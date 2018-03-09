@@ -265,7 +265,7 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Sorts Mill Goudy", serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
