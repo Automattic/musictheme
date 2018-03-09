@@ -1,14 +1,22 @@
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
+.site-header {
+	background: #E38B89;
+}
+
+.site-branding {
+	padding: 1em;
+}
+
 .site-title {
+	font-size: 1.5em;
+	margin: 0;
 }
 
 .site-title a {
 }
 
-.site-branding {
-}
-
 .site-description {
+	margin: 0;
 }

@@ -11,8 +11,20 @@
 /*--------------------------------------------------------------
 ## Post Navigation
 --------------------------------------------------------------*/
-.post-navigation,
-.page-navigation {
-  margin: 1.5em auto;
-  max-width: 720px;
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	margin: 0 auto;
+	max-width: 720px;
+
+	.site-main & {
+		overflow: hidden;
+	}
+
+	.nav-links {
+		margin: 1em auto;
+		padding: 0 1em;
+	}
 }
