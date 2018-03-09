@@ -551,6 +551,7 @@ a:hover, a:active {
 }
 
 .main-navigation a {
+  color: #fff;
   display: block;
   text-decoration: none;
 }
@@ -761,6 +762,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .site-header {
   background: #E38B89;
+  color: #fff;
 }
 
 .site-branding {
@@ -770,6 +772,10 @@ a:hover, a:active {
 .site-title {
   font-size: 1.5em;
   margin: 0;
+}
+
+.site-title a {
+  color: #fff;
 }
 
 .site-description {
@@ -809,13 +815,19 @@ a:hover, a:active {
   max-width: 740px;
 }
 
-.entry-title {
-  font-size: 2em;
-}
-
 .entry-header {
+  color: #fff;
   background: #E38B89;
   padding: 1em;
+}
+
+.entry-header a {
+  color: #fff;
+}
+
+.entry-title {
+  color: #fff;
+  font-size: 2em;
 }
 
 .entry-footer span {

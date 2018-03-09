@@ -3,6 +3,7 @@
 --------------------------------------------------------------*/
 .site-header {
 	background: $color__theme-background;
+	color: $color__background-body;
 }
 
 .site-branding {
@@ -15,6 +16,7 @@
 }
 
 .site-title a {
+	color: $color__background-body;
 }
 
 .site-description {

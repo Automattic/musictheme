@@ -28,13 +28,19 @@
 	max-width: $size__site-max-width;
 }
 
-.entry-title {
-	font-size: 2em;
-}
-
 .entry-header {
+	color: $color__background-body;
 	background: $color__theme-background;
 	padding: 1em;
+}
+
+.entry-header a {
+	color: $color__background-body;
+}
+
+.entry-title {
+	color: $color__background-body;
+	font-size: 2em;
 }
 
 .entry-footer span {
