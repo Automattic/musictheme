@@ -1,0 +1,37 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.entry-header,
+.entry-footer {
+  margin: 1.5em auto;
+  max-width: 720px;
+}
+
+.entry-footer span {
+  margin-right: 1em;
+}
+
+.entry-footer{
+  padding: 0 0 2em 0;
+  border-bottom: 1px solid #111;
+}
