@@ -553,6 +553,7 @@ a:hover, a:active {
 .main-navigation a {
   color: #fff;
   display: block;
+  padding: .5em;
   text-decoration: none;
 }
 
