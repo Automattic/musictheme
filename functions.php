@@ -115,11 +115,11 @@ function superserious_fonts_url() {
 	 * supported by Karla, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$notoserif = esc_html_x( 'on', 'Noto Serif font: on or off', 'superserious' );
+	$sortsmillgoudy = esc_html_x( 'on', 'Sorts Mill Goudy font: on or off', 'superserious' );
 
-	if ( 'off' !== $notoserif ) {
+	if ( 'off' !== $sortsmillgoudy ) {
 		$font_families = array();
-		$font_families[] = 'Noto Serif:400,400italic,700,700italic';
+		$font_families[] = 'Sorts+Mill+Goudy:400,400i';
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
@@ -137,9 +137,21 @@ function superserious_fonts_url() {
  * Enqueue scripts and styles.
  */
 function superserious_scripts() {
+
+	/*
+	 * Styles
+	 */
+
+	// Sorts Mill Goudy font
+	wp_enqueue_style( 'superserious-sorts-mill-goudy', superserious_fonts_url(), array(), null );
+
 	wp_enqueue_style( 'superserious-base-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'superserious-blocks-style', get_template_directory_uri() . '/css/blocks.css');
+
+	/*
+	 * Scripts
+	 */
 
 	wp_enqueue_script( 'superserious-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
