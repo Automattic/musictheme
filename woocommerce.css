@@ -236,7 +236,7 @@ ul.products {
     top: 0;
     position: absolute;
     left: 0;
-    color: royalblue; }
+    color: #000; }
 
 p.stars a {
   position: relative;
@@ -267,12 +267,12 @@ p.stars a {
 
 p.stars:hover a:before {
   content: "\53";
-  color: royalblue;
+  color: #000;
   opacity: 1; }
 
 p.stars.selected a.active:before {
   content: "\53";
-  color: royalblue;
+  color: #000;
   opacity: 1; }
 
 p.stars.selected a.active ~ a:before {
@@ -282,7 +282,7 @@ p.stars.selected a.active ~ a:before {
 
 p.stars.selected a:not(.active):before {
   content: "\53";
-  color: royalblue;
+  color: #000;
   opacity: 1; }
 
 /**
@@ -404,7 +404,7 @@ p.no-comments {
   height: 1em;
   cursor: ew-resize;
   outline: none;
-  background: royalblue;
+  background: #000;
   box-sizing: border-box;
   margin-top: -.25em;
   opacity: 1; }
@@ -418,7 +418,7 @@ p.no-comments {
   z-index: 1;
   display: block;
   border: 0;
-  background: royalblue; }
+  background: #000; }
 
 .widget_price_filter .price_slider_wrapper .ui-widget-content {
   background: rgba(0, 0, 0, 0.1); }

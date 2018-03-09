@@ -1,7 +1,6 @@
 .comments-area {
   margin: 0 auto;
-  padding: 0 1em;
-  max-width: 720px;
+  max-width: $size__site-max-width;
 }
 
 .comment-content a {
@@ -9,4 +8,14 @@
 }
 .bypostauthor {
 	display: block;
+}
+
+.comment-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	ol {
+		margin-left: 1em;
+	}
 }

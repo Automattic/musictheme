@@ -483,15 +483,15 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue;
+  color: #000;
 }
 
 a:visited {
-  color: purple;
+  color: #000;
 }
 
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: red;
 }
 
 a:focus {
@@ -577,7 +577,7 @@ a:hover, a:active {
 .posts-navigation,
 .post-navigation {
   margin: 0 auto;
-  max-width: 720px;
+  max-width: 740px;
 }
 
 .site-main .comment-navigation, .site-main
@@ -750,7 +750,7 @@ a:hover, a:active {
  */
 .site-footer {
   margin: 1.5em auto;
-  max-width: 720px;
+  max-width: 740px;
 }
 
 /*--------------------------------------------------------------
@@ -806,7 +806,7 @@ a:hover, a:active {
 .entry-meta,
 .entry-footer {
   margin: 0 auto;
-  max-width: 720px;
+  max-width: 740px;
 }
 
 .entry-title {
@@ -838,8 +838,7 @@ a:hover, a:active {
 --------------------------------------------------------------*/
 .comments-area {
   margin: 0 auto;
-  padding: 0 1em;
-  max-width: 720px;
+  max-width: 740px;
 }
 
 .comment-content a {
@@ -848,6 +847,16 @@ a:hover, a:active {
 
 .bypostauthor {
   display: block;
+}
+
+.comment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.comment-list ol {
+  margin-left: 1em;
 }
 
 /*--------------------------------------------------------------
@@ -863,7 +872,7 @@ a:hover, a:active {
 .site-info {
   margin: 1em auto;
   padding: 0 1em;
-  max-width: 720px;
+  max-width: 740px;
 }
 
 /*--------------------------------------------------------------

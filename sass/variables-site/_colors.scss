@@ -1,3 +1,9 @@
+// Theme Colors
+$color__theme-background: #E38B89;
+$color__theme-link: #000;
+
+
+// Standard Colors
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
@@ -8,9 +14,9 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+$color__link: $color__theme-link;
+$color__link-visited: $color__theme-link;
+$color__link-hover: red;
 $color__text-main: #404040;
 
 $color__border-button: #ccc #ccc #bbb;
