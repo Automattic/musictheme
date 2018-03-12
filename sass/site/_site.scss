@@ -2,6 +2,15 @@
 // @import "../layout/sidebar-content";
 @import "../layout/css-grid";
 
+body,
+html {
+	background: $color__theme-background;
+}
+
+.site-main {
+	background: $color__theme-link;
+}
+
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
