@@ -188,6 +188,13 @@
 		"oAP": "\/page.php",
 		"oF": 0
 		},
+	"\/README.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/README.html",
+		"oF": 0
+		},
 	"\/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -673,9 +680,9 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/style.css",
-		"oF": 2,
-		"oS": 1,
+		"oAP": "\/sass\/style.css",
+		"oF": 0,
+		"oS": 0,
 		"uL": 1
 		},
 	"\/sass\/typography\/_copy.scss": {
