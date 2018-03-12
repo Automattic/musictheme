@@ -147,8 +147,6 @@ function musictheme_scripts() {
 
 	wp_enqueue_style( 'musictheme-base-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'musictheme-blocks-style', get_template_directory_uri() . '/css/blocks.css');
-
 	/*
 	 * Scripts
 	 */

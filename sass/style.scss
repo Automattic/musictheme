@@ -96,6 +96,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "site/site";
 
 /*--------------------------------------------------------------
+# Blocks
+--------------------------------------------------------------*/
+@import "blocks";
+
+/*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 @import "modules/infinite-scroll";
