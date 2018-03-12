@@ -715,7 +715,7 @@ html {
 
 .entry-footer {
   padding: 3em;
-  margin: 0 auto;
+  margin: 0 auto 1.5em;
   background: #fff;
   max-width: 740px; }
 
@@ -814,13 +814,13 @@ html {
 .entry-content h3 + p,
 .entry-content p + p,
 .entry-content p + figure,
-.entry-content figure + p {
+.entry-content .wp-block-image:not(".alignfull") + p {
   padding-top: 0; }
 
 .wp-block-video video {
   max-width: 740px; }
 
-.wp-block-image {
+.wp-block-image:not(".alignfull") {
   padding: 3em;
   margin: 0 auto;
   background: #fff; }
@@ -941,7 +941,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .entry-content > * {
     padding-left: 0px;
     padding-right: 0px; }
-  .wp-block-image {
+  .wp-block-image:not(".alignfull") {
     padding: 3em; }
   /**
 	 * Cover Image
