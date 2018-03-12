@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Superserious
+ * @package Music Theme
  */
 
 get_header(); ?>

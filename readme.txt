@@ -1,4 +1,4 @@
-=== Superserious ===
+=== Music Theme ===
 
 Contributors: everyone welcome
 Tags: translation-ready
@@ -9,7 +9,7 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A theme to demonstrate the power of the Superserious editor.
+A theme to demonstrate the power of the Music Theme editor.
 
 == Description ==
 
@@ -25,7 +25,7 @@ Description
 
 = Does this theme support any plugins? =
 
-Superserious includes support for Infinite Scroll in Jetpack.
+Music Theme includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
