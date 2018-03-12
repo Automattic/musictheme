@@ -84,6 +84,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
  * Cover Image
  */
 
+.wp-block-cover-image.alignfull {
+	height: 100vh;
+}
+
 .wp-block-cover-image h2 {
 	font-size: 42px;
 	font-weight: normal;
