@@ -1,11 +1,9 @@
 .main-navigation {
 	clear: both;
 	display: block;
-	margin: 0 auto;
-	max-width: 720px;
+	padding: 1em;
 
 	ul {
-		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
@@ -59,7 +57,9 @@
 	}
 
 	a {
+		color: $color__background-body;
 		display: block;
+		padding: .5em;
 		text-decoration: none;
 	}
 
@@ -82,26 +82,5 @@
 	}
 	.main-navigation ul {
 		display: block;
-	}
-}
-
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
-
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
 	}
 }

@@ -340,6 +340,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/sass\/layout\/_css-grid.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/layout\/_css-grid.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/sass\/layout\/_sidebar-content.scss": {
 		"aP": 0,
 		"bl": 0,

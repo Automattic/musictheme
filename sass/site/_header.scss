@@ -1,14 +1,24 @@
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
-.site-title {
-}
-
-.site-title a {
+.site-header {
+	background: $color__theme-background;
+	color: $color__background-body;
 }
 
 .site-branding {
+	padding: 1em;
+}
+
+.site-title {
+	font-size: 1.5em;
+	margin: 0;
+}
+
+.site-title a {
+	color: $color__background-body;
 }
 
 .site-description {
+	margin: 0;
 }
