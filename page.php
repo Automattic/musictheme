@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Superserious
+ * @package Music Theme
  */
 
 get_header(); ?>
