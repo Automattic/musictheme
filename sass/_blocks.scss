@@ -44,8 +44,9 @@
 .entry-content .rotate + p,
 .entry-content h3 + p,
 .entry-content p + p,
-.entry-content p + figure,
-.entry-content .wp-block-image:not(".alignfull") + p {
+.entry-content p + blockquote,
+.entry-content blockquote + p,
+.entry-content p + figure {
 	padding-top: 0;
 }
 
@@ -118,7 +119,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
  * Cover Image
  */
 
+.wp-block-cover-image {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
 .wp-block-cover-image.alignfull {
+	padding: 3em;
 	height: 100vh;
 }
 
@@ -126,6 +133,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	font-size: 42px;
 	font-weight: normal;
 	line-height: 51px;
+	max-width: 100%;
+	padding: 0;
 }
 
 .wp-block-separator {

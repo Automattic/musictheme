@@ -48,6 +48,12 @@
 	z-index: 2;
 }
 
+.entry-meta	{
+	position: relative;
+	z-index: 3;
+}
+
+
 .entry-header .entry-featured-image {
 	margin: 0;
 	max-width: 50%;
@@ -58,10 +64,10 @@
 }
 
 .entry-footer {
-	padding: 3em;
-	margin: 0 auto 1.5em;
 	background: $color__background-body;
+	margin: 0 auto 1.5em;
 	max-width: $size__site-max-width;
+	padding: 3em;
 }
 
 .entry-footer span {
@@ -84,5 +90,6 @@
 		max-width: 20%;
 		position: absolute;
 		top: 0;
+		right: 3em;
 	}
 }
