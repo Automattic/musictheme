@@ -410,7 +410,8 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #000; }
+  color: #000;
+  text-decoration: none; }
   a:visited {
     color: #000; }
   a:hover, a:focus, a:active {
@@ -658,7 +659,8 @@ a {
   display: block; }
 
 .hentry {
-  margin: 0; }
+  margin: 0;
+  position: relative; }
 
 .updated:not(.published) {
   display: none; }
@@ -672,34 +674,56 @@ a {
   clear: both;
   margin: 0 0 1.5em; }
 
-.entry-title,
-.entry-meta,
-.entry-footer {
-  margin: 0 auto;
-  max-width: 740px; }
-
 .entry-header {
   color: #fff;
   background: #E38B89;
-  padding: 1em; }
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; }
 
 .entry-header a {
   color: #fff; }
 
 .entry-title {
   color: #fff;
-  font-size: 2em; }
+  font-size: 42px;
+  font-weight: normal;
+  line-height: 51px;
+  margin: 0;
+  position: relative;
+  z-index: 2; }
+
+.entry-header .entry-featured-image {
+  margin: 0;
+  max-width: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1; }
+
+.entry-footer {
+  padding: 0 1em;
+  margin: 1em auto;
+  max-width: 740px; }
 
 .entry-footer span {
   margin-right: 1em; }
 
-.entry-footer {
-  padding: 0 1em;
-  margin: 1em auto; }
-
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 768px) {
   .entry-header {
-    padding: 3em; } }
+    min-height: 100vh;
+    padding: 3em; }
+  .entry-title {
+    color: #fff;
+    font-size: 117px;
+    line-height: 128px; }
+  .entry-header .entry-featured-image {
+    max-width: 20%;
+    position: absolute;
+    right: 3em;
+    top: 0; } }
 
 /*--------------------------------------------------------------
 ## Comments
@@ -805,10 +829,17 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   bottom: 0;
   right: 0; }
 
+/**
+ * Cover Image
+ */
 .wp-block-cover-image h2 {
   font-size: 42px;
+  font-weight: normal;
   line-height: 51px; }
 
+/**
+ * Dim Backgrounds
+ */
 .has-background-dim.has-background-dim-10:before {
   background-color: rgba(227, 139, 137, 0.1); }
 
@@ -848,7 +879,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     padding: 1.5em 0; }
   .entry-content > * {
     padding-left: 0px;
-    padding-right: 0px; } }
+    padding-right: 0px; }
+  /**
+	 * Cover Image
+	 */
+  .wp-block-cover-image.alignfull h2 {
+    font-size: 117px;
+    line-height: 128px; } }
 
 /*--------------------------------------------------------------
 # Infinite scroll

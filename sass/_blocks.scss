@@ -80,10 +80,19 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	right: 0;
 }
 
+/**
+ * Cover Image
+ */
+
 .wp-block-cover-image h2 {
 	font-size: 42px;
+	font-weight: normal;
 	line-height: 51px;
 }
+
+/**
+ * Dim Backgrounds
+ */
 
 .has-background-dim.has-background-dim-10:before {
 	background-color: rgba($color__theme-background, .1);
@@ -131,6 +140,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 @media screen and (min-width: 768px) {
+
 	.wp-block-cover-text p {
 		padding: 1.5em 0;
 	}
@@ -139,4 +149,14 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		padding-left: 0px;
 		padding-right: 0px;
 	}
+
+	/**
+	 * Cover Image
+	 */
+
+	.wp-block-cover-image.alignfull h2 {
+		font-size: 117px;
+		line-height: 128px;
+	}
+
 }
