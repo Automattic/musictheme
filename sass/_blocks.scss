@@ -16,13 +16,47 @@
 
 .entry-content ul,
 .entry-content ol {
-	margin: 1.5em auto;
+	margin: 0 auto;
 	max-width: 740px;
 	list-style-position: outside;
 }
 
+.entry-content > p,
+.entry-content > ul,
+.entry-content > ol,
+.entry-content > blockquote {
+	padding: 3em;
+	margin: 0 auto;
+	background: $color__background-body;
+}
+
+.entry-content > .rotate,
+.entry-content > h3 {
+	color: $color__theme-background;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: 5px;
+	transform: rotate(-90deg) translate(0, -100%);
+	transform-origin: 100% 0;
+}
+
+.entry-content .rotate + p,
+.entry-content h3 + p,
+.entry-content p + p,
+.entry-content p + figure,
+.entry-content figure + p {
+	padding-top: 0;
+}
+
 .wp-block-video video {
 	max-width: 740px;
+}
+
+.wp-block-image {
+	padding: 3em;
+	margin: 0 auto;
+	background: $color__background-body;
 }
 
 .wp-block-image img {
@@ -94,6 +128,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	line-height: 51px;
 }
 
+.wp-block-separator {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
 /**
  * Dim Backgrounds
  */
@@ -145,6 +184,23 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 @media screen and (min-width: 768px) {
 
+	.entry-content .rotate + p,
+	.entry-content h3 + p {
+		margin-top: 3em;
+		padding-top: 3em;
+	}
+
+	.entry-content > .rotate,
+	.entry-content > h3 {
+		color: $color__background-body;
+		margin: 1em 0 0 0;
+		position: absolute;
+		right: inherit;
+		left: calc(50% - 370px);
+		transform: rotate(270deg) translate(-100%, 0);
+		transform-origin: 0 100%;
+	}
+
 	.wp-block-cover-text p {
 		padding: 1.5em 0;
 	}
@@ -152,6 +208,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	.entry-content > * {
 		padding-left: 0px;
 		padding-right: 0px;
+	}
+
+	.wp-block-image {
+		padding: 3em;
 	}
 
 	/**
