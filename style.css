@@ -226,7 +226,7 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: "Sorts Mill Goudy", serif;
+  font-family: "Sorts Mill Goudy", "OFL Sorts Mill Goudy", serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -286,7 +286,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: white;
   /* Fallback for when there is no custom background color defined. */ }
 
 hr {
@@ -410,10 +410,10 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #000;
+  color: black;
   text-decoration: none; }
   a:visited {
-    color: #000; }
+    color: black; }
   a:hover, a:focus, a:active {
     color: red;
     text-decoration: underline; }
@@ -455,7 +455,7 @@ a {
     float: left;
     position: relative; }
   .main-navigation a {
-    color: #fff;
+    color: white;
     display: block;
     padding: .5em; }
 
@@ -476,7 +476,7 @@ a {
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-  background: #E38B89;
+  background: #e38b89;
   margin: 0 auto;
   max-width: 740px; }
   .site-main .comment-navigation, .site-main
@@ -638,10 +638,10 @@ a {
 
 body,
 html {
-  background: #E38B89; }
+  background: #e38b89; }
 
 .site-main {
-  background: #000; }
+  background: black; }
 
 /*--------------------------------------------------------------
 ## Header
@@ -650,8 +650,8 @@ html {
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-  background: #E38B89;
-  color: #fff; }
+  background: #e38b89;
+  color: white; }
 
 .site-branding {
   padding: 1em; }
@@ -661,7 +661,7 @@ html {
   margin: 0; }
 
 .site-title a {
-  color: #fff; }
+  color: white; }
 
 .site-description {
   margin: 0; }
@@ -673,7 +673,7 @@ html {
   display: block; }
 
 .hentry {
-  background-color: #000;
+  background-color: black;
   margin: 0;
   position: relative; }
 
@@ -690,8 +690,8 @@ html {
   margin: 0 0 1.5em; }
 
 .entry-header {
-  color: #fff;
-  background: #E38B89;
+  color: white;
+  background: #e38b89;
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -700,10 +700,10 @@ html {
   min-height: 100vh; }
 
 .entry-header a {
-  color: #fff; }
+  color: white; }
 
 .entry-title {
-  color: #fff;
+  color: white;
   font-size: 42px;
   font-weight: normal;
   line-height: 51px;
@@ -724,7 +724,7 @@ html {
   z-index: 1; }
 
 .entry-footer {
-  background: #fff;
+  background: white;
   margin: 0 auto 1.5em;
   max-width: 740px;
   padding: 3em; }
@@ -736,7 +736,7 @@ html {
   .entry-header {
     padding: 3em; }
   .entry-title {
-    color: #fff;
+    color: white;
     font-size: 117px;
     line-height: 128px; }
   .entry-header .entry-featured-image {
@@ -753,7 +753,7 @@ html {
 ## Comments
 --------------------------------------------------------------*/
 .comments-area {
-  background: #fff;
+  background: white;
   margin: 0 auto;
   max-width: 740px;
   padding: 3em; }
@@ -817,7 +817,7 @@ html {
 .entry-content > blockquote {
   padding: 1em;
   margin: 0 auto;
-  background: #fff; }
+  background: white; }
 
 .entry-content > h1,
 .entry-content > h2,
@@ -827,11 +827,11 @@ html {
   padding: 1rem;
   margin-top: 0;
   margin-bottom: 0;
-  background: #fff; }
+  background: white; }
 
 .entry-content > .rotate,
 .entry-content > h3 {
-  color: #E38B89;
+  color: #e38b89;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -860,8 +860,8 @@ html {
   line-height: 21px; }
 
 .wp-block-quote.is-large {
-  background: #E38B89;
-  color: #fff;
+  background: #e38b89;
+  color: white;
   height: 50vh;
   margin: 0;
   max-width: 100%;
@@ -880,14 +880,14 @@ html {
     line-height: 51px;
     margin-bottom: .25em; }
   .wp-block-quote.is-large cite {
-    color: #fff;
+    color: white;
     margin-top: 0; }
 
 /**/
 /* ! Image */
 /**/
 .wp-block-image {
-  background: #fff;
+  background: white;
   padding-top: 0;
   padding-bottom: 0; }
   .wp-block-image:not(".alignfull") {
@@ -956,7 +956,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /* ! Video */
 /**/
 .wp-block-video {
-  background: #fff; }
+  background: white; }
   .wp-block-video video {
     max-width: 100%; }
   .wp-block-video.alignfull video {
@@ -968,7 +968,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /**/
 *[class^="wp-block-embed"],
 .wp-block-embed {
-  background: #fff;
+  background: white;
   padding: 1em; }
   *[class^="wp-block-embed"] figcaption,
   .wp-block-embed figcaption {
@@ -1041,7 +1041,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   background-color: rgba(227, 139, 137, 0.9); }
 
 .has-background-dim.has-background-dim-100:before {
-  background-color: #E38B89; }
+  background-color: #e38b89; }
 
 @media screen and (min-width: 768px) {
   .entry-content > p,
@@ -1057,7 +1057,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     padding-top: 3em; }
   .entry-content > .rotate,
   .entry-content > h3 {
-    color: #fff;
+    color: white;
     margin: 3em 0 0;
     max-width: 20vh;
     position: absolute;
@@ -1097,7 +1097,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     margin-left: 0; }
   .entry-content > .rotate,
   .entry-content > h3 {
-    color: #fff;
+    color: white;
     margin: 3em 0 0;
     position: absolute;
     right: calc( 10% + 740px);
