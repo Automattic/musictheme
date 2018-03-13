@@ -1013,6 +1013,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /* ! Separator */
 /**/
 .wp-block-separator {
+  border-bottom: none;
   margin-bottom: 0;
   margin-top: 0;
   padding-bottom: 0;
