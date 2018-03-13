@@ -232,7 +232,8 @@ textarea {
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  font-weight: normal; }
 
 p {
   margin-bottom: 1.5em; }
@@ -723,7 +724,7 @@ html {
   max-width: 50%;
   position: absolute;
   right: 0;
-  top: 3em;
+  top: 20%;
   z-index: 1; }
 
 .entry-footer {
@@ -746,7 +747,7 @@ html {
     max-width: 20%;
     position: absolute;
     top: 0;
-    right: 3em; }
+    right: 10%; }
   .entry-footer {
     padding: 2em; } }
 
