@@ -415,3 +415,37 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	}
 
 }
+
+/**
+ * Cover Image (First Child)
+ */
+.wp-block-cover-image.alignfull:first-child {
+	align-items: center;
+	justify-content: left;
+	background-color: $color__theme-background;
+	background-size: 20% auto;
+	background-position: 90% 0;
+	background-repeat: no-repeat;
+
+	h2 {
+		text-align: left;
+	}
+
+	&.has-background-dim.has-background-dim:before, 
+	&.has-background-dim.has-background-dim-50:before {
+		background-color: transparent;
+	}
+}
+
+/**
+ * Temporary Styles
+ * (Do not merge these ;) )
+ */
+.entry-header {
+	display: none;
+}
+.site-header {
+	position: absolute;
+	background-color: transparent;
+	z-index: 500;
+}
