@@ -60,6 +60,11 @@
 	padding-top: 0;
 }
 
+.entry-content .rotate + p,
+.entry-content h3 + p {
+	padding-right: 3em;
+}
+
 /* */
 /* ! Quote */
 /* */
@@ -364,6 +369,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	.entry-content h3 + p {
 		margin-top: 3em;
 		padding-top: 3em;
+		padding-right: 2em;
 	}
 
 	.entry-content > .rotate,
