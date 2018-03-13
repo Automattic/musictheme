@@ -226,7 +226,7 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: "Sorts Mill Goudy", serif;
+  font-family: "Sorts Mill Goudy", "OFL Sorts Mill Goudy", serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5; }
@@ -247,7 +247,7 @@ address {
   margin: 0 0 1.5em; }
 
 pre {
-  background: #eee;
+  background: #eeeeee;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 0.9375rem;
@@ -263,7 +263,7 @@ code, kbd, tt, var {
   font-size: 0.9375rem; }
 
 abbr, acronym {
-  border-bottom: 1px dotted #666;
+  border-bottom: 1px dotted #666666;
   cursor: help; }
 
 mark, ins {
@@ -286,11 +286,11 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: white;
   /* Fallback for when there is no custom background color defined. */ }
 
 hr {
-  background-color: #ccc;
+  background-color: #cccccc;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -337,7 +337,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
-  border-color: #ccc #ccc #bbb;
+  border-color: #cccccc #cccccc #bbbbbb;
   border-radius: 3px;
   background: #e6e6e6;
   color: rgba(0, 0, 0, 0.8);
@@ -349,7 +349,7 @@ input[type="submit"] {
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa; }
+    border-color: #cccccc #bbbbbb #aaaaaa; }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -357,7 +357,7 @@ input[type="submit"] {
   input[type="reset"]:focus,
   input[type="submit"]:active,
   input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb; }
+    border-color: #aaaaaa #bbbbbb #bbbbbb; }
 
 input[type="text"],
 input[type="email"],
@@ -375,8 +375,8 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  color: #666;
-  border: 1px solid #ccc;
+  color: #666666;
+  border: 1px solid #cccccc;
   border-radius: 3px;
   padding: 3px; }
   input[type="text"]:focus,
@@ -395,10 +395,10 @@ textarea {
   input[type="datetime-local"]:focus,
   input[type="color"]:focus,
   textarea:focus {
-    color: #111; }
+    color: #111111; }
 
 select {
-  border: 1px solid #ccc; }
+  border: 1px solid #cccccc; }
 
 textarea {
   width: 100%; }
@@ -410,10 +410,10 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #000;
+  color: black;
   text-decoration: none; }
   a:visited {
-    color: #000; }
+    color: black; }
   a:hover, a:focus, a:active {
     color: red;
     text-decoration: underline; }
@@ -443,8 +443,7 @@ a {
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
+      .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
         left: 100%; }
       .main-navigation ul ul a {
         width: 200px; }
@@ -455,7 +454,7 @@ a {
     float: left;
     position: relative; }
   .main-navigation a {
-    color: #fff;
+    color: white;
     display: block;
     padding: .5em; }
 
@@ -467,16 +466,16 @@ a {
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none; }
+
   .main-navigation ul {
     display: block; } }
-
 /*--------------------------------------------------------------
 ## Post Navigation
 --------------------------------------------------------------*/
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-  background: #E38B89;
+  background: #e38b89;
   margin: 0 auto;
   max-width: 740px; }
   .site-main .comment-navigation, .site-main
@@ -612,12 +611,10 @@ a {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-template-areas: "previous next"; }
-
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
   grid-area: previous; }
-
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
 .post-navigation .nav-next {
@@ -632,10 +629,10 @@ a {
 
 body,
 html {
-  background: #E38B89; }
+  background: #e38b89; }
 
 .site-main {
-  background: #000; }
+  background: black; }
 
 /*--------------------------------------------------------------
 ## Header
@@ -644,8 +641,8 @@ html {
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-  background: #E38B89;
-  color: #fff; }
+  background: #e38b89;
+  color: white; }
 
 .site-branding {
   padding: 1em; }
@@ -655,7 +652,7 @@ html {
   margin: 0; }
 
 .site-title a {
-  color: #fff; }
+  color: white; }
 
 .site-description {
   margin: 0; }
@@ -667,7 +664,7 @@ html {
   display: block; }
 
 .hentry {
-  background-color: #000;
+  background-color: black;
   margin: 0;
   position: relative; }
 
@@ -684,8 +681,8 @@ html {
   margin: 0 0 1.5em; }
 
 .entry-header {
-  color: #fff;
-  background: #E38B89;
+  color: white;
+  background: #e38b89;
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -694,10 +691,10 @@ html {
   min-height: 100vh; }
 
 .entry-header a {
-  color: #fff; }
+  color: white; }
 
 .entry-title {
-  color: #fff;
+  color: white;
   font-size: 42px;
   font-weight: normal;
   line-height: 51px;
@@ -718,7 +715,7 @@ html {
   z-index: 1; }
 
 .entry-footer {
-  background: #fff;
+  background: white;
   margin: 0 auto 1.5em;
   max-width: 740px;
   padding: 3em; }
@@ -729,21 +726,22 @@ html {
 @media screen and (min-width: 768px) {
   .entry-header {
     padding: 3em; }
+
   .entry-title {
-    color: #fff;
+    color: white;
     font-size: 117px;
     line-height: 128px; }
+
   .entry-header .entry-featured-image {
     max-width: 20%;
     position: absolute;
     top: 0;
     right: 3em; } }
-
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
 .comments-area {
-  background: #fff;
+  background: white;
   margin: 0 auto;
   max-width: 740px;
   padding: 3em; }
@@ -803,11 +801,11 @@ html {
 .entry-content > blockquote {
   padding: 3em;
   margin: 0 auto;
-  background: #fff; }
+  background: white; }
 
 .entry-content > .rotate,
 .entry-content > h3 {
-  color: #E38B89;
+  color: #e38b89;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -829,7 +827,7 @@ html {
 .wp-block-image:not(".alignfull") {
   padding: 3em;
   margin: 0 auto;
-  background: #fff; }
+  background: white; }
 
 .wp-block-image img {
   display: block;
@@ -933,36 +931,40 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   background-color: rgba(227, 139, 137, 0.9); }
 
 .has-background-dim.has-background-dim-100:before {
-  background-color: #E38B89; }
+  background-color: #e38b89; }
 
 @media screen and (min-width: 768px) {
   .entry-content .rotate + p,
   .entry-content h3 + p {
     margin-top: 3em;
     padding-top: 3em; }
+
   .entry-content > .rotate,
   .entry-content > h3 {
-    color: #fff;
+    color: white;
     margin: 1em 0 0 0;
     position: absolute;
     right: inherit;
     left: calc(50% - 370px);
     transform: rotate(270deg) translate(-100%, 0);
     transform-origin: 0 100%; }
+
   .wp-block-cover-text p {
     padding: 1.5em 0; }
+
   .entry-content > * {
     padding-left: 0px;
     padding-right: 0px; }
+
   .wp-block-image:not(".alignfull") {
     padding: 3em; }
+
   /**
-	 * Cover Image
-	 */
+   * Cover Image
+   */
   .wp-block-cover-image.alignfull h2 {
     font-size: 117px;
     line-height: 128px; } }
-
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
