@@ -1,6 +1,6 @@
 .entry-content > * {
 	margin: 1.5em auto;
-	max-width: 740px;
+	max-width: $size__site-max-width;
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -17,7 +17,7 @@
 .entry-content ul,
 .entry-content ol {
 	margin: 0 auto;
-	max-width: 740px;
+	max-width: $size__site-max-width;
 	list-style-position: outside;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .wp-block-video video {
-	max-width: 740px;
+	max-width: $size__site-max-width;
 }
 
 .wp-block-image:not(".alignfull") {
@@ -193,6 +193,21 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 @media screen and (min-width: 768px) {
 
+	.entry-content > * {
+		margin: 1.5em 10% 1.5em auto;
+	}
+
+	.wp-block-gallery:not(.components-placeholder),
+	.wp-block-image:not(".alignfull") {
+
+	}
+	.entry-content > p,
+	.entry-content > ul,
+	.entry-content > ol,
+	.entry-content > blockquote {
+		margin: 0 10% 0 auto;
+	}
+
 	.entry-content .rotate + p,
 	.entry-content h3 + p {
 		margin-top: 3em;
@@ -202,12 +217,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	.entry-content > .rotate,
 	.entry-content > h3 {
 		color: $color__background-body;
-		margin: 1em 0 0 0;
+		margin: 3em 0 0;
 		position: absolute;
-		right: inherit;
-		left: calc(50% - 370px);
-		transform: rotate(270deg) translate(-100%, 0);
-		transform-origin: 0 100%;
+		right: calc( 10% + #{$size__site-max-width} );
+		max-width: 20vh;
 	}
 
 	.wp-block-cover-text p {

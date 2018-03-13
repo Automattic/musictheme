@@ -719,7 +719,7 @@ html {
 
 .entry-footer {
   background: #fff;
-  margin: 0 auto 1.5em;
+  margin: 0 10% 1.5em auto;
   max-width: 740px;
   padding: 3em; }
 
@@ -936,6 +936,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   background-color: #E38B89; }
 
 @media screen and (min-width: 768px) {
+  .entry-content > * {
+    margin: 1.5em 10% 1.5em auto; }
+  .entry-content > p,
+  .entry-content > ul,
+  .entry-content > ol,
+  .entry-content > blockquote {
+    margin: 0 10% 0 auto; }
   .entry-content .rotate + p,
   .entry-content h3 + p {
     margin-top: 3em;
@@ -943,12 +950,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .entry-content > .rotate,
   .entry-content > h3 {
     color: #fff;
-    margin: 1em 0 0 0;
+    margin: 3em 0 0;
     position: absolute;
-    right: inherit;
-    left: calc(50% - 370px);
-    transform: rotate(270deg) translate(-100%, 0);
-    transform-origin: 0 100%; }
+    right: calc( 10% + 740px);
+    max-width: 20vh; }
   .wp-block-cover-text p {
     padding: 1.5em 0; }
   .entry-content > * {
