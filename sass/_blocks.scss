@@ -445,3 +445,45 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	}
 
 }
+
+/**
+ * Cover Image (First Child)
+ */
+.home .wp-block-cover-image.alignfull:first-child {
+	align-items: center;
+	justify-content: left;
+	background-color: $color__theme-background;
+	background-size: 50% auto;
+	background-position: 100% 40%;
+	background-repeat: no-repeat;
+	padding: 12px;
+
+	h2 {
+		text-align: left;
+	}
+
+	&.has-background-dim.has-background-dim:before,
+	&.has-background-dim.has-background-dim-50:before {
+		background-color: transparent;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.home .wp-block-cover-image.alignfull:first-child {
+		background-size: 20% auto;
+		background-position: 90% 0;
+		padding: 10%;
+	}
+}
+
+.home .entry-header {
+	display: none;
+}
+
+.home .site-header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: transparent;
+	z-index: 500;
+}
