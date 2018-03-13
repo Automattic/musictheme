@@ -101,7 +101,7 @@ add_action( 'after_setup_theme', 'musictheme_setup' );
  * @global int $content_width
  */
 function musictheme_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'musictheme_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'musictheme_content_width', 740 );
 }
 add_action( 'after_setup_theme', 'musictheme_content_width', 0 );
 
