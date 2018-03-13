@@ -657,14 +657,17 @@ html {
   padding: 1em; }
 
 .site-title {
-  font-size: 1.5em;
-  margin: 0; }
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0;
+  padding: 0.5em; }
 
 .site-title a {
   color: white; }
 
 .site-description {
-  margin: 0; }
+  margin: 0;
+  padding: 0 0.5em 0.5em; }
 
 /*--------------------------------------------------------------
 ## Posts and pages

@@ -11,8 +11,10 @@
 }
 
 .site-title {
-	font-size: 1.5em;
+	font-size: 1rem;
+	font-style: italic;
 	margin: 0;
+	padding: 0.5em;
 }
 
 .site-title a {
@@ -21,4 +23,5 @@
 
 .site-description {
 	margin: 0;
+	padding: 0 0.5em 0.5em;
 }
