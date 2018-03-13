@@ -31,7 +31,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	min-height: 100vh;
+	min-height: 80vh;
 }
 
 .entry-header a {
@@ -67,7 +67,7 @@
 	background: $color__background-body;
 	margin: 0 auto 1.5em;
 	max-width: $size__site-max-width;
-	padding: 3em;
+	padding: 1em;
 }
 
 .entry-footer span {
@@ -93,6 +93,9 @@
 		right: 3em;
 	}
 
+	.entry-footer {
+		padding: 2em;
+	}
 }
 
 @media screen and (min-width: 940px) {

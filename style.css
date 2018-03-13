@@ -697,7 +697,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  min-height: 100vh; }
+  min-height: 80vh; }
 
 .entry-header a {
   color: white; }
@@ -727,7 +727,7 @@ html {
   background: white;
   margin: 0 auto 1.5em;
   max-width: 740px;
-  padding: 3em; }
+  padding: 1em; }
 
 .entry-footer span {
   margin-right: 1em; }
@@ -743,7 +743,9 @@ html {
     max-width: 20%;
     position: absolute;
     top: 0;
-    right: 3em; } }
+    right: 3em; }
+  .entry-footer {
+    padding: 2em; } }
 
 @media screen and (min-width: 940px) {
   .entry-footer {
