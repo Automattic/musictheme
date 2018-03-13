@@ -419,7 +419,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /**
  * Cover Image (First Child)
  */
-.wp-block-cover-image.alignfull:first-child {
+.home .wp-block-cover-image.alignfull:first-child {
 	align-items: center;
 	justify-content: left;
 	background-color: $color__theme-background;
@@ -439,22 +439,21 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 @media screen and (min-width: 768px) {
-	.wp-block-cover-image.alignfull:first-child {
+	.home .wp-block-cover-image.alignfull:first-child {
 		background-size: 20% auto;
 		background-position: 90% 0;
 		padding: 10%;
 	}
 }
 
-/**
- * Temporary Styles
- * (Do not merge these ;) )
- */
-.entry-header {
+.home .entry-header {
 	display: none;
 }
-.site-header {
+
+.home .site-header {
 	position: absolute;
+	left: 0;
+	right: 0;
 	background-color: transparent;
 	z-index: 500;
 }
