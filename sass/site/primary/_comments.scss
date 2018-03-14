@@ -2,7 +2,7 @@
 	background: $color__background-body;
 	margin: 0 auto;
 	max-width: $size__site-max-width;
-	padding: 1.5rem;
+	padding: $size__vertical-padding;
 }
 
 .comment-content a {
@@ -18,13 +18,13 @@
 	padding: 0;
 
 	ol {
-		margin-left: 1em;
+		margin-left: $size__horizontal-padding;
 	}
 }
 
 @media screen and (min-width: 940px) {
 	.comments-area {
-		padding: 2rem;
+		padding: $size__vertical-padding;
 	}
 }
 

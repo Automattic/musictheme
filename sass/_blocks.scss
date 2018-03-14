@@ -6,21 +6,20 @@
 	background: $color__background-body;
 	margin: 0 auto;
 	max-width: $size__site-max-width;
-	padding-bottom: 1.5rem;
+	padding-bottom: $size__vertical-padding;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
 }
 
 .entry-content > .alignwide {
-	max-width: 1100px;
 	padding-bottom: 0;
 	padding-left: 0;
 	padding-right: 0;
 }
 
 .entry-content > .alignfull {
-	margin: 0;
-	max-width: 100%;
+	margin: $size__vertical-padding 0;
+	max-width: $size__site-max--wide-width;
 	padding-top: 0;
 	padding-bottom: 0;
 	padding-left: 0;
@@ -34,7 +33,7 @@
 .entry-content > figure + *,
 .entry-content > .wp-block-quote + *,
 .entry-content > .wp-block-pullquote + * {
-	padding-top: 1.5rem;
+	padding-top: $size__vertical-padding;
 }
 
 .entry-content > .alignwide + .alignwide,
@@ -76,14 +75,14 @@
 
 	border-top: 1px solid $color__background-pre;
 	border-bottom: 1px solid $color__background-pre;
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
+	padding-top: $size__vertical-padding;
+	padding-bottom: $size__vertical-padding;
 
 	p {
 		font-size: 24px;
 		line-height: 34px;
 		font-style: italic;
-		margin: 0 0 1em;
+		margin: 0 0 $size__vertical-padding;
 	}
 
 	cite {
@@ -95,9 +94,9 @@
 		background: $color__theme-background;
 		color: $color__background-body;
 		height: 50vh;
-		margin: 0;
-		max-width: 100%;
-		padding: 1em;
+		margin: 0 auto;
+		max-width: $size__site-max--wide-width;
+		padding: $size__vertical-padding;
 		clear: both;
 		display: -ms-flexbox;
 		display: flex;
@@ -111,7 +110,7 @@
 			font-size: 42px;
 			font-weight: normal;
 			line-height: 51px;
-			margin-bottom: .25em;
+			margin-bottom: .25rem;
 		}
 
 		cite {
@@ -132,13 +131,13 @@
 	padding-bottom: 0;
 
 	&:not(".alignfull") {
-		padding: 1.5rem;
+		padding: $size__vertical-padding;
 		margin: 0 auto;
 	}
 
 	&.alignleft,
 	&.alignright {
-		padding: 1.5rem;
+		padding: $size__vertical-padding;
 	}
 
 	img {
@@ -155,9 +154,11 @@
 
 	margin-top: 0;
 	margin-bottom: 0;
+	padding: #{$size__vertical-padding * 2};
 
-	&.alignfull {
-		padding: 3em;
+	&.alignfull:first-child {
+		margin-top: 0;
+		max-width: 100%;
 		height: 100vh;
 	}
 
@@ -178,8 +179,8 @@
 
 .wp-block-gallery {
 
-	padding-left: calc( 1.5rem - 8px );
-	padding-right: calc( 1.5rem - 8px );
+	padding-left: calc( #{$size__vertical-padding} - 8px );
+	padding-right: calc( #{$size__vertical-padding} - 8px );
 
 	&.alignwide,
 	&.alignfull {
@@ -193,7 +194,7 @@
 /**/
 
 .wp-block-cover-text p {
-	padding: 1.5em 20px;
+	padding: $size__vertical-padding $size__horizontal-padding;
 }
 
 /**/
@@ -204,7 +205,7 @@ ul.wp-block-latest-posts.alignwide,
 ul.wp-block-latest-posts.alignfull,
 ul.wp-block-latest-posts.is-grid.alignwide,
 ul.wp-block-latest-posts.is-grid.alignwide {
-	padding: 0 1.5rem;
+	padding: 0 $size__horizontal-padding;
 }
 
 /**/
@@ -297,7 +298,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .wp-block-separator {
 	border-top: 1px solid $color__background-pre;
-	border-bottom: 1.5rem solid $color__background-body;
+	border-bottom: $size__vertical-padding solid $color__background-body;
 	margin-bottom: 0;
 	margin-top: 0;
 	padding: 0;
@@ -355,8 +356,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 @media screen and (min-width: 740px) {
 
 	.entry-content > * {
-		padding-left: 2rem;
-		padding-right: 2rem;
+		padding-left: $size__horizontal-padding;
+		padding-right: $size__horizontal-padding;
 	}
 
 	.entry-content > .rotate,
@@ -369,8 +370,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	}
 
 	.wp-block-gallery {
-		padding-left: calc( 2rem - 8px );
-		padding-right: calc( 2rem - 8px );
+		padding-left: calc( #{$size__vertical-padding} - 8px );
+		padding-right: calc( #{$size__vertical-padding} - 8px );
 	}
 
 	.wp-block-video:not('.alignfull') video {
@@ -378,7 +379,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	}
 
 	.wp-block-cover-text p {
-		padding: 2rem 0;
+		padding: $size__vertical-padding 0;
 	}
 
 	.wp-block-cover-image.alignfull h2 {
@@ -393,20 +394,26 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		margin: 0 10% 0 auto;
 	}
 
-	.entry-content .alignwide,
+	.entry-content .alignwide {
+	}
+
+	.entry-content .wp-block-quote.is-large,
+	.entry-content .wp-block-pullquote.is-large,
 	.entry-content .alignfull {
+		margin-left: auto;
 		margin-right: 0;
 	}
 
 	.wp-block-gallery {
 
 		&.alignwide {
-			margin: -8px -8px -8px auto;
+			margin: -8px calc( 10% - 8px ) -8px auto;
+			max-width: calc( #{$size__site-max-width} + 16px );
 		}
 
 		&.alignfull {
-			margin: -8px;
-			max-width: calc(100% + 16px);
+			margin: -8px -8px -8px auto;
+			max-width: calc( $size__site-max--wide-width + 16px );
 		}
 	}
 

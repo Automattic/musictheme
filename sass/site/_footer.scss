@@ -6,8 +6,8 @@
 }
 
 .site-info {
-	margin: 1.5rem auto;
-	padding: 0 1.5rem;
+	margin: $size__vertical-padding auto;
+	padding: 0 $size__horizontal-padding;
 	max-width: $size__site-max-width;
 }
 

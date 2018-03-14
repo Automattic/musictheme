@@ -694,12 +694,12 @@ html {
 
 .page-links {
   clear: both;
-  margin: 0 0 1.5rem; }
+  margin: 0 0 2rem; }
 
 .entry-header {
   color: white;
   background: #f18686;
-  padding: 1em;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -732,16 +732,16 @@ html {
 
 .entry-footer {
   background: white;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 2rem;
   max-width: 740px;
-  padding: 1.5rem; }
+  padding: 2rem; }
 
 .entry-footer span {
   margin-right: 1rem; }
 
 @media screen and (min-width: 768px) {
   .entry-header {
-    padding: 3rem; }
+    padding: 2rem; }
   .entry-title {
     color: white;
     font-size: 117px;
@@ -752,11 +752,11 @@ html {
     top: 0;
     right: 10%; }
   .entry-footer {
-    padding: 1.5rem 2rem; } }
+    padding: 2rem 2rem; } }
 
 @media screen and (min-width: 940px) {
   .entry-footer {
-    margin: 0 10% 1.5rem auto; } }
+    margin: 0 10% 2rem auto; } }
 
 /*--------------------------------------------------------------
 ## Comments
@@ -765,7 +765,7 @@ html {
   background: white;
   margin: 0 auto;
   max-width: 740px;
-  padding: 1.5rem; }
+  padding: 2rem; }
 
 .comment-content a {
   word-wrap: break-word; }
@@ -778,7 +778,7 @@ html {
   margin: 0;
   padding: 0; }
   .comment-list ol {
-    margin-left: 1em; }
+    margin-left: 2rem; }
 
 @media screen and (min-width: 940px) {
   .comments-area {
@@ -798,8 +798,8 @@ html {
   margin: 0; }
 
 .site-info {
-  margin: 1.5rem auto;
-  padding: 0 1.5rem;
+  margin: 2rem auto;
+  padding: 0 2rem;
   max-width: 740px; }
 
 /*--------------------------------------------------------------
@@ -812,19 +812,18 @@ html {
   background: white;
   margin: 0 auto;
   max-width: 740px;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem; }
 
 .entry-content > .alignwide {
-  max-width: 1100px;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0; }
 
 .entry-content > .alignfull {
-  margin: 0;
-  max-width: 100%;
+  margin: 2rem 0;
+  max-width: 1100px;
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 0;
@@ -837,7 +836,7 @@ html {
 .entry-content > figure + *,
 .entry-content > .wp-block-quote + *,
 .entry-content > .wp-block-pullquote + * {
-  padding-top: 1.5rem; }
+  padding-top: 2rem; }
 
 .entry-content > .alignwide + .alignwide,
 .entry-content > .alignfull + .alignfull,
@@ -872,14 +871,14 @@ html {
 .wp-block-pullquote {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem; }
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
   .wp-block-quote p,
   .wp-block-pullquote p {
     font-size: 24px;
     line-height: 34px;
     font-style: italic;
-    margin: 0 0 1em; }
+    margin: 0 0 2rem; }
   .wp-block-quote cite,
   .wp-block-pullquote cite {
     font-size: 15px;
@@ -889,9 +888,9 @@ html {
     background: #f18686;
     color: white;
     height: 50vh;
-    margin: 0;
-    max-width: 100%;
-    padding: 1em;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 2rem;
     clear: both;
     display: -ms-flexbox;
     display: flex;
@@ -905,7 +904,7 @@ html {
       font-size: 42px;
       font-weight: normal;
       line-height: 51px;
-      margin-bottom: .25em; }
+      margin-bottom: .25rem; }
     .wp-block-quote.is-large cite,
     .wp-block-pullquote.is-large cite {
       color: white;
@@ -919,10 +918,10 @@ html {
   padding-top: 0;
   padding-bottom: 0; }
   .wp-block-image:not(".alignfull") {
-    padding: 1.5rem;
+    padding: 2rem;
     margin: 0 auto; }
   .wp-block-image.alignleft, .wp-block-image.alignright {
-    padding: 1.5rem; }
+    padding: 2rem; }
   .wp-block-image img {
     display: block;
     width: 100%; }
@@ -932,9 +931,11 @@ html {
 /**/
 .wp-block-cover-image {
   margin-top: 0;
-  margin-bottom: 0; }
-  .wp-block-cover-image.alignfull {
-    padding: 3em;
+  margin-bottom: 0;
+  padding: 4rem; }
+  .wp-block-cover-image.alignfull:first-child {
+    margin-top: 0;
+    max-width: 100%;
     height: 100vh; }
   .wp-block-cover-image h2 {
     font-size: 42px;
@@ -949,8 +950,8 @@ html {
 /* ! Gallery */
 /**/
 .wp-block-gallery {
-  padding-left: calc( 1.5rem - 8px);
-  padding-right: calc( 1.5rem - 8px); }
+  padding-left: calc( 2rem - 8px);
+  padding-right: calc( 2rem - 8px); }
   .wp-block-gallery.alignwide, .wp-block-gallery.alignfull {
     background: transparent;
     margin: -8px; }
@@ -959,7 +960,7 @@ html {
 /* ! Cover Text */
 /**/
 .wp-block-cover-text p {
-  padding: 1.5em 20px; }
+  padding: 2rem 2rem; }
 
 /**/
 /* ! Latest Posts */
@@ -968,7 +969,7 @@ ul.wp-block-latest-posts.alignwide,
 ul.wp-block-latest-posts.alignfull,
 ul.wp-block-latest-posts.is-grid.alignwide,
 ul.wp-block-latest-posts.is-grid.alignwide {
-  padding: 0 1.5rem; }
+  padding: 0 2rem; }
 
 /**/
 /* ! Table */
@@ -1034,7 +1035,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /**/
 .wp-block-separator {
   border-top: 1px solid #eee;
-  border-bottom: 1.5rem solid white;
+  border-bottom: 2rem solid white;
   margin-bottom: 0;
   margin-top: 0;
   padding: 0; }
@@ -1099,14 +1100,17 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 @media screen and (min-width: 940px) {
   .entry-content > * {
     margin: 0 10% 0 auto; }
-  .entry-content .alignwide,
+  .entry-content .wp-block-quote.is-large,
+  .entry-content .wp-block-pullquote.is-large,
   .entry-content .alignfull {
+    margin-left: auto;
     margin-right: 0; }
   .wp-block-gallery.alignwide {
-    margin: -8px -8px -8px auto; }
+    margin: -8px calc( 10% - 8px) -8px auto;
+    max-width: calc( 740px + 16px); }
   .wp-block-gallery.alignfull {
-    margin: -8px;
-    max-width: calc(100% + 16px); }
+    margin: -8px -8px -8px auto;
+    max-width: calc( $size__site-max--wide-width + 16px); }
   .wp-block-image.alignleft,
   .wp-block-image.alignright {
     margin-right: 0;
