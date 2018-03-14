@@ -1,75 +1,75 @@
 .entry-content > * {
+	background: $color__background-body;
 	margin: 0 auto;
 	max-width: $size__site-max-width;
-	padding: 1em;
+	padding-bottom: 1.5rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 }
 
 .entry-content > .alignwide {
 	max-width: 1100px;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .entry-content > .alignfull {
 	margin: 0;
 	max-width: 100%;
+	padding-top: 0;
+	padding-bottom: 0;
 	padding-left: 0;
 	padding-right: 0;
 }
 
-.entry-content ul,
-.entry-content ol {
-	max-width: $size__site-max-width;
-	list-style-position: inside;
+.entry-content > .alignwide + *,
+.entry-content > .alignfull + *,
+.entry-content > section + *,
+.entry-content > figure + * {
+	padding-top: 1.5rem;
 }
 
-.entry-content > p,
-.entry-content > ul,
-.entry-content > ol,
-.entry-content > blockquote {
-	padding: 1em;
-	margin: 0 auto;
-	background: $color__background-body;
-}
-
-.entry-content > h1,
-.entry-content > h2,
-.entry-content > h4,
-.entry-content > h5,
-.entry-content > h6 {
-	padding: 1rem;
-	margin-top: 0;
-	margin-bottom: 0;
-	background: $color__background-body;
+.entry-content > .alignwide + .alignwide,
+.entry-content > .alignfull + .alignfull,
+.entry-content > .alignwide + .alignfull,
+.entry-content > .alignfull + .alignwide {
+	padding-top: 0;
 }
 
 .entry-content > .rotate,
 .entry-content > h3 {
+	background: transparent;
 	color: $color__theme-background;
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	right: 5px;
+	right: 1rem;
+	text-align: right;
 	transform: rotate(-90deg) translate(0, -100%);
 	transform-origin: 100% 0;
 }
 
-.entry-content .rotate + p,
-.entry-content h3 + p,
-.entry-content p + p,
-.entry-content blockquote + p,
-.entry-content p + figure {
-	padding-top: 0;
+.entry-content > .rotate + *,
+.entry-content > h3 + * {
+	padding-right: 3.5rem;
 }
 
-.entry-content .rotate + p,
-.entry-content h3 + p {
-	padding-right: 3em;
+.entry-content ul,
+.entry-content ol {
+	list-style-position: inside;
 }
 
 /* */
 /* ! Quote */
 /* */
 
-.wp-block-quote {
+.wp-block-quote,
+.wp-block-pullquote {
+
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+
 	p {
 		font-size: 24px;
 		line-height: 34px;
@@ -122,14 +122,9 @@
 	padding-top: 0;
 	padding-bottom: 0;
 
-	&:not(".alignfull") {
-		padding: 1em;
-		margin: 0 auto;
-	}
-
 	&.alignleft,
 	&.alignright {
-		padding: 1em;
+		padding: 1.5rem;
 	}
 
 	img {
@@ -143,11 +138,12 @@
 /**/
 
 .wp-block-cover-image {
+
 	margin-top: 0;
 	margin-bottom: 0;
 
 	&.alignfull {
-		padding: 3em;
+		padding: 3rem;
 		height: 100vh;
 	}
 
@@ -156,6 +152,8 @@
 		font-weight: normal;
 		line-height: 51px;
 		max-width: 100%;
+		margin-bottom: 0;
+		margin-top: 0;
 		padding: 0;
 	}
 }
@@ -165,13 +163,11 @@
 /**/
 
 .wp-block-gallery {
-
-	&:not(.components-placeholder) {
-		margin: 0 auto;
+	&.alignwide,
+	&.alignfull {
+		background: transparent;
+		margin: -8px;
 	}
-
-	margin: 0 auto;
-	padding: 1rem;
 }
 
 /**/
@@ -179,7 +175,7 @@
 /**/
 
 .wp-block-cover-text p {
-	padding: 1.5em 20px;
+	padding: 1.5rem;
 }
 
 /**/
@@ -190,7 +186,7 @@ ul.wp-block-latest-posts.alignwide,
 ul.wp-block-latest-posts.alignfull,
 ul.wp-block-latest-posts.is-grid.alignwide,
 ul.wp-block-latest-posts.is-grid.alignwide {
-	padding: 0 20px;
+	padding: 0 1.5rem;
 }
 
 /**/
@@ -242,10 +238,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .wp-block-embed {
 
 	background: $color__background-body;
-	padding: 1em;
 
 	figcaption {
-		margin-top: .5em;
+		margin-top: .5rem;
 		text-align: center;
 		font-size: 13px;
 	}
@@ -283,11 +278,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /**/
 
 .wp-block-separator {
-	border-bottom: none;
+	border-top: 1px solid $color__background-pre;
+	border-bottom: 1.5rem solid $color__background-body;
 	margin-bottom: 0;
 	margin-top: 0;
-	padding-bottom: 0;
-	padding-top: 0;
+	padding: 0;
 }
 
 /**/
@@ -339,54 +334,19 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	background-color: $color__theme-background;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 740px) {
 
-	.entry-content > p,
-	.entry-content > ul,
-	.entry-content > ol,
-	.entry-content > blockquote {
-		padding: 2rem;
-	}
-
-	.entry-content > p,
-	.entry-content > ul,
-	.entry-content > ol,
-	.entry-content > blockquote,
-	.entry-content > .wp-block-separator,
-	.entry-content .wp-block-cover-image,
-	.entry-content .wp-block-gallery {
-		margin: 0 auto;
-	}
-
-	.entry-content > h1,
-	.entry-content > h2,
-	.entry-content > h4,
-	.entry-content > h5,
-	.entry-content > h6 {
-		padding: 2rem;
-	}
-
-	.entry-content .rotate + p,
-	.entry-content h3 + p {
-		margin-top: 3em;
-		padding-top: 3em;
-		padding-right: 2em;
+	.entry-content > * {
+		padding-left: 2rem;
+		padding-right: 2rem;
 	}
 
 	.entry-content > .rotate,
 	.entry-content > h3 {
-		color: $color__background-body;
-		margin: 3em 0 0;
-		max-width: 20vh;
-		position: absolute;
-		right: calc( 90% );
-		text-align: right;
+		right: calc( 50% - #{$size__site-max-width / 2} + 1rem );
 	}
 
-	*[class^="wp-block-embed"],
-	.wp-block-embed,
-	.wp-block-gallery,
-	.wp-block-video {
+	.wp-block-separator {
 		padding: 0;
 	}
 
@@ -395,16 +355,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	}
 
 	.wp-block-cover-text p {
-		padding: 1.5em 0;
-	}
-
-	.entry-content > * {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-
-	.wp-block-image:not(".alignfull") {
-		padding: 3em;
+		padding: 2rem 0;
 	}
 
 	.wp-block-cover-image.alignfull h2 {
@@ -416,24 +367,23 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 @media screen and (min-width: 940px) {
 
 	.entry-content > * {
-		margin: 1.5em 10% 1.5em auto;
-	}
-
-	.entry-content > p,
-	.entry-content > ul,
-	.entry-content > ol,
-	.entry-content > blockquote,
-	.entry-content > .wp-block-separator,
-	.entry-content > figure,
-	.entry-content > pre,
-	.entry-content .wp-block-cover-image,
-	.entry-content .wp-block-gallery {
 		margin: 0 10% 0 auto;
 	}
 
 	.entry-content .alignwide,
 	.entry-content .alignfull {
 		margin-right: 0;
+	}
+
+	.wp-block-gallery {
+
+		&.alignwide {
+			margin: -8px -8px -8px auto;
+		}
+
+		&.alignfull {
+			margin: -8px;
+		}
 	}
 
 	.wp-block-image.alignleft,
@@ -445,12 +395,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	.entry-content > .rotate,
 	.entry-content > h3 {
 		color: $color__background-body;
-		margin: 3em 0 0;
-		position: absolute;
 		right: calc( 10% + #{$size__site-max-width} );
-		max-width: 20vh;
 	}
 
+	.entry-content > .rotate + *,
+	.entry-content > h3 + * {
+		padding-right: 2em;
+	}
 }
 
 /**
