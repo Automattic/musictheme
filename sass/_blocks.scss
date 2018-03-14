@@ -27,10 +27,13 @@
 	padding-right: 0;
 }
 
+.entry-content > *:first-child,
 .entry-content > .alignwide + *,
 .entry-content > .alignfull + *,
 .entry-content > section + *,
-.entry-content > figure + * {
+.entry-content > figure + *,
+.entry-content > .wp-block-quote + *,
+.entry-content > .wp-block-pullquote + * {
 	padding-top: 1.5rem;
 }
 
@@ -71,6 +74,8 @@
 .wp-block-quote,
 .wp-block-pullquote {
 
+	border-top: 1px solid $color__background-pre;
+	border-bottom: 1px solid $color__background-pre;
 	padding-top: 1.5rem;
 	padding-bottom: 1.5rem;
 

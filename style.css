@@ -296,6 +296,9 @@ hr {
   height: 1px;
   margin-bottom: 1.5em; }
 
+blockquote > p {
+  margin: 0; }
+
 ul, ol {
   margin: 0 0 1.5em 3em; }
 
@@ -494,7 +497,7 @@ a {
   .comment-navigation,
   .posts-navigation,
   .post-navigation {
-    margin: 0 10% 1.5em auto; } }
+    margin: 0 10% 0 auto; } }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -691,7 +694,7 @@ html {
 
 .page-links {
   clear: both;
-  margin: 0 0 1.5em; }
+  margin: 0 0 1.5rem; }
 
 .entry-header {
   color: white;
@@ -729,16 +732,16 @@ html {
 
 .entry-footer {
   background: white;
-  margin: 0 auto 1.5em;
+  margin: 0 auto 1.5rem;
   max-width: 740px;
-  padding: 1em; }
+  padding: 1.5rem; }
 
 .entry-footer span {
-  margin-right: 1em; }
+  margin-right: 1rem; }
 
 @media screen and (min-width: 768px) {
   .entry-header {
-    padding: 3em; }
+    padding: 3rem; }
   .entry-title {
     color: white;
     font-size: 117px;
@@ -749,11 +752,11 @@ html {
     top: 0;
     right: 10%; }
   .entry-footer {
-    padding: 2em; } }
+    padding: 1.5rem 2rem; } }
 
 @media screen and (min-width: 940px) {
   .entry-footer {
-    margin: 0 10% 1.5em auto; } }
+    margin: 0 10% 1.5rem auto; } }
 
 /*--------------------------------------------------------------
 ## Comments
@@ -762,7 +765,7 @@ html {
   background: white;
   margin: 0 auto;
   max-width: 740px;
-  padding: 3em; }
+  padding: 1.5rem; }
 
 .comment-content a {
   word-wrap: break-word; }
@@ -779,7 +782,11 @@ html {
 
 @media screen and (min-width: 940px) {
   .comments-area {
-    margin: 0 10% 1.5em auto; } }
+    padding: 2rem; } }
+
+@media screen and (min-width: 940px) {
+  .comments-area {
+    margin: 0 10% 0 auto; } }
 
 /*--------------------------------------------------------------
 ## Footer
@@ -791,8 +798,8 @@ html {
   margin: 0; }
 
 .site-info {
-  margin: 1em auto;
-  padding: 0 1em;
+  margin: 1.5rem auto;
+  padding: 0 1.5rem;
   max-width: 740px; }
 
 /*--------------------------------------------------------------
@@ -823,10 +830,13 @@ html {
   padding-left: 0;
   padding-right: 0; }
 
+.entry-content > *:first-child,
 .entry-content > .alignwide + *,
 .entry-content > .alignfull + *,
 .entry-content > section + *,
-.entry-content > figure + * {
+.entry-content > figure + *,
+.entry-content > .wp-block-quote + *,
+.entry-content > .wp-block-pullquote + * {
   padding-top: 1.5rem; }
 
 .entry-content > .alignwide + .alignwide,
@@ -860,6 +870,8 @@ html {
 /* */
 .wp-block-quote,
 .wp-block-pullquote {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
   .wp-block-quote p,

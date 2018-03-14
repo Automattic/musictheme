@@ -19,6 +19,10 @@ hr {
 	margin-bottom: 1.5em;
 }
 
+blockquote > p {
+	margin: 0;
+}
+
 @import "lists";
 
 img {
