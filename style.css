@@ -720,7 +720,7 @@ html {
 
 .hfeed .page-header {
   background: black;
-  margin: 0 0 -8rem;
+  margin: 0 0 -6rem;
   max-width: 100%;
   min-height: 80vh; }
 
@@ -752,6 +752,7 @@ html {
   .singular .entry-header .entry-featured-image {
     margin: 0;
     opacity: 1;
+    position: absolute;
     right: 2rem;
     top: 20%;
     left: inherit;
@@ -783,7 +784,6 @@ html {
     line-height: 128px; }
   .singular .entry-header .entry-featured-image {
     max-width: 20%;
-    position: absolute;
     top: 0;
     right: 10%; } }
 
@@ -794,7 +794,7 @@ html {
     padding: 2rem; }
     .singular .entry-header, .singular
     .page-header {
-      margin: 0 0 -8rem; }
+      margin: 0 0 -6rem; }
   .entry-footer {
     margin: -2rem 10% 2rem auto; } }
 

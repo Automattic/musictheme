@@ -56,7 +56,7 @@
 
 .hfeed .page-header {
 	background: $color__theme-link;
-	margin: 0 0 -#{$size__horizontal-padding * 4};
+	margin: 0 0 -#{$size__horizontal-padding * 3};
 	max-width: 100%;
 	min-height: 80vh;
 }
@@ -97,6 +97,7 @@
 	.singular & {
 		margin: 0;
 		opacity: 1;
+		position: absolute;
 		right: $size__horizontal-padding;
 		top: 20%;
 		left: inherit;
@@ -144,7 +145,6 @@
 
 		.singular & {
 			max-width: 20%;
-			position: absolute;
 			top: 0;
 			right: 10%;
 		}
@@ -159,7 +159,7 @@
 		padding: $size__horizontal-padding;
 
 		.singular & {
-			margin: 0 0 -#{$size__horizontal-padding * 4};
+			margin: 0 0 -#{$size__horizontal-padding * 3};
 		}
 	}
 
