@@ -464,7 +464,9 @@ a {
     padding: .5em; }
 
 /* Small menu. */
-.menu-toggle,
+.menu-toggle {
+  display: none; }
+
 .main-navigation.toggled ul {
   display: block; }
 
