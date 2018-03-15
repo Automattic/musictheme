@@ -2,12 +2,18 @@
 ## Footer
 --------------------------------------------------------------*/
 .site-footer {
+	background: $color__theme-link;
 	margin: 0;
 }
 
 .site-info {
+	color: $color__background-body;
 	margin: $size__vertical-padding auto;
-	padding: 0 $size__horizontal-padding;
 	max-width: $size__site-max-width;
+	padding: 0 $size__horizontal-padding;
+
+	a {
+		color: $color__background-body;
+	}
 }
 

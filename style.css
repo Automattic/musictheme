@@ -837,12 +837,16 @@ html {
 ## Footer
 --------------------------------------------------------------*/
 .site-footer {
+  background: black;
   margin: 0; }
 
 .site-info {
+  color: white;
   margin: 2rem auto;
-  padding: 0 2rem;
-  max-width: 740px; }
+  max-width: 740px;
+  padding: 0 2rem; }
+  .site-info a {
+    color: white; }
 
 /*--------------------------------------------------------------
 # Blocks
