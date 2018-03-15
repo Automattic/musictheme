@@ -14,7 +14,7 @@ get_header(); ?>
 	<?php
 	while ( have_posts() ) : the_post();
 
-		get_template_part( 'template-parts/content', get_post_type() );
+		get_template_part( 'template-parts/content-single', get_post_type() );
 
 		the_post_navigation( array(
 			'prev_text' => '← %title',

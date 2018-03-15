@@ -24,14 +24,32 @@
 }
 
 .entry-header {
+
 	color: $color__background-body;
 	background: $color__theme-background;
+	margin: 0 auto;
+	min-height: 350px;
+	max-width: $size__site-max-width;
 	padding: $size__horizontal-padding;
+	position: relative;
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	min-height: 80vh;
+
+	.singular & {
+		margin: 0;
+		max-width: 100%;
+		min-height: 80vh;
+	}
+
+	.entry-header-wrap {
+		max-width: calc( 100% - #{$size__horizontal-padding * 2} );
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 }
 
 .entry-header a {
@@ -39,6 +57,7 @@
 }
 
 .entry-title {
+
 	color: $color__background-body;
 	font-size: 42px;
 	font-weight: normal;
@@ -46,6 +65,11 @@
 	margin: 0;
 	position: relative;
 	z-index: 2;
+
+	.singular & {
+		font-size: 42px;
+		line-height: 51px;
+	}
 }
 
 .entry-meta	{
@@ -55,12 +79,18 @@
 
 
 .entry-header .entry-featured-image {
-	margin: 0;
-	max-width: 50%;
-	position: absolute;
-	right: 0;
-	top: 20%;
-	z-index: 1;
+
+	margin: 0 auto;
+	max-width: 40%;
+
+	.singular & {
+		margin: 0;
+		right: $size__horizontal-padding;
+		top: 20%;
+		left: inherit;
+		transform: inherit;
+		z-index: 1;
+	}
 }
 
 .entry-footer {
@@ -82,15 +112,20 @@
 
 	.entry-title {
 		color: $color__background-body;
-		font-size: 117px;
-		line-height: 128px;
+
+		.singular & {
+			font-size: 117px;
+			line-height: 128px;
+		}
 	}
 
 	.entry-header .entry-featured-image {
-		max-width: 20%;
-		position: absolute;
-		top: 0;
-		right: 10%;
+		.singular & {
+			max-width: 20%;
+			position: absolute;
+			top: 0;
+			right: 10%;
+		}
 	}
 
 	.entry-footer {
@@ -99,6 +134,15 @@
 }
 
 @media screen and (min-width: 940px) {
+
+	.entry-header {
+		margin: 0 10% 0 auto;
+		padding: $size__horizontal-padding;
+
+		.singular & {
+			margin: 0;
+		}
+	}
 
 	.entry-footer {
 		margin: 0 10% $size__vertical-padding auto;

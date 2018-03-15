@@ -17,6 +17,12 @@ function musictheme_body_classes( $classes ) {
 		$classes[] = 'hfeed';
 	}
 
+	// Adds a class of singular to singular pages.
+	if ( is_singular() ) {
+
+		$classes[] = 'singular';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'musictheme_body_classes' );
