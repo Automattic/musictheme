@@ -3,7 +3,6 @@
 }
 
 .hentry {
-	background-color: $color__theme-link;
 	margin: 0;
 	position: relative;
 }
@@ -23,10 +22,11 @@
 	margin: 0 0 $size__vertical-padding;
 }
 
-.entry-header {
+.entry-header,
+.page-header {
 
 	color: $color__background-body;
-	background: $color__theme-background;
+	background: $color__theme-primary;
 	margin: 0 auto;
 	min-height: 350px;
 	max-width: $size__site-max-width;
@@ -39,6 +39,7 @@
 	align-items: flex-start;
 
 	.singular & {
+		background: $color__theme-link;
 		margin: 0;
 		max-width: 100%;
 		min-height: 80vh;
@@ -51,6 +52,13 @@
 		transform: translateY(-50%);
 		z-index: 2;
 	}
+}
+
+.hfeed .page-header {
+	background: $color__theme-link;
+	margin: 0 0 -#{$size__horizontal-padding * 4};
+	max-width: 100%;
+	min-height: 80vh;
 }
 
 .entry-header a {
@@ -78,7 +86,6 @@
 	z-index: 3;
 }
 
-
 .entry-header .entry-featured-image {
 
 	margin: 0 auto;
@@ -100,9 +107,9 @@
 
 .entry-footer {
 	background: $color__background-body;
-	margin: 0 auto $size__vertical-padding;
+	margin: -#{$size__vertical-padding} auto $size__vertical-padding;
 	max-width: $size__site-max-width;
-	padding: $size__horizontal-padding;
+	padding: $size__horizontal-padding $size__vertical-padding;
 }
 
 .entry-footer span {
@@ -111,11 +118,13 @@
 
 @media screen and (min-width: 768px) { // @media screen and (min-width: 37.5em) {
 
-	.entry-header {
+	.entry-header,
+	.page-header {
 		padding: $size__horizontal-padding;
 	}
 
 	.entry-title {
+
 		color: $color__background-body;
 
 		.singular & {
@@ -124,7 +133,13 @@
 		}
 	}
 
+	.hfeed .page-header .page-title {
+		font-size: 117px;
+		line-height: 128px;
+	}
+
 	.entry-header .entry-featured-image {
+
 		.singular & {
 			max-width: 20%;
 			position: absolute;
@@ -132,15 +147,12 @@
 			right: 10%;
 		}
 	}
-
-	.entry-footer {
-		padding: $size__vertical-padding $size__horizontal-padding;
-	}
 }
 
 @media screen and (min-width: 940px) {
 
-	.entry-header {
+	.entry-header,
+	.page-header {
 		margin: 0 10% 0 auto;
 		padding: $size__horizontal-padding;
 
@@ -150,6 +162,6 @@
 	}
 
 	.entry-footer {
-		margin: 0 10% $size__vertical-padding auto;
+		margin: -#{$size__vertical-padding} 10% $size__vertical-padding auto;
 	}
 }

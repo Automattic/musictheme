@@ -634,18 +634,14 @@ a {
   grid-area: next; }
 
 /**
- * Header
+ * Footer
  */
-.site-footer {
-  margin: 1.5em auto;
-  max-width: 740px; }
-
 body,
 html {
   background: #f18686; }
 
-.site-main {
-  background: black; }
+.site {
+  background: #383838; }
 
 /*--------------------------------------------------------------
 ## Header
@@ -654,7 +650,7 @@ html {
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-  background: #f18686;
+  background: black;
   color: white; }
 
 .site-branding {
@@ -680,7 +676,6 @@ html {
   display: block; }
 
 .hentry {
-  background-color: black;
   margin: 0;
   position: relative; }
 
@@ -696,7 +691,8 @@ html {
   clear: both;
   margin: 0 0 2rem; }
 
-.entry-header {
+.entry-header,
+.page-header {
   color: white;
   background: #f18686;
   margin: 0 auto;
@@ -708,16 +704,25 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start; }
-  .singular .entry-header {
+  .singular .entry-header, .singular
+  .page-header {
+    background: black;
     margin: 0;
     max-width: 100%;
     min-height: 80vh; }
-  .entry-header .entry-header-wrap {
+  .entry-header .entry-header-wrap,
+  .page-header .entry-header-wrap {
     max-width: calc( 100% - 4rem);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 2; }
+
+.hfeed .page-header {
+  background: black;
+  margin: 0 0 -8rem;
+  max-width: 100%;
+  min-height: 80vh; }
 
 .entry-header a {
   color: white; }
@@ -755,37 +760,41 @@ html {
 
 .entry-footer {
   background: white;
-  margin: 0 auto 2rem;
+  margin: -2rem auto 2rem;
   max-width: 740px;
-  padding: 2rem; }
+  padding: 2rem 2rem; }
 
 .entry-footer span {
   margin-right: 1rem; }
 
 @media screen and (min-width: 768px) {
-  .entry-header {
+  .entry-header,
+  .page-header {
     padding: 2rem; }
   .entry-title {
     color: white; }
     .singular .entry-title {
       font-size: 117px;
       line-height: 128px; }
+  .hfeed .page-header .page-title {
+    font-size: 117px;
+    line-height: 128px; }
   .singular .entry-header .entry-featured-image {
     max-width: 20%;
     position: absolute;
     top: 0;
-    right: 10%; }
-  .entry-footer {
-    padding: 2rem 2rem; } }
+    right: 10%; } }
 
 @media screen and (min-width: 940px) {
-  .entry-header {
+  .entry-header,
+  .page-header {
     margin: 0 10% 0 auto;
     padding: 2rem; }
-    .singular .entry-header {
+    .singular .entry-header, .singular
+    .page-header {
       margin: 0; }
   .entry-footer {
-    margin: 0 10% 2rem auto; } }
+    margin: -2rem 10% 2rem auto; } }
 
 /*--------------------------------------------------------------
 ## Comments
@@ -843,7 +852,9 @@ html {
   max-width: 740px;
   padding-bottom: 2rem;
   padding-left: 2rem;
-  padding-right: 2rem; }
+  padding-right: 2rem;
+  position: relative;
+  z-index: 1; }
 
 .entry-content > .alignwide {
   padding-bottom: 0;
@@ -877,6 +888,13 @@ html {
 .entry-content ol {
   list-style-position: inside; }
 
+.entry-content > h1,
+.entry-content > h2,
+.entry-content > h4,
+.entry-content > h5,
+.entry-content > h6 {
+  padding-top: 2rem; }
+
 .entry-content > .rotate,
 .entry-content > h3 {
   background: transparent;
@@ -887,7 +905,8 @@ html {
   right: 1rem;
   text-align: right;
   transform: rotate(-90deg) translate(0, -100%);
-  transform-origin: 100% 0; }
+  transform-origin: 100% 0;
+  z-index: 5; }
 
 .entry-content > .rotate + *,
 .entry-content > h3 + * {
@@ -1195,21 +1214,34 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .home .page .wp-block-cover-image.alignfull:first-child {
   align-items: center;
   justify-content: left;
-  background-color: #f18686;
+  background-color: black;
   background-size: 50% auto;
   background-position: 100% 40%;
   background-repeat: no-repeat;
-  padding: 12px; }
+  margin-bottom: -8rem;
+  padding: 12px;
+  position: relative;
+  z-index: 0; }
   .home .page .wp-block-cover-image.alignfull:first-child h2 {
     text-align: left; }
   .home .page .wp-block-cover-image.alignfull:first-child.has-background-dim.has-background-dim:before, .home .page .wp-block-cover-image.alignfull:first-child.has-background-dim.has-background-dim-50:before {
     background-color: transparent; }
+  .home .page .wp-block-cover-image.alignfull:first-child + * {
+    padding-top: 2rem; }
+  .home .page .wp-block-cover-image.alignfull:first-child + h3,
+  .home .page .wp-block-cover-image.alignfull:first-child + .rotate {
+    margin-top: 1.5em; }
 
 @media screen and (min-width: 768px) {
   .home .page .wp-block-cover-image.alignfull:first-child {
     background-size: 20% auto;
     background-position: 90% 0;
     padding: 10%; } }
+
+@media screen and (min-width: 940px) {
+  .home .page .wp-block-cover-image.alignfull:first-child + h3,
+  .home .page .wp-block-cover-image.alignfull:first-child + .rotate {
+    margin-top: 0; } }
 
 .home .page .entry-header {
   display: none; }

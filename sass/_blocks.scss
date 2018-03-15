@@ -9,6 +9,8 @@
 	padding-bottom: $size__vertical-padding;
 	padding-left: $size__horizontal-padding;
 	padding-right: $size__horizontal-padding;
+	position: relative;
+	z-index: 1;
 }
 
 .entry-content > .alignwide {
@@ -48,10 +50,18 @@
 	list-style-position: inside;
 }
 
+.entry-content > h1,
+.entry-content > h2,
+.entry-content > h4,
+.entry-content > h5,
+.entry-content > h6 {
+	padding-top: $size__vertical-padding;
+}
+
 .entry-content > .rotate,
 .entry-content > h3 {
 	background: transparent;
-	color: $color__theme-background;
+	color: $color__theme-primary;
 	margin: 0;
 	padding: 0;
 	position: absolute;
@@ -59,6 +69,7 @@
 	text-align: right;
 	transform: rotate(-90deg) translate(0, -100%);
 	transform-origin: 100% 0;
+	z-index: 5;
 }
 
 .entry-content > .rotate + *,
@@ -91,7 +102,7 @@
 	}
 
 	&.is-large {
-		background: $color__theme-background;
+		background: $color__theme-primary;
 		color: $color__background-body;
 		height: 50vh;
 		margin: 0 auto;
@@ -335,48 +346,48 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /**/
 
 .has-background-dim.has-background-dim-10:before {
-	background-color: rgba($color__theme-background, .1);
+	background-color: rgba($color__theme-primary, .1);
 }
 
 .has-background-dim.has-background-dim-20:before {
-	background-color: rgba($color__theme-background, .2);
+	background-color: rgba($color__theme-primary, .2);
 }
 
 .has-background-dim.has-background-dim-30:before {
-	background-color: rgba($color__theme-background, .3);
+	background-color: rgba($color__theme-primary, .3);
 }
 
 .has-background-dim.has-background-dim-40:before {
-	background-color: rgba($color__theme-background, .4);
+	background-color: rgba($color__theme-primary, .4);
 }
 
 .has-background-dim.has-background-dim:before,
 .has-background-dim.has-background-dim-50:before {
-	background-color: rgba($color__theme-background, .5);
+	background-color: rgba($color__theme-primary, .5);
 }
 
 .has-background-dim.has-background-dim-50:before {
-	background-color: rgba($color__theme-background, .5);
+	background-color: rgba($color__theme-primary, .5);
 }
 
 .has-background-dim.has-background-dim-60:before {
-	background-color: rgba($color__theme-background, .6);
+	background-color: rgba($color__theme-primary, .6);
 }
 
 .has-background-dim.has-background-dim-70:before {
-	background-color: rgba($color__theme-background, .7);
+	background-color: rgba($color__theme-primary, .7);
 }
 
 .has-background-dim.has-background-dim-80:before {
-	background-color: rgba($color__theme-background, .8);
+	background-color: rgba($color__theme-primary, .8);
 }
 
 .has-background-dim.has-background-dim-90:before {
-	background-color: rgba($color__theme-background, .9);
+	background-color: rgba($color__theme-primary, .9);
 }
 
 .has-background-dim.has-background-dim-100:before {
-	background-color: $color__theme-background;
+	background-color: $color__theme-primary;
 }
 
 @media screen and (min-width: 740px) {
@@ -499,13 +510,17 @@ ul.wp-block-latest-posts.is-grid.alignwide {
  * Cover Image (First Child)
  */
 .home .page .wp-block-cover-image.alignfull:first-child {
+
 	align-items: center;
 	justify-content: left;
-	background-color: $color__theme-background;
+	background-color: $color__theme-link;
 	background-size: 50% auto;
 	background-position: 100% 40%;
 	background-repeat: no-repeat;
+	margin-bottom: -#{$size__vertical-padding * 4};
 	padding: 12px;
+	position: relative;
+	z-index: 0;
 
 	h2 {
 		text-align: left;
@@ -515,13 +530,32 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	&.has-background-dim.has-background-dim-50:before {
 		background-color: transparent;
 	}
+
+	& + * {
+		padding-top: $size__vertical-padding;
+	}
+
+	& + h3,
+	& + .rotate {
+		margin-top: 1.5em;
+	}
 }
 
 @media screen and (min-width: 768px) {
+
 	.home .page .wp-block-cover-image.alignfull:first-child {
 		background-size: 20% auto;
 		background-position: 90% 0;
 		padding: 10%;
+	}
+}
+
+@media screen and (min-width: 940px) {
+	.home .page .wp-block-cover-image.alignfull:first-child {
+		& + h3,
+		& + .rotate {
+			margin-top: 0;
+		}
 	}
 }
 
