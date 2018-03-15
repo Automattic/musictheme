@@ -716,7 +716,8 @@ html {
     max-width: calc( 100% - 4rem);
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    z-index: 2; }
 
 .entry-header a {
   color: white; }
@@ -739,9 +740,13 @@ html {
 
 .entry-header .entry-featured-image {
   margin: 0 auto;
-  max-width: 40%; }
+  max-width: 40%;
+  opacity: .5;
+  position: relative;
+  z-index: 1; }
   .singular .entry-header .entry-featured-image {
     margin: 0;
+    opacity: 1;
     right: 2rem;
     top: 20%;
     left: inherit;

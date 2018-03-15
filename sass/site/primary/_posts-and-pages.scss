@@ -49,6 +49,7 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
+		z-index: 2;
 	}
 }
 
@@ -82,9 +83,13 @@
 
 	margin: 0 auto;
 	max-width: 40%;
+	opacity: .5;
+	position: relative;
+	z-index: 1;
 
 	.singular & {
 		margin: 0;
+		opacity: 1;
 		right: $size__horizontal-padding;
 		top: 20%;
 		left: inherit;
