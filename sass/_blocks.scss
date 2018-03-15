@@ -7,8 +7,8 @@
 	margin: 0 auto;
 	max-width: $size__site-max-width;
 	padding-bottom: $size__vertical-padding;
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
+	padding-left: $size__horizontal-padding;
+	padding-right: $size__horizontal-padding;
 }
 
 .entry-content > .alignwide {
@@ -135,6 +135,24 @@
 		margin: 0 auto;
 	}
 
+	figcaption {
+		margin-top: 0;
+		padding: 1rem;
+	}
+
+	&.alignfull {
+		position: relative;
+
+		figcaption {
+			color: $color__background-body;
+			bottom: 0;
+			padding: 1rem;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+		}
+	}
+
 	&.alignleft,
 	&.alignright {
 		padding: $size__vertical-padding;
@@ -195,6 +213,14 @@
 
 .wp-block-cover-text p {
 	padding: $size__vertical-padding $size__horizontal-padding;
+}
+
+/**/
+/* ! Preformatted Text */
+/**/
+
+.wp-block-preformatted {
+	padding-top: $size__vertical-padding;
 }
 
 /**/
@@ -369,6 +395,32 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		padding: 0;
 	}
 
+	.wp-block-image {
+
+		&.alignleft img,
+		&.alignright img {
+			max-width: 100%;
+		}
+
+		&.alignleft {
+			float: left;
+			margin-left: calc( ( 100vw - #{$size__site-max-width} ) / 2 );
+			margin-right: 0;
+		}
+
+		&.alignright {
+			float: right;
+			margin-left: 0;
+			margin-right: calc( ( 100vw - #{$size__site-max-width} ) / 2 );
+		}
+	}
+
+	.entry-content > .alignfull + .wp-block-gallery,
+	.wp-block-gallery {
+		padding-bottom: calc( 2rem - 8px);
+		padding-top: calc( 2rem - 8px);
+	}
+
 	.wp-block-gallery {
 		padding-left: calc( #{$size__vertical-padding} - 8px );
 		padding-right: calc( #{$size__vertical-padding} - 8px );
@@ -394,9 +446,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		margin: 0 10% 0 auto;
 	}
 
-	.entry-content .alignwide {
-	}
-
 	.entry-content .wp-block-quote.is-large,
 	.entry-content .wp-block-pullquote.is-large,
 	.entry-content .alignfull {
@@ -417,10 +466,21 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		}
 	}
 
-	.wp-block-image.alignleft,
-	.wp-block-image.alignright {
-		margin-right: 0;
-		margin-left: 0;
+	.wp-block-image {
+
+		&.alignleft img,
+		&.alignright img {
+			max-width: 100%;
+		}
+
+		&.alignleft {
+			margin-left: calc( 100vw - #{$size__site-max-width} - 10% );
+			margin-right: 0;
+		}
+
+		&.alignright {
+			margin-right: 10%;
+		}
 	}
 
 	.entry-content > .rotate,

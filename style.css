@@ -813,8 +813,8 @@ html {
   margin: 0 auto;
   max-width: 740px;
   padding-bottom: 2rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem; }
+  padding-left: 2rem;
+  padding-right: 2rem; }
 
 .entry-content > .alignwide {
   padding-bottom: 0;
@@ -920,6 +920,18 @@ html {
   .wp-block-image:not(".alignfull") {
     padding: 2rem;
     margin: 0 auto; }
+  .wp-block-image figcaption {
+    margin-top: 0;
+    padding: 1rem; }
+  .wp-block-image.alignfull {
+    position: relative; }
+    .wp-block-image.alignfull figcaption {
+      color: white;
+      bottom: 0;
+      padding: 1rem;
+      position: absolute;
+      text-align: center;
+      width: 100%; }
   .wp-block-image.alignleft, .wp-block-image.alignright {
     padding: 2rem; }
   .wp-block-image img {
@@ -961,6 +973,12 @@ html {
 /**/
 .wp-block-cover-text p {
   padding: 2rem 2rem; }
+
+/**/
+/* ! Preformatted Text */
+/**/
+.wp-block-preformatted {
+  padding-top: 2rem; }
 
 /**/
 /* ! Latest Posts */
@@ -1086,6 +1104,21 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     right: calc( 50% - 370px + 1rem); }
   .wp-block-separator {
     padding: 0; }
+  .wp-block-image.alignleft img,
+  .wp-block-image.alignright img {
+    max-width: 100%; }
+  .wp-block-image.alignleft {
+    float: left;
+    margin-left: calc( ( 100vw - 740px ) / 2);
+    margin-right: 0; }
+  .wp-block-image.alignright {
+    float: right;
+    margin-left: 0;
+    margin-right: calc( ( 100vw - 740px ) / 2); }
+  .entry-content > .alignfull + .wp-block-gallery,
+  .wp-block-gallery {
+    padding-bottom: calc( 2rem - 8px);
+    padding-top: calc( 2rem - 8px); }
   .wp-block-gallery {
     padding-left: calc( 2rem - 8px);
     padding-right: calc( 2rem - 8px); }
@@ -1111,10 +1144,14 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .wp-block-gallery.alignfull {
     margin: -8px -8px -8px auto;
     max-width: calc( $size__site-max--wide-width + 16px); }
-  .wp-block-image.alignleft,
+  .wp-block-image.alignleft img,
+  .wp-block-image.alignright img {
+    max-width: 100%; }
+  .wp-block-image.alignleft {
+    margin-left: calc( 100vw - 740px - 10%);
+    margin-right: 0; }
   .wp-block-image.alignright {
-    margin-right: 0;
-    margin-left: 0; }
+    margin-right: 10%; }
   .entry-content > .rotate,
   .entry-content > h3 {
     color: white;
