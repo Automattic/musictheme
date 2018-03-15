@@ -110,6 +110,8 @@
 	margin: -#{$size__vertical-padding} auto $size__vertical-padding;
 	max-width: $size__site-max-width;
 	padding: $size__horizontal-padding $size__vertical-padding;
+	position: relative;
+	z-index: 2;
 }
 
 .entry-footer span {
@@ -157,7 +159,7 @@
 		padding: $size__horizontal-padding;
 
 		.singular & {
-			margin: 0;
+			margin: 0 0 -#{$size__horizontal-padding * 4};
 		}
 	}
 

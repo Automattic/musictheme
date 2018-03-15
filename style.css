@@ -762,7 +762,9 @@ html {
   background: white;
   margin: -2rem auto 2rem;
   max-width: 740px;
-  padding: 2rem 2rem; }
+  padding: 2rem 2rem;
+  position: relative;
+  z-index: 2; }
 
 .entry-footer span {
   margin-right: 1rem; }
@@ -792,7 +794,7 @@ html {
     padding: 2rem; }
     .singular .entry-header, .singular
     .page-header {
-      margin: 0; }
+      margin: 0 0 -8rem; }
   .entry-footer {
     margin: -2rem 10% 2rem auto; } }
 
