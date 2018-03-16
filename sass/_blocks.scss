@@ -140,24 +140,34 @@
 	padding-top: 0;
 	padding-bottom: 0;
 
-	&:not(".alignfull") {
-		padding: $size__vertical-padding;
-		margin: 0 auto;
-	}
+	padding: $size__vertical-padding;
+	margin: 0 auto;
 
 	figcaption {
 		margin-top: 0;
-		padding: 1rem;
+		padding: 1rem 0;
+		text-align: left;
+	}
+
+	&.alignwide {
+
+		padding-top: 0;
+
+		figcaption {
+			padding: 1rem;
+		}
 	}
 
 	&.alignfull {
+
+		background: transparent;
+		padding: 0;
 		position: relative;
 
 		figcaption {
 			color: $color__background-body;
-			bottom: 0;
+			background: transparent;
 			padding: 1rem;
-			position: absolute;
 			text-align: center;
 			width: 100%;
 		}
@@ -455,6 +465,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	.entry-content > *,
 	.wp-block-quote.is-large {
 		margin: 0 10% 0 auto;
+	}
+
+	.entry-content > .alignfull {
+		margin-right: 0;
+		margin-left: auto;
 	}
 
 	.wp-block-gallery {

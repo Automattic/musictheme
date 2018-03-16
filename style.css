@@ -972,20 +972,25 @@ html {
 .wp-block-image {
   background: white;
   padding-top: 0;
-  padding-bottom: 0; }
-  .wp-block-image:not(".alignfull") {
-    padding: 2rem;
-    margin: 0 auto; }
+  padding-bottom: 0;
+  padding: 2rem;
+  margin: 0 auto; }
   .wp-block-image figcaption {
     margin-top: 0;
-    padding: 1rem; }
+    padding: 1rem 0;
+    text-align: left; }
+  .wp-block-image.alignwide {
+    padding-top: 0; }
+    .wp-block-image.alignwide figcaption {
+      padding: 1rem; }
   .wp-block-image.alignfull {
+    background: transparent;
+    padding: 0;
     position: relative; }
     .wp-block-image.alignfull figcaption {
       color: white;
-      bottom: 0;
+      background: transparent;
       padding: 1rem;
-      position: absolute;
       text-align: center;
       width: 100%; }
   .wp-block-image.alignleft, .wp-block-image.alignright {
@@ -1190,6 +1195,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .entry-content > *,
   .wp-block-quote.is-large {
     margin: 0 10% 0 auto; }
+  .entry-content > .alignfull {
+    margin-right: 0;
+    margin-left: auto; }
   .wp-block-gallery.alignwide {
     margin: -8px calc( 10% - 8px) -8px auto;
     max-width: calc( 740px + 16px); }
