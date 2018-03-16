@@ -84,49 +84,48 @@
 .wp-block-quote,
 .wp-block-pullquote {
 
-	border-top: 1px solid $color__background-pre;
-	border-bottom: 1px solid $color__background-pre;
 	padding-top: $size__vertical-padding;
 	padding-bottom: $size__vertical-padding;
 
+	& > *,
 	p {
+		border-left: .5rem solid $color__theme-primary;
+		padding-left: 1.5rem;
 		font-size: 24px;
 		line-height: 34px;
-		font-style: italic;
-		margin: 0 0 $size__vertical-padding;
+		font-style: normal;
+		margin: 0;
 	}
 
 	cite {
-		font-size: 15px;
-		line-height: 21px;
+		display: block;
+		font-size: 20px;
+		line-height: 22px;
+		margin: 0;
+		padding-bottom: .5rem;
+		padding-top: 1rem;
 	}
 
 	&.is-large {
-		background: $color__theme-primary;
-		color: $color__background-body;
-		height: 50vh;
 		margin: 0 auto;
-		max-width: $size__site-max--wide-width;
+		max-width: $size__site-max-width;
 		padding: $size__vertical-padding;
 		clear: both;
-		display: -ms-flexbox;
-		display: flex;
-		flex-direction: column;
-		-ms-flex-pack: center;
-		justify-content: center;
-		-ms-flex-align: center;
-		align-items: center;
 
 		p {
-			font-size: 42px;
+			border: none;
+			font-size: 36px;
 			font-weight: normal;
-			line-height: 51px;
+			line-height: 44px;
 			margin-bottom: .25rem;
+			padding-left: 0;
 		}
 
 		cite {
-			color: $color__background-body;
+			border: none;
 			margin-top: 0;
+			padding-left: 0;
+			text-align: left;
 		}
 	}
 }
@@ -453,15 +452,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 @media screen and (min-width: 940px) {
 
-	.entry-content > * {
+	.entry-content > *,
+	.wp-block-quote.is-large {
 		margin: 0 10% 0 auto;
-	}
-
-	.entry-content .wp-block-quote.is-large,
-	.entry-content .wp-block-pullquote.is-large,
-	.entry-content .alignfull {
-		margin-left: auto;
-		margin-right: 0;
 	}
 
 	.wp-block-gallery {

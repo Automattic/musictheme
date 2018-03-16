@@ -925,46 +925,46 @@ html {
 /* */
 .wp-block-quote,
 .wp-block-pullquote {
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
   padding-top: 2rem;
   padding-bottom: 2rem; }
+  .wp-block-quote > *,
   .wp-block-quote p,
+  .wp-block-pullquote > *,
   .wp-block-pullquote p {
+    border-left: 0.5rem solid #f18686;
+    padding-left: 1.5rem;
     font-size: 24px;
     line-height: 34px;
-    font-style: italic;
-    margin: 0 0 2rem; }
+    font-style: normal;
+    margin: 0; }
   .wp-block-quote cite,
   .wp-block-pullquote cite {
-    font-size: 15px;
-    line-height: 21px; }
+    display: block;
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0;
+    padding-bottom: .5rem;
+    padding-top: 1rem; }
   .wp-block-quote.is-large,
   .wp-block-pullquote.is-large {
-    background: #f18686;
-    color: white;
-    height: 50vh;
     margin: 0 auto;
-    max-width: 1100px;
+    max-width: 740px;
     padding: 2rem;
-    clear: both;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: column;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    clear: both; }
     .wp-block-quote.is-large p,
     .wp-block-pullquote.is-large p {
-      font-size: 42px;
+      border: none;
+      font-size: 36px;
       font-weight: normal;
-      line-height: 51px;
-      margin-bottom: .25rem; }
+      line-height: 44px;
+      margin-bottom: .25rem;
+      padding-left: 0; }
     .wp-block-quote.is-large cite,
     .wp-block-pullquote.is-large cite {
-      color: white;
-      margin-top: 0; }
+      border: none;
+      margin-top: 0;
+      padding-left: 0;
+      text-align: left; }
 
 /**/
 /* ! Image */
@@ -1187,13 +1187,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     line-height: 128px; } }
 
 @media screen and (min-width: 940px) {
-  .entry-content > * {
+  .entry-content > *,
+  .wp-block-quote.is-large {
     margin: 0 10% 0 auto; }
-  .entry-content .wp-block-quote.is-large,
-  .entry-content .wp-block-pullquote.is-large,
-  .entry-content .alignfull {
-    margin-left: auto;
-    margin-right: 0; }
   .wp-block-gallery.alignwide {
     margin: -8px calc( 10% - 8px) -8px auto;
     max-width: calc( 740px + 16px); }
