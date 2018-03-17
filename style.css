@@ -933,8 +933,6 @@ html {
   .wp-block-pullquote p {
     border-left: 0.25rem solid #f18686;
     padding-left: 1.5rem;
-    font-size: 24px;
-    line-height: 34px;
     font-style: normal;
     margin: 0; }
   .wp-block-quote cite,
@@ -953,13 +951,14 @@ html {
     .wp-block-quote.is-large p,
     .wp-block-pullquote.is-large p {
       border: none;
-      font-size: 36px;
+      font-size: 24px;
       font-weight: normal;
-      line-height: 44px;
+      line-height: 34px;
       margin-bottom: .25rem;
       padding-left: 0; }
     .wp-block-quote.is-large cite,
     .wp-block-pullquote.is-large cite {
+      font-size: 14px;
       border: none;
       margin-top: 0;
       padding-left: 0;

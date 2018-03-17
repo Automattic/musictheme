@@ -91,8 +91,6 @@
 	p {
 		border-left: .25rem solid $color__theme-primary;
 		padding-left: 1.5rem;
-		font-size: 24px;
-		line-height: 34px;
 		font-style: normal;
 		margin: 0;
 	}
@@ -113,14 +111,15 @@
 
 		p {
 			border: none;
-			font-size: 36px;
+			font-size: 24px;
 			font-weight: normal;
-			line-height: 44px;
+			line-height: 34px;
 			margin-bottom: .25rem;
 			padding-left: 0;
 		}
 
 		cite {
+			font-size: 14px;
 			border: none;
 			margin-top: 0;
 			padding-left: 0;
