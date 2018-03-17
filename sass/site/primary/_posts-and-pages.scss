@@ -42,7 +42,7 @@
 		background: $color__theme-link;
 		margin: 0;
 		max-width: 100%;
-		min-height: 80vh;
+		min-height: 100vh;
 	}
 
 	.entry-header-wrap {
@@ -56,9 +56,9 @@
 
 .hfeed .page-header {
 	background: $color__theme-link;
-	margin: 0 0 -#{$size__horizontal-padding * 3};
+	margin: 0 0 -#{$size__horizontal-padding};
 	max-width: 100%;
-	min-height: 80vh;
+	min-height: 100vh;
 }
 
 .entry-header a {
@@ -136,9 +136,13 @@
 		}
 	}
 
-	.hfeed .page-header .page-title {
-		font-size: 117px;
-		line-height: 128px;
+	.hfeed .page-header { 
+		margin: 0 0 -#{$size__horizontal-padding * 3};
+
+		.page-title {
+			font-size: 117px;
+			line-height: 128px;
+		}
 	}
 
 	.entry-header .entry-featured-image {

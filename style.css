@@ -716,7 +716,7 @@ html {
     background: black;
     margin: 0;
     max-width: 100%;
-    min-height: 80vh; }
+    min-height: 100vh; }
   .entry-header .entry-header-wrap,
   .page-header .entry-header-wrap {
     max-width: calc( 100% - 4rem);
@@ -727,9 +727,9 @@ html {
 
 .hfeed .page-header {
   background: black;
-  margin: 0 0 -6rem;
+  margin: 0 0 -2rem;
   max-width: 100%;
-  min-height: 80vh; }
+  min-height: 100vh; }
 
 .entry-header a {
   color: white; }
@@ -786,9 +786,11 @@ html {
     .singular .entry-title {
       font-size: 117px;
       line-height: 128px; }
-  .hfeed .page-header .page-title {
-    font-size: 117px;
-    line-height: 128px; }
+  .hfeed .page-header {
+    margin: 0 0 -6rem; }
+    .hfeed .page-header .page-title {
+      font-size: 117px;
+      line-height: 128px; }
   .singular .entry-header .entry-featured-image {
     max-width: 20%;
     top: 0;
@@ -1233,7 +1235,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   background-size: 50% auto;
   background-position: 100% 40%;
   background-repeat: no-repeat;
-  margin-bottom: -8rem;
+  margin-bottom: -2rem;
   padding: 12px;
   position: relative;
   z-index: 0; }
@@ -1251,6 +1253,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .home .page .wp-block-cover-image.alignfull:first-child {
     background-size: 20% auto;
     background-position: 90% 0;
+    margin-bottom: -8rem;
     padding: 10%; } }
 
 @media screen and (min-width: 940px) {
