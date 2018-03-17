@@ -1224,7 +1224,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .home .page .wp-block-cover-image.alignfull:first-child {
   align-items: center;
   justify-content: left;
-  background-color: black;
+  background-color: #f18686;
   background-size: 50% auto;
   background-position: 100% 40%;
   background-repeat: no-repeat;
@@ -1256,7 +1256,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .home .page .entry-header {
   display: none; }
 
-.home .page .site-header {
+.home .site-header {
   position: absolute;
   left: 0;
   right: 0;
