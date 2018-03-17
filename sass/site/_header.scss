@@ -4,6 +4,11 @@
 .site-header {
 	background: $color__theme-link;
 	color: $color__background-body;
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: transparent;
+	z-index: 500;
 }
 
 .site-branding {

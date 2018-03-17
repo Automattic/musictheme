@@ -653,7 +653,12 @@ html {
 --------------------------------------------------------------*/
 .site-header {
   background: black;
-  color: white; }
+  color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: 500; }
 
 .site-branding {
   padding: 1em; }
@@ -1255,13 +1260,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .home .page .entry-header {
   display: none; }
-
-.home .site-header {
-  position: absolute;
-  left: 0;
-  right: 0;
-  background-color: transparent;
-  z-index: 500; }
 
 /*--------------------------------------------------------------
 # Infinite scroll
