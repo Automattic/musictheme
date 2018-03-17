@@ -931,7 +931,7 @@ html {
   .wp-block-quote p,
   .wp-block-pullquote > *,
   .wp-block-pullquote p {
-    border-left: 0.5rem solid #f18686;
+    border-left: 0.25rem solid #f18686;
     padding-left: 1.5rem;
     font-size: 24px;
     line-height: 34px;
@@ -940,10 +940,9 @@ html {
   .wp-block-quote cite,
   .wp-block-pullquote cite {
     display: block;
-    font-size: 20px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 19px;
     margin: 0;
-    padding-bottom: .5rem;
     padding-top: 1rem; }
   .wp-block-quote.is-large,
   .wp-block-pullquote.is-large {
