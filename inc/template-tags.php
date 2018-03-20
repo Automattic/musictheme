@@ -135,3 +135,67 @@ if ( ! function_exists( 'musictheme_entry_footer' ) ) :
 		);
 	}
 endif;
+
+if ( ! function_exists( 'musictheme_reformat_comment' ) ) :
+/**
+ * Displays an optional post thumbnail.
+ *
+ * Wraps the post thumbnail in an anchor element on index views, or a div
+ * element when on single views.
+ */
+function musictheme_reformat_comment( $comment, $args, $depth ) {
+
+	$GLOBALS['comment'] = $comment;
+
+	if ( 'div' == $args['style'] ) {
+		$tag = 'div';
+		$add_below = 'comment';
+	} else {
+		$tag = 'li';
+		$add_below = 'div-comment';
+	}
+
+	switch ( $comment->comment_type ) :
+		case 'pingback' :
+		case 'trackback' :
+	?>
+	<<?php echo $tag; ?> <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+		<p><?php _e( 'Pingback:', 'musictheme' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'musictheme' ), '<span class="edit-link">', '</span>' ); ?></p>
+	<?php
+			break;
+		default :
+		global $post;
+	?>
+	<<?php echo $tag; ?> <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+		<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+			<div class="comment-content">
+				<?php if ( '0' == $comment->comment_approved ) : ?>
+					<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'musictheme' ); ?></p>
+				<?php endif; ?>
+				<?php comment_text(); ?>
+			</div><!-- .comment-content -->
+
+			<div class="reply">
+				<?php comment_reply_link( array_merge( $args, array( 'add_below' => 'div-comment', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+			</div><!-- .reply -->
+
+			<footer class="comment-meta">
+				<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+				<span class="comment-author vcard">
+					<?php printf( __( 'Posted by %s' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link() ) ); ?>
+				</span><!-- .comment-author -->
+
+				<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
+					<time datetime="<?php comment_time( 'c' ); ?>">
+						<?php printf( _x( 'on %1$s at %2$s', '1: date, 2: time' ), get_comment_date(), get_comment_time() ); ?>
+					</time>
+				</a>
+				<?php edit_comment_link( __( 'Edit', 'musictheme' ), '<span class="edit-link">', '</span>' ); ?>
+			</footer><!-- .comment-meta -->
+
+		</article><!-- .comment-body -->
+	<?php
+		break;
+	endswitch;
+}
+endif;

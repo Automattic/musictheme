@@ -862,8 +862,24 @@ html {
   margin: 0;
   padding: 2rem; }
 
+.comment-reply-title {
+  margin-top: 0; }
+
 .comment-body {
-  padding: 2rem; }
+  border-bottom: 1px solid #ccc;
+  margin: 0 2rem;
+  padding: 2rem 0; }
+  .comment-body .reply {
+    margin-bottom: 1rem; }
+
+.comment-meta {
+  color: #ccc;
+  font-style: italic; }
+  .comment-meta > * {
+    vertical-align: middle; }
+
+.comment-content p {
+  margin: 0 0 1rem; }
 
 .comment-content a {
   word-wrap: break-word; }
@@ -876,18 +892,26 @@ html {
   margin: 0;
   padding: 0; }
   .comment-list ol {
-    margin-left: 2rem; }
+    margin-left: 0;
+    padding-left: 0; }
+    .comment-list ol li article {
+      margin-left: 4rem; }
 
 .comment-respond {
-  padding: 2rem; }
+  border-top: 1px solid #ccc;
+  margin: -1px 2rem 0;
+  padding: 2rem 0; }
 
 @media screen and (min-width: 940px) {
   .comments-area {
     margin: 0 10% 0 auto;
     position: relative; }
+    .comments-area .comment {
+      position: relative; }
     .comments-area .avatar {
       position: absolute;
-      right: calc( 100% + 1rem); } }
+      left: -4rem;
+      top: 2rem; } }
 
 /*--------------------------------------------------------------
 ## Footer
