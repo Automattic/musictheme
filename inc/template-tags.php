@@ -8,38 +8,38 @@
  */
 
 if ( ! function_exists( 'musictheme_post_thumbnail' ) ) :
-/**
- * Displays an optional post thumbnail.
- *
- * Wraps the post thumbnail in an anchor element on index views, or a div
- * element when on single views.
- */
-function musictheme_post_thumbnail() {
-	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
-		return;
-	}
+	/**
+	 * Displays an optional post thumbnail.
+	 *
+	 * Wraps the post thumbnail in an anchor element on index views, or a div
+	 * element when on single views.
+	 */
+	function musictheme_post_thumbnail() {
+		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
+			return;
+		}
 
-	if ( is_singular() ) :
-	?>
-
-	<figure class="entry-featured-image">
-		<?php the_post_thumbnail(); ?>
-	</figure><!-- .post-thumbnail -->
-
-	<?php else : ?>
-
-	<a class="entry-featured-image" href="<?php the_permalink(); ?>" aria-hidden="true">
-		<?php
-			the_post_thumbnail( 'post-thumbnail', array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
+		if ( is_singular() ) :
 		?>
-	</a>
 
-	<?php endif; // End is_singular().
-}
+			<figure class="entry-featured-image">
+				<?php the_post_thumbnail(); ?>
+			</figure><!-- .post-thumbnail -->
+
+		<?php else : ?>
+
+			<a class="entry-featured-image" href="<?php the_permalink(); ?>" aria-hidden="true">
+				<?php
+					the_post_thumbnail( 'post-thumbnail', array(
+						'alt' => the_title_attribute( array(
+							'echo' => false,
+						) ),
+					) );
+				?>
+			</a>
+
+		<?php endif; // End is_singular().
+	}
 endif;
 
 if ( ! function_exists( 'musictheme_posted_on' ) ) :
@@ -182,17 +182,16 @@ function musictheme_reformat_comment( $comment, $args, $depth ) {
 			<footer class="comment-meta">
 				<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
 				<span class="comment-author vcard">
-					<?php printf( __( 'Posted by %s' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link() ) ); ?>
+					<?php printf( __( 'Posted by %s on' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link() ) ); ?>
 				</span><!-- .comment-author -->
 
 				<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 					<time datetime="<?php comment_time( 'c' ); ?>">
-						<?php printf( _x( 'on %1$s at %2$s', '1: date, 2: time' ), get_comment_date(), get_comment_time() ); ?>
+						<?php printf( _x( '%1$s at %2$s', '1: date, 2: time' ), get_comment_date(), get_comment_time() ); ?>
 					</time>
 				</a>
 				<?php edit_comment_link( __( 'Edit', 'musictheme' ), '<span class="edit-link">', '</span>' ); ?>
 			</footer><!-- .comment-meta -->
-
 		</article><!-- .comment-body -->
 	<?php
 		break;
