@@ -22,37 +22,6 @@
 }
 
 /**
- * Content
- */
-
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.nav-links {
-		display: inline-grid;
-		grid-auto-flow: column;
-		grid-gap: 0;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: repeat(1, 1fr);
-		grid-template-areas:
-			"previous next";
-	}
-
-	.nav-previous {
-		grid-area: previous;
-	}
-
-	.nav-next {
-		grid-area: next;
-	}
-}
-
-@media screen and (min-width: 37.5em) {
-
-}
-
-/**
  * Footer
  */
 

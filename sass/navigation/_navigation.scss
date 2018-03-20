@@ -16,8 +16,7 @@
 .posts-navigation,
 .post-navigation {
 
-	background: $color__theme-primary;
-	margin: 0 auto;
+	margin: 0 auto 2rem;
 	max-width: $size__site-max-width;
 
 	.site-main & {
@@ -25,16 +24,78 @@
 	}
 
 	.nav-links {
-		margin: 1em auto;
-		padding: 0 1em;
+		margin: 1rem auto;
+		padding: 0 1rem;
+
+		& > div:first-child {
+			margin-bottom: 1rem;
+		}
+	}
+
+	.nav-previous,
+	.nav-next {
+		width: 100%;
+	}
+
+	.nav-next a {
+
+		justify-content: flex-start;
+
+		& > svg {
+			order: -1;
+			margin: 0 1rem 0 0;
+		}
+	}
+
+	.nav-previous a > svg {
+		margin: 0 1rem 0 0;
+	}
+
+	a {
+		align-items: center;
+		color: $color__background-body;
+		display: flex;
+		font-style: italic;
+	}
+
+	a > svg {
+		flex: 0 0 auto;
+		height: 48px;
+		width: 48px;
 	}
 }
 
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 940px) { // 37.5em
 
 	.comment-navigation,
 	.posts-navigation,
 	.post-navigation {
-		margin: 0 10% 0 auto;
+		margin: 0 10% 2rem;
+		max-width: inherit;
+
+		.nav-links {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			padding: 0;
+
+			& > div:first-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.nav-next a {
+			justify-content: flex-end;
+
+			& > svg {
+				order: inherit;
+				margin: 0 0 0 1rem;
+			}
+		}
+
+		.nav-previous,
+		.nav-next {
+			width: 50%;
+		}
 	}
 }

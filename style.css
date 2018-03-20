@@ -482,8 +482,7 @@ a {
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-  background: #f18686;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   max-width: 740px; }
   .site-main .comment-navigation, .site-main
   .posts-navigation, .site-main
@@ -492,14 +491,79 @@ a {
   .comment-navigation .nav-links,
   .posts-navigation .nav-links,
   .post-navigation .nav-links {
-    margin: 1em auto;
-    padding: 0 1em; }
+    margin: 1rem auto;
+    padding: 0 1rem; }
+    .comment-navigation .nav-links > div:first-child,
+    .posts-navigation .nav-links > div:first-child,
+    .post-navigation .nav-links > div:first-child {
+      margin-bottom: 1rem; }
+  .comment-navigation .nav-previous,
+  .comment-navigation .nav-next,
+  .posts-navigation .nav-previous,
+  .posts-navigation .nav-next,
+  .post-navigation .nav-previous,
+  .post-navigation .nav-next {
+    width: 100%; }
+  .comment-navigation .nav-next a,
+  .posts-navigation .nav-next a,
+  .post-navigation .nav-next a {
+    justify-content: flex-start; }
+    .comment-navigation .nav-next a > svg,
+    .posts-navigation .nav-next a > svg,
+    .post-navigation .nav-next a > svg {
+      order: -1;
+      margin: 0 1rem 0 0; }
+  .comment-navigation .nav-previous a > svg,
+  .posts-navigation .nav-previous a > svg,
+  .post-navigation .nav-previous a > svg {
+    margin: 0 1rem 0 0; }
+  .comment-navigation a,
+  .posts-navigation a,
+  .post-navigation a {
+    align-items: center;
+    color: white;
+    display: flex;
+    font-style: italic; }
+  .comment-navigation a > svg,
+  .posts-navigation a > svg,
+  .post-navigation a > svg {
+    flex: 0 0 auto;
+    height: 48px;
+    width: 48px; }
 
 @media screen and (min-width: 940px) {
   .comment-navigation,
   .posts-navigation,
   .post-navigation {
-    margin: 0 10% 0 auto; } }
+    margin: 0 10% 2rem;
+    max-width: inherit; }
+    .comment-navigation .nav-links,
+    .posts-navigation .nav-links,
+    .post-navigation .nav-links {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: 0; }
+      .comment-navigation .nav-links > div:first-child,
+      .posts-navigation .nav-links > div:first-child,
+      .post-navigation .nav-links > div:first-child {
+        margin-bottom: 0; }
+    .comment-navigation .nav-next a,
+    .posts-navigation .nav-next a,
+    .post-navigation .nav-next a {
+      justify-content: flex-end; }
+      .comment-navigation .nav-next a > svg,
+      .posts-navigation .nav-next a > svg,
+      .post-navigation .nav-next a > svg {
+        order: inherit;
+        margin: 0 0 0 1rem; }
+    .comment-navigation .nav-previous,
+    .comment-navigation .nav-next,
+    .posts-navigation .nav-previous,
+    .posts-navigation .nav-next,
+    .post-navigation .nav-previous,
+    .post-navigation .nav-next {
+      width: 50%; } }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -611,29 +675,6 @@ a {
 
 .main-navigation {
   grid-area: navigation; }
-
-/**
- * Content
- */
-.comment-navigation .nav-links,
-.posts-navigation .nav-links,
-.post-navigation .nav-links {
-  display: inline-grid;
-  grid-auto-flow: column;
-  grid-gap: 0;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  grid-template-areas: "previous next"; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  grid-area: previous; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  grid-area: next; }
 
 /**
  * Footer
@@ -813,7 +854,15 @@ html {
 .comments-area {
   background: white;
   margin: 0 auto;
-  max-width: 740px;
+  max-width: 740px; }
+
+.comments-title {
+  background: black;
+  color: white;
+  margin: 0;
+  padding: 2rem; }
+
+.comment-body {
   padding: 2rem; }
 
 .comment-content a {
@@ -829,13 +878,16 @@ html {
   .comment-list ol {
     margin-left: 2rem; }
 
-@media screen and (min-width: 940px) {
-  .comments-area {
-    padding: 2rem; } }
+.comment-respond {
+  padding: 2rem; }
 
 @media screen and (min-width: 940px) {
   .comments-area {
-    margin: 0 10% 0 auto; } }
+    margin: 0 10% 0 auto;
+    position: relative; }
+    .comments-area .avatar {
+      position: absolute;
+      right: calc( 100% + 1rem); } }
 
 /*--------------------------------------------------------------
 ## Footer

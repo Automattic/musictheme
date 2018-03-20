@@ -2,12 +2,23 @@
 	background: $color__background-body;
 	margin: 0 auto;
 	max-width: $size__site-max-width;
-	padding: $size__vertical-padding;
+}
+
+.comments-title {
+	background: $color__theme-link;
+	color: $color__background-body;
+	margin: 0;
+	padding: $size__horizontal-padding;
+}
+
+.comment-body {
+	padding: $size__horizontal-padding;
 }
 
 .comment-content a {
 	word-wrap: break-word;
 }
+
 .bypostauthor {
 	display: block;
 }
@@ -22,15 +33,20 @@
 	}
 }
 
-@media screen and (min-width: 940px) {
-	.comments-area {
-		padding: $size__vertical-padding;
-	}
+.comment-respond {
+	padding: $size__horizontal-padding;
 }
 
 @media screen and (min-width: 940px) {
 
 	.comments-area {
+
 		margin: 0 10% 0 auto;
+		position: relative;
+
+		.avatar {
+			position: absolute;
+			right: calc( 100% + 1rem );
+		}
 	}
 }
