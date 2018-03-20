@@ -34,6 +34,18 @@
         </g>
     </g>
 </symbol>
+<symbol id="icon-reply" viewBox="0 0 17 16">
+	<title>reply</title>
+	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<g transform="translate(-324.000000, -2550.000000)" fill="#777777" fill-rule="nonzero">
+			<g transform="translate(228.000000, 2331.000000)">
+				<g transform="translate(104.500000, 227.000000) rotate(-180.000000) translate(-104.500000, -227.000000) translate(96.000000, 219.000000)">
+					<path d="M11,4 L3.828,4 L6.414,1.414 L5,0 L0,5 L5,10 L6.414,8.586 L3.828,6 L11,6 C13.206,6 15,7.794 15,10 C15,12.206 13.206,14 11,14 L9,14 L9,16 L11,16 C14.314,16 17,13.314 17,10 C17,6.686 14.314,4 11,4 Z" id="Shape"></path>
+				</g>
+			</g>
+		</g>
+	</g>
+</symbol>
 <symbol id="icon-tag" viewBox="0 0 32 32">
 <title>tag</title>
 <path d="M22.6 8.6c-0.4-0.4-0.8-0.6-1.4-0.6h-15.2c-1 0-2 1-2 2v12c0 1.2 1 2 2 2h15.2c0.6 0 1-0.2 1.4-0.6l7.4-7.4-7.4-7.4zM20 18c-1 0-2-1-2-2s1-2 2-2 2 1 2 2-1 2-2 2z"></path>

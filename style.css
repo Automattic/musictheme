@@ -875,6 +875,8 @@ html {
 .comment-meta {
   color: #ccc;
   font-style: italic; }
+  .comment-meta .comment-author {
+    margin-left: .5rem; }
   .comment-meta > * {
     vertical-align: middle; }
 
@@ -894,8 +896,30 @@ html {
   .comment-list ol {
     margin-left: 0;
     padding-left: 0; }
-    .comment-list ol li article {
-      margin-left: 4rem; }
+  .comment-list .comment .reply-indicator {
+    position: absolute;
+    top: 2rem; }
+    .comment-list .comment .reply-indicator svg {
+      height: 1rem;
+      width: 1rem; }
+  .comment-list .children .comment {
+    position: relative; }
+  .comment-list .children .depth-2 article {
+    margin-left: 4rem; }
+  .comment-list .children .depth-2 .reply-indicator {
+    left: 2rem; }
+  .comment-list .children .depth-3 article {
+    margin-left: 6rem; }
+  .comment-list .children .depth-3 .reply-indicator {
+    left: 4rem; }
+  .comment-list .children .depth-4 article {
+    margin-left: 8rem; }
+  .comment-list .children .depth-4 .reply-indicator {
+    left: 6rem; }
+  .comment-list .children .depth-5 article {
+    margin-left: 10rem; }
+  .comment-list .children .depth-5 .reply-indicator {
+    left: 8rem; }
 
 .comment-respond {
   border-top: 1px solid #ccc;
@@ -911,7 +935,9 @@ html {
     .comments-area .avatar {
       position: absolute;
       left: -4rem;
-      top: 2rem; } }
+      top: 2rem; }
+  .comment-meta .comment-author {
+    margin-left: 0; } }
 
 /*--------------------------------------------------------------
 ## Footer

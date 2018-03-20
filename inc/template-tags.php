@@ -167,6 +167,9 @@ function musictheme_reformat_comment( $comment, $args, $depth ) {
 		global $post;
 	?>
 	<<?php echo $tag; ?> <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+		<?php if ( $depth > 1 ) { ?>
+		<span class="reply-indicator"><?php echo musictheme_get_svg( array( 'icon' => 'reply' ) ); ?></span>
+		<?php } ?>
 		<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 			<div class="comment-content">
 				<?php if ( '0' == $comment->comment_approved ) : ?>
