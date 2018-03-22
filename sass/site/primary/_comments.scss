@@ -26,7 +26,6 @@
 }
 
 .comment-meta {
-
 	color: $color__background-hr;
 	font-style: italic;
 
@@ -52,7 +51,6 @@
 }
 
 .comment-list {
-
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -123,15 +121,13 @@
 }
 
 .comment-respond {
-	border-top: 1px solid $color__background-hr;
-	margin: -1px $size__vertical-padding 0;
+	margin: 0 $size__vertical-padding;
 	padding: $size__horizontal-padding 0;
 }
 
 @media screen and (min-width: 940px) {
 
 	.comments-area {
-
 		margin: 0 10% 0 auto;
 		position: relative;
 

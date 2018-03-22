@@ -48,9 +48,16 @@
 	.entry-header-wrap {
 		max-width: calc( 100% - #{$size__horizontal-padding * 2} );
 		position: absolute;
+		left: 50%;
 		top: 50%;
-		transform: translateY(-50%);
+		transform: translate(-50%, -50%);
 		z-index: 2;
+
+		.singular & {
+			margin: 0 auto;
+			max-width: 920px;
+			width: 100%;
+		}
 	}
 }
 
@@ -136,7 +143,7 @@
 		}
 	}
 
-	.hfeed .page-header { 
+	.hfeed .page-header {
 		margin: 0 0 -#{$size__horizontal-padding * 3};
 
 		.page-title {
@@ -161,10 +168,6 @@
 	.page-header {
 		margin: 0 10% 0 auto;
 		padding: $size__horizontal-padding;
-
-		.singular & {
-			margin: 0 0 -#{$size__horizontal-padding * 3};
-		}
 	}
 
 	.entry-footer {

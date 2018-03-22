@@ -465,6 +465,14 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		margin: 0 10% 0 auto;
 	}
 
+	.singular .entry-content {
+		margin-top: -#{$size__horizontal-padding * 3};
+
+		& > .alignfull:first-child {
+			margin-top: #{$size__horizontal-padding * 3};
+		}
+	}
+
 	.entry-content > .alignfull {
 		margin-right: 0;
 		margin-left: auto;

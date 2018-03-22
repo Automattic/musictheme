@@ -762,9 +762,15 @@ html {
   .page-header .entry-header-wrap {
     max-width: calc( 100% - 4rem);
     position: absolute;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     z-index: 2; }
+    .singular .entry-header .entry-header-wrap, .singular
+    .page-header .entry-header-wrap {
+      margin: 0 auto;
+      max-width: 920px;
+      width: 100%; }
 
 .hfeed .page-header {
   background: black;
@@ -842,9 +848,6 @@ html {
   .page-header {
     margin: 0 10% 0 auto;
     padding: 2rem; }
-    .singular .entry-header, .singular
-    .page-header {
-      margin: 0 0 -6rem; }
   .entry-footer {
     margin: -2rem 10% 2rem auto; } }
 
@@ -922,8 +925,7 @@ html {
     left: 8rem; }
 
 .comment-respond {
-  border-top: 1px solid #ccc;
-  margin: -1px 2rem 0;
+  margin: 0 2rem;
   padding: 2rem 0; }
 
 @media screen and (min-width: 940px) {
@@ -1302,6 +1304,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .entry-content > *,
   .wp-block-quote.is-large {
     margin: 0 10% 0 auto; }
+  .singular .entry-content {
+    margin-top: -6rem; }
+    .singular .entry-content > .alignfull:first-child {
+      margin-top: 6rem; }
   .entry-content > .alignfull {
     margin-right: 0;
     margin-left: auto; }
