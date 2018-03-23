@@ -1095,6 +1095,15 @@ html {
       text-align: left; }
 
 /**/
+/* ! Subhead */
+/**/
+p.wp-block-subhead {
+  opacity: 1;
+  font-size: 1em;
+  margin-top: -1.3333333333rem;
+  color: #666; }
+
+/**/
 /* ! Image */
 /**/
 .wp-block-image {
@@ -1113,7 +1122,7 @@ html {
       padding: 1rem; }
   .wp-block-image.alignfull {
     background: transparent;
-    padding: 0;
+    padding: 2rem 0;
     position: relative; }
     .wp-block-image.alignfull figcaption {
       color: white;
@@ -1154,6 +1163,8 @@ html {
   padding-left: calc( 2rem - 8px);
   padding-right: calc( 2rem - 8px); }
   .wp-block-gallery.alignwide, .wp-block-gallery.alignfull {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     background: transparent;
     margin: -8px; }
 
