@@ -772,6 +772,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
     min-height: 350px;
     z-index: 2; }
     .singular .entry-header .entry-header-wrap {
@@ -823,19 +824,31 @@ html {
   display: block;
   line-height: 0;
   margin: 0 auto;
-  max-width: 40%;
+  width: 100%;
+  height: 350px;
   opacity: .5;
-  position: relative;
-  z-index: 1; }
+  padding: 2rem 0;
+  position: absolute;
+  z-index: 1;
+  left: 0; }
+  .entry-header .entry-featured-image img {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    width: auto; }
   .singular .entry-header .entry-featured-image {
     margin: 0;
     opacity: 1;
     position: absolute;
-    right: 2rem;
+    right: 0;
     top: 20%;
     left: inherit;
     transform: inherit;
+    width: 50%;
     z-index: 1; }
+    .singular .entry-header .entry-featured-image img {
+      height: auto;
+      margin: inherit; }
 
 .entry-footer {
   margin-left: auto;

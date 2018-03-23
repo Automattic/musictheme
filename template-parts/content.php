@@ -19,8 +19,8 @@
 			</div><!-- .entry-meta -->
 			<?php
 			endif; ?>
+			<?php musictheme_post_thumbnail( 'medium' ); ?>
 		</div>
-		<?php // musictheme_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
