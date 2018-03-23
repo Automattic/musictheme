@@ -52,6 +52,8 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php musictheme_entry_footer(); ?>
+		<div class="entry-footer-wrap">
+			<?php musictheme_entry_footer(); ?>
+		</div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

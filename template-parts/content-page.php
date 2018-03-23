@@ -27,6 +27,7 @@
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
+			<div class="entry-footer-wrap">
 			<?php
 				edit_post_link(
 					sprintf(
@@ -45,6 +46,7 @@
 					'</span>'
 				);
 			?>
+			</div>
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

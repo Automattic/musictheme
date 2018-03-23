@@ -1,7 +1,4 @@
 .comments-area {
-	background: $color__background-body;
-	margin: 0 auto;
-	max-width: $size__site-max-width;
 }
 
 .comments-title {
@@ -121,15 +118,25 @@
 }
 
 .comment-respond {
-	margin: 0 $size__vertical-padding;
-	padding: $size__horizontal-padding 0;
+	background: $color__background-body;
+    margin-left: auto;
+    margin-right: auto;
+	max-width: $size__site-max-width;
+	width: 100%;
+	padding: $size__vertical-padding $size__horizontal-padding;
 }
 
 @media screen and (min-width: 940px) {
 
 	.comments-area {
-		margin: 0 10% 0 auto;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: $size__site-max-width-wide;
 		position: relative;
+
+		.comment-respond {
+			margin: 0 $size__max-width-wide-margin 0 auto;
+		}
 
 		.comment {
 			position: relative;
