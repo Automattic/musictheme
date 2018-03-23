@@ -159,7 +159,7 @@
 	&.alignfull {
 
 		background: transparent;
-		padding: 0;
+		padding: $size__vertical-padding 0;
 		position: relative;
 
 		figcaption {
@@ -220,6 +220,8 @@
 
 	&.alignwide,
 	&.alignfull {
+		padding-top: $size__vertical-padding;
+		padding-bottom: $size__vertical-padding;
 		background: transparent;
 		margin: -8px;
 	}
