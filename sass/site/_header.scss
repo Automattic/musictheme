@@ -11,8 +11,13 @@
 	z-index: 500;
 }
 
+.site-header-wrap {
+	max-width: $size__site-max--wide-width;
+	padding: 0 $size__horizontal-padding;
+}
+
 .site-branding {
-	padding: 1em;
+	padding: 1em 0;
 }
 
 .site-title {

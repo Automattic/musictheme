@@ -195,7 +195,7 @@
 	&.alignfull:first-child {
 		margin-top: 0;
 		max-width: 100%;
-		height: 100vh;
+		min-height: 100vh;
 	}
 
 	h2 {
@@ -465,14 +465,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		margin: 0 10% 0 auto;
 	}
 
-	.singular .entry-content {
-		margin-top: -#{$size__horizontal-padding * 3};
-
-		& > .alignfull:first-child {
-			margin-top: #{$size__horizontal-padding * 3};
-		}
-	}
-
 	.entry-content > .alignfull {
 		margin-right: 0;
 		margin-left: auto;
@@ -523,7 +515,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /**
  * Cover Image (First Child)
  */
-.home .page .wp-block-cover-image.alignfull:first-child {
+.home.page .wp-block-cover-image.alignfull:first-child {
 
 	align-items: center;
 	justify-content: left;
@@ -532,12 +524,16 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	background-position: 100% 40%;
 	background-repeat: no-repeat;
 	margin-bottom: -#{$size__vertical-padding};
-	padding: 12px;
+	padding: 0;
 	position: relative;
 	z-index: 0;
 
 	h2 {
 		text-align: left;
+		margin: 0 auto;
+		max-width: $size__site-max--wide-width;
+		padding: 0 $size__horizontal-padding;
+		width: 100%;
 	}
 
 	&.has-background-dim.has-background-dim:before,
@@ -557,16 +553,16 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 @media screen and (min-width: 768px) {
 
-	.home .page .wp-block-cover-image.alignfull:first-child {
+	.home.page .wp-block-cover-image.alignfull:first-child {
 		background-size: 20% auto;
 		background-position: 90% 0;
 		margin-bottom: -#{$size__vertical-padding * 4};
-		padding: 10%;
+		padding: 10% 0;
 	}
 }
 
 @media screen and (min-width: 940px) {
-	.home .page .wp-block-cover-image.alignfull:first-child {
+	.home.page .wp-block-cover-image.alignfull:first-child {
 		& + h3,
 		& + .rotate {
 			margin-top: 0;
@@ -574,6 +570,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	}
 }
 
-.home .page .entry-header {
+.home.page .entry-header {
 	display: none;
 }

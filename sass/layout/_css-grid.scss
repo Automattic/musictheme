@@ -2,7 +2,7 @@
  * Header
  */
 
-.site-header {
+.site-header-wrap {
 	display: grid;
 	grid-auto-flow: dense;
 	grid-gap: 0;
@@ -11,6 +11,9 @@
 	grid-template-areas:
 		"branding navigation navigation"
 		"branding navigation navigation";
+	margin: 0 auto;
+	max-width: $size__site-max--wide-width;
+	width: 100%;
 }
 
 .site-branding {
