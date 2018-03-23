@@ -1076,6 +1076,15 @@ html {
       text-align: left; }
 
 /**/
+/* ! Subhead */
+/**/
+p.wp-block-subhead {
+  opacity: 1;
+  font-size: 1em;
+  margin-top: -1.3333333333rem;
+  color: #666; }
+
+/**/
 /* ! Image */
 /**/
 .wp-block-image {
@@ -1114,7 +1123,7 @@ html {
 .wp-block-cover-image {
   margin-top: 0;
   margin-bottom: 0;
-  padding: 2rem; }
+  padding: 4rem; }
   .wp-block-cover-image.alignfull:first-child {
     margin-top: 0;
     max-width: 100%;

@@ -129,6 +129,17 @@
 }
 
 /**/
+/* ! Subhead */
+/**/
+
+p.wp-block-subhead {
+	opacity: 1;
+	font-size: 1em;
+	margin-top: -#{ $size__vertical-padding / 1.5 };
+	color: $color__text-input;
+}
+
+/**/
 /* ! Image */
 /**/
 
