@@ -567,7 +567,7 @@ a {
   .posts-navigation .nav-next,
   .post-navigation .nav-previous,
   .post-navigation .nav-next {
-    width: 50%; } }
+    flex: 1 1 50%; } }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -903,10 +903,19 @@ html {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comments-title,
+.comment-list,
+.comment-respond {
+  background: white;
+  margin: 0 auto;
+  max-width: 740px;
+  width: 100%;
+  padding: 2rem 2rem; }
+
 .comments-title {
   background: black;
   color: white;
-  margin: 0;
+  margin: 0 auto;
   padding: 2rem; }
 
 .comment-reply-title {
@@ -938,7 +947,6 @@ html {
 
 .comment-list {
   list-style: none;
-  margin: 0;
   padding: 0; }
   .comment-list ol {
     margin-left: 0;
@@ -968,22 +976,16 @@ html {
   .comment-list .children .depth-5 .reply-indicator {
     left: 8rem; }
 
-.comment-respond {
-  background: white;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 740px;
-  width: 100%;
-  padding: 2rem 2rem; }
-
 @media screen and (min-width: 940px) {
+  .comments-title,
+  .comment-list,
+  .comment-respond {
+    margin: 0 10% 0 auto; }
   .comments-area {
     margin-left: auto;
     margin-right: auto;
     max-width: 1100px;
     position: relative; }
-    .comments-area .comment-respond {
-      margin: 0 10% 0 auto; }
     .comments-area .comment {
       position: relative; }
     .comments-area .avatar {
