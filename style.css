@@ -761,7 +761,7 @@ html {
   .singular .entry-header, .singular
   .page-header {
     background: black;
-    margin: 0;
+    margin: 0 0 -6rem;
     max-width: 100%;
     min-height: 100vh; }
   .entry-header .entry-header-wrap,
