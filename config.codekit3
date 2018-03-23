@@ -91,6 +91,13 @@
 		"oAP": "\/functions.php",
 		"oF": 0
 		},
+	"\/header.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/header.php",
+		"oF": 0
+		},
 	"\/inc\/custom-header.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -131,6 +138,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/inc\/template-tags.php",
+		"oF": 0
+		},
+	"\/index.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/index.php",
 		"oF": 0
 		},
 	"\/js\/customizer.js": {
@@ -233,6 +247,19 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/sass\/_blocks.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/_blocks.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/sass\/_normalize.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -333,6 +360,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/layout\/_content-sidebar.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/layout\/_css-grid.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/layout\/_css-grid.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -467,6 +507,32 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/sass\/navigation\/_menus.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/navigation\/_menus.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/navigation\/_navigation.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/navigation\/_navigation.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/sass\/shop\/_checkout.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -545,6 +611,32 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/sass\/site\/_footer.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/site\/_footer.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/site\/_header.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/site\/_header.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/sass\/site\/_site.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -554,6 +646,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/site\/_site.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/site\/primary\/_comments.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/site\/primary\/_comments.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -649,6 +754,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/sass\/variables-site\/_structure.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/variables-site\/_structure.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/sass\/variables-site\/_typography.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -720,11 +838,25 @@
 		"oAP": "\/template-parts\/content-none.php",
 		"oF": 0
 		},
+	"\/template-parts\/content-page.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/content-page.php",
+		"oF": 0
+		},
 	"\/template-parts\/content-search.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/template-parts\/content-search.php",
+		"oF": 0
+		},
+	"\/template-parts\/content-single.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/content-single.php",
 		"oF": 0
 		},
 	"\/woocommerce.css": {
