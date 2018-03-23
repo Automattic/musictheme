@@ -790,7 +790,6 @@ html {
   display: flex;
   align-items: center; }
   .hfeed .page-header .page-title {
-    max-width: 1100px;
     width: 100%;
     margin: 0 auto;
     padding: 0 2rem; }
@@ -893,6 +892,8 @@ html {
     right: 10%; } }
 
 @media screen and (min-width: 940px) {
+  .hfeed .page-header .page-title {
+    max-width: 1100px; }
   .entry-header {
     margin-left: auto;
     margin-right: auto;

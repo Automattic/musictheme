@@ -74,7 +74,6 @@
 	align-items: center;
 
 	.page-title {
-		max-width: $size__site-max-width-wide;
 		width: 100%;
 		margin: 0 auto;
 		padding: 0 $size__horizontal-padding;
@@ -216,6 +215,10 @@
 }
 
 @media screen and (min-width: 940px) {
+
+	.hfeed .page-header .page-title {
+		max-width: $size__site-max-width-wide;
+	}
 
 	.entry-header {
 		margin-left: auto;
