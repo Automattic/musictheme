@@ -50,6 +50,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		position: relative;
 		min-height: 350px;
 		z-index: 2;
 
@@ -117,20 +118,36 @@
 	display: block;
 	line-height: 0;
 	margin: 0 auto;
-	max-width: 40%;
+	width: 100%;
+	height: 350px;
 	opacity: .5;
-	position: relative;
-	z-index: 1;
+	padding: $size__vertical-padding 0;
+	position: absolute;
+    z-index: 1;
+    left: 0;
+
+	img {
+		display: block;
+		height: 100%;
+		margin: 0 auto;
+		width: auto;
+	}
 
 	.singular & {
 		margin: 0;
 		opacity: 1;
 		position: absolute;
-		right: $size__horizontal-padding;
+		right: 0;
 		top: 20%;
 		left: inherit;
 		transform: inherit;
+		width: 50%;
 		z-index: 1;
+
+		img {
+			height: auto;
+			margin: inherit;
+		}
 	}
 }
 
