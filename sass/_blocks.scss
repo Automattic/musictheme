@@ -208,7 +208,7 @@ p.wp-block-subhead {
 	margin-bottom: 0;
 	padding: #{$size__vertical-padding * 2};
 
-	&.alignfull:first-child {
+	&.alignfull {
 		margin-top: 0;
 		max-width: 100%;
 		min-height: 100vh;
@@ -541,7 +541,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /**
  * Cover Image (First Child)
  */
-.home.page .wp-block-cover-image.alignfull:first-child {
+.wp-block-cover-image.alignfull {
 
 	align-items: center;
 	justify-content: left;
@@ -580,21 +580,25 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 @media screen and (min-width: 768px) {
 
-	.home.page .wp-block-cover-image.alignfull:first-child {
+	.wp-block-cover-image.alignfull {
 		background-size: 20% auto;
 		background-position: 90% 0;
-		margin-bottom: -#{$size__vertical-padding * 4};
+		margin-bottom: $size__vertical-padding;
 		margin-right: calc((100% - 100vw) * .5);
 		margin-left: calc((100% - 100vw) * .5);
 		max-width: 100vw;
 		padding: 10% 0;
 		width: 100vw;
+
+		&:first-child {
+			margin-bottom: -#{$size__vertical-padding * 4};
+		}
 	}
 }
 
 @media screen and (min-width: 940px) {
 
-	.home.page .wp-block-cover-image.alignfull:first-child {
+	.wp-block-cover-image.alignfull {
 		& + h3,
 		& + .rotate {
 			margin-top: 0;
