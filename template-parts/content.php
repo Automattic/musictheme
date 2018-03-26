@@ -13,12 +13,6 @@
 	<header class="entry-header">
 		<div class="entry-header-wrap">
 			<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
-			<?php if ( 'post' === get_post_type() ) : ?>
-			<div class="entry-meta">
-				<?php musictheme_posted_on(); ?>
-			</div><!-- .entry-meta -->
-			<?php
-			endif; ?>
 			<?php musictheme_post_thumbnail( 'medium' ); ?>
 		</div>
 	</header><!-- .entry-header -->
@@ -29,6 +23,11 @@
 
 	<footer class="entry-footer">
 		<div class="entry-footer-wrap">
+			<?php if ( 'post' === get_post_type() ) : ?>
+			<span class="entry-meta">
+				<?php musictheme_posted_on(); ?>
+			</span><!-- .entry-meta -->
+			<?php endif; ?>
 			<?php musictheme_entry_footer(); ?>
 		</div>
 	</footer><!-- .entry-footer -->
