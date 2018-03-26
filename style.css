@@ -1427,7 +1427,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     padding-right: 2em; } }
 
 /**
- * Cover Image (First Child)
+ * Cover Image (Full Width)
  */
 .wp-block-cover-image.alignfull {
   align-items: center;
@@ -1465,6 +1465,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     max-width: 100vw;
     padding: 10% 0;
     width: 100vw; }
+    .wp-block-cover-image.alignfull h2,
+    .wp-block-cover-image.alignfull .wp-block-cover-image-text {
+      font-size: 117px;
+      line-height: 128px; }
     .wp-block-cover-image.alignfull:first-child {
       margin-bottom: -8rem; } }
 

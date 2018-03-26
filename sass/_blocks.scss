@@ -539,7 +539,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 /**
- * Cover Image (First Child)
+ * Cover Image (Full Width)
  */
 .wp-block-cover-image.alignfull {
 
@@ -589,6 +589,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		max-width: 100vw;
 		padding: 10% 0;
 		width: 100vw;
+
+		h2,
+		.wp-block-cover-image-text {
+			font-size: 117px;
+			line-height: 128px;
+		}
 
 		&:first-child {
 			margin-bottom: -#{$size__vertical-padding * 4};
