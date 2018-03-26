@@ -247,6 +247,11 @@ p.wp-block-subhead {
 	}
 	&.white {
 		background-color: $color__background-body;
+
+		h2,
+		.wp-block-cover-image-text {
+			color: $color__theme-link;
+		}
 	}
 }
 

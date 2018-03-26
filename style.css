@@ -1237,6 +1237,9 @@ p.wp-block-subhead {
     background-color: black; }
   .wp-block-cover-image.white {
     background-color: white; }
+    .wp-block-cover-image.white h2,
+    .wp-block-cover-image.white .wp-block-cover-image-text {
+      color: black; }
 
 /**/
 /* ! Gallery */
