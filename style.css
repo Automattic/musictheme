@@ -1338,15 +1338,19 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /**/
 /* ! Dim Backgrounds */
 /**/
+.wp-block-cover-image.has-background-dim.has-background-dim-10:before,
 .has-background-dim.has-background-dim-10:before {
   background-color: rgba(241, 134, 134, 0.1); }
 
+.wp-block-cover-image.has-background-dim.has-background-dim-20:before,
 .has-background-dim.has-background-dim-20:before {
   background-color: rgba(241, 134, 134, 0.2); }
 
+.wp-block-cover-image.has-background-dim.has-background-dim-30:before,
 .has-background-dim.has-background-dim-30:before {
   background-color: rgba(241, 134, 134, 0.3); }
 
+.wp-block-cover-image.has-background-dim.has-background-dim-40:before,
 .has-background-dim.has-background-dim-40:before {
   background-color: rgba(241, 134, 134, 0.4); }
 
@@ -1354,21 +1358,27 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .has-background-dim.has-background-dim-50:before {
   background-color: rgba(241, 134, 134, 0.5); }
 
+.wp-block-cover-image.has-background-dim.has-background-dim-50:before,
 .has-background-dim.has-background-dim-50:before {
   background-color: rgba(241, 134, 134, 0.5); }
 
+.wp-block-cover-image.has-background-dim.has-background-dim-60:before,
 .has-background-dim.has-background-dim-60:before {
   background-color: rgba(241, 134, 134, 0.6); }
 
+.wp-block-cover-image.has-background-dim.has-background-dim-70:before,
 .has-background-dim.has-background-dim-70:before {
   background-color: rgba(241, 134, 134, 0.7); }
 
+.wp-block-cover-image.has-background-dim.has-background-dim-80:before,
 .has-background-dim.has-background-dim-80:before {
   background-color: rgba(241, 134, 134, 0.8); }
 
+.wp-block-cover-image.has-background-dim.has-background-dim-90:before,
 .has-background-dim.has-background-dim-90:before {
   background-color: rgba(241, 134, 134, 0.9); }
 
+.wp-block-cover-image.has-background-dim.has-background-dim-100:before,
 .has-background-dim.has-background-dim-100:before {
   background-color: #f18686; }
 
