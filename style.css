@@ -567,7 +567,7 @@ a {
   .posts-navigation .nav-next,
   .post-navigation .nav-previous,
   .post-navigation .nav-next {
-    width: 50%; } }
+    flex: 1 1 50%; } }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -719,7 +719,7 @@ html {
   font-size: 1rem;
   font-style: italic;
   margin: 0;
-  padding: 0.5em; }
+  padding: 0.5em 0; }
 
 .site-title a {
   color: white; }
@@ -759,10 +759,11 @@ html {
     color: white; }
   .singular .entry-header {
     background: black;
+    display: flex;
     margin: 0 0 -6rem;
     max-width: 100%;
     min-height: 100vh;
-    display: flex;
+    padding: 6rem 0;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start; }
@@ -787,10 +788,10 @@ html {
   margin: 0 0 -2rem;
   max-width: 100%;
   min-height: 100vh;
+  padding: 6rem 0;
   display: flex;
   align-items: center; }
   .hfeed .page-header .page-title {
-    max-width: 1100px;
     width: 100%;
     margin: 0 auto;
     padding: 0 2rem; }
@@ -806,7 +807,7 @@ html {
   .singular .entry-title {
     font-size: 42px;
     line-height: 51px;
-    margin: 6rem auto 0;
+    margin: 0 auto;
     max-width: 1100px;
     padding: 0 2rem;
     width: 100%; }
@@ -893,6 +894,8 @@ html {
     right: 10%; } }
 
 @media screen and (min-width: 940px) {
+  .hfeed .page-header .page-title {
+    max-width: 1100px; }
   .entry-header {
     margin-left: auto;
     margin-right: auto;
@@ -903,10 +906,19 @@ html {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comments-title,
+.comment-list,
+.comment-respond {
+  background: white;
+  margin: 0 auto;
+  max-width: 740px;
+  width: 100%;
+  padding: 2rem 2rem; }
+
 .comments-title {
   background: black;
   color: white;
-  margin: 0;
+  margin: 0 auto;
   padding: 2rem; }
 
 .comment-reply-title {
@@ -938,7 +950,6 @@ html {
 
 .comment-list {
   list-style: none;
-  margin: 0;
   padding: 0; }
   .comment-list ol {
     margin-left: 0;
@@ -968,22 +979,16 @@ html {
   .comment-list .children .depth-5 .reply-indicator {
     left: 8rem; }
 
-.comment-respond {
-  background: white;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 740px;
-  width: 100%;
-  padding: 2rem 2rem; }
-
 @media screen and (min-width: 940px) {
+  .comments-title,
+  .comment-list,
+  .comment-respond {
+    margin: 0 10% 0 auto; }
   .comments-area {
     margin-left: auto;
     margin-right: auto;
     max-width: 1100px;
     position: relative; }
-    .comments-area .comment-respond {
-      margin: 0 10% 0 auto; }
     .comments-area .comment {
       position: relative; }
     .comments-area .avatar {

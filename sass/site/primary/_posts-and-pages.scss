@@ -35,10 +35,11 @@
 
 	.singular & {
 		background: $color__theme-link;
+		display: flex;
 		margin: 0 0 -6rem;
 		max-width: 100%;
 		min-height: 100vh;
-		display: flex;
+		padding: #{$size__horizontal-padding * 3} 0;
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
@@ -70,11 +71,11 @@
 	margin: 0 0 -#{$size__horizontal-padding};
 	max-width: 100%;
 	min-height: 100vh;
+	padding: #{$size__horizontal-padding * 3} 0;
 	display: flex;
 	align-items: center;
 
 	.page-title {
-		max-width: $size__site-max-width-wide;
 		width: 100%;
 		margin: 0 auto;
 		padding: 0 $size__horizontal-padding;
@@ -94,7 +95,7 @@
 	.singular & {
 		font-size: 42px;
 		line-height: 51px;
-		margin: 6rem auto 0;
+		margin: 0 auto;
 		max-width: $size__site-max-width-wide;
 		padding: 0 $size__horizontal-padding;
 		width: 100%;
@@ -216,6 +217,10 @@
 }
 
 @media screen and (min-width: 940px) {
+
+	.hfeed .page-header .page-title {
+		max-width: $size__site-max-width-wide;
+	}
 
 	.entry-header {
 		margin-left: auto;

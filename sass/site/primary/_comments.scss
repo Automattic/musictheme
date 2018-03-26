@@ -1,10 +1,20 @@
 .comments-area {
 }
 
+.comments-title,
+.comment-list,
+.comment-respond {
+	background: $color__background-body;
+	margin: 0 auto;
+	max-width: $size__site-max-width;
+	width: 100%;
+	padding: $size__vertical-padding $size__horizontal-padding;
+}
+
 .comments-title {
 	background: $color__theme-link;
 	color: $color__background-body;
-	margin: 0;
+	margin: 0 auto;
 	padding: $size__horizontal-padding;
 }
 
@@ -49,7 +59,6 @@
 
 .comment-list {
 	list-style: none;
-	margin: 0;
 	padding: 0;
 
 	ol {
@@ -58,7 +67,6 @@
 	}
 
 	.comment .reply-indicator {
-
 		position: absolute;
 		top: 2rem;
 
@@ -117,26 +125,19 @@
 	}
 }
 
-.comment-respond {
-	background: $color__background-body;
-    margin-left: auto;
-    margin-right: auto;
-	max-width: $size__site-max-width;
-	width: 100%;
-	padding: $size__vertical-padding $size__horizontal-padding;
-}
-
 @media screen and (min-width: 940px) {
+
+	.comments-title,
+	.comment-list,
+	.comment-respond {
+		margin: 0 $size__max-width-wide-margin 0 auto;
+	}
 
 	.comments-area {
 		margin-left: auto;
 		margin-right: auto;
 		max-width: $size__site-max-width-wide;
 		position: relative;
-
-		.comment-respond {
-			margin: 0 $size__max-width-wide-margin 0 auto;
-		}
 
 		.comment {
 			position: relative;
@@ -152,4 +153,5 @@
 	.comment-meta .comment-author {
 		margin-left: 0;
 	}
+
 }
