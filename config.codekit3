@@ -151,9 +151,9 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/js\/customizer-min.js",
-		"oF": 0,
+		"oF": 1,
 		"sC": 1,
 		"tS": 0
 		},
@@ -161,9 +161,19 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/js\/navigation-min.js",
-		"oF": 0,
+		"oF": 1,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/priority-navigation.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/js\/priority-navigation-min.js",
+		"oF": 1,
 		"sC": 1,
 		"tS": 0
 		},
@@ -171,9 +181,9 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/js\/skip-link-focus-fix-min.js",
-		"oF": 0,
+		"oF": 1,
 		"sC": 1,
 		"tS": 0
 		},
@@ -520,6 +530,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/sass\/navigation\/_navigation.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/navigation\/_navigation.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/sass\/shop\/_checkout.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -611,6 +634,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/sass\/site\/_header.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/site\/_header.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/sass\/site\/_site.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -620,6 +656,32 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/site\/_site.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/site\/primary\/_comments.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/site\/primary\/_comments.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/site\/primary\/_posts-and-pages.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/site\/primary\/_posts-and-pages.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -791,6 +853,16 @@
 		"oA": 0,
 		"oAP": "\/single.php",
 		"oF": 0
+		},
+	"\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/style-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"\/template-parts\/content-none.php": {
 		"cB": 0,

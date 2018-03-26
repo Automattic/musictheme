@@ -36,3 +36,16 @@ function musictheme_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'musictheme_pingback_header' );
+
+/*
+ * Add an extra li to our nav for our priority+ navigation to use
+ */
+function musictheme_add_ellipses_to_nav( $items, $args ) {
+	if ( 'menu-1' === $args->theme_location ) :
+		$items .= '<li id="more-menu" class="menu-item menu-item-has-children"><a href="#">';
+		$items .= '...';// easy_as_svg_get_icon( 'more' );
+		$items .= '<span class="screen-reader-text">'. esc_html( 'More', 'musictheme' ) . '</span></a><ul class="sub-menu"></ul></li>';
+	endif;
+	return $items;
+}
+add_filter( 'wp_nav_menu_items', 'musictheme_add_ellipses_to_nav', 10, 2 );

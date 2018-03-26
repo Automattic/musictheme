@@ -9,8 +9,10 @@
 		padding-left: 0;
 
 		ul {
+			background: white;
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
+			padding-bottom: .5rem;
 			position: absolute;
 			top: 100%;
 			left: -999em;
@@ -29,6 +31,8 @@
 			}
 
 			a {
+				color: black;
+				padding: .5rem .5rem 0;
 				width: 200px;
 			}
 
@@ -66,6 +70,30 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+	}
+
+	.icon {
+		width: 1rem;
+		height: 1rem;
+		margin-left: .25rem;
+		fill: white;
+	}
+}
+
+/* Hide more link unless we need it. */
+#more-menu {
+	display: none;
+
+	&.visible {
+		display: inline-block;
+	}
+
+	.sub-menu .sub-menu {
+		box-shadow: none;
+		left: inherit;
+		padding-left: 1rem;
+		position: relative;
+		top: inherit;
 	}
 }
 
