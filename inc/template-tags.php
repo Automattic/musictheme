@@ -87,7 +87,7 @@ if ( ! function_exists( 'musictheme_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'musictheme' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'musictheme' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . $categories_list . '</span>' ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */

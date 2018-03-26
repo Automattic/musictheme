@@ -1,6 +1,7 @@
 // Theme Colors
 $color__theme-primary: #f18686;
 $color__theme-secondary: #383838;
+$color__theme-tertiary: #666;
 $color__theme-link: black;
 
 
@@ -24,4 +25,4 @@ $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
-$color__border-abbr: #666;
+$color__border-abbr: $color__theme-tertiary;
