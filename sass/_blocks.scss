@@ -240,6 +240,14 @@ p.wp-block-subhead {
 		line-height: 51px;
 		max-width: 100%;
 	}
+
+	/* Additional Color Classes */
+	&.black {
+		background-color: $color__theme-link;
+	}
+	&.white {
+		background-color: $color__background-body;
+	}
 }
 
 /**/
@@ -432,6 +440,100 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 	&.has-background-dim-100:before {
 		background-color: $color__theme-primary;
+	}
+
+	&.black {
+
+		&:before {
+			background-color: rgba($color__theme-link, .5);
+		}
+
+		&.has-background-dim-10:before {
+			background-color: rgba($color__theme-link, .1);
+		}
+
+		&.has-background-dim-20:before {
+			background-color: rgba($color__theme-link, .2);
+		}
+
+		&.has-background-dim-30:before {
+			background-color: rgba($color__theme-link, .3);
+		}
+
+		&.has-background-dim-40:before {
+			background-color: rgba($color__theme-link, .4);
+		}
+
+		&.has-background-dim-50:before {
+			background-color: rgba($color__theme-link, .5);
+		}
+
+		&.has-background-dim-60:before {
+			background-color: rgba($color__theme-link, .6);
+		}
+
+		&.has-background-dim-70:before {
+			background-color: rgba($color__theme-link, .7);
+		}
+
+		&.has-background-dim-80:before {
+			background-color: rgba($color__theme-link, .8);
+		}
+
+		&.has-background-dim-90:before {
+			background-color: rgba($color__theme-link, .9);
+		}
+
+		&.has-background-dim-100:before {
+			background-color: $color__theme-link;
+		}
+	}
+
+	&.white {
+		
+		&:before {
+			background-color: rgba($color__background-body, .5);
+		}
+
+		&.has-background-dim-10:before {
+			background-color: rgba($color__background-body, .1);
+		}
+
+		&.has-background-dim-20:before {
+			background-color: rgba($color__background-body, .2);
+		}
+
+		&.has-background-dim-30:before {
+			background-color: rgba($color__background-body, .3);
+		}
+
+		&.has-background-dim-40:before {
+			background-color: rgba($color__background-body, .4);
+		}
+
+		&.has-background-dim-50:before {
+			background-color: rgba($color__background-body, .5);
+		}
+
+		&.has-background-dim-60:before {
+			background-color: rgba($color__background-body, .6);
+		}
+
+		&.has-background-dim-70:before {
+			background-color: rgba($color__background-body, .7);
+		}
+
+		&.has-background-dim-80:before {
+			background-color: rgba($color__background-body, .8);
+		}
+
+		&.has-background-dim-90:before {
+			background-color: rgba($color__background-body, .9);
+		}
+
+		&.has-background-dim-100:before {
+			background-color: $color__background-body;
+		}
 	}
 }
 
