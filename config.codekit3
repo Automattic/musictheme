@@ -663,6 +663,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/sass\/site\/primary\/_posts-and-pages.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/site\/primary\/_posts-and-pages.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/sass\/site\/secondary\/_widgets.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -831,6 +844,16 @@
 		"oAP": "\/single.php",
 		"oF": 0
 		},
+	"\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/style-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/template-parts\/content-none.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -857,6 +880,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/template-parts\/content-single.php",
+		"oF": 0
+		},
+	"\/template-parts\/content.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/content.php",
 		"oF": 0
 		},
 	"\/woocommerce.css": {
