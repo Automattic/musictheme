@@ -719,7 +719,7 @@ html {
   font-size: 1rem;
   font-style: italic;
   margin: 0;
-  padding: 0.5em; }
+  padding: 0.5em 0; }
 
 .site-title a {
   color: white; }
