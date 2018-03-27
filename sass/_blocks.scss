@@ -17,23 +17,19 @@
 }
 
 .entry-content > .alignwide {
-	padding-bottom: 0;
-	padding-left: 0;
-	padding-right: 0;
+	max-width: 100%;
+	margin: $size__vertical-padding auto;
+	padding: 0;
 }
 
 .entry-content > .alignfull {
-	margin: $size__vertical-padding 0;
-	max-width: $size__site-max-width-wide;
-	padding-top: 0;
-	padding-bottom: 0;
-	padding-left: 0;
-	padding-right: 0;
+	width: 100vw;
+	max-width: 100vw;
+	margin: $size__vertical-padding calc((100% - 100vw) * .5);
+	padding: 0;
 }
 
 .entry-content > *:first-child,
-.entry-content > .alignwide + *,
-.entry-content > .alignfull + *,
 .entry-content > section + *,
 .entry-content > figure + *,
 .entry-content > .wp-block-quote + *,
@@ -41,13 +37,6 @@
 	padding-top: $size__vertical-padding;
 	padding-left: $size__horizontal-padding;
 	padding-right: $size__horizontal-padding;
-}
-
-.entry-content > .alignwide + .alignwide,
-.entry-content > .alignfull + .alignfull,
-.entry-content > .alignwide + .alignfull,
-.entry-content > .alignfull + .alignwide {
-	padding-top: 0;
 }
 
 .entry-content ul,
@@ -164,18 +153,15 @@ p.wp-block-subhead {
 	}
 
 	&.alignwide {
-
-		padding-top: 0;
+		background: transparent;
 
 		figcaption {
+			color: $color__background-body;
 			padding: 1rem;
 		}
 	}
 
 	&.alignfull {
-
-		background: transparent;
-		padding: $size__vertical-padding 0;
 		position: relative;
 
 		figcaption {
@@ -220,15 +206,11 @@ p.wp-block-subhead {
 		border: none;
 		width: 100%;
 		max-width: 100%;
-		margin: #{$size__vertical-padding * 2} auto;
 		padding: $size__vertical-padding;
 	}
 
 	&.alignfull {
 		border: none;
-		margin-top: 0;
-		padding: 0 $size__vertical-padding;
-		max-width: 100%;
 		min-height: 100vh;
 	}
 
@@ -264,15 +246,12 @@ p.wp-block-subhead {
 
 .wp-block-gallery {
 
-	padding-left: calc( #{$size__vertical-padding} - 8px );
-	padding-right: calc( #{$size__vertical-padding} - 8px );
+	&.alignwide, &.alignfull {
+		background-color: transparent;
+	}
 
-	&.alignwide,
 	&.alignfull {
-		padding-top: $size__vertical-padding;
 		padding-bottom: $size__vertical-padding;
-		background: transparent;
-		margin: -8px auto;
 	}
 }
 
@@ -332,10 +311,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 	video {
 		max-width: 100%;
-	}
-
-	&.alignwide {
-
 	}
 
 	&.alignfull video {
@@ -452,12 +427,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		}
 	}
 
-	.entry-content > .alignfull + .wp-block-gallery,
-	.wp-block-gallery {
-		padding-bottom: calc( 2rem - 8px);
-		padding-top: calc( 2rem - 8px);
-	}
-
 	.wp-block-gallery {
 		padding-left: calc( #{$size__vertical-padding} - 8px );
 		padding-right: calc( #{$size__vertical-padding} - 8px );
@@ -503,24 +472,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		margin: 0 $size__max-width-wide-margin 0 auto;
 	}
 
-	.entry-content > .alignfull {
-		margin-right: 0;
-		margin-left: auto;
-	}
-
-	.wp-block-gallery {
-
-		&.alignwide {
-			margin: -8px calc( #{$size__max-width-wide-margin} - 8px ) -8px auto;
-			max-width: calc( #{$size__site-max-width} + 16px );
-		}
-
-		&.alignfull {
-			margin: -8px -8px -8px auto;
-			max-width: calc( #{$size__site-max-width-wide} + 16px );
-		}
-	}
-
 	.wp-block-image {
 
 		&.alignleft img,
@@ -561,13 +512,14 @@ ul.wp-block-latest-posts.is-grid.alignwide {
  * Cover Image (Full Width)
  */
 .wp-block-cover-image.alignfull {
-
+	min-height: 100vh;
 	align-items: center;
 	justify-content: left;
 	background-size: 50% auto;
 	background-position: 100% 40%;
 	background-repeat: no-repeat;
-	margin-bottom: -#{$size__vertical-padding};
+	margin-top: 0;
+	margin-bottom: 0;
 	padding: 0;
 	position: relative;
 	z-index: 0;
@@ -586,10 +538,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		background-color: transparent;
 	}
 
-	& + * {
-		padding-top: $size__vertical-padding;
-	}
-
 	& + h3,
 	& + .rotate {
 		margin-top: 1.5em;
@@ -602,11 +550,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		background-size: 20% auto;
 		background-position: 90% 0;
 		margin-bottom: $size__vertical-padding;
-		margin-right: calc((100% - 100vw) * .5);
-		margin-left: calc((100% - 100vw) * .5);
-		max-width: 100vw;
 		padding: 10% 0;
-		width: 100vw;
 
 		&:first-child {
 			margin-bottom: -#{$size__vertical-padding * 4};
