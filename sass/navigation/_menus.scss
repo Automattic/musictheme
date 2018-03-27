@@ -69,6 +69,13 @@
 		padding: .5em;
 	}
 
+	.icon {
+		width: 1rem;
+		height: 1rem;
+		margin-left: .25rem;
+		fill: currentColor;
+	}
+
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,

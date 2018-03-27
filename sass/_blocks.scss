@@ -464,9 +464,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	}
 
 	.wp-block-cover-image {
-		min-height: 580px;
+		min-height: 480px;
 
 		&.alignfull, &.alignwide {
+			min-height: 580px;
 
 			h2,
 			.wp-block-cover-image-text {
@@ -537,7 +538,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		}
 	}
 
-	.wp-block-cover-image {
+	.wp-block-cover-image.alignfull
+	.wp-block-cover-image.alignwide {
 		min-height: 640px;
 	}
 
