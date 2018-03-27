@@ -1,7 +1,7 @@
 /**
  * Priority plus menu pattern.
  *
- *
+ * src: https://gist.github.com/sarahmonster/e99db050ffdb14ac4296fc76a23d7e56
  */
 
 ( function( $ ) {
