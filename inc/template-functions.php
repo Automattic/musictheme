@@ -43,7 +43,7 @@ add_action( 'wp_head', 'musictheme_pingback_header' );
 function musictheme_add_ellipses_to_nav( $items, $args ) {
 	if ( 'menu-1' === $args->theme_location ) :
 		$items .= '<li id="more-menu" class="menu-item menu-item-has-children"><a href="#">';
-		$items .= '...';// easy_as_svg_get_icon( 'more' );
+		$items .= musictheme_get_svg( array( 'icon' => 'ellipsis' ) ); // '...';
 		$items .= '<span class="screen-reader-text">'. esc_html( 'More', 'musictheme' ) . '</span></a><ul class="sub-menu"></ul></li>';
 	endif;
 	return $items;

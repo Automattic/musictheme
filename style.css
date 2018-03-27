@@ -471,13 +471,16 @@ a {
     width: 1rem;
     height: 1rem;
     margin-left: .25rem;
-    fill: white; }
+    fill: currentColor; }
 
 /* Hide more link unless we need it. */
 #more-menu {
   display: none; }
   #more-menu.visible {
     display: inline-block; }
+  #more-menu .icon {
+    vertical-align: bottom;
+    margin-left: 0; }
   #more-menu .sub-menu .sub-menu {
     box-shadow: none;
     left: inherit;
