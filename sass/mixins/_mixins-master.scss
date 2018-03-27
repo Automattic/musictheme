@@ -27,3 +27,50 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+// Background dim styles
+@mixin has-background-dim($colorValue) {
+	&:before { 
+		background-color: rgba($colorValue, .5);
+	}
+	
+	&.has-background-dim-10:before {
+		background-color: rgba($colorValue, .1);
+	}
+
+	&.has-background-dim-20:before {
+		background-color: rgba($colorValue, .2);
+	}
+
+	&.has-background-dim-30:before {
+		background-color: rgba($colorValue, .3);
+	}
+
+	&.has-background-dim-40:before {
+		background-color: rgba($colorValue, .4);
+	}
+
+	&.has-background-dim-50:before {
+		background-color: rgba($colorValue, .5);
+	}
+
+	&.has-background-dim-60:before {
+		background-color: rgba($colorValue, .6);
+	}
+
+	&.has-background-dim-70:before {
+		background-color: rgba($colorValue, .7);
+	}
+
+	&.has-background-dim-80:before {
+		background-color: rgba($colorValue, .8);
+	}
+
+	&.has-background-dim-90:before {
+		background-color: rgba($colorValue, .9);
+	}
+
+	&.has-background-dim-100:before {
+		background-color: $colorValue;
+	}
+}
