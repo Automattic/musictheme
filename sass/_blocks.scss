@@ -203,26 +203,58 @@ p.wp-block-subhead {
 /**/
 
 .wp-block-cover-image {
-
+	align-items: center;
+	justify-content: left;
+	background-color: $color__theme-primary;
+	background-size: 50% auto;
+	background-position: center center;
+	background-repeat: no-repeat;
 	margin-top: 0;
 	margin-bottom: 0;
-	padding: #{$size__vertical-padding * 2};
+	padding: 0 0 #{ $size__vertical-padding / 2 } 0;
+	position: relative;
+	z-index: 0;
+	border: $size__vertical-padding solid $color__background-body;
 
-	&.alignfull:first-child {
+	&.alignwide {
+		border: none;
+		width: 100%;
+		max-width: 100%;
+		margin: #{$size__vertical-padding * 2} auto;
+		padding: $size__vertical-padding;
+	}
+
+	&.alignfull {
+		border: none;
 		margin-top: 0;
+		padding: 0 $size__vertical-padding;
 		max-width: 100%;
 		min-height: 100vh;
 	}
 
 	h2,
 	.wp-block-cover-image-text {
+		text-align: left;
+		margin: 0 auto;
+		padding: 0;
+		width: 100%;
 		font-size: 42px;
 		font-weight: normal;
 		line-height: 51px;
-		margin-top: 0;
-		margin-bottom: 0;
 		max-width: 100%;
-		padding: 0;
+	}
+
+	/* Additional Color Classes */
+	&.black {
+		background-color: $color__theme-link;
+	}
+	&.white {
+		background-color: $color__background-body;
+
+		h2,
+		.wp-block-cover-image-text {
+			color: $color__theme-link;
+		}
 	}
 }
 
@@ -371,49 +403,17 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /* ! Dim Backgrounds */
 /**/
 
-.has-background-dim.has-background-dim-10:before {
-	background-color: rgba($color__theme-primary, .1);
-}
+.wp-block-cover-image.has-background-dim,
+.has-background-dim { 
+	@include has-background-dim($color__theme-primary);
 
-.has-background-dim.has-background-dim-20:before {
-	background-color: rgba($color__theme-primary, .2);
-}
+	&.black {
+		@include has-background-dim($color__theme-link);
+	}
 
-.has-background-dim.has-background-dim-30:before {
-	background-color: rgba($color__theme-primary, .3);
-}
-
-.has-background-dim.has-background-dim-40:before {
-	background-color: rgba($color__theme-primary, .4);
-}
-
-.has-background-dim.has-background-dim:before,
-.has-background-dim.has-background-dim-50:before {
-	background-color: rgba($color__theme-primary, .5);
-}
-
-.has-background-dim.has-background-dim-50:before {
-	background-color: rgba($color__theme-primary, .5);
-}
-
-.has-background-dim.has-background-dim-60:before {
-	background-color: rgba($color__theme-primary, .6);
-}
-
-.has-background-dim.has-background-dim-70:before {
-	background-color: rgba($color__theme-primary, .7);
-}
-
-.has-background-dim.has-background-dim-80:before {
-	background-color: rgba($color__theme-primary, .8);
-}
-
-.has-background-dim.has-background-dim-90:before {
-	background-color: rgba($color__theme-primary, .9);
-}
-
-.has-background-dim.has-background-dim-100:before {
-	background-color: $color__theme-primary;
+	&.white {
+		@include has-background-dim($color__background-body);
+	}
 }
 
 @media screen and (min-width: 740px) {
@@ -461,6 +461,19 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	.wp-block-gallery {
 		padding-left: calc( #{$size__vertical-padding} - 8px );
 		padding-right: calc( #{$size__vertical-padding} - 8px );
+	}
+
+	.wp-block-cover-image {
+		min-height: 580px;
+
+		&.alignfull, &.alignwide {
+
+			h2,
+			.wp-block-cover-image-text {
+				font-size: 117px;
+				line-height: 128px;
+			}
+		}
 	}
 
 	.wp-block-video:not('.alignfull') video {
@@ -524,6 +537,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		}
 	}
 
+	.wp-block-cover-image {
+		min-height: 640px;
+	}
+
 	.entry-content > .rotate,
 	.entry-content > h3 {
 		color: $color__background-body;
@@ -539,13 +556,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 /**
- * Cover Image (First Child)
+ * Cover Image (Full Width)
  */
-.home.page .wp-block-cover-image.alignfull:first-child {
+.wp-block-cover-image.alignfull {
 
 	align-items: center;
 	justify-content: left;
-	background-color: $color__theme-primary;
 	background-size: 50% auto;
 	background-position: 100% 40%;
 	background-repeat: no-repeat;
@@ -580,21 +596,25 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 @media screen and (min-width: 768px) {
 
-	.home.page .wp-block-cover-image.alignfull:first-child {
+	.wp-block-cover-image.alignfull {
 		background-size: 20% auto;
 		background-position: 90% 0;
-		margin-bottom: -#{$size__vertical-padding * 4};
+		margin-bottom: $size__vertical-padding;
 		margin-right: calc((100% - 100vw) * .5);
 		margin-left: calc((100% - 100vw) * .5);
 		max-width: 100vw;
 		padding: 10% 0;
 		width: 100vw;
+
+		&:first-child {
+			margin-bottom: -#{$size__vertical-padding * 4};
+		}
 	}
 }
 
 @media screen and (min-width: 940px) {
 
-	.home.page .wp-block-cover-image.alignfull:first-child {
+	.wp-block-cover-image.alignfull {
 		& + h3,
 		& + .rotate {
 			margin-top: 0;
