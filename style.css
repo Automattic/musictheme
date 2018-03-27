@@ -441,7 +441,6 @@ a {
       background: white;
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
-      padding-bottom: .5rem;
       position: absolute;
       top: 100%;
       left: -999em;
@@ -452,6 +451,8 @@ a {
       .main-navigation ul ul li:hover > ul,
       .main-navigation ul ul li.focus > ul {
         left: 100%; }
+      .main-navigation ul ul li:last-of-type > a {
+        padding-bottom: .5rem; }
       .main-navigation ul ul a {
         color: black;
         padding: .5rem .5rem 0;
