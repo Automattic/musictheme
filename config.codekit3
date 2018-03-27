@@ -133,13 +133,6 @@
 		"oAP": "\/inc\/template-functions.php",
 		"oF": 0
 		},
-	"\/inc\/template-tags.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/inc\/template-tags.php",
-		"oF": 0
-		},
 	"\/index.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -246,19 +239,6 @@
 		"oAP": "\/rtl-min.css",
 		"oF": 0,
 		"oS": 3
-		},
-	"\/sass\/_blocks.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/_blocks.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
 		},
 	"\/sass\/_normalize.scss": {
 		"aP": 0,
@@ -425,19 +405,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/media\/_media.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/mixins\/_mixins-master.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/mixins\/_mixins-master.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -624,19 +591,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/site\/_header.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/site\/_header.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/sass\/site\/_site.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -659,19 +613,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/site\/primary\/_comments.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/site\/primary\/_posts-and-pages.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/site\/primary\/_posts-and-pages.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -737,19 +678,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/typography\/_typography.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/variables-site\/_colors.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/variables-site\/_colors.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -844,16 +772,6 @@
 		"oAP": "\/single.php",
 		"oF": 0
 		},
-	"\/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/style-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"\/template-parts\/content-none.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -880,13 +798,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/template-parts\/content-single.php",
-		"oF": 0
-		},
-	"\/template-parts\/content.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/template-parts\/content.php",
 		"oF": 0
 		},
 	"\/woocommerce.css": {
