@@ -20,6 +20,11 @@
 	max-width: 100%;
 	margin: $size__vertical-padding auto;
 	padding: 0;
+
+	figcaption {
+		padding: 1rem;
+		color: $color__background-body;
+	}
 }
 
 .entry-content > .alignfull {
@@ -142,7 +147,6 @@ p.wp-block-subhead {
 	background: $color__background-body;
 	padding-top: 0;
 	padding-bottom: 0;
-
 	padding: $size__vertical-padding;
 	margin: 0 auto;
 
@@ -154,11 +158,6 @@ p.wp-block-subhead {
 
 	&.alignwide {
 		background: transparent;
-
-		figcaption {
-			color: $color__background-body;
-			padding: 1rem;
-		}
 	}
 
 	&.alignfull {

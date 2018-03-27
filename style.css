@@ -1057,6 +1057,9 @@ html {
   max-width: 100%;
   margin: 2rem auto;
   padding: 0; }
+  .entry-content > .alignwide figcaption {
+    padding: 1rem;
+    color: white; }
 
 .entry-content > .alignfull {
   width: 100vw;
@@ -1169,9 +1172,6 @@ p.wp-block-subhead {
     text-align: left; }
   .wp-block-image.alignwide {
     background: transparent; }
-    .wp-block-image.alignwide figcaption {
-      color: white;
-      padding: 1rem; }
   .wp-block-image.alignfull {
     position: relative; }
     .wp-block-image.alignfull figcaption {
