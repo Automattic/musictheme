@@ -40,6 +40,8 @@
 }
 
 .entry-content > *:first-child,
+.entry-content > .alignwide + *,
+.entry-content > .alignfull + *,
 .entry-content > section + *,
 .entry-content > figure + *,
 .entry-content > .wp-block-quote + *,
