@@ -1536,12 +1536,14 @@ ul.wp-block-latest-posts.is-grid.alignwide {
       font-size: 117px;
       line-height: 128px; }
     .wp-block-cover-image.alignfull {
-      background-size: 20% auto;
+      background-size: auto 40%;
       background-position: 90% 0;
       margin-bottom: 2rem;
       padding: 10% 0; }
       .wp-block-cover-image.alignfull:first-child {
         margin-bottom: -8rem; }
+      .wp-block-cover-image.alignfull:not(:first-child) {
+        background-position: 90% 25%; }
     .wp-block-cover-image.alignwide {
       min-height: 580px; }
   .wp-block-video:not('.alignfull') video {
