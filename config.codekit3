@@ -50,6 +50,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/assets\/images\/icons.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/images\/icons.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/comments.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -484,6 +494,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/sass\/navigation\/_menus.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/navigation\/_menus.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/sass\/navigation\/_navigation.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -610,6 +633,32 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/site\/_site.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/site\/primary\/_comments.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/site\/primary\/_comments.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/site\/primary\/_posts-and-pages.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/site\/primary\/_posts-and-pages.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -781,6 +830,16 @@
 		"oA": 0,
 		"oAP": "\/single.php",
 		"oF": 0
+		},
+	"\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/style-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"\/template-parts\/content-none.php": {
 		"cB": 0,
