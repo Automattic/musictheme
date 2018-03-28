@@ -1071,10 +1071,10 @@ html {
     color: white; }
 
 .entry-content > *:first-child,
-.entry-content > .alignwide + *,
-.entry-content > .alignfull + *,
 .entry-content > section + *,
 .entry-content > figure + *,
+.entry-content > .alignwide + :not(.alignwide):not(.alignfull),
+.entry-content > .alignfull + :not(.alignwide):not(.alignfull),
 .entry-content > .wp-block-quote + *,
 .entry-content > .wp-block-pullquote + * {
   padding-top: 2rem;
