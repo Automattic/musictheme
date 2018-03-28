@@ -35,7 +35,6 @@
 
 	figcaption {
 		padding: 1rem;
-		color: $color__background-body;
 	}
 }
 
@@ -171,7 +170,6 @@ p.wp-block-subhead {
 		position: relative;
 
 		figcaption {
-			color: $color__background-body;
 			background: transparent;
 			padding: 1rem;
 			text-align: center;
@@ -434,7 +432,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /**/
 
 .wp-block-cover-image.has-background-dim,
-.has-background-dim { 
+.has-background-dim {
 	@include has-background-dim($color__theme-primary);
 
 	&.black {

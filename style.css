@@ -1070,8 +1070,7 @@ html {
   margin: 2rem calc((100% - 100vw) * .5);
   padding: 0; }
   .entry-content > .alignfull figcaption {
-    padding: 1rem;
-    color: white; }
+    padding: 1rem; }
 
 .entry-content > *:first-child,
 .entry-content > section + *,
@@ -1183,7 +1182,6 @@ p.wp-block-subhead {
   .wp-block-image.alignfull {
     position: relative; }
     .wp-block-image.alignfull figcaption {
-      color: white;
       background: transparent;
       padding: 1rem;
       text-align: center;
