@@ -1355,6 +1355,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   padding: 0; }
 
 /**/
+/* ! Buttons */
+/**/
+.wp-block-button .wp-block-button__link {
+  background-color: black;
+  border-radius: 0; }
+
+/**/
 /* ! Dim Backgrounds */
 /**/
 .wp-block-cover-image.has-background-dim:before,
