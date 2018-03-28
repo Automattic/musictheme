@@ -499,13 +499,17 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		}
 
 		&.alignfull {
-			background-size: 20% auto;
+			background-size: auto 40%;
 			background-position: 90% 0;
 			margin-bottom: $size__vertical-padding;
 			padding: 10% 0;
 
 			&:first-child {
 				margin-bottom: -#{$size__vertical-padding * 4};
+			}
+
+			&:not(:first-child) {
+				background-position: 90% 20%;
 			}
 		}
 
