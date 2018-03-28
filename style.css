@@ -462,6 +462,11 @@ a {
     color: white;
     display: block;
     padding: .5em; }
+  .main-navigation .icon {
+    width: 1rem;
+    height: 1rem;
+    margin-left: .25rem;
+    fill: currentColor; }
 
 /* Small menu. */
 .menu-toggle {
@@ -952,6 +957,9 @@ html {
   .comment-body .reply {
     margin-bottom: 1rem; }
 
+.reply-indicator {
+  color: #ccc; }
+
 .comment-meta {
   color: #ccc;
   font-style: italic; }
@@ -1370,6 +1378,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   margin-bottom: 0;
   margin-top: 0;
   padding: 0; }
+
+/**/
+/* ! Buttons */
+/**/
+.wp-block-button .wp-block-button__link {
+  background-color: black;
+  border-radius: 0; }
 
 /**/
 /* ! Dim Backgrounds */

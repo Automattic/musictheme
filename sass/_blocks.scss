@@ -429,6 +429,15 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 /**/
+/* ! Buttons */
+/**/
+
+.wp-block-button .wp-block-button__link {
+	background-color: $color__theme-link;
+	border-radius: 0;
+}
+
+/**/
 /* ! Dim Backgrounds */
 /**/
 
