@@ -249,11 +249,6 @@ p.wp-block-subhead {
 			width: 100%;
 		}
 
-		&.has-background-dim.has-background-dim:before,
-		&.has-background-dim.has-background-dim-50:before {
-			background-color: transparent;
-		}
-
 		& + h3,
 		& + .rotate {
 			margin-top: 1.5em;
