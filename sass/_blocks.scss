@@ -44,7 +44,8 @@
 .entry-content > .alignwide + :not(.alignwide):not(.alignfull),
 .entry-content > .alignfull + :not(.alignwide):not(.alignfull),
 .entry-content > .wp-block-quote + *,
-.entry-content > .wp-block-pullquote + * {
+.entry-content > .wp-block-pullquote + *,
+.entry-content > .wp-block-separator + * {
 	padding-top: $size__vertical-padding;
 	padding-left: $size__horizontal-padding;
 	padding-right: $size__horizontal-padding;
@@ -458,6 +459,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 	.wp-block-separator {
 		padding: 0;
+
+		& + * {
+			padding-top: 2rem;
+		}
 	}
 
 	.wp-block-image {
