@@ -208,6 +208,18 @@ p.wp-block-subhead {
 	z-index: 0;
 	border: $size__vertical-padding solid $color__background-body;
 
+	h2,
+	.wp-block-cover-image-text {
+		text-align: left;
+		margin: 0 auto;
+		padding: 0;
+		width: 100%;
+		font-size: 42px;
+		font-weight: normal;
+		line-height: 51px;
+		max-width: 100%;
+	}
+
 	&.alignwide {
 		border: none;
 		width: 100%;
@@ -247,18 +259,6 @@ p.wp-block-subhead {
 		& + .rotate {
 			margin-top: 1.5em;
 		}
-	}
-
-	h2,
-	.wp-block-cover-image-text {
-		text-align: left;
-		margin: 0 auto;
-		padding: 0;
-		width: 100%;
-		font-size: 42px;
-		font-weight: normal;
-		line-height: 51px;
-		max-width: 100%;
 	}
 
 	/* Additional Color Classes */
