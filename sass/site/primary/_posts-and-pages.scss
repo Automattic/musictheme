@@ -15,6 +15,7 @@
 .entry-content,
 .entry-summary {
 	margin: 0;
+	@include font-size(1.125);
 }
 
 .page-links {

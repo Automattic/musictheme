@@ -229,7 +229,7 @@ textarea {
   font-family: "Sorts Mill Goudy", "OFL Sorts Mill Goudy", serif;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.5; }
+  line-height: 1.7; }
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
@@ -749,7 +749,9 @@ html {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 0; }
+  margin: 0;
+  font-size: 18px;
+  font-size: 1.125rem; }
 
 .page-links {
   clear: both;
