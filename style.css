@@ -877,6 +877,9 @@ html {
   padding: 2rem 2rem;
   position: relative;
   z-index: 2; }
+  .entry-footer-wrap .wp-block-button {
+    margin-top: 2rem;
+    margin-bottom: 1rem; }
 
 .home.page .entry-header {
   display: none; }
