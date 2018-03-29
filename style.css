@@ -767,10 +767,10 @@ html {
   .singular .entry-header {
     background: black;
     display: flex;
-    margin: 0 0 -6rem;
+    margin: 0 0 -8rem;
     max-width: 100%;
     min-height: 100vh;
-    padding: 6rem 0;
+    padding: 8rem 0;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start; }
@@ -915,7 +915,7 @@ html {
       font-size: 117px;
       line-height: 128px; }
   .hfeed .page-header {
-    margin: 0 0 -6rem; }
+    margin: 0 0 -8rem; }
     .hfeed .page-header .page-title {
       font-size: 117px;
       line-height: 128px; }
@@ -933,6 +933,11 @@ html {
     max-width: 1100px; }
   .entry-footer-wrap {
     margin: -2rem 10% 2rem auto; } }
+
+@media screen and (min-width: 740px) {
+  .page.singular .entry-title,
+  .hfeed .page-header .page-title {
+    padding-bottom: 8rem; } }
 
 /*--------------------------------------------------------------
 ## Comments
@@ -1561,6 +1566,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
       padding: 10% 0; }
       .wp-block-cover-image.alignfull:first-child {
         margin-bottom: -8rem; }
+        .wp-block-cover-image.alignfull:first-child h2,
+        .wp-block-cover-image.alignfull:first-child .wp-block-cover-image-text {
+          padding-bottom: 8rem; }
       .wp-block-cover-image.alignfull:not(:first-child) {
         background-position: 90% 20%; }
     .wp-block-cover-image.alignwide {

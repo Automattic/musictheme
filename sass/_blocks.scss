@@ -511,6 +511,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 			&:first-child {
 				margin-bottom: -#{$size__vertical-padding * 4};
+
+				h2,
+				.wp-block-cover-image-text {
+					padding-bottom: #{$size__vertical-padding * 4};
+				}
 			}
 
 			&:not(:first-child) {

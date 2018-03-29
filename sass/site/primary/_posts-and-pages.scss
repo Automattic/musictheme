@@ -37,10 +37,10 @@
 	.singular & {
 		background: $color__theme-link;
 		display: flex;
-		margin: 0 0 -6rem;
+		margin: 0 0 -#{$size__horizontal-padding * 4};
 		max-width: 100%;
 		min-height: 100vh;
-		padding: #{$size__horizontal-padding * 3} 0;
+		padding: #{$size__horizontal-padding * 4} 0;
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
@@ -244,7 +244,7 @@
 	}
 
 	.hfeed .page-header {
-		margin: 0 0 -#{$size__horizontal-padding * 3};
+		margin: 0 0 -#{$size__horizontal-padding * 4};
 
 		.page-title {
 			font-size: 117px;
@@ -276,5 +276,13 @@
 
 	.entry-footer-wrap {
 		margin: -#{$size__vertical-padding} $size__max-width-wide-margin $size__vertical-padding auto;
+	}
+}
+
+@media screen and (min-width: 740px) {
+	
+	.page.singular .entry-title,
+	.hfeed .page-header .page-title {
+		padding-bottom: #{$size__vertical-padding * 4};
 	}
 }
