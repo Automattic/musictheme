@@ -491,9 +491,12 @@ a {
   #more-menu .icon {
     vertical-align: bottom;
     margin-left: 0; }
+  #more-menu .sub-menu .icon {
+    float: right; }
   #more-menu .sub-menu .sub-menu {
     box-shadow: none;
-    left: inherit;
+    right: inherit;
+    left: 0;
     padding-left: 1rem;
     position: relative;
     top: inherit; }
@@ -705,7 +708,7 @@ a {
   display: grid;
   grid-auto-flow: dense;
   grid-gap: 0;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-template-areas: "branding navigation navigation" "branding navigation navigation";
   margin: 0 auto;
@@ -721,6 +724,10 @@ a {
 /**
  * Footer
  */
+@media screen and (min-width: 37.5em) {
+  .site-header-wrap {
+    grid-template-columns: repeat(3, 1fr); } }
+
 body,
 html {
   background: black; }

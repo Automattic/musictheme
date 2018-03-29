@@ -111,12 +111,20 @@
 		margin-left: 0;
 	}
 
-	.sub-menu .sub-menu {
-		box-shadow: none;
-		left: inherit;
-		padding-left: 1rem;
-		position: relative;
-		top: inherit;
+	.sub-menu {
+
+		.icon {
+			float: right;
+		}
+
+		.sub-menu {
+			box-shadow: none;
+			right: inherit;
+			left: 0;
+			padding-left: 1rem;
+			position: relative;
+			top: inherit;
+		}
 	}
 }
 
