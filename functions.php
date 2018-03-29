@@ -122,11 +122,11 @@ function musictheme_fonts_url() {
 		$font_families[] = 'Sorts+Mill+Goudy:400,400i';
 
 		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
+			'family' => implode( '|', $font_families ),
+			'subset' => 'latin,latin-ext',
 		);
 
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 	}
 
 	return $fonts_url;

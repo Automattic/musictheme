@@ -29,6 +29,11 @@
 			</span><!-- .entry-meta -->
 			<?php endif; ?>
 			<?php musictheme_entry_footer(); ?>
+			<div class="wp-block-button">
+			<a href="' . esc_url( get_permalink() ) . '" class="wp-block-button__link">
+				<?php _e( 'Read more', 'musictheme' ); ?>
+			</a>
+		</div>
 		</div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

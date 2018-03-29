@@ -229,7 +229,7 @@ textarea {
   font-family: "Sorts Mill Goudy", "OFL Sorts Mill Goudy", serif;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.5; }
+  line-height: 1.7; }
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
@@ -774,7 +774,9 @@ html {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 0; }
+  margin: 0;
+  font-size: 18px;
+  font-size: 1.125rem; }
 
 .page-links {
   clear: both;
@@ -900,6 +902,9 @@ html {
   padding: 2rem 2rem;
   position: relative;
   z-index: 2; }
+  .entry-footer-wrap .wp-block-button {
+    margin-top: 2rem;
+    margin-bottom: 1rem; }
 
 .home.page .entry-header {
   display: none; }
