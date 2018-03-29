@@ -429,6 +429,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/sass\/mixins\/_mixins-master.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/mixins\/_mixins-master.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/sass\/modules\/_accessibility.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -715,6 +728,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/sass\/typography\/_typography.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/typography\/_typography.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/sass\/variables-site\/_colors.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -817,6 +843,16 @@
 		"oA": 0,
 		"oAP": "\/single.php",
 		"oF": 0
+		},
+	"\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/style-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"\/template-parts\/content-none.php": {
 		"cB": 0,
