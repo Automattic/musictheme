@@ -33,14 +33,14 @@
 				var lastItem = mainNav.find( '.menu > li:not(#more-menu)' ).last();
 				lastItem.attr( 'data-width', lastItem.outerWidth( true ) );
 				lastItem.prependTo( moreMenu.find( '.sub-menu' ).eq( 0 ) );
-				// priorityNav(); // Rerun this function!
+				priorityNav(); // Rerun this function!
 				// setTimeout( priorityNav, 1 );
 
 			// But if we have the extra space, we should add the items back to our menu
 			} else if ( navWidth + firstMoreElement.data( 'width' ) < availableSpace ) {
 				// Check to be sure there's enough space for our extra element
 				firstMoreElement.insertBefore( mainNav.find( '.menu > li' ).last() );
-				// priorityNav();
+				priorityNav();
 				// setTimeout( priorityNav, 1 );
 			}
 
@@ -53,15 +53,35 @@
 		} // check for body class
 	} // function priorityNav
 
+	// Debounce
+	function debounce(func, wait = 20, immediate = true) {
+		var timeout;
+
+		return function() {
+			var context = this, args = arguments;
+			var later = function() {
+				timeout = null;
+				if (!immediate) {
+					func.apply(context, args);
+				}
+			};
+			var callNow = immediate && !timeout;
+			clearTimeout(timeout);
+			timeout = setTimeout(later, wait);
+			if (callNow) {
+				func.apply(context, args);
+			}
+		};
+	}
 
 	// Run our functions once the window has loaded fully
-	$( window ).on( 'load', function() {
+	$( window ).on( 'load', debounce( function() {
 		priorityNav();
-	});
+	}));
 
 	// Annnnnd also every time the window resizes
 	var isResizing = false;
-	$( window ).on( 'resize', function() {
+	$( window ).on( 'resize', debounce( function() {
 		if (isResizing) {
 			return;
 		}
@@ -71,6 +91,6 @@
 			priorityNav();
 			isResizing = false;
 		}, 150 );
-	});
+	}));
 
 } )( jQuery );

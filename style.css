@@ -433,17 +433,22 @@ a {
   clear: both;
   display: block;
   padding: 1em 0; }
+  .main-navigation > div {
+    text-align: right; }
   .main-navigation ul {
+    clear: both;
+    display: inline-block;
     list-style: none;
     margin: 0;
-    padding-left: 0; }
+    padding-left: 0;
+    text-align: left; }
     .main-navigation ul ul {
       background: white;
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
       top: 100%;
-      left: -999em;
+      right: -999em;
       z-index: 99999; }
       .main-navigation ul ul ul {
         left: -999em;
@@ -459,7 +464,7 @@ a {
         width: 200px; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
-      left: auto; }
+      right: 0; }
   .main-navigation li {
     float: left;
     position: relative; }
@@ -503,8 +508,8 @@ a {
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none; }
-  .main-navigation ul {
-    display: block; } }
+  .main-navigation > div {
+    text-align: left; } }
 
 /*--------------------------------------------------------------
 ## Post Navigation

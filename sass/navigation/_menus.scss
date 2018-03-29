@@ -3,10 +3,17 @@
 	display: block;
 	padding: 1em 0;
 
+	& > div {
+		text-align: right;
+	}
+
 	ul {
+		clear: both;
+		display: inline-block;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		text-align: left;
 
 		ul {
 			background: white;
@@ -14,7 +21,7 @@
 			float: left;
 			position: absolute;
 			top: 100%;
-			left: -999em;
+			right: -999em;
 			z-index: 99999;
 
 			ul {
@@ -50,7 +57,7 @@
 
 		li:hover > ul,
 		li.focus > ul {
-			left: auto;
+			right: 0;
 		}
 	}
 
@@ -128,7 +135,7 @@
 		display: none;
 	}
 
-	.main-navigation ul {
-		display: block;
+	.main-navigation > div {
+		text-align: left;
 	}
 }

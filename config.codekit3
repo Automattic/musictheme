@@ -2379,7 +2379,7 @@
 			"flagValue": -1
 			},
 		"esnext": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"evil": {
@@ -2637,7 +2637,7 @@
 			"flagValue": -1
 			},
 		"es6": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"eval": {
@@ -2653,7 +2653,7 @@
 			"flagValue": 150
 			},
 		"node": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"this": {
