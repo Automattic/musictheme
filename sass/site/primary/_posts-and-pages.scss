@@ -177,6 +177,11 @@
 	padding: $size__horizontal-padding $size__vertical-padding;
 	position: relative;
 	z-index: 2;
+
+	.wp-block-button {
+		margin-top: $size__vertical-padding;
+		margin-bottom: #{$size__vertical-padding / 2 };
+	}
 }
 
 .home.page .entry-header {
