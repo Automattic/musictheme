@@ -4,103 +4,181 @@
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
  */
-( function() {
-	var container, button, menu, links, i, len;
 
-	container = document.getElementById( 'site-navigation' );
-	if ( ! container ) {
-		return;
-	}
+/* global screenReaderText */
+( function( $ ) {
 
-	button = container.getElementsByTagName( 'button' )[0];
-	if ( 'undefined' === typeof button ) {
-		return;
-	}
+	var body,
+		siteMenu       = $( '.main-navigation' ),
+		siteNavigation = siteMenu.find( '.main-navigation > div' );
 
-	menu = container.getElementsByTagName( 'ul' )[0];
+	/**
+	 * Initialize the main navigation
+	 */
+	function initMainNavigation( container ) {
 
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
-	}
+		// Add parent class to sub-menu parent items
+		container.find( '.sub-menu, .children' ).parents( 'li' ).addClass( 'menu-item-has-children' );
 
-	menu.setAttribute( 'aria-expanded', 'false' );
-	if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
-		menu.className += ' nav-menu';
-	}
+/*
+		// Add dropdown toggle button
+		var dropdownToggle = $( '<button />', {
+				'class': 'dropdown-toggle',
+				'aria-expanded': false
+			} ).append( $( '<span />', {
+				'class': 'screen-reader-text',
+				text: screenReaderText.expand
+			})).append( '<span class="meta-nav" aria-hidden="true"><svg class="dropdown-icon dropdown-icon-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><polyline class="line" points="2.5,3.8 5,6.2 7.5,3.8 "/></svg><svg class="dropdown-icon dropdown-icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><line class="line" x1="2.5" y1="7.5" x2="7.5" y2="2.5"/><line class="line" x1="2.5" y1="2.5" x2="7.5" y2="7.5"/></svg></span>' );
 
-	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-			container.className = container.className.replace( ' toggled', '' );
-			button.setAttribute( 'aria-expanded', 'false' );
-			menu.setAttribute( 'aria-expanded', 'false' );
-		} else {
-			container.className += ' toggled';
-			button.setAttribute( 'aria-expanded', 'true' );
-			menu.setAttribute( 'aria-expanded', 'true' );
-		}
-	};
+		container.find( '.menu-item-has-children > a' ).after( dropdownToggle );
+*/
 
-	// Get all the link elements within the menu.
-	links    = menu.getElementsByTagName( 'a' );
+		// Change menu items with submenus to aria-haspopup="true".
+		container.find( '.menu-item-has-children' ).attr( 'aria-haspopup', 'true' );
 
-	// Each time a menu link is focused or blurred, toggle focus.
-	for ( i = 0, len = links.length; i < len; i++ ) {
-		links[i].addEventListener( 'focus', toggleFocus, true );
-		links[i].addEventListener( 'blur', toggleFocus, true );
+		// Drop down toggle setup
+		container.find( '.dropdown-toggle' ).click( function( e ) {
+
+			var _this            = $( this ),
+			    otherSubMenus    = _this.parents( '.menu-item-has-children' ).siblings( '.menu-item-has-children' ),
+			    screenReaderSpan = _this.find( '.screen-reader-text' );
+
+			// Disable default behavior
+			e.preventDefault();
+
+			// Stop click outside area function
+			e.stopPropagation();
+
+			// Reveal sub-menus
+			_this.not( '.menu-toggle' ).toggleClass( 'toggled-on' );
+			_this.not( '.menu-toggle' ).parent().toggleClass( 'toggled-on' );
+			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+
+			// Close other sub-menus if they're open
+			otherSubMenus.removeClass( 'toggled-on' );
+			otherSubMenus.find( '.toggled-on' ).removeClass( 'toggled-on' );
+
+			// jscs:disable
+			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+			// jscs:enable
+
+			// Update screen reader text
+			screenReaderSpan.text( screenReaderSpan.text() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
+
+		} );
+
+		// Close sub-menus when click outside of menus
+		$( 'html' ).click( function() {
+
+			container.find( '.toggled-on' ).removeClass( 'toggled-on' );
+		});
+
+		// Close expanded sub-menus when clicking links
+		container.find( 'a' ).click( function( e ) {
+
+			var _this         = $( this ),
+				anchor        = _this.attr( 'href' ),
+				otherSubMenus = container.find( '.toggled-on' );
+
+			//console.log(anchor);
+			e.preventDefault();
+
+			otherSubMenus.removeClass( 'toggled-on' ).attr( 'aria-expanded', 'false' ).attr( 'aria-haspopup', 'false' );
+
+			window.location.href = anchor;
+
+		} );
 	}
 
 	/**
-	 * Sets or removes .focus class on an element.
+	 * Fix sub-menus for touch devices and better focus for hidden submenu items for accessibility
 	 */
-	function toggleFocus() {
-		var self = this;
+	function addTouchSupport() {
 
-		// Move up through the ancestors of the current link until we hit .nav-menu.
-		while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
+		if ( ! siteNavigation.length || ! siteNavigation.children().length ) {
 
-			// On li elements toggle the class .focus.
-			if ( 'li' === self.tagName.toLowerCase() ) {
-				if ( -1 !== self.className.indexOf( 'focus' ) ) {
-					self.className = self.className.replace( ' focus', '' );
-				} else {
-					self.className += ' focus';
+			return;
+		}
+
+		// Toggle `focus` class to allow submenu access on tablets.
+		function toggleFocusClassTouchScreen() {
+
+			//	if ( window.innerWidth >= 896 ) {
+			$( document.body ).on( 'touchstart.altofocus', function( e ) {
+
+				if ( ! $( e.target ).closest( '.top-navigation li' ).length ) {
+
+					$( '.top-navigation li' ).removeClass( 'focus' );
 				}
-			}
+			} );
 
-			self = self.parentElement;
+			siteNavigation.find( '.menu-item-has-children > a' ).on( 'touchstart.altofocus', function( e ) {
+
+				var el = $( this ).parent( 'li' );
+
+				if ( ! el.hasClass( 'focus' ) ) {
+
+					e.preventDefault();
+					el.toggleClass( 'focus' );
+					el.siblings( '.focus' ).removeClass( 'focus' );
+				}
+			} );
 		}
-	}
-
-	/**
-	 * Toggles `focus` class to allow submenu access on tablets.
-	 */
-	( function( container ) {
-		var touchStartFn, i,
-			parentLink = container.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
 
 		if ( 'ontouchstart' in window ) {
-			touchStartFn = function( e ) {
-				var menuItem = this.parentNode, i;
 
-				if ( ! menuItem.classList.contains( 'focus' ) ) {
-					e.preventDefault();
-					for ( i = 0; i < menuItem.parentNode.children.length; ++i ) {
-						if ( menuItem === menuItem.parentNode.children[i] ) {
-							continue;
-						}
-						menuItem.parentNode.children[i].classList.remove( 'focus' );
-					}
-					menuItem.classList.add( 'focus' );
-				} else {
-					menuItem.classList.remove( 'focus' );
-				}
-			};
-
-			for ( i = 0; i < parentLink.length; ++i ) {
-				parentLink[i].addEventListener( 'touchstart', touchStartFn, false );
-			}
+			$( window ).on( 'resize.altofocus', toggleFocusClassTouchScreen );
+			toggleFocusClassTouchScreen();
 		}
-	}( container ) );
-} )();
+
+		siteNavigation.find( 'a' ).on( 'focus.altofocus blur.altofocus', function() {
+
+			$( this ).parents( '.menu-item' ).toggleClass( 'focus' );
+		} );
+	}
+
+	/**
+	 * Add the default ARIA attributes for the menu toggle and the navigations
+	 */
+	function onResizeARIA() {
+
+		if ( window.innerWidth < 896 ) {
+
+			siteMenu.attr( 'aria-expanded', 'false' );
+			siteNavigation.attr( 'aria-expanded', 'false' );
+
+		} else {
+
+			siteMenu.removeAttr( 'aria-expanded' );
+			siteNavigation.removeAttr( 'aria-expanded' );
+		}
+	}
+
+	/**
+	 * Re-initialize the main navigation when it is updated in the customizer
+	 * - Borrowed from twentysixteen: https://goo.gl/O6msL1
+	 */
+	$( document ).on( 'customize-preview-menu-refreshed', function( e, params ) {
+
+		if ( 'menu-1' === params.wpNavMenuArgs.theme_location ) {
+
+			initMainNavigation( params.newContainer );
+		}
+	});
+
+	/**
+	 * Execute functions
+	 */
+	$( document )
+		.ready( initMainNavigation( siteMenu ) )
+		.ready( addTouchSupport )
+		.ready( function() {
+
+			body = $( document.body );
+
+			$( window )
+				.on( 'load.altofocus', onResizeARIA )
+				.on( 'resize.altofocus', onResizeARIA );
+		});
+
+} )( jQuery );

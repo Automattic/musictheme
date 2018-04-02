@@ -160,6 +160,13 @@ function musictheme_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// Screenreader text
+	wp_localize_script( 'musictheme-navigation', 'screenReaderText', array(
+		'expand'   => esc_html__( 'expand child menu', 'musictheme' ),
+		'collapse' => esc_html__( 'collapse child menu', 'musictheme' ),
+	) );
+
 }
 add_action( 'wp_enqueue_scripts', 'musictheme_scripts' );
 

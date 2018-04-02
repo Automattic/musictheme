@@ -434,7 +434,6 @@ a {
   display: block;
   padding: 1em 0; }
   .main-navigation > div {
-    overflow: hidden;
     text-align: right; }
   .main-navigation ul {
     clear: both;
@@ -449,7 +448,7 @@ a {
       float: left;
       position: absolute;
       top: 100%;
-      right: -999em;
+      left: -999em;
       z-index: 99999; }
       .main-navigation ul ul ul {
         left: -999em;
@@ -465,23 +464,25 @@ a {
         width: 200px; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
+      left: inherit;
       right: 0; }
   .main-navigation li {
     float: left;
     position: relative; }
   .main-navigation a {
     color: white;
-    display: block;
+    display: inline-block;
     padding: .5em; }
-  .main-navigation .icon {
-    width: 1rem;
-    height: 1rem;
-    margin-left: .25rem;
-    fill: currentColor; }
+  .main-navigation .menu-item-has-children a {
+    padding-right: .25rem; }
+  .main-navigation .dropdown-toggle {
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: .25rem; }
   .main-navigation .icon {
     width: 0.75rem;
     height: 0.75rem;
-    margin-left: .25rem;
     fill: currentColor; }
 
 /* Hide more link unless we need it. */
@@ -492,6 +493,8 @@ a {
   #more-menu .icon {
     vertical-align: bottom;
     margin-left: 0; }
+  #more-menu li .dropdown-toggle {
+    display: none; }
   #more-menu .sub-menu .icon {
     float: right; }
   #more-menu .sub-menu .sub-menu {
