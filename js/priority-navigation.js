@@ -33,15 +33,15 @@
 				var lastItem = mainNav.find( '.menu > li:not(#more-menu)' ).last();
 				lastItem.attr( 'data-width', lastItem.outerWidth( true ) );
 				lastItem.prependTo( moreMenu.find( '.sub-menu' ).eq( 0 ) );
-				priorityNav(); // Rerun this function!
-				// setTimeout( priorityNav, 1 );
+				// priorityNav(); // Rerun this function!
+				setTimeout( priorityNav, 10 );
 
 			// But if we have the extra space, we should add the items back to our menu
 			} else if ( navWidth + firstMoreElement.data( 'width' ) < availableSpace ) {
 				// Check to be sure there's enough space for our extra element
 				firstMoreElement.insertBefore( mainNav.find( '.menu > li' ).last() );
-				priorityNav();
-				// setTimeout( priorityNav, 1 );
+				// priorityNav();
+				setTimeout( priorityNav, 10 );
 			}
 
 			// Hide our more-menu entirely if there's nothing in it
@@ -50,6 +50,7 @@
 			} else {
 				moreMenu.removeClass( 'visible' );
 			}
+
 		} // check for body class
 	} // function priorityNav
 
@@ -81,7 +82,7 @@
 
 	// Annnnnd also every time the window resizes
 	var isResizing = false;
-	$( window ).on( 'resize', debounce( function() {
+	$( window ).on( 'resize', function() {
 		if (isResizing) {
 			return;
 		}
@@ -91,6 +92,6 @@
 			priorityNav();
 			isResizing = false;
 		}, 150 );
-	}));
+	});
 
 } )( jQuery );
