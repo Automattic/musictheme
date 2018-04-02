@@ -51,7 +51,7 @@
 
 			// Reveal sub-menus
 			_this.not( '.menu-toggle' ).toggleClass( 'toggled-on' );
-			_this.not( '.menu-toggle' ).parent().toggleClass( 'toggled-on' );
+			_this.not( '.menu-toggle' ).parents( 'li' ).toggleClass( 'toggled-on' );
 			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
 
 			// Close other sub-menus if they're open

@@ -462,8 +462,7 @@ a {
         color: black;
         padding: .5rem .5rem 0;
         width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
+    .main-navigation ul li.toggled-on > ul {
       left: inherit;
       right: 0; }
   .main-navigation li {
@@ -490,6 +489,8 @@ a {
   display: none; }
   #more-menu.visible {
     display: inline-block; }
+  #more-menu .dropdown-toggle {
+    line-height: 1.75rem; }
   #more-menu .icon {
     vertical-align: bottom;
     margin-left: 0; }

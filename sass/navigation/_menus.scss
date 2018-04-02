@@ -55,8 +55,7 @@
 			}
 		}
 
-		li:hover > ul,
-		li.focus > ul {
+		li.toggled-on > ul {
 			left: inherit;
 			right: 0;
 		}
@@ -108,6 +107,10 @@
 
 	&.visible {
 		display: inline-block;
+	}
+
+	.dropdown-toggle {
+		line-height: 1.75rem;
 	}
 
 	.icon {
