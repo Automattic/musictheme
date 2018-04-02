@@ -37,10 +37,10 @@
 	.singular & {
 		background: $color__theme-link;
 		display: flex;
-		margin: 0 0 -6rem;
+		margin: 0;
 		max-width: 100%;
 		min-height: 100vh;
-		padding: #{$size__horizontal-padding * 3} 0;
+		padding: #{$size__horizontal-padding * 4} 0;
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
@@ -108,7 +108,7 @@
 	z-index: 3;
 
 	.singular & {
-		margin: 0 auto 6rem;
+		margin: 0 auto;
 		max-width: $size__site-max-width-wide;
 		padding: 0 $size__horizontal-padding;
 		width: 100%;
@@ -234,6 +234,10 @@
 		}
 	}
 
+	.singular .entry-meta {
+		margin-bottom: #{$size__vertical-padding * 3.5}; 
+	}
+
 	.entry-title {
 		color: $color__background-body;
 
@@ -243,13 +247,14 @@
 		}
 	}
 
+	.singular .entry-header, 
 	.hfeed .page-header {
-		margin: 0 0 -#{$size__horizontal-padding * 3};
+		margin: 0 0 -#{$size__horizontal-padding * 4};
+	}
 
-		.page-title {
-			font-size: 117px;
-			line-height: 128px;
-		}
+	.hfeed .page-header .page-title {
+		font-size: 117px;
+		line-height: 128px;
 	}
 
 	.entry-header .entry-featured-image {
@@ -276,5 +281,13 @@
 
 	.entry-footer-wrap {
 		margin: -#{$size__vertical-padding} $size__max-width-wide-margin $size__vertical-padding auto;
+	}
+}
+
+@media screen and (min-width: 740px) {
+	
+	.page.singular .entry-title,
+	.hfeed .page-header .page-title {
+		margin-bottom: #{$size__vertical-padding * 4};
 	}
 }
