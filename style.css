@@ -1120,6 +1120,8 @@ html {
 .entry-content > h3 {
   background: transparent;
   color: #f18686;
+  font-size: 18px;
+  font-size: 1.125rem;
   margin: 0;
   padding: 0;
   position: absolute;

@@ -68,6 +68,7 @@
 .entry-content > h3 {
 	background: transparent;
 	color: $color__theme-primary;
+	@include font-size(1.125);
 	margin: 0;
 	padding: 0;
 	position: absolute;
