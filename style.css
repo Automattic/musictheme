@@ -1271,6 +1271,8 @@ p.wp-block-subhead {
       margin-top: 1.5em; }
   .wp-block-cover-image.black {
     background-color: black; }
+  .wp-block-cover-image.gray, .wp-block-cover-image.grey {
+    background-color: #383838; }
   .wp-block-cover-image.white {
     background-color: white; }
     .wp-block-cover-image.white h2,

@@ -258,6 +258,9 @@ p.wp-block-subhead {
 	&.black {
 		background-color: $color__theme-link;
 	}
+	&.gray, &.grey {
+		background-color: $color__theme-secondary;
+	}
 	&.white {
 		background-color: $color__background-body;
 
