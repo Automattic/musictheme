@@ -881,7 +881,7 @@ html {
     margin-top: 2rem;
     margin-bottom: 1rem; }
 
-.home.page .entry-header {
+.page.page-template-hide-header .entry-header {
   display: none; }
 
 .blog .post:nth-of-type(3n+2) .entry-header, .archive .post:nth-of-type(3n+2) .entry-header, .search-results .post:nth-of-type(3n+2) .entry-header {
