@@ -884,6 +884,9 @@ html {
 .page.page-template-hide-header .entry-header {
   display: none; }
 
+.page.page-template-hide-header .entry-content :first-child:not(.wp-block-cover-image.alignfull) {
+  margin-top: 5rem; }
+
 .blog .post:nth-of-type(3n+2) .entry-header, .archive .post:nth-of-type(3n+2) .entry-header, .search-results .post:nth-of-type(3n+2) .entry-header {
   color: black; }
   .blog .post:nth-of-type(3n+2) .entry-header .entry-header-wrap, .archive .post:nth-of-type(3n+2) .entry-header .entry-header-wrap, .search-results .post:nth-of-type(3n+2) .entry-header .entry-header-wrap {
