@@ -462,6 +462,8 @@ a {
     color: white;
     display: block;
     padding: .5em; }
+    .contrast-text-color .main-navigation a {
+      color: black; }
   .main-navigation .icon {
     width: 1rem;
     height: 1rem;
@@ -728,6 +730,8 @@ html {
 
 .site-title a {
   color: white; }
+  .contrast-text-color .site-title a {
+    color: black; }
 
 .site-description {
   margin: 0;

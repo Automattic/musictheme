@@ -5,7 +5,7 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, pageCoverImage, button, menu, links, i, len;
+	var container, pageCoverImage, siteHeader, button, menu, links, i, len;
 
 	/**
 	 * Sets or removes .focus class on an element.
@@ -107,10 +107,11 @@
 	/**
 	 * Add contrast text color to site navigation when a white cover image is used
 	 */
+	siteHeader = document.getElementById( 'masthead' );
 	pageCoverImage = document.querySelectorAll( '.page .hentry .wp-block-cover-image.alignfull' );
 
 	if ( pageCoverImage[0].classList.contains( 'white' ) ) {
-    	container.classList.add( 'contrast-text-color' );
+    	siteHeader.classList.add( 'contrast-text-color' );
 	}
 
 } )();
