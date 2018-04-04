@@ -5,7 +5,29 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, i, len;
+	var container, pageCoverImage, siteHeader, button, menu, links, i, len;
+
+	/**
+	 * Sets or removes .focus class on an element.
+	 */
+	function toggleFocus() {
+		var self = this;
+
+		// Move up through the ancestors of the current link until we hit .nav-menu.
+		while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
+
+			// On li elements toggle the class .focus.
+			if ( 'li' === self.tagName.toLowerCase() ) {
+				if ( -1 !== self.className.indexOf( 'focus' ) ) {
+					self.className = self.className.replace( ' focus', '' );
+				} else {
+					self.className += ' focus';
+				}
+			}
+
+			self = self.parentElement;
+		}
+	}
 
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
@@ -52,28 +74,6 @@
 	}
 
 	/**
-	 * Sets or removes .focus class on an element.
-	 */
-	function toggleFocus() {
-		var self = this;
-
-		// Move up through the ancestors of the current link until we hit .nav-menu.
-		while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
-
-			// On li elements toggle the class .focus.
-			if ( 'li' === self.tagName.toLowerCase() ) {
-				if ( -1 !== self.className.indexOf( 'focus' ) ) {
-					self.className = self.className.replace( ' focus', '' );
-				} else {
-					self.className += ' focus';
-				}
-			}
-
-			self = self.parentElement;
-		}
-	}
-
-	/**
 	 * Toggles `focus` class to allow submenu access on tablets.
 	 */
 	( function( container ) {
@@ -103,4 +103,15 @@
 			}
 		}
 	}( container ) );
+
+	/**
+	 * Add contrast text color to site navigation when a white cover image is used
+	 */
+	siteHeader = document.getElementById( 'masthead' );
+	pageCoverImage = document.querySelectorAll( '.page .hentry .wp-block-cover-image.alignfull' );
+
+	if ( pageCoverImage[0].classList.contains( 'white' ) ) {
+    	siteHeader.classList.add( 'contrast-text-color' );
+	}
+
 } )();

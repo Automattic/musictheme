@@ -60,6 +60,9 @@
 		color: $color__background-body;
 		display: block;
 		padding: .5em;
+		.contrast-text-color & {
+			color: $color__theme-link;
+		}
 	}
 
 	.icon {

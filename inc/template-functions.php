@@ -19,7 +19,6 @@ function musictheme_body_classes( $classes ) {
 
 	// Adds a class of singular to singular pages.
 	if ( is_singular() ) {
-
 		$classes[] = 'singular';
 	}
 

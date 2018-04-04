@@ -462,6 +462,8 @@ a {
     color: white;
     display: block;
     padding: .5em; }
+    .contrast-text-color .main-navigation a {
+      color: black; }
   .main-navigation .icon {
     width: 1rem;
     height: 1rem;
@@ -728,6 +730,8 @@ html {
 
 .site-title a {
   color: white; }
+  .contrast-text-color .site-title a {
+    color: black; }
 
 .site-description {
   margin: 0;
@@ -881,8 +885,11 @@ html {
     margin-top: 2rem;
     margin-bottom: 1rem; }
 
-.home.page .entry-header {
+.page.page-template-hide-header .entry-header {
   display: none; }
+
+.page.page-template-hide-header .entry-content > :first-child:not(.wp-block-cover-image.alignfull) {
+  margin-top: 5rem; }
 
 .blog .post:nth-of-type(3n+2) .entry-header, .archive .post:nth-of-type(3n+2) .entry-header, .search-results .post:nth-of-type(3n+2) .entry-header {
   color: black; }

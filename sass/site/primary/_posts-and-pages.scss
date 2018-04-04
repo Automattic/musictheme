@@ -184,8 +184,15 @@
 	}
 }
 
-.home.page .entry-header {
-	display: none;
+.page.page-template-hide-header {
+
+	.entry-header {
+		display: none;
+	}
+
+	.entry-content > :first-child:not(.wp-block-cover-image.alignfull) {
+		margin-top: #{$size__vertical-padding * 2.5 };
+	}
 }
 
 .blog .post, .archive .post, .search-results .post {
