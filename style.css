@@ -482,6 +482,8 @@ a {
     padding: .5em; }
     .contrast-text-color .main-navigation a {
       color: black; }
+  .main-navigation > div > ul > li.menu-item-has-children.toggled-on > a, .current_page_item > a, .current-menu-item > a, .current_page_ancestor > a, .current-menu-ancestor > a {
+    text-decoration: underline; }
   .main-navigation .dropdown-toggle {
     background: transparent;
     border: none;
