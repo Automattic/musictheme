@@ -432,7 +432,10 @@ a {
 .main-navigation {
   clear: both;
   display: block;
-  padding: 1em 0; }
+  padding: 1em 0;
+  /**
+	 * Colors
+	 */ }
   .main-navigation > div {
     float: right; }
   .main-navigation ul {
@@ -442,15 +445,12 @@ a {
     padding-left: 0;
     text-align: left; }
     .main-navigation ul ul {
-      background: #f18686;
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
       top: 100%;
       left: -999em;
       z-index: 99999; }
-      .contrast-text-color .main-navigation ul ul {
-        background: white; }
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
@@ -463,7 +463,6 @@ a {
         .main-navigation ul ul li:last-of-type > a {
           padding-bottom: 1.5rem; }
       .main-navigation ul ul a {
-        color: white;
         font-size: 30px;
         line-height: 1.25;
         padding: 1.5rem 2rem 0;
@@ -477,24 +476,44 @@ a {
     .main-navigation li.menu-item-has-children > a {
       padding-right: .25rem; }
   .main-navigation a {
-    color: white;
     display: inline-block;
     padding: .5em; }
-    .contrast-text-color .main-navigation a {
-      color: black; }
   .main-navigation > div > ul > li.menu-item-has-children.toggled-on > a, .current_page_item > a, .current-menu-item > a, .current_page_ancestor > a, .current-menu-ancestor > a {
     text-decoration: underline; }
   .main-navigation .dropdown-toggle {
+    display: none;
     background: transparent;
     border: none;
-    color: white;
     padding: .25rem; }
-    .contrast-text-color .main-navigation .dropdown-toggle {
-      color: black; }
   .main-navigation .icon {
     width: 0.75rem;
     height: 0.75rem;
     fill: currentColor; }
+  .main-navigation a,
+  .main-navigation .dropdown-toggle {
+    color: white; }
+    .white .main-navigation a, .white
+    .main-navigation .dropdown-toggle {
+      color: black; }
+    .black .main-navigation a, .black
+    .main-navigation .dropdown-toggle {
+      color: white; }
+  .main-navigation ul ul {
+    background: #f18686; }
+    .main-navigation ul ul a {
+      color: white; }
+    .white .main-navigation ul ul {
+      background: white; }
+      .white .main-navigation ul ul a {
+        color: black; }
+    .grey .main-navigation ul ul {
+      background: #383838; }
+      .grey .main-navigation ul ul a {
+        color: white; }
+    .black .main-navigation ul ul {
+      background: black; }
+      .black .main-navigation ul ul a {
+        color: white; }
 
 /* Hide more link unless we need it. */
 #more-menu {
@@ -502,6 +521,7 @@ a {
   #more-menu.visible {
     display: inline-block; }
   #more-menu .dropdown-toggle {
+    display: inline-block;
     line-height: 1.7rem;
     padding: .5rem; }
   #more-menu .icon {
@@ -514,10 +534,7 @@ a {
     position: relative;
     z-index: 1; }
   #more-menu .sub-menu .dropdown-toggle {
-    position: absolute;
-    right: 2rem;
-    top: 1rem;
-    z-index: 0; }
+    display: none; }
   #more-menu .sub-menu .sub-menu {
     box-shadow: none;
     right: inherit;
@@ -536,29 +553,51 @@ a {
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none; }
-  .main-navigation > div {
-    float: left; }
-  .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation .menu-item-has-children > a {
-    padding-right: .5rem; }
-  .main-navigation ul li.toggled-on > ul {
-    left: inherit;
-    right: 0;
-    width: inherit; }
-  .main-navigation ul ul {
-    background: white; }
+  .main-navigation {
+    /**
+		 * Colors
+		 */ }
+    .main-navigation > div {
+      float: left; }
+    .main-navigation li {
+      float: left;
+      position: relative; }
+    .main-navigation .menu-item-has-children > a {
+      padding-right: .5rem; }
+    .main-navigation ul li.toggled-on > ul {
+      left: inherit;
+      right: 0;
+      width: inherit; }
+    .main-navigation .dropdown-toggle {
+      display: inline-block; }
     .main-navigation ul ul li {
       float: left;
       clear: inherit; }
     .main-navigation ul ul li:last-of-type > a {
       padding-bottom: .5rem; }
     .main-navigation ul ul a {
-      color: #f18686;
       font-size: 1rem;
       padding: .5rem .5rem 0;
-      width: 200px; } }
+      width: 200px; }
+    .main-navigation a,
+    .main-navigation .dropdown-toggle {
+      color: white; }
+    .main-navigation ul ul {
+      background: white; }
+      .main-navigation ul ul a {
+        color: #f18686; }
+      .white .main-navigation ul ul {
+        background: black; }
+        .white .main-navigation ul ul a {
+          color: white; }
+      .grey .main-navigation ul ul {
+        background: white; }
+        .grey .main-navigation ul ul a {
+          color: #383838; }
+      .black .main-navigation ul ul {
+        background: white; }
+        .black .main-navigation ul ul a {
+          color: black; } }
 
 /*--------------------------------------------------------------
 ## Post Navigation
@@ -775,9 +814,7 @@ a {
     grid-template-columns: repeat(3, 1fr); } }
 
 body,
-html {
-  background: black; }
-
+html,
 .site {
   background: #383838; }
 
@@ -811,7 +848,7 @@ html {
 
 .site-title a {
   color: white; }
-  .contrast-text-color .site-title a {
+  .white .site-title a {
     color: black; }
 
 .site-description {
@@ -1577,6 +1614,61 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .wp-block-cover-image.has-background-dim.black.has-background-dim-100:before,
 .has-background-dim.black.has-background-dim-100:before {
   background-color: black; }
+
+.wp-block-cover-image.has-background-dim.gray:before, .wp-block-cover-image.has-background-dim.grey:before,
+.has-background-dim.gray:before,
+.has-background-dim.grey:before {
+  background-color: rgba(56, 56, 56, 0.5); }
+
+.wp-block-cover-image.has-background-dim.gray.has-background-dim-10:before, .wp-block-cover-image.has-background-dim.grey.has-background-dim-10:before,
+.has-background-dim.gray.has-background-dim-10:before,
+.has-background-dim.grey.has-background-dim-10:before {
+  background-color: rgba(56, 56, 56, 0.1); }
+
+.wp-block-cover-image.has-background-dim.gray.has-background-dim-20:before, .wp-block-cover-image.has-background-dim.grey.has-background-dim-20:before,
+.has-background-dim.gray.has-background-dim-20:before,
+.has-background-dim.grey.has-background-dim-20:before {
+  background-color: rgba(56, 56, 56, 0.2); }
+
+.wp-block-cover-image.has-background-dim.gray.has-background-dim-30:before, .wp-block-cover-image.has-background-dim.grey.has-background-dim-30:before,
+.has-background-dim.gray.has-background-dim-30:before,
+.has-background-dim.grey.has-background-dim-30:before {
+  background-color: rgba(56, 56, 56, 0.3); }
+
+.wp-block-cover-image.has-background-dim.gray.has-background-dim-40:before, .wp-block-cover-image.has-background-dim.grey.has-background-dim-40:before,
+.has-background-dim.gray.has-background-dim-40:before,
+.has-background-dim.grey.has-background-dim-40:before {
+  background-color: rgba(56, 56, 56, 0.4); }
+
+.wp-block-cover-image.has-background-dim.gray.has-background-dim-50:before, .wp-block-cover-image.has-background-dim.grey.has-background-dim-50:before,
+.has-background-dim.gray.has-background-dim-50:before,
+.has-background-dim.grey.has-background-dim-50:before {
+  background-color: rgba(56, 56, 56, 0.5); }
+
+.wp-block-cover-image.has-background-dim.gray.has-background-dim-60:before, .wp-block-cover-image.has-background-dim.grey.has-background-dim-60:before,
+.has-background-dim.gray.has-background-dim-60:before,
+.has-background-dim.grey.has-background-dim-60:before {
+  background-color: rgba(56, 56, 56, 0.6); }
+
+.wp-block-cover-image.has-background-dim.gray.has-background-dim-70:before, .wp-block-cover-image.has-background-dim.grey.has-background-dim-70:before,
+.has-background-dim.gray.has-background-dim-70:before,
+.has-background-dim.grey.has-background-dim-70:before {
+  background-color: rgba(56, 56, 56, 0.7); }
+
+.wp-block-cover-image.has-background-dim.gray.has-background-dim-80:before, .wp-block-cover-image.has-background-dim.grey.has-background-dim-80:before,
+.has-background-dim.gray.has-background-dim-80:before,
+.has-background-dim.grey.has-background-dim-80:before {
+  background-color: rgba(56, 56, 56, 0.8); }
+
+.wp-block-cover-image.has-background-dim.gray.has-background-dim-90:before, .wp-block-cover-image.has-background-dim.grey.has-background-dim-90:before,
+.has-background-dim.gray.has-background-dim-90:before,
+.has-background-dim.grey.has-background-dim-90:before {
+  background-color: rgba(56, 56, 56, 0.9); }
+
+.wp-block-cover-image.has-background-dim.gray.has-background-dim-100:before, .wp-block-cover-image.has-background-dim.grey.has-background-dim-100:before,
+.has-background-dim.gray.has-background-dim-100:before,
+.has-background-dim.grey.has-background-dim-100:before {
+  background-color: #383838; }
 
 .wp-block-cover-image.has-background-dim.white:before,
 .has-background-dim.white:before {

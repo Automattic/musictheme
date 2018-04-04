@@ -145,11 +145,15 @@
 	/**
 	 * Add contrast text color to site navigation when a white cover image is used
 	 */
-	function addHeaderColorContrast() {
-		var pageCoverImage = $( '.page .hentry .wp-block-cover-image.alignfull' );
+	function addHeaderContrast() {
+		var pageCoverImage = $( '.page .hentry .wp-block-cover-image' ).eq(0);
 
-		if ( pageCoverImage.length && pageCoverImage.hasClass( 'white' ) ) {
-			siteHeader.addClass( 'contrast-text-color' );
+		if ( pageCoverImage.hasClass( 'white' ) ) {
+			siteHeader.addClass( 'white' );
+		} else if ( pageCoverImage.hasClass( 'grey' ) || pageCoverImage.hasClass( 'gray' ) ) {
+			siteHeader.addClass( 'grey' );
+		} else if ( pageCoverImage.hasClass( 'black' ) ) {
+			siteHeader.addClass( 'black' );
 		}
 	}
 
@@ -171,7 +175,7 @@
 	$( document )
 		.ready( initMainNavigation( siteMenu ) )
 		.ready( addTouchSupport )
-		.ready( addHeaderColorContrast )
+		.ready( addHeaderContrast )
 		.ready( function() {
 
 			body = $( document.body );

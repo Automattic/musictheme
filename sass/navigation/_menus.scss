@@ -15,17 +15,12 @@
 		text-align: left;
 
 		ul {
-			background: $color__theme-primary;
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
 			top: 100%;
 			left: -999em;
 			z-index: 99999;
-
-			.contrast-text-color & {
-				background: $color__background-body;
-			}
 
 			ul {
 				left: -999em;
@@ -47,7 +42,6 @@
 			}
 
 			a {
-				color: $color__background-body;
 				font-size: 30px;
 				line-height: 1.25;
 				padding: 1.5rem 2rem 0;
@@ -79,12 +73,8 @@
 	}
 
 	a {
-		color: $color__background-body;
 		display: inline-block;
 		padding: .5em;
-		.contrast-text-color & {
-			color: $color__theme-link;
-		}
 	}
 
 	@at-root .main-navigation > div > ul > li.menu-item-has-children.toggled-on > a,
@@ -96,20 +86,60 @@
 	}
 
 	.dropdown-toggle {
+		display: none;
 		background: transparent;
 		border: none;
-		color: $color__background-body;
 		padding: .25rem;
-
-		.contrast-text-color & {
-			color: $color__theme-link;
-		}
 	}
 
 	.icon {
 		width: 0.75rem;
 		height: 0.75rem;
 		fill: currentColor;
+	}
+
+	/**
+	 * Colors
+	 */
+	a,
+	.dropdown-toggle {
+		color: $color__background-body;
+
+		.white & {
+			color: $color__theme-link;
+		}
+
+		.black & {
+			color: $color__background-body;
+		}
+	}
+
+	ul ul {
+		background: $color__theme-primary;
+		a {
+			color: $color__background-body;
+		}
+
+		.white & {
+			background: $color__background-body;
+			a {
+				color: $color__theme-link;
+			}
+		}
+
+		.grey & {
+			background: $color__theme-secondary;
+			a {
+				color: $color__background-body;
+			}
+		}
+
+		.black & {
+			background: $color__theme-link;
+			a {
+				color: $color__background-body;
+			}
+		}
 	}
 }
 
@@ -123,6 +153,7 @@
 	}
 
 	.dropdown-toggle {
+		display: inline-block;
 		line-height: 1.7rem;
 		padding: .5rem;
 	}
@@ -145,10 +176,7 @@
 		}
 
 		.dropdown-toggle {
-			position: absolute;
-			right: 2rem;
-			top: 1rem;
-			z-index: 0;
+			display: none;
 		}
 
 		.sub-menu {
@@ -198,8 +226,11 @@
 			width: inherit;
 		}
 
+		.dropdown-toggle {
+			display: inline-block;
+		}
+
 		ul ul {
-			background: $color__background-body;
 
 			li {
 				float: left;
@@ -211,10 +242,45 @@
 			}
 
 			a {
-				color: $color__theme-primary;
 				font-size: 1rem;
 				padding: .5rem .5rem 0;
 				width: 200px;
+			}
+		}
+
+		/**
+		 * Colors
+		 */
+		a,
+		.dropdown-toggle {
+			color: $color__background-body;
+		}
+
+		ul ul {
+			background: $color__background-body;
+			a {
+				color: $color__theme-primary;
+			}
+
+			.white & {
+				background: $color__theme-link;
+				a {
+					color: $color__background-body;
+				}
+			}
+
+			.grey & {
+				background: $color__background-body;
+				a {
+					color: $color__theme-secondary;
+				}
+			}
+
+			.black & {
+				background: $color__background-body;
+				a {
+					color: $color__theme-link;
+				}
 			}
 		}
 	}

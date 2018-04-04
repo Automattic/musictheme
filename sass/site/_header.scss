@@ -29,8 +29,7 @@
 
 .site-title a {
 	color: $color__background-body;
-
-	.contrast-text-color & {
+	.white & {
 		color: $color__theme-link;
 	}
 }
