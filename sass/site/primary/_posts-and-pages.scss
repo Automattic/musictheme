@@ -190,7 +190,7 @@
 		display: none;
 	}
 
-	.entry-content :first-child:not(.wp-block-cover-image.alignfull) {
+	.entry-content > :first-child:not(.wp-block-cover-image.alignfull) {
 		margin-top: #{$size__vertical-padding * 2.5 };
 	}
 }
