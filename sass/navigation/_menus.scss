@@ -15,7 +15,7 @@
 		text-align: left;
 
 		ul {
-			background: $color__theme-link;
+			background: $color__theme-primary;
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
@@ -199,7 +199,7 @@
 		}
 
 		ul ul {
-			background: rgba( $color__theme-link, .66 );
+			background: $color__background-body;
 
 			li {
 				float: left;
@@ -211,6 +211,7 @@
 			}
 
 			a {
+				color: $color__theme-primary;
 				font-size: 1rem;
 				padding: .5rem .5rem 0;
 				width: 200px;

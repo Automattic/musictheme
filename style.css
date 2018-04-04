@@ -442,7 +442,7 @@ a {
     padding-left: 0;
     text-align: left; }
     .main-navigation ul ul {
-      background: black;
+      background: #f18686;
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
@@ -548,13 +548,14 @@ a {
     right: 0;
     width: inherit; }
   .main-navigation ul ul {
-    background: rgba(0, 0, 0, 0.66); }
+    background: white; }
     .main-navigation ul ul li {
       float: left;
       clear: inherit; }
     .main-navigation ul ul li:last-of-type > a {
       padding-bottom: .5rem; }
     .main-navigation ul ul a {
+      color: #f18686;
       font-size: 1rem;
       padding: .5rem .5rem 0;
       width: 200px; } }
