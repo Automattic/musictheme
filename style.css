@@ -449,6 +449,8 @@ a {
       top: 100%;
       left: -999em;
       z-index: 99999; }
+      .contrast-text-color .main-navigation ul ul {
+        background: white; }
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
@@ -478,11 +480,15 @@ a {
     color: white;
     display: inline-block;
     padding: .5em; }
+    .contrast-text-color .main-navigation a {
+      color: black; }
   .main-navigation .dropdown-toggle {
     background: transparent;
     border: none;
     color: white;
     padding: .25rem; }
+    .contrast-text-color .main-navigation .dropdown-toggle {
+      color: black; }
   .main-navigation .icon {
     width: 0.75rem;
     height: 0.75rem;
@@ -802,6 +808,8 @@ html {
 
 .site-title a {
   color: white; }
+  .contrast-text-color .site-title a {
+    color: black; }
 
 .site-description {
   margin: 0;
@@ -955,8 +963,11 @@ html {
     margin-top: 2rem;
     margin-bottom: 1rem; }
 
-.home.page .entry-header {
+.page.page-template-hide-header .entry-header {
   display: none; }
+
+.page.page-template-hide-header .entry-content > :first-child:not(.wp-block-cover-image.alignfull) {
+  margin-top: 5rem; }
 
 .blog .post:nth-of-type(3n+2) .entry-header, .archive .post:nth-of-type(3n+2) .entry-header, .search-results .post:nth-of-type(3n+2) .entry-header {
   color: black; }
@@ -1194,6 +1205,8 @@ html {
 .entry-content > h3 {
   background: transparent;
   color: #f18686;
+  font-size: 18px;
+  font-size: 1.125rem;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -1343,6 +1356,8 @@ p.wp-block-subhead {
       margin-top: 1.5em; }
   .wp-block-cover-image.black {
     background-color: black; }
+  .wp-block-cover-image.gray, .wp-block-cover-image.grey {
+    background-color: #383838; }
   .wp-block-cover-image.white {
     background-color: white; }
     .wp-block-cover-image.white h2,

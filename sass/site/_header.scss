@@ -29,6 +29,10 @@
 
 .site-title a {
 	color: $color__background-body;
+
+	.contrast-text-color & {
+		color: $color__theme-link;
+	}
 }
 
 .site-description {

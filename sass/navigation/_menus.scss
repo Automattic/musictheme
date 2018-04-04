@@ -15,13 +15,17 @@
 		text-align: left;
 
 		ul {
-			background: black;
+			background: $color__theme-link;
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
 			top: 100%;
 			left: -999em;
 			z-index: 99999;
+
+			.contrast-text-color & {
+				background: $color__background-body;
+			}
 
 			ul {
 				left: -999em;
@@ -43,7 +47,7 @@
 			}
 
 			a {
-				color: white;
+				color: $color__background-body;
 				font-size: 30px;
 				line-height: 1.25;
 				padding: 1.5rem 2rem 0;
@@ -78,6 +82,9 @@
 		color: $color__background-body;
 		display: inline-block;
 		padding: .5em;
+		.contrast-text-color & {
+			color: $color__theme-link;
+		}
 	}
 
 	.current_page_item > a,
@@ -89,8 +96,12 @@
 	.dropdown-toggle {
 		background: transparent;
 		border: none;
-		color: white;
+		color: $color__background-body;
 		padding: .25rem;
+
+		.contrast-text-color & {
+			color: $color__theme-link;
+		}
 	}
 
 	.icon {
@@ -186,7 +197,7 @@
 		}
 
 		ul ul {
-			background: rgba(black, .66);
+			background: rgba( $color__theme-link, .66 );
 
 			li {
 				float: left;

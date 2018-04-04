@@ -10,6 +10,7 @@
 
 	var body,
 		siteMenu       = $( '.main-navigation' ),
+		siteHeader     = $( '.site-header' ),
 		siteNavigation = siteMenu.find( '.main-navigation > div' );
 
 	/**
@@ -19,19 +20,6 @@
 
 		// Add parent class to sub-menu parent items
 		container.find( '.sub-menu, .children' ).parents( 'li' ).addClass( 'menu-item-has-children' );
-
-/*
-		// Add dropdown toggle button
-		var dropdownToggle = $( '<button />', {
-				'class': 'dropdown-toggle',
-				'aria-expanded': false
-			} ).append( $( '<span />', {
-				'class': 'screen-reader-text',
-				text: screenReaderText.expand
-			})).append( '<span class="meta-nav" aria-hidden="true"><svg class="dropdown-icon dropdown-icon-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><polyline class="line" points="2.5,3.8 5,6.2 7.5,3.8 "/></svg><svg class="dropdown-icon dropdown-icon-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><line class="line" x1="2.5" y1="7.5" x2="7.5" y2="2.5"/><line class="line" x1="2.5" y1="2.5" x2="7.5" y2="7.5"/></svg></span>' );
-
-		container.find( '.menu-item-has-children > a' ).after( dropdownToggle );
-*/
 
 		// Change menu items with submenus to aria-haspopup="true".
 		container.find( '.menu-item-has-children' ).attr( 'aria-haspopup', 'true' );
@@ -155,6 +143,17 @@
 	}
 
 	/**
+	 * Add contrast text color to site navigation when a white cover image is used
+	 */
+	function addHeaderColorContrast() {
+		var pageCoverImage = $( '.page .hentry .wp-block-cover-image.alignfull' );
+
+		if ( pageCoverImage.length && pageCoverImage.hasClass( 'white' ) ) {
+			siteHeader.addClass( 'contrast-text-color' );
+		}
+	}
+
+	/**
 	 * Re-initialize the main navigation when it is updated in the customizer
 	 * - Borrowed from twentysixteen: https://goo.gl/O6msL1
 	 */
@@ -172,6 +171,7 @@
 	$( document )
 		.ready( initMainNavigation( siteMenu ) )
 		.ready( addTouchSupport )
+		.ready( addHeaderColorContrast )
 		.ready( function() {
 
 			body = $( document.body );

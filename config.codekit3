@@ -208,6 +208,13 @@
 		"oAP": "\/LICENSE",
 		"oF": 0
 		},
+	"\/page-templates\/hide-header.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/page-templates\/hide-header.php",
+		"oF": 0
+		},
 	"\/page.php": {
 		"cB": 0,
 		"ft": 8192,
