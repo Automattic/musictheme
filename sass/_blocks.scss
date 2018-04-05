@@ -530,7 +530,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 		&.alignwide {
 			min-height: 580px;
-			border: $size__vertical-padding solid $color__theme-secondary;
 		}
 	}
 
@@ -554,9 +553,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		width: calc( 140% + #{$size__horizontal-padding * 2} );
 		max-width: calc( 140% + #{$size__horizontal-padding * 2} );
 		margin-left: calc( -20% - #{$size__horizontal-padding} );
-
 		border: $size__vertical-padding solid $color__theme-secondary;
-		background: $color__theme-secondary;
+		
+		&:not(.wp-block-cover-image) {
+			background: $color__theme-secondary;
+		}
 
 		figcaption {
 			background: $color__theme-secondary;

@@ -1578,8 +1578,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
       .wp-block-cover-image.alignfull:not(:first-child) {
         background-position: 90% 20%; }
     .wp-block-cover-image.alignwide {
-      min-height: 580px;
-      border: 2rem solid #383838; }
+      min-height: 580px; }
   .wp-block-video:not('.alignfull') video {
     max-width: 740px; }
   .wp-block-cover-text p {
@@ -1593,8 +1592,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     width: calc( 140% + 4rem);
     max-width: calc( 140% + 4rem);
     margin-left: calc( -20% - 2rem);
-    border: 2rem solid #383838;
-    background: #383838; }
+    border: 2rem solid #383838; }
+    .entry-content > .alignwide:not(.wp-block-cover-image) {
+      background: #383838; }
     .entry-content > .alignwide figcaption {
       background: #383838;
       padding: 1rem;
