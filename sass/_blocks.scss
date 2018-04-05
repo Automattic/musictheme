@@ -402,10 +402,14 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /**/
 
 .wp-block-separator {
-	border-bottom: $size__vertical-padding solid $color__theme-secondary;
+	width: calc( 100% + #{$size__horizontal-padding} );
+	border: $size__vertical-padding solid $color__theme-secondary;
+	border-top: none;
+	margin-left: -#{$size__horizontal-padding};
 	margin-bottom: 0;
 	margin-top: 0;
 	padding: 0;
+	height: 0;
 }
 
 /**/

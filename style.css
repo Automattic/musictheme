@@ -1372,10 +1372,14 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /* ! Separator */
 /**/
 .wp-block-separator {
-  border-bottom: 2rem solid #383838;
+  width: calc( 100% + 2rem);
+  border: 2rem solid #383838;
+  border-top: none;
+  margin-left: -2rem;
   margin-bottom: 0;
   margin-top: 0;
-  padding: 0; }
+  padding: 0;
+  height: 0; }
 
 /**/
 /* ! Buttons */
