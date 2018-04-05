@@ -41,6 +41,7 @@
 			// Reveal sub-menus
 			_this.not( '.menu-toggle' ).toggleClass( 'toggled-on' );
 			_this.not( '.menu-toggle' ).parents( 'li' ).toggleClass( 'toggled-on' ).promise().done(function(){
+
 				// Toggle the site wrapper class for mobile menu display
 				var _thisLink = $( this );
 
