@@ -1641,7 +1641,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     color: white;
     left: inherit;
     padding-top: 0;
-    right: calc(740px + 10%); }
+    right: calc(740px + 1rem); }
   .entry-content > .rotate + *,
   .entry-content > h3 + * {
     padding-right: 2em; } }
