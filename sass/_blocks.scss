@@ -17,7 +17,7 @@
 	z-index: 1;
 }
 
-.entry-content > .alignwide {
+.entry-content > .alignfull {
 	max-width: 100%;
 	margin: $size__vertical-padding auto;
 	padding: 0;
@@ -548,6 +548,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 @media screen and (min-width: 940px) {
+
+	.entry-content > .alignwide + .alignwide,
+	.entry-content > .alignwide + .alignfull,
+	.entry-content > .alignfull + .alignwide,
+	.entry-content > .alignfull + .alignfull {
+		margin-top: -#{$size__vertical-padding * 2};
+	}
 
 	.entry-content > .alignwide {
 		width: calc( 140% + #{$size__horizontal-padding * 2} );

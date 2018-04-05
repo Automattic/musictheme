@@ -1079,7 +1079,7 @@ html {
   position: relative;
   z-index: 1; }
 
-.entry-content > .alignwide {
+.entry-content > .alignfull {
   max-width: 100%;
   margin: 2rem auto;
   padding: 0; }
@@ -1588,6 +1588,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     line-height: 128px; } }
 
 @media screen and (min-width: 940px) {
+  .entry-content > .alignwide + .alignwide,
+  .entry-content > .alignwide + .alignfull,
+  .entry-content > .alignfull + .alignwide,
+  .entry-content > .alignfull + .alignfull {
+    margin-top: -4rem; }
   .entry-content > .alignwide {
     width: calc( 140% + 4rem);
     max-width: calc( 140% + 4rem);
