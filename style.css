@@ -445,12 +445,14 @@ a {
     padding-left: 0;
     text-align: left; }
     .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
+      opacity: 0;
       position: absolute;
-      top: 100%;
       left: -999em;
-      z-index: 99999; }
+      z-index: 99999;
+      -webkit-transition: opacity 0.5s ease-in-out;
+      -moz-transition: opacity 0.5s ease-in-out;
+      transition: opacity 0.5s ease-in-out; }
       .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
@@ -470,7 +472,10 @@ a {
     .main-navigation ul li.toggled-on > ul {
       left: 0;
       right: inherit;
-      width: 100vw; }
+      width: 100vw;
+      opacity: 1; }
+      .main-navigation ul li.toggled-on > ul ul {
+        opacity: 1; }
   .main-navigation li {
     float: left; }
     .main-navigation li.menu-item-has-children > a {
@@ -569,15 +574,17 @@ a {
       width: inherit; }
     .main-navigation .dropdown-toggle {
       display: inline-block; }
-    .main-navigation ul ul li {
-      float: left;
-      clear: inherit; }
-    .main-navigation ul ul li:last-of-type > a {
-      padding-bottom: .5rem; }
-    .main-navigation ul ul a {
-      font-size: 1rem;
-      padding: .5rem .5rem 0;
-      width: 200px; }
+    .main-navigation ul ul {
+      top: 100%; }
+      .main-navigation ul ul li {
+        float: left;
+        clear: inherit; }
+      .main-navigation ul ul li:last-of-type > a {
+        padding-bottom: .5rem; }
+      .main-navigation ul ul a {
+        font-size: 1rem;
+        padding: .5rem .5rem 0;
+        width: 200px; }
     .main-navigation a,
     .main-navigation .dropdown-toggle {
       color: white; }
@@ -812,6 +819,22 @@ a {
   .site-header-wrap {
     grid-template-columns: repeat(3, 1fr); } }
 
+/**
+ * Mobile Menu Layout
+ */
+@media screen and (max-width: 37.5em) {
+  .menu-open .site-header {
+    min-height: 100vh; }
+  .menu-open .site-main,
+  .menu-open .site-footer {
+    height: 100vh;
+    overflow-y: hidden;
+    opacity: 0;
+    position: fixed; }
+  .menu-open .site-footer {
+    opacity: 0;
+    position: fixed; } }
+
 body,
 html,
 .site {
@@ -824,13 +847,18 @@ html,
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-  background: black;
   color: white;
   position: absolute;
   left: 0;
   right: 0;
   background-color: transparent;
   z-index: 500; }
+  .menu-open .site-header.white {
+    background: white; }
+  .menu-open .site-header.grey {
+    background: #383838; }
+  .menu-open .site-header.black {
+    background: black; }
 
 .site-header-wrap {
   max-width: 1100px;
@@ -853,6 +881,10 @@ html,
 .site-description {
   margin: 0;
   padding: 0 0.5em 0.5em; }
+
+@media screen and (min-width: 37.5em) {
+  .site-header.white, .site-header.grey, .site-header.black {
+    background: transparent; } }
 
 /*--------------------------------------------------------------
 ## Posts and pages

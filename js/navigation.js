@@ -11,7 +11,8 @@
 	var body,
 		siteMenu       = $( '.main-navigation' ),
 		siteHeader     = $( '.site-header' ),
-		siteNavigation = siteMenu.find( '.main-navigation > div' );
+		siteNavigation = siteMenu.find( '.main-navigation > div' ),
+		siteWrap       = siteHeader.parents( '.site' );
 
 	/**
 	 * Initialize the main navigation
@@ -39,7 +40,16 @@
 
 			// Reveal sub-menus
 			_this.not( '.menu-toggle' ).toggleClass( 'toggled-on' );
-			_this.not( '.menu-toggle' ).parents( 'li' ).toggleClass( 'toggled-on' );
+			_this.not( '.menu-toggle' ).parents( 'li' ).toggleClass( 'toggled-on' ).promise().done(function(){
+				// Toggle the site wrapper class for mobile menu display
+				var _thisLink = $( this );
+
+				if ( _thisLink.hasClass( 'toggled-on' ) ) {
+					siteWrap.addClass( 'menu-open' );
+				} else {
+					siteWrap.removeClass( 'menu-open' );
+				}
+			});
 			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
 
 			// Close other sub-menus if they're open
@@ -143,7 +153,7 @@
 	}
 
 	/**
-	 * Add contrast text color to site navigation when a white cover image is used
+	 * Add contrast text color to site navigation when a white, grey or black alt-cover image is used
 	 */
 	function addHeaderContrast() {
 		var pageCoverImage = $( '.page .hentry .wp-block-cover-image' ).eq(0);

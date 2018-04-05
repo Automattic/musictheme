@@ -37,3 +37,27 @@
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
+
+/**
+ * Mobile Menu Layout
+ */
+
+@media screen and (max-width: 37.5em) {
+
+	.menu-open .site-header {
+		min-height: 100vh;
+	}
+
+	.menu-open .site-main,
+	.menu-open .site-footer {
+		height: 100vh;
+		overflow-y: hidden;
+		opacity: 0;
+		position: fixed;
+	}
+
+	.menu-open .site-footer {
+		opacity: 0;
+		position: fixed;
+	}
+}
