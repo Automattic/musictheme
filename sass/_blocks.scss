@@ -1,9 +1,14 @@
 .entry-content {
 	overflow: hidden;
 	background: $color__background-body;
+	padding: $size__horizontal-padding;
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 1100px;
+
+	:first-child {
+		margin-top: 0;
+	}
 }
 
 .entry-content > * {
@@ -67,8 +72,7 @@
 .wp-block-quote,
 .wp-block-pullquote {
 
-	padding-top: $size__vertical-padding;
-	padding-bottom: $size__vertical-padding;
+	margin: $size__vertical-padding 0;
 
 	& > *,
 	p {
@@ -89,7 +93,7 @@
 	&.is-large {
 		margin: 0 auto;
 		max-width: $size__site-max-width;
-		padding: $size__vertical-padding;
+		margin: $size__vertical-padding 0;
 		clear: both;
 
 		p {
@@ -446,11 +450,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		max-width: #{$size__site-max-width};
 	}
 
-	.entry-content > * {
-		padding-left: $size__horizontal-padding;
-		padding-right: $size__horizontal-padding;
-	}
-
 	.entry-content > .alignwide {
 		width: calc( 140% + #{$size__horizontal-padding} );
 		max-width: calc( 140% + #{$size__horizontal-padding} );
@@ -513,6 +512,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 			padding: 10% 0;
 
 			&:first-child {
+				margin-top: -#{$size__vertical-padding};
 				margin-bottom: -#{$size__vertical-padding * 4};
 
 				h2,
@@ -530,6 +530,14 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 					background-color: $color__background-body;
 					margin-left: calc( ( 100vw - #{$size__site-max-width} ) / 2 );
 					margin-right: calc( ( 100vw - #{$size__site-max-width} ) / 2 );
+				}
+
+				+ *:not(h3) {
+					margin-top: $size__vertical-padding;
+				}
+
+				+ h3 + *:not(h3) {
+					margin-top: $size__vertical-padding;
 				}
 			}
 
