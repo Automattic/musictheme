@@ -34,6 +34,7 @@
 	max-width: 100vw;
 	margin: $size__vertical-padding calc((100% - 100vw) * .5);
 	padding: 0;
+	border: $size__vertical-padding solid $color__theme-secondary;
 
 	figcaption {
 		padding: 1rem;
@@ -265,11 +266,7 @@ p.wp-block-subhead {
 	&.alignwide, &.alignfull {
 		background-color: transparent;
 	}
-
-	&.alignfull {
-		padding-bottom: $size__vertical-padding;
-	}
-
+	
 	.blocks-gallery-item {
 		background: $color__theme-secondary;
 		border: 8px solid $color__theme-secondary;
@@ -450,12 +447,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		max-width: #{$size__site-max-width};
 	}
 
-	.entry-content > .alignwide {
-		width: calc( 140% + #{$size__horizontal-padding} );
-		max-width: calc( 140% + #{$size__horizontal-padding} );
-		margin-left: -20%;
-	}
-
 	.entry-content > .rotate,
 	.entry-content > h3 {
 		right: calc( 50% - #{$size__site-max-width / 2} + 1rem );
@@ -548,6 +539,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 		&.alignwide {
 			min-height: 580px;
+			border: $size__vertical-padding solid $color__theme-secondary;
 		}
 	}
 
@@ -566,6 +558,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 @media screen and (min-width: 940px) {
+
+	.entry-content > .alignwide {
+		width: calc( 140% + #{$size__horizontal-padding * 2} );
+		max-width: calc( 140% + #{$size__horizontal-padding * 2} );
+		margin-left: calc( -20% - #{$size__horizontal-padding} );
+	}
 
 	.wp-block-image {
 
