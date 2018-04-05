@@ -1600,6 +1600,14 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     border: 2rem solid #383838; }
     .entry-content > .alignwide:not(.wp-block-cover-image) {
       background: #383838; }
+    .entry-content > .alignwide:first-child {
+      width: calc( 140% + 2rem);
+      max-width: calc( 140% + 2rem);
+      margin-left: calc( -20%);
+      margin-top: -2rem;
+      border-left: 0;
+      border-right: 0;
+      border-top: 0; }
     .entry-content > .alignwide figcaption {
       background: #383838;
       padding: 1rem;

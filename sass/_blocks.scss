@@ -566,6 +566,17 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 			background: $color__theme-secondary;
 		}
 
+		&:first-child {
+			width: calc( 140% + #{$size__horizontal-padding} );
+			max-width: calc( 140% + #{$size__horizontal-padding} );
+			margin-left: calc( -20% );
+			margin-top: -#{$size__vertical-padding};
+			border-left: 0;
+			border-right: 0;
+			border-top: 0;
+
+		}
+
 		figcaption {
 			background: $color__theme-secondary;
 			padding: 1rem;
