@@ -234,7 +234,7 @@
 
 		.entry-header-wrap {
 			margin-left: auto;
-			margin-right: 10%;
+			margin-right: auto;
 			max-width: $size__site-max-width;
 			padding: 0 $size__horizontal-padding;
 			width: 100%;
@@ -287,7 +287,7 @@
 	}
 
 	.entry-footer-wrap {
-		margin: -#{$size__vertical-padding} $size__max-width-wide-margin $size__vertical-padding auto;
+		margin: -#{$size__vertical-padding} auto $size__vertical-padding;
 	}
 }
 
