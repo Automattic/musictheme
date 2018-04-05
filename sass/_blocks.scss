@@ -21,16 +21,6 @@
 	max-width: 100%;
 	margin: $size__vertical-padding auto;
 	padding: 0;
-	border: $size__vertical-padding solid $color__theme-secondary;
-	background: $color__theme-secondary;
-
-	figcaption {
-		background: $color__theme-secondary;
-		padding: 1rem;
-		margin-top: 0;
-		color: $color__background-body;
-		text-align: center;
-	}
 }
 
 .entry-content > .alignfull {
@@ -264,7 +254,7 @@ p.wp-block-subhead {
 	padding: 0;
 	margin: $size__vertical-padding 0;
 
-	&.alignwide, &.alignfull {
+	&.alignfull {
 		background: $color__theme-secondary;
 	}
 
@@ -564,6 +554,17 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		width: calc( 140% + #{$size__horizontal-padding * 2} );
 		max-width: calc( 140% + #{$size__horizontal-padding * 2} );
 		margin-left: calc( -20% - #{$size__horizontal-padding} );
+
+		border: $size__vertical-padding solid $color__theme-secondary;
+		background: $color__theme-secondary;
+
+		figcaption {
+			background: $color__theme-secondary;
+			padding: 1rem;
+			margin-top: 0;
+			color: $color__background-body;
+			text-align: center;
+		}
 	}
 
 	.wp-block-image {
