@@ -519,6 +519,18 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 				.wp-block-cover-image-text {
 					margin-bottom: #{$size__vertical-padding * 4};
 				}
+
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					bottom: 0;
+					width: $size__site-max-width;
+					height: #{$size__vertical-padding * 4};
+					background-color: $color__background-body;
+					margin-left: calc( ( 100vw - #{$size__site-max-width} ) / 2 );
+					margin-right: calc( ( 100vw - #{$size__site-max-width} ) / 2 );
+				}
 			}
 
 			&:not(:first-child) {

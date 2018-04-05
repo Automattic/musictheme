@@ -1573,6 +1573,16 @@ ul.wp-block-latest-posts.is-grid.alignwide {
         .wp-block-cover-image.alignfull:first-child h2,
         .wp-block-cover-image.alignfull:first-child .wp-block-cover-image-text {
           margin-bottom: 8rem; }
+        .wp-block-cover-image.alignfull:first-child:after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: 0;
+          width: 740px;
+          height: 8rem;
+          background-color: white;
+          margin-left: calc( ( 100vw - 740px ) / 2);
+          margin-right: calc( ( 100vw - 740px ) / 2); }
       .wp-block-cover-image.alignfull:not(:first-child) {
         background-position: 90% 20%; }
     .wp-block-cover-image.alignwide {
