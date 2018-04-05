@@ -6,7 +6,7 @@
 	margin-right: auto;
 	max-width: 1100px;
 
-	:first-child {
+	> :first-child {
 		margin-top: 0;
 	}
 }
@@ -22,10 +22,14 @@
 	margin: $size__vertical-padding auto;
 	padding: 0;
 	border: $size__vertical-padding solid $color__theme-secondary;
+	background: $color__theme-secondary;
 
 	figcaption {
+		background: $color__theme-secondary;
 		padding: 1rem;
+		margin-top: 0;
 		color: $color__background-body;
+		text-align: center;
 	}
 }
 
@@ -37,7 +41,11 @@
 	border: $size__vertical-padding solid $color__theme-secondary;
 
 	figcaption {
+		background: $color__theme-secondary;
 		padding: 1rem;
+		margin-top: 0;
+		color: $color__background-body;
+		text-align: center;
 	}
 }
 
@@ -134,10 +142,8 @@ p.wp-block-subhead {
 .wp-block-image {
 
 	background: $color__background-body;
-	padding-top: 0;
-	padding-bottom: 0;
-	padding: $size__vertical-padding;
-	margin: 0 auto;
+	margin: $size__vertical-padding auto;
+	padding: 0;
 
 	figcaption {
 		margin-top: 0;
@@ -151,13 +157,6 @@ p.wp-block-subhead {
 
 	&.alignfull {
 		position: relative;
-
-		figcaption {
-			background: transparent;
-			padding: 1rem;
-			text-align: center;
-			width: 100%;
-		}
 	}
 
 	&.alignleft,
@@ -187,7 +186,6 @@ p.wp-block-subhead {
 	padding: 0 0 #{ $size__vertical-padding / 2 } 0;
 	position: relative;
 	z-index: 0;
-	border: $size__vertical-padding solid $color__background-body;
 
 	h2,
 	.wp-block-cover-image-text {
@@ -263,11 +261,14 @@ p.wp-block-subhead {
 
 .wp-block-gallery {
 
+	padding: 0;
+	margin: $size__vertical-padding 0;
+
 	&.alignwide, &.alignfull {
-		background-color: transparent;
+		background: $color__theme-secondary;
 	}
-	
-	.blocks-gallery-item {
+
+	&.alignfull .blocks-gallery-item {
 		background: $color__theme-secondary;
 		border: 8px solid $color__theme-secondary;
 		margin: 0;
@@ -447,6 +448,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		max-width: #{$size__site-max-width};
 	}
 
+	.entry-content > .alignfull {
+		border-left: none;
+		border-right: none;
+	}
+
 	.entry-content > .rotate,
 	.entry-content > h3 {
 		right: calc( 50% - #{$size__site-max-width / 2} + 1rem );
@@ -478,11 +484,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 			margin-left: 0;
 			margin-right: calc( ( 100vw - #{$size__site-max-width} ) / 2 );
 		}
-	}
-
-	.wp-block-gallery {
-		padding-left: calc( #{$size__vertical-padding} - 8px );
-		padding-right: calc( #{$size__vertical-padding} - 8px );
 	}
 
 	.wp-block-cover-image {
