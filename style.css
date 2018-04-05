@@ -1205,7 +1205,7 @@ p.wp-block-subhead {
   background-repeat: no-repeat;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 0 0 1rem 0;
+  padding: 2rem;
   position: relative;
   z-index: 0;
   /* Additional Color Classes */ }
@@ -1243,6 +1243,8 @@ p.wp-block-subhead {
     .wp-block-cover-image.alignfull + h3,
     .wp-block-cover-image.alignfull + .rotate {
       margin-top: 1.5em; }
+    .wp-block-cover-image.alignfull:first-child {
+      margin-top: -2rem; }
     .wp-block-cover-image.alignfull:not(:first-child) {
       border-top: 2rem solid #383838;
       border-bottom: 2rem solid #383838;
@@ -1525,6 +1527,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .entry-content > .alignfull {
     border-left: none;
     border-right: none; }
+    .entry-content > .alignfull:first-child {
+      margin-top: -2rem;
+      border-top: none; }
   .entry-content > .rotate,
   .entry-content > h3 {
     right: calc( 50% - 370px + 1rem); }
@@ -1592,7 +1597,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .entry-content > .alignwide + .alignfull,
   .entry-content > .alignfull + .alignwide,
   .entry-content > .alignfull + .alignfull {
-    margin-top: -4rem; }
+    margin-top: -2rem; }
   .entry-content > .alignwide {
     width: calc( 140% + 4rem);
     max-width: calc( 140% + 4rem);

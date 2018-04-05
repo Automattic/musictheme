@@ -173,7 +173,7 @@ p.wp-block-subhead {
 	background-repeat: no-repeat;
 	margin-top: 0;
 	margin-bottom: 0;
-	padding: 0 0 #{ $size__vertical-padding / 2 } 0;
+	padding: $size__vertical-padding;
 	position: relative;
 	z-index: 0;
 
@@ -218,6 +218,10 @@ p.wp-block-subhead {
 		& + h3,
 		& + .rotate {
 			margin-top: 1.5em;
+		}
+
+		&:first-child {
+			margin-top: -#{$size__vertical-padding};
 		}
 
 		&:not(:first-child) {
@@ -441,6 +445,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	.entry-content > .alignfull {
 		border-left: none;
 		border-right: none;
+
+		&:first-child {
+			margin-top: -$size__vertical-padding;
+			border-top: none;
+		}
 	}
 
 	.entry-content > .rotate,
@@ -553,7 +562,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	.entry-content > .alignwide + .alignfull,
 	.entry-content > .alignfull + .alignwide,
 	.entry-content > .alignfull + .alignfull {
-		margin-top: -#{$size__vertical-padding * 2};
+		margin-top: -#{$size__vertical-padding};
 	}
 
 	.entry-content > .alignwide {
@@ -574,7 +583,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 			border-left: 0;
 			border-right: 0;
 			border-top: 0;
-
 		}
 
 		figcaption {
