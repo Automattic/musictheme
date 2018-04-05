@@ -889,6 +889,13 @@
 		"oAP": "\/template-parts\/content-single.php",
 		"oF": 0
 		},
+	"\/template-parts\/content.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/content.php",
+		"oF": 0
+		},
 	"\/woocommerce.css": {
 		"aP": 1,
 		"bl": 0,
