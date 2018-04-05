@@ -853,6 +853,8 @@ html,
   right: 0;
   background-color: transparent;
   z-index: 500; }
+  .menu-open .site-header {
+    background: #f18686; }
   .menu-open .site-header.white {
     background: white; }
   .menu-open .site-header.grey {

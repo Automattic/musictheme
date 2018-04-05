@@ -9,6 +9,9 @@
 	background-color: transparent;
 	z-index: 500;
 
+	.menu-open & {
+		background: $color__theme-primary;
+	}
 	.menu-open &.white {
 		background: $color__background-body;
 	}
