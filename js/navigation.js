@@ -29,8 +29,8 @@
 		container.find( '.dropdown-toggle' ).click( function( e ) {
 
 			var _this            = $( this ),
-			    otherSubMenus    = _this.parents( '.menu-item-has-children' ).siblings( '.menu-item-has-children' ),
-			    screenReaderSpan = _this.find( '.screen-reader-text' );
+				otherSubMenus    = _this.parents( '.menu-item-has-children' ).siblings( '.menu-item-has-children' ),
+				screenReaderSpan = _this.find( '.screen-reader-text' );
 
 			// Disable default behavior
 			e.preventDefault();
