@@ -1,17 +1,13 @@
 .entry-content {
 	overflow: hidden;
+	background: $color__background-body;
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 1100px;
 }
 
 .entry-content > * {
-	background: $color__background-body;
-	margin: 0 auto;
 	max-width: $size__site-max-width;
-	padding-bottom: $size__vertical-padding;
-	padding-left: $size__horizontal-padding;
-	padding-right: $size__horizontal-padding;
 	position: relative;
 	z-index: 1;
 }
@@ -20,6 +16,7 @@
 	max-width: 100%;
 	margin: $size__vertical-padding auto;
 	padding: 0;
+	border: $size__vertical-padding solid $color__theme-secondary;
 
 	figcaption {
 		padding: 1rem;
@@ -38,30 +35,9 @@
 	}
 }
 
-.entry-content > *:first-child,
-.entry-content > section + *,
-.entry-content > figure + *,
-.entry-content > .alignwide + :not(.alignwide):not(.alignfull),
-.entry-content > .alignfull + :not(.alignwide):not(.alignfull),
-.entry-content > .wp-block-quote + *,
-.entry-content > .wp-block-pullquote + *,
-.entry-content > .wp-block-separator + * {
-	padding-top: $size__vertical-padding;
-	padding-left: $size__horizontal-padding;
-	padding-right: $size__horizontal-padding;
-}
-
 .entry-content ul,
 .entry-content ol {
 	list-style-position: inside;
-}
-
-.entry-content > h1,
-.entry-content > h2,
-.entry-content > h4,
-.entry-content > h5,
-.entry-content > h6 {
-	padding-top: $size__vertical-padding;
 }
 
 .entry-content > .rotate,
@@ -221,8 +197,6 @@ p.wp-block-subhead {
 
 	&.alignwide {
 		border: none;
-		width: 100%;
-		max-width: 100%;
 		padding: $size__vertical-padding;
 	}
 
@@ -251,6 +225,13 @@ p.wp-block-subhead {
 		& + h3,
 		& + .rotate {
 			margin-top: 1.5em;
+		}
+
+		&:not(:first-child) {
+			border-top: $size__vertical-padding solid $color__theme-secondary;
+			border-bottom: $size__vertical-padding solid $color__theme-secondary;
+			border-left: none;
+			border-right: none;
 		}
 	}
 
@@ -283,6 +264,12 @@ p.wp-block-subhead {
 
 	&.alignfull {
 		padding-bottom: $size__vertical-padding;
+	}
+
+	.blocks-gallery-item {
+		background: $color__theme-secondary;
+		border: 8px solid $color__theme-secondary;
+		margin: 0;
 	}
 }
 
@@ -453,9 +440,21 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 @media screen and (min-width: 740px) {
 
+	.entry-content {
+		overflow: visible;
+		position: relative;
+		max-width: #{$size__site-max-width};
+	}
+
 	.entry-content > * {
 		padding-left: $size__horizontal-padding;
 		padding-right: $size__horizontal-padding;
+	}
+
+	.entry-content > .alignwide {
+		width: calc( 140% + #{$size__horizontal-padding} );
+		max-width: calc( 140% + #{$size__horizontal-padding} );
+		margin-left: -20%;
 	}
 
 	.entry-content > .rotate,
@@ -547,16 +546,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 @media screen and (min-width: 940px) {
-
-	.entry-content {
-		overflow: visible;
-		position: relative;
-	}
-
-	.entry-content > *,
-	.wp-block-quote.is-large {
-		margin: 0 $size__max-width-wide-margin 0 auto;
-	}
 
 	.wp-block-image {
 

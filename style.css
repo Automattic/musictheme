@@ -1070,24 +1070,21 @@ html {
 --------------------------------------------------------------*/
 .entry-content {
   overflow: hidden;
+  background: white;
   margin-left: auto;
   margin-right: auto;
   max-width: 1100px; }
 
 .entry-content > * {
-  background: white;
-  margin: 0 auto;
   max-width: 740px;
-  padding-bottom: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
   position: relative;
   z-index: 1; }
 
 .entry-content > .alignwide {
   max-width: 100%;
   margin: 2rem auto;
-  padding: 0; }
+  padding: 0;
+  border: 2rem solid #383838; }
   .entry-content > .alignwide figcaption {
     padding: 1rem;
     color: white; }
@@ -1100,28 +1097,9 @@ html {
   .entry-content > .alignfull figcaption {
     padding: 1rem; }
 
-.entry-content > *:first-child,
-.entry-content > section + *,
-.entry-content > figure + *,
-.entry-content > .alignwide + :not(.alignwide):not(.alignfull),
-.entry-content > .alignfull + :not(.alignwide):not(.alignfull),
-.entry-content > .wp-block-quote + *,
-.entry-content > .wp-block-pullquote + *,
-.entry-content > .wp-block-separator + * {
-  padding-top: 2rem;
-  padding-left: 2rem;
-  padding-right: 2rem; }
-
 .entry-content ul,
 .entry-content ol {
   list-style-position: inside; }
-
-.entry-content > h1,
-.entry-content > h2,
-.entry-content > h4,
-.entry-content > h5,
-.entry-content > h6 {
-  padding-top: 2rem; }
 
 .entry-content > .rotate,
 .entry-content > h3 {
@@ -1251,8 +1229,6 @@ p.wp-block-subhead {
     max-width: 100%; }
   .wp-block-cover-image.alignwide {
     border: none;
-    width: 100%;
-    max-width: 100%;
     padding: 2rem; }
   .wp-block-cover-image.alignfull {
     border: none;
@@ -1276,6 +1252,11 @@ p.wp-block-subhead {
     .wp-block-cover-image.alignfull + h3,
     .wp-block-cover-image.alignfull + .rotate {
       margin-top: 1.5em; }
+    .wp-block-cover-image.alignfull:not(:first-child) {
+      border-top: 2rem solid #383838;
+      border-bottom: 2rem solid #383838;
+      border-left: none;
+      border-right: none; }
   .wp-block-cover-image.black {
     background-color: black; }
   .wp-block-cover-image.gray, .wp-block-cover-image.grey {
@@ -1294,6 +1275,11 @@ p.wp-block-subhead {
 
 .wp-block-gallery.alignfull {
   padding-bottom: 2rem; }
+
+.wp-block-gallery .blocks-gallery-item {
+  background: #383838;
+  border: 8px solid #383838;
+  margin: 0; }
 
 /**/
 /* ! Cover Text */
@@ -1542,9 +1528,17 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   background-color: white; }
 
 @media screen and (min-width: 740px) {
+  .entry-content {
+    overflow: visible;
+    position: relative;
+    max-width: 740px; }
   .entry-content > * {
     padding-left: 2rem;
     padding-right: 2rem; }
+  .entry-content > .alignwide {
+    width: calc( 140% + 2rem);
+    max-width: calc( 140% + 2rem);
+    margin-left: -20%; }
   .entry-content > .rotate,
   .entry-content > h3 {
     right: calc( 50% - 370px + 1rem); }
@@ -1596,12 +1590,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     line-height: 128px; } }
 
 @media screen and (min-width: 940px) {
-  .entry-content {
-    overflow: visible;
-    position: relative; }
-  .entry-content > *,
-  .wp-block-quote.is-large {
-    margin: 0 10% 0 auto; }
   .wp-block-image.alignleft img,
   .wp-block-image.alignright img {
     max-width: 100%; }
