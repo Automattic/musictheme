@@ -114,15 +114,20 @@ function musictheme_get_svg( $args = array() ) {
  * @param  int    $depth Depth of menu item. Used for padding.
  * @return string $title The menu item's title with dropdown icon.
  */
-function musictheme_dropdown_icon_to_menu_link( $title, $item, $args, $depth ) {
+
+function musictheme_dropdown_icon_to_menu_link( $item_output, $item, $depth, $args  ) {
 	if ( 'menu-1' === $args->theme_location ) {
 		foreach ( $item->classes as $value ) {
 			if ( 'menu-item-has-children' === $value || 'page_item_has_children' === $value ) {
-				$title = $title . musictheme_get_svg( array( 'icon' => 'expand' ) );
+				$item_output = $item_output;
+				$item_output .= '<button class="dropdown-toggle" aria-expanded="false">';
+				$item_output .= '<span class="screen-reader-text">expand child menu</span>';
+				$item_output .= '<span class="meta-nav" aria-hidden="true">' . musictheme_get_svg( array( 'icon' => 'expand' ) ) . '</span>'; // '...';
+				$item_output .= '</button>';
 			}
 		}
 	}
 
-	return $title;
+	return $item_output;
 }
-add_filter( 'nav_menu_item_title', 'musictheme_dropdown_icon_to_menu_link', 10, 4 );
+add_filter( 'walker_nav_menu_start_el', 'musictheme_dropdown_icon_to_menu_link', 10, 4 );
