@@ -30,7 +30,7 @@
 			<?php endif; ?>
 			<?php musictheme_entry_footer(); ?>
 			<div class="wp-block-button">
-			<a href="<?php the_permalink() ); ?>" class="wp-block-button__link">
+			<a href="<?php the_permalink(); ?>" class="wp-block-button__link">
 				<?php _e( 'Read more', 'musictheme' ); ?>
 			</a>
 		</div>
