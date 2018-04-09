@@ -446,6 +446,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		@include has-background-dim($color__theme-link);
 	}
 
+	&.gray, &.grey {
+		@include has-background-dim($color__theme-secondary);
+	}
+
 	&.white {
 		@include has-background-dim($color__background-body);
 	}

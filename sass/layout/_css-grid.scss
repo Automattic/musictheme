@@ -6,7 +6,7 @@
 	display: grid;
 	grid-auto-flow: dense;
 	grid-gap: 0;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(1, 1fr);
 	grid-template-areas:
 		"branding navigation navigation"
@@ -29,4 +29,35 @@
  */
 
 .site-footer {
+}
+
+@media screen and (min-width: 37.5em) {
+
+	.site-header-wrap {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/**
+ * Mobile Menu Layout
+ */
+
+@media screen and (max-width: 37.5em) {
+
+	.menu-open .site-header {
+		min-height: 100vh;
+	}
+
+	.menu-open .site-main,
+	.menu-open .site-footer {
+		height: 100vh;
+		overflow-y: hidden;
+		opacity: 0;
+		position: fixed;
+	}
+
+	.menu-open .site-footer {
+		opacity: 0;
+		position: fixed;
+	}
 }

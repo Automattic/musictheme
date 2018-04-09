@@ -2,13 +2,25 @@
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-	background: $color__theme-link;
 	color: $color__background-body;
 	position: absolute;
 	left: 0;
 	right: 0;
 	background-color: transparent;
 	z-index: 500;
+
+	.menu-open & {
+		background: $color__theme-link;
+	}
+	.menu-open &.white {
+		background: $color__background-body;
+	}
+	.menu-open &.grey {
+		background: $color__theme-secondary;
+	}
+	.menu-open &.black{
+		background: $color__theme-link;
+	}
 }
 
 .site-header-wrap {
@@ -29,8 +41,7 @@
 
 .site-title a {
 	color: $color__background-body;
-
-	.contrast-text-color & {
+	.white & {
 		color: $color__theme-link;
 	}
 }
@@ -38,4 +49,24 @@
 .site-description {
 	margin: 0;
 	padding: 0 0.5em 0.5em;
+}
+
+@media screen and (min-width: 37.5em) {
+
+	.site-header {
+		&.white,
+		&.grey,
+		&.black {
+			background: transparent;
+		}
+	}
+
+	.site-header {
+		.menu-open &,
+		.menu-open &.white,
+		.menu-open &.grey,
+		.menu-open &.black {
+			background: transparent;
+		}
+	}
 }
