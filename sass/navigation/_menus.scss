@@ -3,18 +3,26 @@
 	display: block;
 	padding: 1em 0;
 
+	& > div {
+		float: right;
+	}
+
 	ul {
+		clear: both;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		text-align: left;
 
 		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
+			opacity: 0;
 			position: absolute;
-			top: 100%;
 			left: -999em;
 			z-index: 99999;
+			-webkit-transition: opacity 0.5s ease-in-out;
+			-moz-transition:    opacity 0.5s ease-in-out;
+			transition:         opacity 0.5s ease-in-out;
 
 			ul {
 				left: -999em;
@@ -22,18 +30,24 @@
 			}
 
 			li {
+				clear: both;
+				float: none;
+
 				&:hover > ul,
 				&.focus > ul {
 					left: 100%;
 				}
+
+				&:last-of-type > a {
+					padding-bottom: 1.5rem;
+				}
 			}
 
 			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
+				font-size: 30px;
+				line-height: 1.25;
+				padding: 1.5rem 2rem 0;
+				width: 100%;
 			}
 
 			a:hover,
@@ -41,41 +55,144 @@
 			}
 		}
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
+		li.toggled-on > ul {
+			left: 0;
+			right: inherit;
+			width: 100vw;
+			opacity: 1;
+
+			ul {
+				opacity: 1
+			}
 		}
 	}
 
 	li {
 		float: left;
-		position: relative;
 
 		&:hover > a,
 		&.focus > a {
 		}
-	}
 
-	a {
-		color: $color__background-body;
-		display: block;
-		padding: .5em;
-		.contrast-text-color & {
-			color: $color__theme-link;
+		&.menu-item-has-children > a {
+			padding-right: .25rem;
 		}
 	}
 
-	.icon {
-		width: 1rem;
-		height: 1rem;
-		margin-left: .25rem;
-		fill: currentColor;
+	a {
+		display: inline-block;
+		padding: .5em;
 	}
 
+	@at-root .main-navigation > div > ul > li.menu-item-has-children.toggled-on > a,
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		text-decoration: underline;
+	}
+
+	.dropdown-toggle {
+		background: transparent;
+		border: none;
+		padding: .25rem;
+	}
+
+	.icon {
+		width: 0.75rem;
+		height: 0.75rem;
+		fill: currentColor;
+	}
+
+	/**
+	 * Colors
+	 */
+	a,
+	.dropdown-toggle {
+		color: $color__background-body;
+
+		.white & {
+			color: $color__theme-link;
+		}
+
+		.black & {
+			color: $color__background-body;
+		}
+	}
+
+	ul ul {
+		background: $color__theme-primary;
+		a {
+			color: $color__background-body;
+		}
+
+		.white & {
+			background: $color__background-body;
+			a {
+				color: $color__theme-link;
+			}
+		}
+
+		.grey & {
+			background: $color__theme-secondary;
+			a {
+				color: $color__background-body;
+			}
+		}
+
+		.black & {
+			background: $color__theme-link;
+			a {
+				color: $color__background-body;
+			}
+		}
+	}
+}
+
+/* Hide more link unless we need it. */
+#more-menu {
+
+	display: none;
+
+	&.visible {
+		display: inline-block;
+	}
+
+	.dropdown-toggle {
+		display: inline-block;
+		line-height: 1.7rem;
+		padding: .5rem;
+	}
+
+	.icon {
+		vertical-align: text-bottom;
+		margin-left: 0;
+	}
+
+	.sub-menu {
+
+		& > li {
+			clear: both;
+			float: none;
+		}
+
+		a {
+			position: relative;
+			z-index: 1;
+		}
+
+		.dropdown-toggle {
+			display: none;
+		}
+
+		.sub-menu {
+			box-shadow: none;
+			right: inherit;
+			left: 0;
+			padding-left: 1rem;
+			position: relative;
+			top: inherit;
+		}
 	}
 }
 
@@ -89,11 +206,90 @@
 }
 
 @media screen and (min-width: 37.5em) {
+
 	.menu-toggle {
 		display: none;
 	}
 
-	.main-navigation ul {
-		display: block;
+	.main-navigation {
+
+		& > div {
+			float: left;
+		}
+
+		li {
+			float: left;
+			position: relative;
+		}
+
+		.menu-item-has-children > a {
+			padding-right: .5rem;
+		}
+
+		ul li.toggled-on > ul {
+			left: inherit;
+			right: 0;
+			width: inherit;
+		}
+
+		.dropdown-toggle {
+			display: inline-block;
+		}
+
+		ul ul {
+
+			top: 100%;
+
+			li {
+				float: left;
+				clear: inherit;
+			}
+
+			li:last-of-type > a {
+				padding-bottom: .5rem;
+			}
+
+			a {
+				font-size: 1rem;
+				padding: .5rem .5rem 0;
+				width: 200px;
+			}
+		}
+
+		/**
+		 * Colors
+		 */
+		a,
+		.dropdown-toggle {
+			color: $color__background-body;
+		}
+
+		ul ul {
+			background: $color__background-body;
+			a {
+				color: $color__theme-primary;
+			}
+
+			.white & {
+				background: $color__theme-link;
+				a {
+					color: $color__background-body;
+				}
+			}
+
+			.grey & {
+				background: $color__background-body;
+				a {
+					color: $color__theme-secondary;
+				}
+			}
+
+			.black & {
+				background: $color__background-body;
+				a {
+					color: $color__theme-link;
+				}
+			}
+		}
 	}
 }

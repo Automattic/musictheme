@@ -4,114 +4,196 @@
  * Handles toggling the navigation menu for small screens and enables TAB key
  * navigation support for dropdown menus.
  */
-( function() {
-	var container, pageCoverImage, siteHeader, button, menu, links, i, len;
+
+/* global screenReaderText */
+( function( $ ) {
+
+	var body,
+		siteMenu       = $( '.main-navigation' ),
+		siteHeader     = $( '.site-header' ),
+		siteNavigation = siteMenu.find( '.main-navigation > div' ),
+		siteWrap       = siteHeader.parents( '.site' );
 
 	/**
-	 * Sets or removes .focus class on an element.
+	 * Initialize the main navigation
 	 */
-	function toggleFocus() {
-		var self = this;
+	function initMainNavigation( container ) {
 
-		// Move up through the ancestors of the current link until we hit .nav-menu.
-		while ( -1 === self.className.indexOf( 'nav-menu' ) ) {
+		// Add parent class to sub-menu parent items
+		container.find( '.sub-menu, .children' ).parents( 'li' ).addClass( 'menu-item-has-children' );
 
-			// On li elements toggle the class .focus.
-			if ( 'li' === self.tagName.toLowerCase() ) {
-				if ( -1 !== self.className.indexOf( 'focus' ) ) {
-					self.className = self.className.replace( ' focus', '' );
+		// Change menu items with submenus to aria-haspopup="true".
+		container.find( '.menu-item-has-children' ).attr( 'aria-haspopup', 'true' );
+
+		// Drop down toggle setup
+		container.find( '.dropdown-toggle' ).click( function( e ) {
+
+			var _this            = $( this ),
+				otherSubMenus    = _this.parents( '.menu-item-has-children' ).siblings( '.menu-item-has-children' ),
+				screenReaderSpan = _this.find( '.screen-reader-text' );
+
+			// Disable default behavior
+			e.preventDefault();
+
+			// Stop click outside area function
+			e.stopPropagation();
+
+			// Reveal sub-menus
+			_this.not( '.menu-toggle' ).toggleClass( 'toggled-on' );
+			_this.not( '.menu-toggle' ).parents( 'li' ).toggleClass( 'toggled-on' ).promise().done(function(){
+
+				// Toggle the site wrapper class for mobile menu display
+				var _thisLink = $( this );
+
+				if ( _thisLink.hasClass( 'toggled-on' ) ) {
+					siteWrap.addClass( 'menu-open' );
 				} else {
-					self.className += ' focus';
+					siteWrap.removeClass( 'menu-open' );
 				}
-			}
+			});
+			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
 
-			self = self.parentElement;
-		}
-	}
+			// Close other sub-menus if they're open
+			otherSubMenus.removeClass( 'toggled-on' );
+			otherSubMenus.find( '.toggled-on' ).removeClass( 'toggled-on' );
 
-	container = document.getElementById( 'site-navigation' );
-	if ( ! container ) {
-		return;
-	}
+			// jscs:disable
+			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+			// jscs:enable
 
-	button = container.getElementsByTagName( 'button' )[0];
-	if ( 'undefined' === typeof button ) {
-		return;
-	}
+			// Update screen reader text
+			screenReaderSpan.text( screenReaderSpan.text() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
 
-	menu = container.getElementsByTagName( 'ul' )[0];
+		} );
 
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
-	}
+		// Close sub-menus when click outside of menus
+		$( 'html' ).click( function() {
 
-	menu.setAttribute( 'aria-expanded', 'false' );
-	if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
-		menu.className += ' nav-menu';
-	}
+			container.find( '.toggled-on' ).removeClass( 'toggled-on' );
+		});
 
-	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-			container.className = container.className.replace( ' toggled', '' );
-			button.setAttribute( 'aria-expanded', 'false' );
-			menu.setAttribute( 'aria-expanded', 'false' );
-		} else {
-			container.className += ' toggled';
-			button.setAttribute( 'aria-expanded', 'true' );
-			menu.setAttribute( 'aria-expanded', 'true' );
-		}
-	};
+		// Close expanded sub-menus when clicking links
+		container.find( 'a' ).click( function( e ) {
 
-	// Get all the link elements within the menu.
-	links    = menu.getElementsByTagName( 'a' );
+			var _this         = $( this ),
+				anchor        = _this.attr( 'href' ),
+				otherSubMenus = container.find( '.toggled-on' );
 
-	// Each time a menu link is focused or blurred, toggle focus.
-	for ( i = 0, len = links.length; i < len; i++ ) {
-		links[i].addEventListener( 'focus', toggleFocus, true );
-		links[i].addEventListener( 'blur', toggleFocus, true );
+			//console.log(anchor);
+			e.preventDefault();
+
+			otherSubMenus.removeClass( 'toggled-on' ).attr( 'aria-expanded', 'false' ).attr( 'aria-haspopup', 'false' );
+
+			window.location.href = anchor;
+
+		} );
 	}
 
 	/**
-	 * Toggles `focus` class to allow submenu access on tablets.
+	 * Fix sub-menus for touch devices and better focus for hidden submenu items for accessibility
 	 */
-	( function( container ) {
-		var touchStartFn, i,
-			parentLink = container.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
+	function addTouchSupport() {
+
+		if ( ! siteNavigation.length || ! siteNavigation.children().length ) {
+
+			return;
+		}
+
+		// Toggle `focus` class to allow submenu access on tablets.
+		function toggleFocusClassTouchScreen() {
+
+			//	if ( window.innerWidth >= 896 ) {
+			$( document.body ).on( 'touchstart.altofocus', function( e ) {
+
+				if ( ! $( e.target ).closest( '.top-navigation li' ).length ) {
+
+					$( '.top-navigation li' ).removeClass( 'focus' );
+				}
+			} );
+
+			siteNavigation.find( '.menu-item-has-children > a' ).on( 'touchstart.altofocus', function( e ) {
+
+				var el = $( this ).parent( 'li' );
+
+				if ( ! el.hasClass( 'focus' ) ) {
+
+					e.preventDefault();
+					el.toggleClass( 'focus' );
+					el.siblings( '.focus' ).removeClass( 'focus' );
+				}
+			} );
+		}
 
 		if ( 'ontouchstart' in window ) {
-			touchStartFn = function( e ) {
-				var menuItem = this.parentNode, i;
 
-				if ( ! menuItem.classList.contains( 'focus' ) ) {
-					e.preventDefault();
-					for ( i = 0; i < menuItem.parentNode.children.length; ++i ) {
-						if ( menuItem === menuItem.parentNode.children[i] ) {
-							continue;
-						}
-						menuItem.parentNode.children[i].classList.remove( 'focus' );
-					}
-					menuItem.classList.add( 'focus' );
-				} else {
-					menuItem.classList.remove( 'focus' );
-				}
-			};
-
-			for ( i = 0; i < parentLink.length; ++i ) {
-				parentLink[i].addEventListener( 'touchstart', touchStartFn, false );
-			}
+			$( window ).on( 'resize.altofocus', toggleFocusClassTouchScreen );
+			toggleFocusClassTouchScreen();
 		}
-	}( container ) );
 
-	/**
-	 * Add contrast text color to site navigation when a white cover image is used
-	 */
-	siteHeader = document.getElementById( 'masthead' );
-	pageCoverImage = document.querySelectorAll( '.page .hentry .wp-block-cover-image.alignfull' );
+		siteNavigation.find( 'a' ).on( 'focus.altofocus blur.altofocus', function() {
 
-	if ( pageCoverImage[0].classList.contains( 'white' ) ) {
-    	siteHeader.classList.add( 'contrast-text-color' );
+			$( this ).parents( '.menu-item' ).toggleClass( 'focus' );
+		} );
 	}
 
-} )();
+	/**
+	 * Add the default ARIA attributes for the menu toggle and the navigations
+	 */
+	function onResizeARIA() {
+
+		if ( window.innerWidth < 896 ) {
+
+			siteMenu.attr( 'aria-expanded', 'false' );
+			siteNavigation.attr( 'aria-expanded', 'false' );
+
+		} else {
+
+			siteMenu.removeAttr( 'aria-expanded' );
+			siteNavigation.removeAttr( 'aria-expanded' );
+		}
+	}
+
+	/**
+	 * Add contrast text color to site navigation when a white, grey or black alt-cover image is used
+	 */
+	function addHeaderContrast() {
+		var pageCoverImage = $( '.page .hentry .wp-block-cover-image' ).eq(0);
+
+		if ( pageCoverImage.hasClass( 'white' ) ) {
+			siteHeader.addClass( 'white' );
+		} else if ( pageCoverImage.hasClass( 'grey' ) || pageCoverImage.hasClass( 'gray' ) ) {
+			siteHeader.addClass( 'grey' );
+		} else if ( pageCoverImage.hasClass( 'black' ) ) {
+			siteHeader.addClass( 'black' );
+		}
+	}
+
+	/**
+	 * Re-initialize the main navigation when it is updated in the customizer
+	 * - Borrowed from twentysixteen: https://goo.gl/O6msL1
+	 */
+	$( document ).on( 'customize-preview-menu-refreshed', function( e, params ) {
+
+		if ( 'menu-1' === params.wpNavMenuArgs.theme_location ) {
+
+			initMainNavigation( params.newContainer );
+		}
+	});
+
+	/**
+	 * Execute functions
+	 */
+	$( document )
+		.ready( initMainNavigation( siteMenu ) )
+		.ready( addTouchSupport )
+		.ready( addHeaderContrast )
+		.ready( function() {
+
+			body = $( document.body );
+
+			$( window )
+				.on( 'load.altofocus', onResizeARIA )
+				.on( 'resize.altofocus', onResizeARIA );
+		});
+
+} )( jQuery );
