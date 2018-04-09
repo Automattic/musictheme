@@ -503,7 +503,7 @@ a {
     .main-navigation .dropdown-toggle {
       color: white; }
   .main-navigation ul ul {
-    background: #f18686; }
+    background: black; }
     .main-navigation ul ul a {
       color: white; }
     .white .main-navigation ul ul {
@@ -854,7 +854,7 @@ html,
   background-color: transparent;
   z-index: 500; }
   .menu-open .site-header {
-    background: #f18686; }
+    background: black; }
   .menu-open .site-header.white {
     background: white; }
   .menu-open .site-header.grey {
@@ -886,6 +886,11 @@ html,
 
 @media screen and (min-width: 37.5em) {
   .site-header.white, .site-header.grey, .site-header.black {
+    background: transparent; }
+  .menu-open .site-header,
+  .menu-open .site-header.white,
+  .menu-open .site-header.grey,
+  .menu-open .site-header.black {
     background: transparent; } }
 
 /*--------------------------------------------------------------
