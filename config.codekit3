@@ -167,6 +167,16 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/js\/priority-navigation.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/js\/priority-navigation-min.js",
+		"oF": 1,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/js\/skip-link-focus-fix.js": {
 		"ft": 64,
 		"ma": 0,
@@ -2320,7 +2330,7 @@
 			"flagValue": -1
 			},
 		"esnext": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"evil": {
@@ -2578,7 +2588,7 @@
 			"flagValue": -1
 			},
 		"es6": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"eval": {
@@ -2594,7 +2604,7 @@
 			"flagValue": 150
 			},
 		"node": {
-			"active": 0,
+			"active": 1,
 			"flagValue": -1
 			},
 		"this": {
