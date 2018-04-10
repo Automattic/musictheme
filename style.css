@@ -913,8 +913,8 @@ html,
 .entry-content,
 .entry-summary {
   margin: 0;
-  font-size: 18px;
-  font-size: 1.125rem; }
+  font-size: 20px;
+  font-size: 1.25rem; }
 
 .page-links {
   clear: both;
@@ -1065,6 +1065,12 @@ html,
     color: white; }
 
 @media screen and (min-width: 768px) {
+  .page-content,
+  .entry-content,
+  .entry-summary {
+    margin: 0;
+    font-size: 18px;
+    font-size: 1.125rem; }
   .entry-header {
     margin-left: auto;
     margin-right: auto;

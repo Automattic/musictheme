@@ -15,7 +15,7 @@
 .entry-content,
 .entry-summary {
 	margin: 0;
-	@include font-size(1.125);
+	@include font-size(1.25);
 }
 
 .page-links {
@@ -226,6 +226,13 @@
 }
 
 @media screen and (min-width: 768px) { // @media screen and (min-width: 37.5em) {
+
+	.page-content,
+	.entry-content,
+	.entry-summary {
+		margin: 0;
+		@include font-size(1.125);
+	}
 
 	.entry-header {
 		margin-left: auto;
