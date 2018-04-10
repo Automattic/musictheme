@@ -8,14 +8,13 @@
 	margin: 0 auto;
 	max-width: $size__site-max-width;
 	width: 100%;
-	padding: $size__vertical-padding $size__horizontal-padding;
+	padding: $size__vertical-padding #{$size__horizontal-padding / 2};
 }
 
 .comments-title {
 	background: $color__theme-link;
 	color: $color__background-body;
 	margin: 0 auto;
-	padding: $size__horizontal-padding;
 }
 
 .comment-reply-title {
@@ -24,7 +23,7 @@
 
 .comment-body {
 	border-bottom: 1px solid $color__background-hr;
-	margin: 0 $size__horizontal-padding;
+	margin: 0 #{$size__horizontal-padding / 2};
 	padding: $size__horizontal-padding 0;
 
 	.reply {
@@ -126,6 +125,19 @@
 		.reply-indicator {
 			left: #{$size__horizontal-padding * 4};
 		}
+	}
+}
+
+@media screen and (min-width: 740px) {
+
+	.comments-title,
+	.comment-list,
+	.comment-respond {
+		padding: $size__vertical-padding $size__horizontal-padding;
+	}
+
+	.comment-body {
+		margin: 0 $size__horizontal-padding;
 	}
 }
 

@@ -1121,20 +1121,19 @@ html,
   margin: 0 auto;
   max-width: 740px;
   width: 100%;
-  padding: 2rem 2rem; }
+  padding: 2rem 1rem; }
 
 .comments-title {
   background: black;
   color: white;
-  margin: 0 auto;
-  padding: 2rem; }
+  margin: 0 auto; }
 
 .comment-reply-title {
   margin-top: 0; }
 
 .comment-body {
   border-bottom: 1px solid #ccc;
-  margin: 0 2rem;
+  margin: 0 1rem;
   padding: 2rem 0; }
   .comment-body .reply {
     margin-bottom: 1rem; }
@@ -1189,6 +1188,14 @@ html,
     margin-left: 10rem; }
   .comment-list .children .depth-5 .reply-indicator {
     left: 8rem; }
+
+@media screen and (min-width: 740px) {
+  .comments-title,
+  .comment-list,
+  .comment-respond {
+    padding: 2rem 2rem; }
+  .comment-body {
+    margin: 0 2rem; } }
 
 @media screen and (min-width: 940px) {
   .comments-area {
