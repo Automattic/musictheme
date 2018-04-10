@@ -868,16 +868,21 @@ html,
 
 .site-header-wrap {
   max-width: 1100px;
-  padding: 0 2rem; }
+  padding: 0 1rem; }
 
 .site-branding {
   padding: 1em 0; }
 
+.custom-logo {
+  max-height: 38px;
+  width: auto; }
+
 .site-title {
   font-size: 1rem;
   font-style: italic;
+  line-height: 1.4;
   margin: 0;
-  padding: 0.5em 0; }
+  padding: 0.7em 0 0.2em; }
 
 .site-title a {
   color: white; }
@@ -885,16 +890,24 @@ html,
     color: black; }
 
 .site-description {
+  line-height: 1.4;
   margin: 0;
-  padding: 0 0.5em 0.5em; }
+  padding: 0 0.5em 0.5em 0; }
+
+@media screen and (min-width: 740px) {
+  .site-branding {
+    display: flex; }
+  .custom-logo {
+    margin-top: 0.5em; }
+  .custom-logo-link + .site-branding-text {
+    padding-left: 1em; }
+  .site-header-wrap {
+    padding: 0 2rem; }
+  .custom-logo {
+    max-height: 46px; } }
 
 @media screen and (min-width: 37.5em) {
-  .site-header.white, .site-header.grey, .site-header.black {
-    background: transparent; }
-  .menu-open .site-header,
-  .menu-open .site-header.white,
-  .menu-open .site-header.grey,
-  .menu-open .site-header.black {
+  .menu-open .site-header.white, .menu-open .site-header.grey, .menu-open .site-header.black {
     background: transparent; } }
 
 /*--------------------------------------------------------------

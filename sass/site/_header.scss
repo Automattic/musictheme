@@ -25,18 +25,25 @@
 
 .site-header-wrap {
 	max-width: $size__site-max-width-wide;
-	padding: 0 $size__horizontal-padding;
+	padding: 0 #{$size__horizontal-padding / 2 };
 }
 
 .site-branding {
 	padding: 1em 0;
 }
 
+.custom-logo {
+	max-height: 38px;
+	width: auto;
+}
+
+
 .site-title {
 	font-size: 1rem;
 	font-style: italic;
+	line-height: 1.4;
 	margin: 0;
-	padding: 0.5em 0;
+	padding: 0.7em 0 0.2em;
 }
 
 .site-title a {
@@ -47,8 +54,32 @@
 }
 
 .site-description {
+	line-height: 1.4;
 	margin: 0;
-	padding: 0 0.5em 0.5em;
+	padding: 0 0.5em 0.5em 0;
+}
+
+@media screen and (min-width: 740px) {
+
+	.site-branding {
+		display: flex;
+	}
+
+	.custom-logo {
+		margin-top: 0.5em;
+	}
+
+	.custom-logo-link + .site-branding-text {
+		padding-left: 1em;
+	}
+
+	.site-header-wrap {
+		padding: 0 $size__horizontal-padding;
+	}
+
+	.custom-logo {
+		max-height: 46px;
+	}
 }
 
 @media screen and (min-width: 37.5em) {
