@@ -7,7 +7,7 @@
 		"uuidString": "488B3E74-77B8-4080-9ABC-B90620A38FFF"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -263,6 +263,19 @@
 		"oAP": "\/rtl-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"\/sass\/_blocks.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/_blocks.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
 		},
 	"\/sass\/_normalize.scss": {
 		"aP": 0,
@@ -654,6 +667,32 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/sass\/site\/primary\/_comments.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/site\/primary\/_comments.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/site\/primary\/_posts-and-pages.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/site\/primary\/_posts-and-pages.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/sass\/site\/secondary\/_widgets.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -822,6 +861,16 @@
 		"oAP": "\/single.php",
 		"oF": 0
 		},
+	"\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/style-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/template-parts\/content-none.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -850,6 +899,13 @@
 		"oAP": "\/template-parts\/content-single.php",
 		"oF": 0
 		},
+	"\/template-parts\/content.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/template-parts\/content.php",
+		"oF": 0
+		},
 	"\/woocommerce.css": {
 		"aP": 1,
 		"bl": 0,
@@ -869,7 +925,8 @@
 	"creationDate": 542322894,
 	"displayValue": "musictheme",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-hart"
+	"iconImageName": "meme-hart",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2672,6 +2729,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {
