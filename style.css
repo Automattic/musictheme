@@ -1398,7 +1398,7 @@ p.wp-block-subhead {
     .wp-block-cover-image.alignfull .wp-block-cover-image-text {
       margin: 0 auto;
       max-width: 1100px;
-      padding: 0 2rem;
+      padding: 0 1rem;
       width: 100%; }
     .wp-block-cover-image.alignfull + h3,
     .wp-block-cover-image.alignfull + .rotate {
@@ -1773,6 +1773,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     .wp-block-cover-image.alignfull h2,
     .wp-block-cover-image.alignfull .wp-block-cover-image-text, .wp-block-cover-image.alignwide h2,
     .wp-block-cover-image.alignwide .wp-block-cover-image-text {
+      padding: 0 2rem;
       font-size: 117px;
       line-height: 128px; }
     .wp-block-cover-image.alignfull {

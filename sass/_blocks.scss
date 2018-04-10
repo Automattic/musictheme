@@ -212,7 +212,7 @@ p.wp-block-subhead {
 		.wp-block-cover-image-text {
 			margin: 0 auto;
 			max-width: $size__site-max-width-wide;
-			padding: 0 $size__horizontal-padding;
+			padding: 0 #{$size__horizontal-padding / 2};
 			width: 100%;
 		}
 
@@ -501,6 +501,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		&.alignfull, &.alignwide {
 			h2,
 			.wp-block-cover-image-text {
+				padding: 0 $size__horizontal-padding;
 				font-size: 117px;
 				line-height: 128px;
 			}
