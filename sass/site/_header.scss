@@ -25,7 +25,7 @@
 
 .site-header-wrap {
 	max-width: $size__site-max-width-wide;
-	padding: 0 $size__horizontal-padding;
+	padding: 0 #{$size__horizontal-padding / 2 };
 }
 
 .site-branding {
@@ -49,6 +49,13 @@
 .site-description {
 	margin: 0;
 	padding: 0 0.5em 0.5em;
+}
+
+@media screen and (min-width: 740px) {
+
+	.site-header-wrap {
+		padding: 0 $size__horizontal-padding;
+	}
 }
 
 @media screen and (min-width: 37.5em) {
