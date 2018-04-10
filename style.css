@@ -483,7 +483,11 @@ a {
   .main-navigation a {
     display: inline-block;
     padding: .5em; }
-  .main-navigation > div > ul > li.menu-item-has-children.toggled-on > a, .current_page_item > a, .current-menu-item > a, .current_page_ancestor > a, .current-menu-ancestor > a {
+  .main-navigation > div > ul > li.menu-item-has-children.toggled-on > a,
+  .current_page_item > a,
+  .current-menu-item > a,
+  .current_page_ancestor > a,
+  .current-menu-ancestor > a {
     text-decoration: underline; }
   .main-navigation .dropdown-toggle {
     background: transparent;
@@ -1798,7 +1802,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
         background-position: 90% 20%; }
     .wp-block-cover-image.alignwide {
       min-height: 580px; }
-  .wp-block-video:not('.alignfull') video {
+  .wp-block-video:not(.alignfull) video {
     max-width: 740px; }
   .wp-block-cover-text p {
     padding: 2rem 0; }
