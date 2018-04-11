@@ -57,6 +57,9 @@
 	line-height: 1.4;
 	margin: 0;
 	padding: 0 0.5em 0.5em 0;
+	.white & {
+		color: $color__theme-link;
+	}
 }
 
 @media screen and (min-width: 740px) {
