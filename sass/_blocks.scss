@@ -422,6 +422,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	border-radius: 0;
 }
 
+.wp-block-button .wp-block-button__link:active,
+.wp-block-button .wp-block-button__link:focus,
+.wp-block-button .wp-block-button__link:hover {
+	background-color: $color__theme-secondary;
+}
+
 /**/
 /* ! Dim Backgrounds */
 /**/
@@ -581,7 +587,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		max-width: calc( 140% + #{$size__horizontal-padding * 2} );
 		margin-left: calc( -20% - #{$size__horizontal-padding} );
 		border: $size__vertical-padding solid $color__theme-secondary;
-		
+
 		&:not(.wp-block-cover-image) {
 			background: $color__theme-secondary;
 		}

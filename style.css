@@ -483,11 +483,7 @@ a {
   .main-navigation a {
     display: inline-block;
     padding: .5em; }
-  .main-navigation > div > ul > li.menu-item-has-children.toggled-on > a,
-  .current_page_item > a,
-  .current-menu-item > a,
-  .current_page_ancestor > a,
-  .current-menu-ancestor > a {
+  .main-navigation > div > ul > li.menu-item-has-children.toggled-on > a, .current_page_item > a, .current-menu-item > a, .current_page_ancestor > a, .current-menu-ancestor > a {
     text-decoration: underline; }
   .main-navigation .dropdown-toggle {
     background: transparent;
@@ -1567,6 +1563,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .wp-block-button .wp-block-button__link {
   background-color: black;
   border-radius: 0; }
+
+.wp-block-button .wp-block-button__link:active,
+.wp-block-button .wp-block-button__link:focus,
+.wp-block-button .wp-block-button__link:hover {
+  background-color: #383838; }
 
 /**/
 /* ! Dim Backgrounds */
