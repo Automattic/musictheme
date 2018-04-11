@@ -1090,9 +1090,17 @@ html,
     font-size: 117px;
     line-height: 128px; }
   .singular .entry-header .entry-featured-image {
-    max-width: 20%;
-    top: 0;
-    right: 10%; } }
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -2rem;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+    .singular .entry-header .entry-featured-image img {
+      position: absolute;
+      right: calc( 5% + 2rem);
+      height: 40%; } }
 
 @media screen and (min-width: 940px) {
   .hfeed .page-header .page-title {
