@@ -889,8 +889,7 @@ html,
   font-size: 1rem;
   font-style: italic;
   line-height: 1.4;
-  margin: 0;
-  padding: 0.7em 0 0.2em; }
+  margin: 0; }
 
 .site-title a {
   color: white; }
@@ -899,8 +898,7 @@ html,
 
 .site-description {
   line-height: 1.4;
-  margin: 0;
-  padding: 0 0.5em 0.5em 0; }
+  margin: 0; }
   .white .site-description {
     color: black; }
 
