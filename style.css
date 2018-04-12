@@ -896,13 +896,12 @@ html,
   .site-branding {
     display: flex; }
   .custom-logo {
-    margin-top: 0.5em; }
+    margin-top: 0.5em;
+    max-height: 46px; }
   .custom-logo-link + .site-branding-text {
     padding-left: 1em; }
   .site-header-wrap {
-    padding: 0 2rem; }
-  .custom-logo {
-    max-height: 46px; } }
+    padding: 0 2rem; } }
 
 @media screen and (min-width: 37.5em) {
   .site-header.white, .site-header.grey, .site-header.black {
