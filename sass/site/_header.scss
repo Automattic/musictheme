@@ -24,8 +24,15 @@
 }
 
 .site-header-wrap {
+	display: flex;
 	max-width: $size__site-max-width-wide;
+	margin: 0 auto;
 	padding: 0 #{$size__horizontal-padding / 2 };
+
+	.main-navigation {
+		flex: 1;
+		align-self: flex-end;
+	}
 }
 
 .site-branding {
