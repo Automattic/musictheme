@@ -29,12 +29,23 @@
 }
 
 .site-branding {
-	padding: 1em 0;
+	display: flex;
+	align-items: center;
 }
 
 .custom-logo {
 	max-height: 38px;
 	width: auto;
+}
+
+.custom-logo-link {
+	display: flex;
+	align-items: center;
+	height: 2.7rem;
+
+	+ .site-branding-text {
+		padding-left: 1em;
+	}
 }
 
 .site-title {
@@ -63,17 +74,12 @@
 
 @media screen and (min-width: 740px) {
 
-	.site-branding {
-		display: flex;
-	}
-
-	.custom-logo {
-		margin-top: 0.5em;
+	.custom-logo-link {
 		max-height: 46px;
 	}
 
-	.custom-logo-link + .site-branding-text {
-		padding-left: 1em;
+	.custom-logo {
+		max-height: 32px;
 	}
 
 	.site-header-wrap {

@@ -483,7 +483,11 @@ a {
   .main-navigation a {
     display: inline-block;
     padding: .5em; }
-  .main-navigation > div > ul > li.menu-item-has-children.toggled-on > a, .current_page_item > a, .current-menu-item > a, .current_page_ancestor > a, .current-menu-ancestor > a {
+  .main-navigation > div > ul > li.menu-item-has-children.toggled-on > a,
+  .current_page_item > a,
+  .current-menu-item > a,
+  .current_page_ancestor > a,
+  .current-menu-ancestor > a {
     text-decoration: underline; }
   .main-navigation .dropdown-toggle {
     background: transparent;
@@ -867,11 +871,19 @@ html,
   padding: 0 1rem; }
 
 .site-branding {
-  padding: 1em 0; }
+  display: flex;
+  align-items: center; }
 
 .custom-logo {
   max-height: 38px;
   width: auto; }
+
+.custom-logo-link {
+  display: flex;
+  align-items: center;
+  height: 2.7rem; }
+  .custom-logo-link + .site-branding-text {
+    padding-left: 1em; }
 
 .site-title {
   font-size: 1rem;
@@ -893,13 +905,10 @@ html,
     color: black; }
 
 @media screen and (min-width: 740px) {
-  .site-branding {
-    display: flex; }
-  .custom-logo {
-    margin-top: 0.5em;
+  .custom-logo-link {
     max-height: 46px; }
-  .custom-logo-link + .site-branding-text {
-    padding-left: 1em; }
+  .custom-logo {
+    max-height: 32px; }
   .site-header-wrap {
     padding: 0 2rem; } }
 
@@ -1889,10 +1898,6 @@ embed,
 iframe,
 object {
   max-width: 100%; }
-
-/* Make sure logo link wraps around logo image. */
-.custom-logo-link {
-  display: inline-block; }
 
 /*--------------------------------------------------------------
 ## Captions
