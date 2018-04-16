@@ -72,6 +72,7 @@
 .site-description {
 	line-height: 1.4;
 	margin: 0;
+  
 	.white & {
 		color: $color__theme-link;
 	}
@@ -90,6 +91,7 @@
 	.site-header-wrap {
 		padding: 0 $size__horizontal-padding;
 	}
+
 }
 
 @media screen and (min-width: 37.5em) {
