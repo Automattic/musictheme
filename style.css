@@ -921,6 +921,7 @@ html,
   margin: 0 0 2rem; }
 
 .entry-header {
+  z-index: 2;
   color: white;
   margin: 0 auto;
   max-width: 740px;
