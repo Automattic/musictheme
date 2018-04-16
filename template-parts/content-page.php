@@ -14,16 +14,22 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php
-			the_content();
+	<div class="entry-wrapper">
+		<div class="entry-background">
+			<div class="entry-background--color">Background-Color</div>
+		</div><!-- .entry-background -->
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'musictheme' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+		<div class="entry-content">
+			<?php
+				the_content();
+
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'musictheme' ),
+					'after'  => '</div>',
+				) );
+			?>
+		</div><!-- .entry-content -->
+	</div><!-- .entry-wrapper -->
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
