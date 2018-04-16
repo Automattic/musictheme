@@ -31,7 +31,7 @@
 
 	<div class="entry-wrapper">
 		<div class="entry-background">
-			<div class="entry-background--color">Background-Color</div>
+			<div class="entry-background--color"></div>
 		</div><!-- .entry-background -->
 
 		<div class="entry-content">
