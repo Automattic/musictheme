@@ -1,44 +1,4 @@
 /**
- * Header
- */
-
-.site-header-wrap {
-	display: grid;
-	grid-auto-flow: dense;
-	grid-gap: 0;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(1, 1fr);
-	grid-template-areas:
-		"branding navigation navigation"
-		"branding navigation navigation";
-	margin: 0 auto;
-	max-width: $size__site-max-width-wide;
-	width: 100%;
-}
-
-.site-branding {
-	grid-area: branding;
-}
-
-.main-navigation {
-	grid-area: navigation;
-}
-
-/**
- * Footer
- */
-
-.site-footer {
-}
-
-@media screen and (min-width: 37.5em) {
-
-	.site-header-wrap {
-		grid-template-columns: repeat(3, 1fr);
-	}
-}
-
-/**
  * Mobile Menu Layout
  */
 
