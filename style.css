@@ -1887,6 +1887,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
       margin-top: 0;
       color: white;
       text-align: center; }
+  .wp-block-quote.is-large,
+  .wp-block-pullquote.is-large {
+    padding-left: 2rem;
+    padding-right: 2rem; }
   .wp-block-image.alignleft img,
   .wp-block-image.alignright img {
     max-width: 100%; }
