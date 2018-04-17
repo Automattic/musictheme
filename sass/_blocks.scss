@@ -648,6 +648,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		}
 	}
 
+	.wp-block-cover-image.alignfull:first-child {
+		margin-top: 0;
+	}
+
 	.wp-block-quote.is-large,
 	.wp-block-pullquote.is-large {
 		padding-left: $size__horizontal-padding;
