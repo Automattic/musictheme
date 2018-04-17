@@ -7,7 +7,7 @@
 		"uuidString": "488B3E74-77B8-4080-9ABC-B90620A38FFF"
 		}
 	],
-"creatorBuild": "26330",
+"creatorBuild": "26680",
 "files": {
 	"\/.gitignore": {
 		"cB": 0,
@@ -925,7 +925,8 @@
 	"creationDate": 542322894,
 	"displayValue": "musictheme",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-hart"
+	"iconImageName": "meme-hart",
+	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -2728,6 +2729,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
+		"outputFormat": 0,
 		"quality": 100
 		},
 	"languageDefaultsJS": {
