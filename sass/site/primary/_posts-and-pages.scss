@@ -198,7 +198,7 @@
 
 	&:nth-of-type(3n+2) .entry-header {
 		color: $color__theme-link;
-		
+
 		.entry-header-wrap {
 			background: $color__background-body;
 		}
@@ -211,7 +211,7 @@
 
 	&:nth-of-type(3n+3) .entry-header {
 		color: $color__background-body;
-		
+
 		.entry-header-wrap {
 			background: $color__theme-link;
 		}
@@ -248,7 +248,7 @@
 	}
 
 	.singular .entry-meta {
-		margin-bottom: #{$size__vertical-padding * 3.5}; 
+		margin-bottom: #{$size__vertical-padding * 3.5};
 	}
 
 	.entry-title {
@@ -264,7 +264,7 @@
 		}
 	}
 
-	.singular .entry-header, 
+	.singular .entry-header,
 	.hfeed .page-header {
 		margin: 0 0 -#{$size__horizontal-padding * 4};
 	}
@@ -295,7 +295,7 @@
 }
 
 @media screen and (min-width: 740px) {
-	
+
 	.singular .entry-meta,
 	.entry-footer-wrap,
 	.hfeed .page-header .page-title {
@@ -333,6 +333,7 @@
 }
 
 @media screen and (min-width: 1400px) {
+	.hfeed .entry-header,
 	.entry-footer {
 		position: relative;
 		left: calc( 180px - #{$size__horizontal-padding} );

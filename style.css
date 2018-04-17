@@ -1137,6 +1137,7 @@ html,
     padding-right: 240px; } }
 
 @media screen and (min-width: 1400px) {
+  .hfeed .entry-header,
   .entry-footer {
     position: relative;
     left: calc( 180px - 2rem); } }

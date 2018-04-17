@@ -112,6 +112,13 @@
 		"oAP": "\/inc\/customizer.php",
 		"oF": 0
 		},
+	"\/inc\/gutenberg.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/inc\/gutenberg.php",
+		"oF": 0
+		},
 	"\/inc\/icon-functions.php": {
 		"cB": 0,
 		"ft": 8192,
