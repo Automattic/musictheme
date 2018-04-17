@@ -10,7 +10,7 @@
 	z-index: 500;
 
 	.menu-open & {
-		background: $color__theme-primary;
+		background: $color__theme-link;
 	}
 	.menu-open &.white {
 		background: $color__background-body;
@@ -64,6 +64,15 @@
 		&.white,
 		&.grey,
 		&.black {
+			background: transparent;
+		}
+	}
+
+	.site-header {
+		.menu-open &,
+		.menu-open &.white,
+		.menu-open &.grey,
+		.menu-open &.black {
 			background: transparent;
 		}
 	}
