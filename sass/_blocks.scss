@@ -688,10 +688,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 	.entry-content > .rotate,
 	.entry-content > h3 {
+		position: relative;
+		left: 0;
+		right: 0;
+		top: $size__horizontal-padding;
+		grid-column: 3;
+		align-self: right;
 		color: $color__background-body;
-		left: inherit;
-		padding-top: 0;
-		right: calc(#{$size__site-max-width} + #{$size__horizontal-padding / 2});
 	}
 
 	.entry-content > .rotate + *,
