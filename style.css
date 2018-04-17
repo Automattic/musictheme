@@ -1873,7 +1873,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     .entry-content > .alignwide:first-child {
       width: calc( 140% + 2rem);
       max-width: calc( 140% + 2rem);
-      margin-left: calc( -20%);
+      margin-left: calc( -20% - ( 1rem  ));
       margin-top: -2rem;
       border-left: 0;
       border-right: 0;
