@@ -24,19 +24,42 @@
 }
 
 .site-header-wrap {
+	display: flex;
 	max-width: $size__site-max-width-wide;
+	margin: 0 auto;
 	padding: 0 #{$size__horizontal-padding / 2 };
+
+	.main-navigation {
+		flex: 1;
+		align-self: flex-end;
+	}
 }
 
 .site-branding {
-	padding: 1em 0;
+	display: flex;
+	align-items: center;
+}
+
+.custom-logo {
+	max-height: 38px;
+	width: auto;
+}
+
+.custom-logo-link {
+	display: flex;
+	align-items: center;
+	height: 2.7rem;
+
+	+ .site-branding-text {
+		padding-left: 1em;
+	}
 }
 
 .site-title {
 	font-size: 1rem;
 	font-style: italic;
+	line-height: 1.4;
 	margin: 0;
-	padding: 0.5em 0;
 }
 
 .site-title a {
@@ -47,8 +70,28 @@
 }
 
 .site-description {
+	line-height: 1.4;
 	margin: 0;
-	padding: 0 0.5em 0.5em;
+  
+	.white & {
+		color: $color__theme-link;
+	}
+}
+
+@media screen and (min-width: 740px) {
+
+	.custom-logo-link {
+		max-height: 46px;
+	}
+
+	.custom-logo {
+		max-height: 32px;
+	}
+
+	.site-header-wrap {
+		padding: 0 $size__horizontal-padding;
+	}
+
 }
 
 @media screen and (min-width: 740px) {

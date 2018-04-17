@@ -565,8 +565,6 @@ a {
     /**
 		 * Colors
 		 */ }
-    .main-navigation > div {
-      float: left; }
     .main-navigation li {
       float: left;
       position: relative; }
@@ -797,33 +795,6 @@ a {
 # Content
 --------------------------------------------------------------*/
 /**
- * Header
- */
-.site-header-wrap {
-  display: grid;
-  grid-auto-flow: dense;
-  grid-gap: 0;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  grid-template-areas: "branding navigation navigation" "branding navigation navigation";
-  margin: 0 auto;
-  max-width: 1100px;
-  width: 100%; }
-
-.site-branding {
-  grid-area: branding; }
-
-.main-navigation {
-  grid-area: navigation; }
-
-/**
- * Footer
- */
-@media screen and (min-width: 37.5em) {
-  .site-header-wrap {
-    grid-template-columns: repeat(3, 1fr); } }
-
-/**
  * Mobile Menu Layout
  */
 @media screen and (max-width: 37.5em) {
@@ -867,17 +838,34 @@ html,
     background: black; }
 
 .site-header-wrap {
+  display: flex;
   max-width: 1100px;
+  margin: 0 auto;
   padding: 0 1rem; }
+  .site-header-wrap .main-navigation {
+    flex: 1;
+    align-self: flex-end; }
 
 .site-branding {
-  padding: 1em 0; }
+  display: flex;
+  align-items: center; }
+
+.custom-logo {
+  max-height: 38px;
+  width: auto; }
+
+.custom-logo-link {
+  display: flex;
+  align-items: center;
+  height: 2.7rem; }
+  .custom-logo-link + .site-branding-text {
+    padding-left: 1em; }
 
 .site-title {
   font-size: 1rem;
   font-style: italic;
-  margin: 0;
-  padding: 0.5em 0; }
+  line-height: 1.4;
+  margin: 0; }
 
 .site-title a {
   color: white; }
@@ -885,8 +873,18 @@ html,
     color: black; }
 
 .site-description {
-  margin: 0;
-  padding: 0 0.5em 0.5em; }
+  line-height: 1.4;
+  margin: 0; }
+  .white .site-description {
+    color: black; }
+
+@media screen and (min-width: 740px) {
+  .custom-logo-link {
+    max-height: 46px; }
+  .custom-logo {
+    max-height: 32px; }
+  .site-header-wrap {
+    padding: 0 2rem; } }
 
 @media screen and (min-width: 740px) {
   .site-header-wrap {
@@ -1947,10 +1945,6 @@ embed,
 iframe,
 object {
   max-width: 100%; }
-
-/* Make sure logo link wraps around logo image. */
-.custom-logo-link {
-  display: inline-block; }
 
 /*--------------------------------------------------------------
 ## Captions
