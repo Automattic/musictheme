@@ -1935,7 +1935,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
       left: calc( -180px + 2rem); }
   .entry-content > .rotate,
   .entry-content > h3 {
-    right: calc(100% + 2rem); }
+    right: calc(100% + 1rem); }
   .wp-block-cover-image.alignfull:first-child:after {
     left: calc( 180px - 2rem); } }
 
