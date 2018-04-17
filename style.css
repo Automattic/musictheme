@@ -1092,7 +1092,8 @@ html,
     color: white; }
     .singular .entry-title {
       font-size: 117px;
-      line-height: 128px;
+      line-height: 128px; }
+    .page .entry-title {
       padding-bottom: 8rem; }
   .singular .entry-header,
   .hfeed .page-header {

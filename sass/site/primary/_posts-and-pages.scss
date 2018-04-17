@@ -257,6 +257,9 @@
 		.singular & {
 			font-size: 117px;
 			line-height: 128px;
+		}
+
+		.page & {
 			padding-bottom: #{$size__horizontal-padding * 4};
 		}
 	}
