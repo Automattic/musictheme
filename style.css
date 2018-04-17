@@ -1901,8 +1901,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
       margin-top: 0;
       color: white;
       text-align: center; }
-  .wp-block-cover-image.alignfull:first-child {
-    margin-top: 0; }
   .wp-block-quote.is-large,
   .wp-block-pullquote.is-large {
     padding-left: 2rem;
@@ -1919,6 +1917,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     min-height: 640px; }
   .wp-block-cover-image.alignfull + h3,
   .wp-block-cover-image.alignfull + .rotate {
+    margin-top: 0; }
+  .wp-block-cover-image.alignfull:first-child {
     margin-top: 0; }
   .entry-content > .rotate,
   .entry-content > h3 {
