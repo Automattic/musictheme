@@ -665,3 +665,18 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		padding-right: 240px;
 	}
 }
+
+@media screen and (min-width: 1400px) {
+	
+	.entry-content {
+		left: calc( 180px - #{$size__horizontal-padding} );
+
+		> .alignfull {
+			left: calc( -180px + #{$size__horizontal-padding} );
+		}
+	}
+
+	.wp-block-cover-image.alignfull:first-child:after {
+		left: calc( 180px - #{$size__horizontal-padding} );
+	}
+}

@@ -165,3 +165,12 @@
 	}
 
 }
+
+@media screen and (min-width: 1400px) {
+
+	.comments-area {
+		position: relative;
+		left: calc( 180px - #{$size__horizontal-padding} );
+	}
+	
+}

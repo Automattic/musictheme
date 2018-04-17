@@ -331,3 +331,10 @@
 		padding-right: 240px;
 	}
 }
+
+@media screen and (min-width: 1400px) {
+	.entry-footer {
+		position: relative;
+		left: calc( 180px - #{$size__horizontal-padding} );
+	}
+}

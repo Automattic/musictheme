@@ -1136,6 +1136,11 @@ html,
   .singular .entry-title {
     padding-right: 240px; } }
 
+@media screen and (min-width: 1400px) {
+  .entry-footer {
+    position: relative;
+    left: calc( 180px - 2rem); } }
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1236,6 +1241,11 @@ html,
       top: 2rem; }
   .comment-meta .comment-author {
     margin-left: 0; } }
+
+@media screen and (min-width: 1400px) {
+  .comments-area {
+    position: relative;
+    left: calc( 180px - 2rem); } }
 
 /*--------------------------------------------------------------
 ## Footer
@@ -1915,6 +1925,14 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .wp-block-cover-image.alignfull.has-left-content h2,
   .wp-block-cover-image.alignfull.has-left-content .wp-block-cover-image-text {
     padding-right: 240px; } }
+
+@media screen and (min-width: 1400px) {
+  .entry-content {
+    left: calc( 180px - 2rem); }
+    .entry-content > .alignfull {
+      left: calc( -180px + 2rem); }
+  .wp-block-cover-image.alignfull:first-child:after {
+    left: calc( 180px - 2rem); } }
 
 /*--------------------------------------------------------------
 # Infinite scroll
