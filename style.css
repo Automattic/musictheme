@@ -1893,6 +1893,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .wp-block-cover-image.alignfull + h3,
   .wp-block-cover-image.alignfull + .rotate {
     margin-top: 0; }
+  .page .wp-block-cover-image.alignfull:first-child + .alignwide {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0; }
   .entry-content > .rotate,
   .entry-content > h3 {
     color: white;

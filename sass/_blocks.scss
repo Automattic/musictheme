@@ -639,6 +639,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		}
 	}
 
+	.page .wp-block-cover-image.alignfull:first-child + .alignwide {
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+	}
+
 	.entry-content > .rotate,
 	.entry-content > h3 {
 		color: $color__background-body;
