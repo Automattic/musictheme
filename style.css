@@ -1113,7 +1113,6 @@ html,
       height: 40%; } }
 
 @media screen and (min-width: 740px) {
-  .singular .entry-title,
   .singular .entry-meta,
   .entry-footer-wrap,
   .hfeed .page-header .page-title {
