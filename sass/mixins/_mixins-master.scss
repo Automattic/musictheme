@@ -74,3 +74,9 @@
 		background-color: $colorValue;
 	}
 }
+
+// CSS Grid
+@mixin css-grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr 740px 1fr 1fr;
+}

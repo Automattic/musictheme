@@ -393,7 +393,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /**/
 
 .wp-block-separator {
-	width: calc( 100% + #{$size__horizontal-padding} );
+	width: 100%;
+	max-width: 100%;
 	border: $size__vertical-padding solid $color__theme-secondary;
 	border-top: none;
 	margin-left: -#{$size__horizontal-padding};
@@ -560,8 +561,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 	.entry-content,
 	.entry-background {
-		display: grid;
-		grid-template-columns: 3fr 1fr 740px 1fr 1fr;
+		@include css-grid;
 	}
 
 	.entry-background {
@@ -577,8 +577,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		grid-template-rows: 100vh;
 
 		.entry-background--color {
-			grid-column-start: 3;
-			grid-column-end: 4;
+			grid-column-start: 4;
+			grid-column-end: 5;
 			align-self: stretch;
 			background-color: white;
 		}
@@ -591,23 +591,23 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		background: transparent;
 
 		> * {
-			z-index: 2;
-			grid-column: 3;
+			z-index: 3;
+			grid-column: 4;
 			position: relative;
 			padding-left: $size__horizontal-padding;
 			padding-right: $size__horizontal-padding;
 		}
 
 		> .alignwide {
-			grid-column-start: 2;
-			grid-column-end: 5;
+			grid-column-start: 3;
+			grid-column-end: 6;
 			padding-left: 0;
 			padding-right: 0;
 		}
 
 		> .alignfull {
 			grid-column-start: 1;
-			grid-column-end: 6;
+			grid-column-end: 7;
 			padding-left: 0;
 			padding-right: 0;
 		}
