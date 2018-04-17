@@ -1319,11 +1319,13 @@ html,
   margin: 0;
   padding: 0;
   position: absolute;
-  right: 1rem;
+  right: 0;
   text-align: right;
   transform: rotate(-90deg) translate(0, -100%);
   transform-origin: 100% 0;
-  z-index: 5; }
+  z-index: 5;
+  display: inline-block;
+  width: 33.33%; }
 
 .entry-content > .rotate + *,
 .entry-content > h3 + * {
@@ -1915,7 +1917,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .entry-content > .rotate,
   .entry-content > h3 {
     color: white;
-    left: inherit;
     padding-top: 0;
     right: calc(740px + 1rem); }
   .entry-content > .rotate + *,
@@ -1932,6 +1933,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     left: calc( 180px - 2rem); }
     .entry-content > .alignfull {
       left: calc( -180px + 2rem); }
+  .entry-content > .rotate,
+  .entry-content > h3 {
+    right: calc(100% + 2rem); }
   .wp-block-cover-image.alignfull:first-child:after {
     left: calc( 180px - 2rem); } }
 

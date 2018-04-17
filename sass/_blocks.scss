@@ -52,11 +52,13 @@
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	right: 1rem;
-	text-align: right;
-	transform: rotate(-90deg) translate(0, -100%);
-	transform-origin: 100% 0;
-	z-index: 5;
+	right: 0;
+    text-align: right;
+    transform: rotate(-90deg) translate(0, -100%);
+    transform-origin: 100% 0;
+    z-index: 5;
+    display: inline-block;
+    width: 33.33%;
 }
 
 .entry-content > .rotate + *,
@@ -648,7 +650,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	.entry-content > .rotate,
 	.entry-content > h3 {
 		color: $color__background-body;
-		left: inherit;
 		padding-top: 0;
 		right: calc(#{$size__site-max-width} + #{$size__horizontal-padding / 2});
 	}
@@ -660,20 +661,25 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 @media screen and (min-width: 1100px) {
-	.wp-block-cover-image.alignfull.has-left-content h2, 
+	.wp-block-cover-image.alignfull.has-left-content h2,
 	.wp-block-cover-image.alignfull.has-left-content .wp-block-cover-image-text {
 		padding-right: 240px;
 	}
 }
 
 @media screen and (min-width: 1400px) {
-	
+
 	.entry-content {
 		left: calc( 180px - #{$size__horizontal-padding} );
 
 		> .alignfull {
 			left: calc( -180px + #{$size__horizontal-padding} );
 		}
+	}
+
+	.entry-content > .rotate,
+	.entry-content > h3 {
+		right: calc(100% + 2rem);
 	}
 
 	.wp-block-cover-image.alignfull:first-child:after {
