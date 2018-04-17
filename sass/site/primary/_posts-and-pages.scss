@@ -292,6 +292,24 @@
 
 @media screen and (min-width: 940px) {
 
+	.blog .site-main, .archive .site-main, .search-results .site-main {
+		@include css-grid;
+
+		.page-header {
+			grid-column-start: 1;
+			grid-column-end: 7;
+		}
+
+		.hentry {
+			grid-column: 4;
+
+			.entry-content {
+				padding: $size__vertical-padding 0;
+				background: white;
+			}
+		}
+	}
+
 	.hfeed .page-header .page-title {
 		max-width: $size__site-max-width-wide;
 	}
@@ -313,7 +331,7 @@
 	.singular .entry-meta,
 	.entry-footer-wrap,
 	.hfeed .page-header .page-title {
-		margin-bottom: #{$size__vertical-padding * 4};
-		padding: 0 $size__horizontal-padding;
+		margin-bottom: #{$size__vertical-padding * 2};
+		padding: 0 $size__horizontal-padding $size__vertical-padding;
 	}
 }
