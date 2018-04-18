@@ -412,7 +412,16 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	margin-bottom: 0;
 	margin-top: 0;
 	padding: 0;
-	height: 0;
+	height: #{$size__vertical-padding / 2};
+
+	&:before {
+		content: "";
+		display: block;
+		background-color: $color__background-body;
+		padding: 0 #{$size__vertical-padding};
+		margin-left: -#{$size__vertical-padding};
+		height: #{$size__vertical-padding / 2};
+	}
 }
 
 /**/
