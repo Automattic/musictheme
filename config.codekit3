@@ -91,13 +91,6 @@
 		"oAP": "\/functions.php",
 		"oF": 0
 		},
-	"\/header.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/header.php",
-		"oF": 0
-		},
 	"\/inc\/custom-header.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -264,19 +257,6 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"\/sass\/_blocks.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/_blocks.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/sass\/_normalize.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -381,19 +361,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/layout\/_css-grid.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/layout\/_css-grid.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/sass\/layout\/_sidebar-content.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -429,19 +396,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/media\/_galleries.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/media\/_media.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/media\/_media.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -520,19 +474,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/navigation\/_links.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/navigation\/_menus.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/navigation\/_menus.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -628,32 +569,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/site\/_footer.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/site\/_footer.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/site\/_header.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/site\/_header.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/sass\/site\/_site.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -663,32 +578,6 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/site\/_site.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/site\/primary\/_comments.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/site\/primary\/_comments.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/sass\/site\/primary\/_posts-and-pages.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "\/sass\/site\/primary\/_posts-and-pages.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -860,16 +749,6 @@
 		"oA": 0,
 		"oAP": "\/single.php",
 		"oF": 0
-		},
-	"\/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/style-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"\/template-parts\/content-none.php": {
 		"cB": 0,
