@@ -27,7 +27,9 @@
 	padding: $size__horizontal-padding 0;
 
 	.reply {
+		font-style: italic;
 		margin-bottom: 1rem;
+		float: right;
 	}
 }
 
@@ -41,6 +43,11 @@
 
 	.comment-author {
 		margin-left: .5rem;
+	}
+
+	.avatar {
+		height: 20px;
+		width: 20px;
 	}
 
 	& > * {
@@ -86,44 +93,24 @@
 	.children .depth-2 {
 
 		article {
-			margin-left: #{$size__horizontal-padding * 2};
+			margin-left: #{$size__horizontal-padding * 1.5 };
 		}
 
 		.reply-indicator {
-			left: #{$size__horizontal-padding};
+			left: #{$size__horizontal-padding / 2};
 		}
 	}
 
-	.children .depth-3 {
-
-		article {
-			margin-left: #{$size__horizontal-padding * 3};
-		}
-
-		.reply-indicator {
-			left: #{$size__horizontal-padding * 2};
-		}
-	}
-
-	.children .depth-4 {
-
-		article {
-			margin-left: #{$size__horizontal-padding * 4};
-		}
-
-		.reply-indicator {
-			left: #{$size__horizontal-padding * 3};
-		}
-	}
-
+	.children .depth-3,
+	.children .depth-4,
 	.children .depth-5 {
 
 		article {
-			margin-left: #{$size__horizontal-padding * 5};
+			margin-left: #{$size__horizontal-padding * 2.5};
 		}
 
 		.reply-indicator {
-			left: #{$size__horizontal-padding * 4};
+			left: #{$size__horizontal-padding * 1.5};
 		}
 	}
 }
@@ -154,6 +141,8 @@
 		}
 
 		.avatar {
+			height: 44px;
+			width: 44px;
 			position: absolute;
 			left: -6rem;
 			top: 2rem
@@ -162,6 +151,30 @@
 
 	.comment-meta .comment-author {
 		margin-left: 0;
+	}
+
+	.comment-list {
+		.children .depth-4 {
+
+			article {
+				margin-left: #{$size__horizontal-padding * 3.5};
+			}
+
+			.reply-indicator {
+				left: #{$size__horizontal-padding * 2.5};
+			}
+		}
+
+		.children .depth-5 {
+
+			article {
+				margin-left: #{$size__horizontal-padding * 4.5};
+			}
+
+			.reply-indicator {
+				left: #{$size__horizontal-padding * 3.5};
+			}
+		}
 	}
 
 }
