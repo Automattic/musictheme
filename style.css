@@ -1597,12 +1597,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .wp-block-separator {
   background: transparent;
   border: none;
+  height: 2px;
   margin: 4rem 0;
   padding: 0 40%; }
   .wp-block-separator:before {
+    background-color: #ccc;
     content: "";
     display: block;
-    background-color: #ccc;
     height: 2px; }
 
 /**/

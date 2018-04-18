@@ -407,14 +407,15 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .wp-block-separator {
 	background: transparent;
 	border: none;
+	height: 2px;
 	margin: #{$size__vertical-padding * 2} 0;
 	padding: 0 40%;
 
 	&:before {
+		background-color: $color__background-hr;
 		content: "";
 		display: block;
-		background-color: $color__background-hr;
-		height: 2px; // #{$size__vertical-padding / 2};
+		height: 2px;
 	}
 }
 
