@@ -1116,9 +1116,7 @@ html,
       right: calc( 5% + 2rem);
       height: 40%; }
   .page.page-template-hide-header .entry-header {
-    padding: 6.5rem; } }
-
-@media screen and (min-width: 740px) {
+    padding: 6.5rem; }
   .singular .entry-meta,
   .entry-footer-wrap,
   .hfeed .page-header .page-title {
