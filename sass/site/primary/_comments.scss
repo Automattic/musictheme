@@ -8,14 +8,13 @@
 	margin: 0 auto;
 	max-width: $size__site-max-width;
 	width: 100%;
-	padding: $size__vertical-padding $size__horizontal-padding;
+	padding: $size__vertical-padding #{$size__horizontal-padding / 2};
 }
 
 .comments-title {
 	background: $color__theme-link;
 	color: $color__background-body;
 	margin: 0 auto;
-	padding: $size__horizontal-padding;
 }
 
 .comment-reply-title {
@@ -24,11 +23,13 @@
 
 .comment-body {
 	border-bottom: 1px solid $color__background-hr;
-	margin: 0 $size__horizontal-padding;
+	margin: 0 #{$size__horizontal-padding / 2};
 	padding: $size__horizontal-padding 0;
 
 	.reply {
+		font-style: italic;
 		margin-bottom: 1rem;
+		float: right;
 	}
 }
 
@@ -42,6 +43,11 @@
 
 	.comment-author {
 		margin-left: .5rem;
+	}
+
+	.avatar {
+		height: 20px;
+		width: 20px;
 	}
 
 	& > * {
@@ -87,55 +93,42 @@
 	.children .depth-2 {
 
 		article {
-			margin-left: #{$size__horizontal-padding * 2};
+			margin-left: #{$size__horizontal-padding * 1.5 };
 		}
 
 		.reply-indicator {
-			left: #{$size__horizontal-padding};
+			left: #{$size__horizontal-padding / 2};
 		}
 	}
 
-	.children .depth-3 {
-
-		article {
-			margin-left: #{$size__horizontal-padding * 3};
-		}
-
-		.reply-indicator {
-			left: #{$size__horizontal-padding * 2};
-		}
-	}
-
-	.children .depth-4 {
-
-		article {
-			margin-left: #{$size__horizontal-padding * 4};
-		}
-
-		.reply-indicator {
-			left: #{$size__horizontal-padding * 3};
-		}
-	}
-
+	.children .depth-3,
+	.children .depth-4,
 	.children .depth-5 {
 
 		article {
-			margin-left: #{$size__horizontal-padding * 5};
+			margin-left: #{$size__horizontal-padding * 2.5};
 		}
 
 		.reply-indicator {
-			left: #{$size__horizontal-padding * 4};
+			left: #{$size__horizontal-padding * 1.5};
 		}
 	}
 }
 
-@media screen and (min-width: 940px) {
+@media screen and (min-width: 740px) {
 
 	.comments-title,
 	.comment-list,
 	.comment-respond {
-		margin: 0 $size__max-width-wide-margin 0 auto;
+		padding: $size__vertical-padding $size__horizontal-padding;
 	}
+
+	.comment-body {
+		margin: 0;
+	}
+}
+
+@media screen and (min-width: 940px) {
 
 	.comments-area {
 		margin-left: auto;
@@ -148,8 +141,10 @@
 		}
 
 		.avatar {
+			height: 44px;
+			width: 44px;
 			position: absolute;
-			left: -4rem;
+			left: -6rem;
 			top: 2rem
 		}
 	}
@@ -158,4 +153,37 @@
 		margin-left: 0;
 	}
 
+	.comment-list {
+		.children .depth-4 {
+
+			article {
+				margin-left: #{$size__horizontal-padding * 3.5};
+			}
+
+			.reply-indicator {
+				left: #{$size__horizontal-padding * 2.5};
+			}
+		}
+
+		.children .depth-5 {
+
+			article {
+				margin-left: #{$size__horizontal-padding * 4.5};
+			}
+
+			.reply-indicator {
+				left: #{$size__horizontal-padding * 3.5};
+			}
+		}
+	}
+
+}
+
+@media screen and (min-width: 1400px) {
+
+	.comments-area {
+		position: relative;
+		left: calc( 180px - #{$size__horizontal-padding} );
+	}
+	
 }

@@ -94,6 +94,13 @@
 
 }
 
+@media screen and (min-width: 740px) {
+
+	.site-header-wrap {
+		padding: 0 $size__horizontal-padding;
+	}
+}
+
 @media screen and (min-width: 37.5em) {
 
 	.site-header {
