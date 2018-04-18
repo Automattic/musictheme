@@ -1226,7 +1226,7 @@ html,
   .comment-respond {
     padding: 2rem 2rem; }
   .comment-body {
-    margin: 0 2rem; } }
+    margin: 0; } }
 
 @media screen and (min-width: 940px) {
   .comments-area {
@@ -1238,7 +1238,7 @@ html,
       position: relative; }
     .comments-area .avatar {
       position: absolute;
-      left: -4rem;
+      left: -6rem;
       top: 2rem; }
   .comment-meta .comment-author {
     margin-left: 0; } }
