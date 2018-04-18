@@ -1,5 +1,4 @@
 .entry-content {
-	overflow: hidden;
 	background: $color__background-body;
 	padding: $size__vertical-padding #{$size__horizontal-padding / 2};
 	margin-left: auto;
@@ -458,7 +457,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 @media screen and (min-width: 740px) {
 
 	.entry-content {
-		overflow: visible;
 		position: relative;
 		padding: $size__vertical-padding $size__horizontal-padding;
 		max-width: #{$size__site-max-width};

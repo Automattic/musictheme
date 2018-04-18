@@ -186,12 +186,16 @@
 .page.page-template-hide-header {
 
 	.entry-header {
-		display: none;
+		visibility: hidden;
+		opacity: 0;
+		height: 0;
+		min-height: 0;
+		padding: 2.5rem;
 	}
 
-	.entry-content > :first-child:not(.wp-block-cover-image.alignfull) {
-		margin-top: #{$size__vertical-padding * 2.5 };
-	}
+	.entry-content .alignfull:first-child {
+		margin-top: -#{$size__vertical-padding * 3.5 };
+	} 
 }
 
 .blog .post, .archive .post, .search-results .post {
@@ -290,6 +294,13 @@
 				right: calc( 5% + #{$size__horizontal-padding} );
 				height: 40%;
 			}
+		}
+	}
+
+	.page.page-template-hide-header {
+
+		.entry-header {
+			padding: 6.5rem;
 		}
 	}
 }
