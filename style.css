@@ -1595,21 +1595,15 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /* ! Separator */
 /**/
 .wp-block-separator {
-  width: calc( 100% + 2rem);
-  border: 2rem solid #383838;
-  border-top: none;
-  margin-left: -2rem;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
-  height: 1rem; }
+  background: transparent;
+  border: none;
+  margin: 4rem 0;
+  padding: 0 40%; }
   .wp-block-separator:before {
     content: "";
     display: block;
-    background-color: white;
-    padding: 0 2rem;
-    margin-left: -2rem;
-    height: 1rem; }
+    background-color: #ccc;
+    height: 2px; }
 
 /**/
 /* ! Buttons */
@@ -1828,10 +1822,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .entry-content > .rotate,
   .entry-content > h3 {
     right: calc( 50% - 370px + 1rem); }
-  .wp-block-separator {
-    padding: 0; }
-    .wp-block-separator + * {
-      padding-top: 2rem; }
+  .wp-block-separator + * {
+    padding-top: 2rem; }
   .wp-block-image.alignleft img,
   .wp-block-image.alignright img {
     max-width: 100%; }
