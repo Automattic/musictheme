@@ -112,7 +112,7 @@
 	z-index: 3;
 
 	.singular & {
-		margin: 0 auto;
+		margin: #{$size__vertical-padding / 2} auto 0;
 		max-width: $size__site-max-width-wide;
 		padding: 0 #{$size__horizontal-padding / 2};
 		width: 100%;
@@ -261,7 +261,7 @@
 	}
 
 	.singular .entry-meta {
-		margin-bottom: #{$size__vertical-padding * 3.5};
+		margin-bottom: #{$size__vertical-padding * 4};
 	}
 
 	.entry-title {
@@ -313,7 +313,6 @@
 		}
 	}
 
-	.singular .entry-meta,
 	.entry-footer-wrap,
 	.hfeed .page-header .page-title {
 		margin-bottom: #{$size__vertical-padding * 4};
