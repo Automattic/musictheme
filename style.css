@@ -1330,6 +1330,9 @@ html,
     margin-top: 0;
     color: white;
     text-align: center; }
+    .entry-content > .alignfull figcaption a {
+      color: white;
+      text-decoration: underline; }
 
 .entry-content ul,
 .entry-content ol {
@@ -1918,6 +1921,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
       margin-top: 0;
       color: white;
       text-align: center; }
+      .entry-content > .alignwide figcaption a {
+        color: white;
+        text-decoration: underline; }
   .wp-block-cover-image.alignwide {
     min-height: 640px; }
   .wp-block-cover-image.alignfull + h3,

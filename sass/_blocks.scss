@@ -41,6 +41,11 @@
 		margin-top: 0;
 		color: $color__background-body;
 		text-align: center;
+
+		a {
+			color: $color__background-body;
+			text-decoration: underline;
+		}
 	}
 }
 
@@ -611,6 +616,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 			margin-top: 0;
 			color: $color__background-body;
 			text-align: center;
+
+			a {
+				color: $color__background-body;
+				text-decoration: underline;
+			}
 		}
 	}
 
