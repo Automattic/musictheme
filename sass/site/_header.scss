@@ -9,6 +9,10 @@
 	background-color: transparent;
 	z-index: 500;
 
+	.js & {
+		opacity: 0;
+	}
+
 	.menu-open & {
 		background: $color__theme-link;
 	}
@@ -72,7 +76,7 @@
 .site-description {
 	line-height: 1.4;
 	margin: 0;
-  
+
 	.white & {
 		color: $color__theme-link;
 	}

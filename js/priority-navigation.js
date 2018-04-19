@@ -33,14 +33,14 @@
 				var lastItem = mainNav.find( '.menu > li:not(#more-menu)' ).last();
 				lastItem.attr( 'data-width', lastItem.outerWidth( true ) );
 				lastItem.prependTo( moreMenu.find( '.sub-menu' ).eq( 0 ) );
-				// priorityNav(); // Rerun this function!
+				// Rerun this function!
 				setTimeout( priorityNav, 10 );
+				setTimeout( fadeInNav, 160 );
 
 			// But if we have the extra space, we should add the items back to our menu
 			} else if ( navWidth + firstMoreElement.data( 'width' ) < availableSpace ) {
 				// Check to be sure there's enough space for our extra element
 				firstMoreElement.insertBefore( mainNav.find( '.menu > li' ).last() );
-				// priorityNav();
 				setTimeout( priorityNav, 10 );
 			}
 
@@ -75,6 +75,16 @@
 		};
 	}
 
+	/*
+	 * Fade in page
+	 * - only if js is enabled
+	 */
+	function fadeInNav() {
+		$( '.js .site-header' ).animate({
+			opacity: 1,
+		}, 0 );
+	}
+
 	// Run our functions once the window has loaded fully
 	$( window ).on( 'load', debounce( function() {
 		priorityNav();
@@ -93,5 +103,17 @@
 			isResizing = false;
 		}, 150 );
 	});
+
+	/**
+	 * Execute functions
+	 */
+	$( document )
+		.ready( function() {
+			/**
+			 * Window calls
+			 */
+			//$( window )
+			//	.load( fadeInNav );
+		} );
 
 } )( jQuery );

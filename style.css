@@ -828,6 +828,8 @@ html,
   right: 0;
   background-color: transparent;
   z-index: 500; }
+  .js .site-header {
+    opacity: 0; }
   .menu-open .site-header {
     background: black; }
   .menu-open .site-header.white {

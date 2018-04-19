@@ -171,6 +171,14 @@ function musictheme_scripts() {
 add_action( 'wp_enqueue_scripts', 'musictheme_scripts' );
 
 /**
+ * Check whether the browser supports JavaScript
+ */
+function musictheme_html_js_class() {
+	echo '<script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>'. "\n";
+}
+add_action( 'wp_head', 'musictheme_html_js_class', 1 );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
