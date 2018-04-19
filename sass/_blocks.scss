@@ -455,6 +455,22 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 /**/
+/* ! Columns */
+/**/
+
+.wp-block-columns {
+	grid-gap: $size__horizontal-padding;
+
+	&.has-2-columns,
+	&.has-3-columns,
+	&.has-4-columns
+	&.has-5-columns
+	&.has-6-columns {
+		grid-auto-columns: 1fr;
+	}
+}
+
+/**/
 /* ! Dim Backgrounds */
 /**/
 

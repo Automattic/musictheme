@@ -1645,6 +1645,15 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   background-color: #383838; }
 
 /**/
+/* ! Columns */
+/**/
+.wp-block-columns {
+  grid-gap: 2rem; }
+  .wp-block-columns.has-2-columns, .wp-block-columns.has-3-columns,
+  .wp-block-columns.has-4-columns .wp-block-columns.has-5-columns .wp-block-columns.has-6-columns {
+    grid-auto-columns: 1fr; }
+
+/**/
 /* ! Dim Backgrounds */
 /**/
 .wp-block-cover-image.has-background-dim:before,
