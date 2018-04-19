@@ -20,7 +20,7 @@ get_header(); ?>
 	if ( have_posts() ) : ?>
 		<header class="page-header">
 		<?php if ( empty( single_post_title( '', false ) ) ) { ?>
-			<h1 class="page-title"><?php esc_html_e( 'We have written some blog posts for you:', 'musictheme' ); ?></h1>
+			<h1 class="page-title"><?php esc_html_e( 'Posts', 'musictheme' ); ?></h1>
 		<?php } else { ?>
 			<h1 class="page-title"><?php single_post_title(); ?></h1>
 		<?php } ?>

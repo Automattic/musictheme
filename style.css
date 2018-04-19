@@ -848,7 +848,8 @@ html,
 
 .site-branding {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  padding: 1em 0; }
 
 .custom-logo {
   max-height: 38px;
@@ -1071,6 +1072,10 @@ html,
   .blog .post:nth-of-type(3n+3) .entry-header a, .archive .post:nth-of-type(3n+3) .entry-header a, .search-results .post:nth-of-type(3n+3) .entry-header a {
     color: white; }
 
+.home.blog .page-header {
+  min-height: 0;
+  padding: 5rem 0 3rem; }
+
 @media screen and (min-width: 740px) {
   .page-content,
   .entry-content,
@@ -1123,7 +1128,9 @@ html,
     margin-bottom: 8rem;
     padding: 0 2rem; }
   .entry-footer-wrap {
-    padding-bottom: 2rem; } }
+    padding-bottom: 2rem; }
+  .home.blog .page-header {
+    padding: 10rem 0 8rem; } }
 
 @media screen and (min-width: 940px) {
   .hfeed .page-header .page-title {

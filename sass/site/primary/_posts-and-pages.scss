@@ -228,6 +228,11 @@
 
 }
 
+.home.blog .page-header {
+	min-height: 0;
+	padding: 5rem 0 3rem;
+}
+
 @media screen and (min-width: 740px) {
 
 	.page-content,
@@ -313,6 +318,10 @@
 
 	.entry-footer-wrap {
 		padding-bottom: #{$size__vertical-padding};
+	}
+
+	.home.blog .page-header {
+		padding: 10rem 0 8rem;
 	}
 }
 
