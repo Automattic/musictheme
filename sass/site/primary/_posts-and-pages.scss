@@ -16,6 +16,10 @@
 .entry-summary {
 	margin: 0;
 	@include font-size(1.25);
+
+	a {
+		text-decoration: underline;
+	}
 }
 
 .page-links {
@@ -108,7 +112,7 @@
 	z-index: 3;
 
 	.singular & {
-		margin: 0 auto;
+		margin: #{$size__vertical-padding / 4} auto 0;
 		max-width: $size__site-max-width-wide;
 		padding: 0 #{$size__horizontal-padding / 2};
 		width: 100%;
@@ -186,12 +190,16 @@
 .page.page-template-hide-header {
 
 	.entry-header {
-		display: none;
+		visibility: hidden;
+		opacity: 0;
+		height: 0;
+		min-height: 0;
+		padding: 2.5rem;
 	}
 
-	.entry-content > :first-child:not(.wp-block-cover-image.alignfull) {
-		margin-top: #{$size__vertical-padding * 2.5 };
-	}
+	.entry-content .alignfull:first-child {
+		margin-top: -#{$size__vertical-padding * 3.5 };
+	} 
 }
 
 .blog .post, .archive .post, .search-results .post {
@@ -224,6 +232,11 @@
 
 }
 
+.home.blog .page-header {
+	min-height: 0;
+	padding: 5rem 0 3rem;
+}
+
 @media screen and (min-width: 740px) {
 
 	.page-content,
@@ -248,7 +261,7 @@
 	}
 
 	.singular .entry-meta {
-		margin-bottom: #{$size__vertical-padding * 3.5};
+		margin-bottom: #{$size__vertical-padding * 4};
 	}
 
 	.entry-title {
@@ -292,11 +305,14 @@
 			}
 		}
 	}
-}
 
-@media screen and (min-width: 740px) {
+	.page.page-template-hide-header {
 
-	.singular .entry-meta,
+		.entry-header {
+			padding: 6.5rem;
+		}
+	}
+
 	.entry-footer-wrap,
 	.hfeed .page-header .page-title {
 		margin-bottom: #{$size__vertical-padding * 4};
@@ -305,6 +321,10 @@
 
 	.entry-footer-wrap {
 		padding-bottom: #{$size__vertical-padding};
+	}
+
+	.home.blog .page-header {
+		padding: 10rem 0 8rem;
 	}
 }
 
