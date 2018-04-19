@@ -1553,7 +1553,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     width: 100%; }
   .wp-block-table td,
   .wp-block-table th {
-    padding: .5em; }
+    padding: .5em .5em .3em;
+    border: 1px solid #e6e6e6; }
 
 /**/
 /* ! Video */
