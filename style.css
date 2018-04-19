@@ -1312,7 +1312,11 @@ html,
   max-width: 100vw;
   margin: 2rem calc((100% - 100vw) * .5);
   padding: 0;
-  border: 2rem solid #383838; }
+  border-top: 2rem solid #383838;
+  border-bottom: 2rem solid #383838; }
+  .entry-content > .alignfull:first-child {
+    border-top: 0;
+    margin-top: -2rem; }
   .entry-content > .alignfull figcaption {
     background: #383838;
     padding: 1rem;
