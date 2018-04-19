@@ -6,6 +6,13 @@
 
 ( function( $ ) {
 
+	// Fade in Nav, only if js is enabled
+	function fadeInNav() {
+		$( '.js .site-header' ).animate({
+			opacity: 1,
+		}, 0 );
+	}
+
 	// Priority+ navigation, whee!
 	function priorityNav() {
 
@@ -75,16 +82,6 @@
 		};
 	}
 
-	/*
-	 * Fade in page
-	 * - only if js is enabled
-	 */
-	function fadeInNav() {
-		$( '.js .site-header' ).animate({
-			opacity: 1,
-		}, 0 );
-	}
-
 	// Run our functions once the window has loaded fully
 	$( window ).on( 'load', debounce( function() {
 		priorityNav();
@@ -103,17 +100,5 @@
 			isResizing = false;
 		}, 150 );
 	});
-
-	/**
-	 * Execute functions
-	 */
-	$( document )
-		.ready( function() {
-			/**
-			 * Window calls
-			 */
-			//$( window )
-			//	.load( fadeInNav );
-		} );
 
 } )( jQuery );
