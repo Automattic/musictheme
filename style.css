@@ -419,7 +419,7 @@ a {
   a:visited {
     color: black; }
   a:hover, a:focus, a:active {
-    color: red;
+    color: #f18686;
     text-decoration: underline; }
   a:focus {
     outline: thin dotted; }
@@ -919,6 +919,10 @@ html,
   margin: 0;
   font-size: 20px;
   font-size: 1.25rem; }
+  .page-content a,
+  .entry-content a,
+  .entry-summary a {
+    text-decoration: underline; }
 
 .page-links {
   clear: both;

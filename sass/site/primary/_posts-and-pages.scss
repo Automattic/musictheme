@@ -16,6 +16,10 @@
 .entry-summary {
 	margin: 0;
 	@include font-size(1.25);
+
+	a {
+		text-decoration: underline;
+	}
 }
 
 .page-links {
