@@ -112,7 +112,7 @@
 	z-index: 3;
 
 	.singular & {
-		margin: #{$size__vertical-padding / 2} auto 0;
+		margin: #{$size__vertical-padding / 4} auto 0;
 		max-width: $size__site-max-width-wide;
 		padding: 0 #{$size__horizontal-padding / 2};
 		width: 100%;
