@@ -1394,6 +1394,10 @@ html,
     line-height: 19px;
     margin: 0;
     padding-top: 1rem; }
+  .wp-block-quote.alignwide cite, .wp-block-quote.alignfull cite,
+  .wp-block-pullquote.alignwide cite,
+  .wp-block-pullquote.alignfull cite {
+    color: white; }
   .wp-block-quote.is-large,
   .wp-block-pullquote.is-large {
     margin: 0 auto;
@@ -1416,6 +1420,12 @@ html,
       margin-top: 0;
       padding-left: 0;
       text-align: inherit; }
+  .wp-block-quote.alignleft,
+  .wp-block-pullquote.alignleft {
+    margin-right: 2rem; }
+  .wp-block-quote.alignright,
+  .wp-block-pullquote.alignright {
+    margin-left: 2rem; }
 
 /**/
 /* ! Subhead */
@@ -1868,6 +1878,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     .entry-content > .alignfull:first-child {
       margin-top: -2rem;
       border-top: none; }
+  .entry-content > .wp-block-quote.alignfull,
+  .entry-content > .wp-block-pullquote.alignfull,
   .entry-content > p.alignfull {
     border-left: 2rem solid #383838;
     border-right: 2rem solid #383838; }

@@ -112,6 +112,13 @@
 		padding-top: 1rem;
 	}
 
+	&.alignwide,
+	&.alignfull {
+		cite {
+			color: $color__background-body;
+		}
+	}
+
 	&.is-large {
 		margin: 0 auto;
 		max-width: $size__site-max-width;
@@ -135,6 +142,14 @@
 			padding-left: 0;
 			text-align: inherit;
 		}
+	}
+
+	&.alignleft {
+		margin-right: $size__horizontal-padding;
+	}
+
+	&.alignright {
+		margin-left: $size__horizontal-padding;
 	}
 }
 
@@ -526,6 +541,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		}
 	}
 
+
+	.entry-content > .wp-block-quote.alignfull,
+	.entry-content > .wp-block-pullquote.alignfull,
 	.entry-content > p.alignfull {
 		border-left: $size__horizontal-padding solid $color__theme-secondary;
 		border-right: $size__horizontal-padding solid $color__theme-secondary;
