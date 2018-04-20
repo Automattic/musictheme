@@ -1508,6 +1508,9 @@ p.wp-block-subhead {
       border-bottom: 2rem solid #383838;
       border-left: none;
       border-right: none; }
+  .wp-block-cover-image.alignleft, .wp-block-cover-image.alignright {
+    display: flex;
+    margin-bottom: 2rem; }
   .wp-block-cover-image.black {
     background-color: black; }
   .wp-block-cover-image.gray, .wp-block-cover-image.grey {
@@ -1867,6 +1870,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .entry-content > p.alignfull {
     border-left: 2rem solid #383838;
     border-right: 2rem solid #383838; }
+  .wp-block-cover-image.alignleft, .wp-block-cover-image.alignright {
+    display: flex;
+    max-width: 50%;
+    margin-bottom: 2rem; }
   .entry-content > .rotate,
   .entry-content > h3 {
     right: calc( 50% - 370px + 1rem); }

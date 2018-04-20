@@ -264,6 +264,12 @@ p.wp-block-subhead {
 		}
 	}
 
+	&.alignleft,
+	&.alignright {
+		display: flex;
+		margin-bottom: $size__vertical-padding;
+	}
+
 	/* Additional Color Classes */
 	&.black {
 		background-color: $color__theme-link;
@@ -522,6 +528,15 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	.entry-content > p.alignfull {
 		border-left: $size__horizontal-padding solid $color__theme-secondary;
 		border-right: $size__horizontal-padding solid $color__theme-secondary;
+	}
+
+	.wp-block-cover-image {
+		&.alignleft,
+		&.alignright {
+			display: flex;
+			max-width: 50%;
+			margin-bottom: $size__vertical-padding;
+		}
 	}
 
 	.entry-content > .rotate,
