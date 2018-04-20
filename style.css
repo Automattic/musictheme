@@ -1345,7 +1345,7 @@ html,
   margin-left: 2rem;
   padding-left: 0; }
 
-.entry-content ul {
+.entry-content ul ul {
   list-style-type: circle; }
 
 .entry-content > .rotate,
