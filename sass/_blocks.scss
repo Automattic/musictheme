@@ -71,6 +71,10 @@
     width: 33.33%;
 }
 
+.entry-content > h4 {
+	font-style: italic;
+}
+
 .entry-content > .rotate + *,
 .entry-content > h3 + * {
 	padding-right: 3.5rem;
