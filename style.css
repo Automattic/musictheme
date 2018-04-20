@@ -1384,6 +1384,7 @@ html,
   .wp-block-pullquote p {
     border-left: 0.25rem solid #f18686;
     padding-left: 1.5rem;
+    padding-right: 1.5rem;
     font-style: normal;
     margin: 0; }
   .wp-block-quote cite,
