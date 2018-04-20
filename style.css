@@ -1341,7 +1341,12 @@ html,
 
 .entry-content ul,
 .entry-content ol {
-  list-style-position: inside; }
+  list-style-position: outside;
+  margin-left: 2rem;
+  padding-left: 0; }
+
+.entry-content ul {
+  list-style-type: circle; }
 
 .entry-content > .rotate,
 .entry-content > h3 {
