@@ -846,7 +846,11 @@ html,
     flex: 1;
     align-self: flex-end; }
     .js .site-header-wrap .main-navigation {
-      opacity: 0; }
+      position: absolute;
+      visibility: hidden; }
+      .js .site-header-wrap .main-navigation.show-menu {
+        position: relative;
+        visibility: visible; }
 
 .site-branding {
   display: flex;

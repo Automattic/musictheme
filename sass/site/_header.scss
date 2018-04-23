@@ -34,7 +34,13 @@
 		align-self: flex-end;
 
 		.js & {
-			opacity: 0;
+			position: absolute;
+			visibility: hidden;
+
+			&.show-menu {
+				position: relative;
+				visibility: visible;
+			}
 		}
 	}
 }

@@ -8,9 +8,7 @@
 
 	// Fade in Nav, only if js is enabled
 	function fadeInNav() {
-		$( '.js #site-navigation' ).animate({
-			opacity: 1,
-		}, 0 );
+		$( '.js #site-navigation' ).addClass('show-menu');
 	}
 
 	// Priority+ navigation, whee!
