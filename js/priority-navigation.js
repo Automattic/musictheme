@@ -8,7 +8,7 @@
 
 	// Fade in Nav, only if js is enabled
 	function fadeInNav() {
-		$( '.js .site-header' ).animate({
+		$( '.js #site-navigation' ).animate({
 			opacity: 1,
 		}, 0 );
 	}
