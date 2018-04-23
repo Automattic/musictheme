@@ -1398,16 +1398,15 @@ html,
     line-height: 19px;
     margin: 0;
     padding-top: 1rem; }
-  .wp-block-quote.alignwide cite, .wp-block-quote.alignfull cite,
-  .wp-block-pullquote.alignwide cite,
-  .wp-block-pullquote.alignfull cite {
-    color: white; }
   .wp-block-quote.alignfull,
   .wp-block-pullquote.alignfull {
     background: #383838;
     border-left: 1rem solid #383838;
     border-right: 1rem solid #383838;
     color: white; }
+    .wp-block-quote.alignfull cite,
+    .wp-block-pullquote.alignfull cite {
+      color: white; }
   .wp-block-quote.is-large,
   .wp-block-pullquote.is-large {
     margin: 0 auto;
@@ -1436,6 +1435,17 @@ html,
   .wp-block-quote.alignright,
   .wp-block-pullquote.alignright {
     margin-left: 2rem; }
+
+.wp-block-pullquote {
+  border-top: 4px solid #f18686;
+  border-bottom: 4px solid #f18686; }
+  .wp-block-pullquote.alignfull {
+    padding-top: 4rem;
+    padding-bottom: 4rem; }
+  .wp-block-pullquote cite {
+    text-transform: none; }
+  .wp-block-pullquote > *, .wp-block-pullquote p {
+    border-left: 0; }
 
 /**/
 /* ! Subhead */
@@ -2036,6 +2046,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .entry-content > .rotate + *,
   .entry-content > h3 + * {
     padding-right: 2em; }
+  .wp-block-quote.alignwide cite,
+  .wp-block-pullquote.alignwide cite {
+    color: white; }
   .wp-block-table.alignwide {
     color: white;
     background: #383838; }

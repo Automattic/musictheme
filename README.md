@@ -23,11 +23,11 @@ A demo is available at https:musictheme.mystagingwebsite.com
 
 **How do I remove the default post header?**
 
-In the document settings of the editor, choose the "Hide Page Header" template. This is located under the Page Attributes section. This template is especially helpful for when you want to begin your page with a full-width image or cover image. 
+In the document settings of the editor, [choose the "Hide Page Header" template](http://cld.wthms.co/CCJaSI). This is located under the Page Attributes section. This template is especially helpful for when you want to begin your page with a full-width image or cover image. 
 
 **How do I change the background color for cover image blocks?**
 
-The default background color for cover image blocks is pink, but  there are a few color variations available. To use them, open the block settings and enter one of the following colors into the "custom class" field:
+The default background color for cover image blocks is pink, but  there are a few color variations available. To use them, open the block settings and enter one of the following colors into the ["Additional CSS Class"](http://cld.wthms.co/1cThcZ) field:
 
 - `white`
 - `black`
