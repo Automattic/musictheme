@@ -1372,6 +1372,10 @@ html,
 .entry-content > h3 + * {
   padding-right: 3.5rem; }
 
+.entry-content > p.alignfull {
+  border-left: 1rem solid #383838;
+  border-right: 1rem-padding solid #383838; }
+
 /* */
 /* ! Quote */
 /* */
@@ -1397,6 +1401,12 @@ html,
   .wp-block-quote.alignwide cite, .wp-block-quote.alignfull cite,
   .wp-block-pullquote.alignwide cite,
   .wp-block-pullquote.alignfull cite {
+    color: white; }
+  .wp-block-quote.alignfull,
+  .wp-block-pullquote.alignfull {
+    background: #383838;
+    border-left: 1rem solid #383838;
+    border-right: 1rem solid #383838;
     color: white; }
   .wp-block-quote.is-large,
   .wp-block-pullquote.is-large {
@@ -1873,16 +1883,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     padding: 2rem 2rem;
     max-width: 740px; }
   .entry-content > .alignfull {
-    border-left: none;
-    border-right: none; }
+    border-left-width: inherit;
+    border-right-width: inherit; }
     .entry-content > .alignfull:first-child {
       margin-top: -2rem;
       border-top: none; }
-  .entry-content > .wp-block-quote.alignfull,
-  .entry-content > .wp-block-pullquote.alignfull,
-  .entry-content > p.alignfull {
-    border-left: 2rem solid #383838;
-    border-right: 2rem solid #383838; }
   .wp-block-cover-image.alignleft, .wp-block-cover-image.alignright {
     display: flex;
     max-width: 50%;
@@ -1890,6 +1895,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .entry-content > .rotate,
   .entry-content > h3 {
     right: calc( 50% - 370px + 1rem); }
+  .entry-content > .wp-block-quote.alignfull,
+  .entry-content > .wp-block-pullquote.alignfull,
+  .entry-content > p.alignfull {
+    border-left-width: 2rem;
+    border-right-width: 2rem; }
   .wp-block-separator + * {
     padding-top: 2rem; }
   .wp-block-image.alignleft img,
