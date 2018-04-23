@@ -8,7 +8,7 @@
 
 	// Fade in Nav, only if js is enabled
 	function fadeInNav() {
-		$( '.js .site-header' ).animate({
+		$( '.js #masthead' ).animate({
 			opacity: 1,
 		}, 0 );
 	}
@@ -42,7 +42,6 @@
 				lastItem.prependTo( moreMenu.find( '.sub-menu' ).eq( 0 ) );
 				// Rerun this function!
 				setTimeout( priorityNav, 10 );
-				setTimeout( fadeInNav, 160 );
 
 			// But if we have the extra space, we should add the items back to our menu
 			} else if ( navWidth + firstMoreElement.data( 'width' ) < availableSpace ) {
@@ -85,7 +84,7 @@
 	// Run our functions once the window has loaded fully
 	$( window ).on( 'load', debounce( function() {
 		priorityNav();
-		fadeInNav();
+		setTimeout( fadeInNav, 200 );
 	}));
 
 	// Annnnnd also every time the window resizes
