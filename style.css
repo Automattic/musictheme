@@ -1671,6 +1671,20 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .wp-block-button .wp-block-button__link:hover {
   background-color: #383838; }
 
+.wp-block-button.alignwide, .wp-block-button.alignfull {
+  text-align: center; }
+  .wp-block-button.alignwide .wp-block-button__link, .wp-block-button.alignfull .wp-block-button__link {
+    background-color: #f18686; }
+    .wp-block-button.alignwide .wp-block-button__link:active, .wp-block-button.alignwide .wp-block-button__link:focus, .wp-block-button.alignwide .wp-block-button__link:hover, .wp-block-button.alignfull .wp-block-button__link:active, .wp-block-button.alignfull .wp-block-button__link:focus, .wp-block-button.alignfull .wp-block-button__link:hover {
+      color: white;
+      background-color: black; }
+
+.wp-block-button.alignfull {
+  background: #383838; }
+  .wp-block-button.alignfull .wp-block-button__link {
+    padding: 0.8em 1em 0.75em;
+    font-size: 1.5em; }
+
 /**/
 /* ! Columns */
 /**/
@@ -2009,7 +2023,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .entry-content > h3 {
     right: calc(100% + 1rem); }
   .wp-block-cover-image.alignfull:first-child:after {
-    left: calc( 180px - 2rem); } }
+    left: calc( 180px - 2rem); }
+  .wp-block-button.alignfull {
+    left: 0; } }
 
 /*--------------------------------------------------------------
 # Infinite scroll
