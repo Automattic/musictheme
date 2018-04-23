@@ -355,7 +355,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /**/
 
 .wp-block-table {
-	display: block;
+	display: table;
 	overflow-x: auto;
 
 	table {
@@ -372,6 +372,24 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	th {
 		padding: .5em .5em .3em;
 		border: 1px solid $color__background-button;
+	}
+
+	&.alignfull {
+		color: $color__background-body;
+		background: $color__theme-secondary;
+
+		td, 
+		th {
+			border: 1px solid $color__theme-tertiary;
+
+			&:first-child {
+				border-left: none;
+			}
+
+			&:last-child {
+				border-right: none;
+			}
+		}
 	}
 }
 
@@ -771,6 +789,16 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	.entry-content > .rotate + *,
 	.entry-content > h3 + * {
 		padding-right: 2em;
+	}
+
+	.wp-block-table.alignwide {
+		color: $color__background-body;
+		background: $color__theme-secondary;
+
+		td, 
+		th {
+			border: 1px solid $color__theme-tertiary;
+		}
 	}
 }
 
