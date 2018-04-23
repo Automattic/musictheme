@@ -828,8 +828,6 @@ html,
   right: 0;
   background-color: transparent;
   z-index: 500; }
-  .js .site-header {
-    opacity: 0; }
   .menu-open .site-header {
     background: black; }
   .menu-open .site-header.white {
@@ -847,6 +845,12 @@ html,
   .site-header-wrap .main-navigation {
     flex: 1;
     align-self: flex-end; }
+    .js .site-header-wrap .main-navigation {
+      position: absolute;
+      visibility: hidden; }
+      .js .site-header-wrap .main-navigation.show-menu {
+        position: initial;
+        visibility: visible; }
 
 .site-branding {
   display: flex;

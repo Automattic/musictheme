@@ -170,7 +170,7 @@
 	"\/js\/priority-navigation.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 1,
 		"oAP": "\/js\/priority-navigation-min.js",
 		"oF": 1,

@@ -9,10 +9,6 @@
 	background-color: transparent;
 	z-index: 500;
 
-	.js & {
-		opacity: 0;
-	}
-
 	.menu-open & {
 		background: $color__theme-link;
 	}
@@ -36,6 +32,16 @@
 	.main-navigation {
 		flex: 1;
 		align-self: flex-end;
+
+		.js & {
+			position: absolute;
+			visibility: hidden;
+
+			&.show-menu {
+				position: initial;
+				visibility: visible;
+			}
+		}
 	}
 }
 
