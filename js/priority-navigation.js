@@ -40,7 +40,6 @@
 				lastItem.prependTo( moreMenu.find( '.sub-menu' ).eq( 0 ) );
 				// Rerun this function!
 				setTimeout( priorityNav, 10 );
-				setTimeout( fadeInNav, 160 );
 
 			// But if we have the extra space, we should add the items back to our menu
 			} else if ( navWidth + firstMoreElement.data( 'width' ) < availableSpace ) {
