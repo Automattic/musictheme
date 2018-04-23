@@ -1584,6 +1584,15 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     border: 1px solid #e6e6e6; }
 
 /**/
+/* ! Audio */
+/**/
+.wp-block-audio audio {
+  width: 100%; }
+
+.wp-block-audio.alignfull {
+  background: #383838; }
+
+/**/
 /* ! Video */
 /**/
 .wp-block-video {

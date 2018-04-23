@@ -376,6 +376,21 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 /**/
+/* ! Audio */
+/**/
+
+.wp-block-audio {
+	
+	audio { 
+		width: 100%;
+	}
+
+	&.alignfull {
+		background: $color__theme-secondary;
+	}
+}
+
+/**/
 /* ! Video */
 /**/
 
