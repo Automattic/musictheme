@@ -85,6 +85,7 @@
 	// Run our functions once the window has loaded fully
 	$( window ).on( 'load', debounce( function() {
 		priorityNav();
+		setTimeout( fadeInNav, 200 );
 	}));
 
 	// Annnnnd also every time the window resizes
