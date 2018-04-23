@@ -367,7 +367,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /**/
 
 .wp-block-table {
-	display: block;
+	display: table;
 	overflow-x: auto;
 
 	table {
@@ -375,10 +375,48 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		width: 100%;
 	}
 
+	&.alignleft, &.alignright {
+		width: auto;
+		max-width: none;
+	}
+
 	td,
 	th {
 		padding: .5em .5em .3em;
 		border: 1px solid $color__background-button;
+	}
+
+	&.alignfull {
+		color: $color__background-body;
+		background: $color__theme-secondary;
+
+		td, 
+		th {
+			border: 1px solid $color__theme-tertiary;
+
+			&:first-child {
+				border-left: none;
+			}
+
+			&:last-child {
+				border-right: none;
+			}
+		}
+	}
+}
+
+/**/
+/* ! Audio */
+/**/
+
+.wp-block-audio {
+	
+	audio { 
+		width: 100%;
+	}
+
+	&.alignfull {
+		background: $color__theme-secondary;
 	}
 }
 
@@ -451,8 +489,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		margin-right: auto;
 	}
 
-	&.alignwide, &.alignfull {
-		background: transparent;
+	&.alignfull {
+		background: $color__theme-secondary;
 	}
 
 	&.alignwide > iframe {
@@ -496,6 +534,32 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .wp-block-button .wp-block-button__link:focus,
 .wp-block-button .wp-block-button__link:hover {
 	background-color: $color__theme-secondary;
+}
+
+.wp-block-button {
+
+	&.alignwide, &.alignfull {
+		text-align: center;
+		
+		.wp-block-button__link {
+			background-color: $color__theme-primary;
+			
+			&:active, &:focus, &:hover {
+				color: $color__background-body;
+				background-color: $color__theme-link;
+			}
+		}
+	}
+
+	&.alignfull {
+		background: $color__theme-secondary;
+
+		.wp-block-button__link {
+			padding: 0.8em 1em 0.75em;
+			font-size: 1.5em;
+		}
+	}
+
 }
 
 /**/
@@ -645,10 +709,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		}
 	}
 
-	.wp-block-video:not(.alignfull) video {
-		max-width: $size__site-max-width;
-	}
-
 	.wp-block-cover-text p {
 		padding: $size__vertical-padding 0;
 	}
@@ -738,6 +798,16 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	.entry-content > h3 + * {
 		padding-right: 2em;
 	}
+
+	.wp-block-table.alignwide {
+		color: $color__background-body;
+		background: $color__theme-secondary;
+
+		td, 
+		th {
+			border: 1px solid $color__theme-tertiary;
+		}
+	}
 }
 
 @media screen and (min-width: 1100px) {
@@ -764,5 +834,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 	.wp-block-cover-image.alignfull:first-child:after {
 		left: calc( 180px - #{$size__horizontal-padding} );
+	}
+
+	.wp-block-button.alignfull {
+		left: 0;
 	}
 }
