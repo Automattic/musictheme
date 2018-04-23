@@ -38,4 +38,4 @@ The default background color for cover image blocks is pink, but  there are a fe
 * Based on Underscores http://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * Initially forked from https://github.com/WordPress/gutenberg-starter-theme, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2018 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
-* Sort Mill Goudy, (C) Barry Schwartz. [SIL Open Font License, 1.1] (http://scripts.sil.org/OFL)
+* Sort Mill Goudy, (C) Barry Schwartz. [SIL Open Font License, 1.1](http://scripts.sil.org/OFL)
