@@ -6,11 +6,6 @@
 
 ( function( $ ) {
 
-	// Fade in Nav, only if js is enabled
-	function fadeInNav() {
-		$( '.js #site-navigation' ).addClass('show-menu');
-	}
-
 	// Priority+ navigation, whee!
 	function priorityNav() {
 
@@ -82,7 +77,9 @@
 	// Run our functions once the window has loaded fully
 	$( window ).on( 'load', debounce( function() {
 		priorityNav();
-		setTimeout( fadeInNav, 200 );
+		setTimeout( function() {
+			$( '.js #site-navigation' ).addClass('show-menu');
+		}, 200 );
 	}));
 
 	// Annnnnd also every time the window resizes
