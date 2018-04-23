@@ -1970,8 +1970,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
         background-position: 90% 20%; }
     .wp-block-cover-image.alignwide {
       min-height: 580px; }
-  .wp-block-video:not(.alignfull) video {
-    max-width: 740px; }
   .wp-block-cover-text p {
     padding: 2rem 0; }
   .wp-block-cover-image.alignfull h2 {
