@@ -363,6 +363,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		width: 100%;
 	}
 
+	&.alignleft, &.alignright {
+		width: auto;
+		max-width: none;
+	}
+
 	td,
 	th {
 		padding: .5em .5em .3em;
