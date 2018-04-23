@@ -477,8 +477,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		margin-right: auto;
 	}
 
-	&.alignwide, &.alignfull {
-		background: transparent;
+	&.alignfull {
+		background: $color__theme-secondary;
 	}
 
 	&.alignwide > iframe {

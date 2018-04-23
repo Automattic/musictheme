@@ -1654,10 +1654,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     display: block;
     margin-left: auto;
     margin-right: auto; }
-  *[class^="wp-block-embed"].alignwide, *[class^="wp-block-embed"].alignfull,
-  .wp-block-embed.alignwide,
+  *[class^="wp-block-embed"].alignfull,
   .wp-block-embed.alignfull {
-    background: transparent; }
+    background: #383838; }
   *[class^="wp-block-embed"].alignwide > iframe,
   .wp-block-embed.alignwide > iframe {
     width: 100%; }
