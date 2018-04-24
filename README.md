@@ -2,8 +2,8 @@
 
 This theme is designed to showcase what Gutenberg can do with regards to themes. It is intended as a work in progress, at least until v1 of the new editor (and maybe beyond). 
 
-Contributors: Automattic
-License: GPLv2 or later
+Contributors: Automattic  
+License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description
