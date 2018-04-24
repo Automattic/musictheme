@@ -341,19 +341,18 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
-  border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
-  background: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 12px;
-  font-size: 0.75rem;
+  border-color: black;
+  background: black;
+  color: white;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 1;
   padding: .6em 1em .4em; }
   button:hover,
   input[type="button"]:hover,
   input[type="reset"]:hover,
   input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa; }
+    border-color: #383838; }
   button:active, button:focus,
   input[type="button"]:active,
   input[type="button"]:focus,
@@ -361,7 +360,7 @@ input[type="submit"] {
   input[type="reset"]:focus,
   input[type="submit"]:active,
   input[type="submit"]:focus {
-    border-color: #aaa #bbb #bbb; }
+    border-color: #666; }
 
 input[type="text"],
 input[type="email"],
@@ -379,10 +378,11 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+  font-size: 16px;
+  font-size: 1rem;
   color: #666;
   border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 3px; }
+  padding: .2em 1em .1em; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
@@ -1608,7 +1608,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .wp-block-table td,
   .wp-block-table th {
     padding: .5em .5em .3em;
-    border: 1px solid #e6e6e6; }
+    border: 1px solid black; }
   .wp-block-table.alignfull {
     color: white;
     background: #383838; }
