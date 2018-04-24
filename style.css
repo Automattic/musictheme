@@ -1378,7 +1378,7 @@ html,
 
 .entry-content > p.alignfull {
   border-left: 1rem solid #383838;
-  border-right: 1rem-padding solid #383838; }
+  border-right: 1rem solid #383838; }
 
 /* */
 /* ! Quote */
@@ -1624,6 +1624,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /**/
 .wp-block-audio audio {
   width: 100%; }
+
+.wp-block-audio.alignleft, .wp-block-audio.alignright {
+  width: calc( 50% - 4rem); }
 
 .wp-block-audio.alignfull {
   background: #383838; }
