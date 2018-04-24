@@ -2095,6 +2095,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .infinity-end.neverending .site-footer {
   display: block; }
 
+#infinite-footer {
+  z-index: 500; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
