@@ -1304,16 +1304,19 @@ html,
 /*--------------------------------------------------------------
 # Blocks
 --------------------------------------------------------------*/
-.entry-content {
+.entry-content,
+.page-content {
   background: white;
   padding: 2rem 1rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 1100px; }
-  .entry-content > :first-child {
+  .entry-content > :first-child,
+  .page-content > :first-child {
     margin-top: 0; }
 
-.entry-content > * {
+.entry-content > *,
+.page-content > * {
   max-width: 740px;
   position: relative;
   z-index: 1; }
@@ -1932,7 +1935,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   background-color: white; }
 
 @media screen and (min-width: 740px) {
-  .entry-content {
+  .entry-content,
+  .page-content {
     position: relative;
     padding: 2rem 2rem;
     max-width: 740px; }
@@ -2069,9 +2073,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     padding-right: 240px; } }
 
 @media screen and (min-width: 1400px) {
-  .entry-content {
+  .entry-content,
+  .page-content {
     left: calc( 180px - 2rem); }
-    .entry-content > .alignfull {
+    .entry-content > .alignfull,
+    .page-content > .alignfull {
       left: calc( -180px + 2rem); }
   .entry-content > .rotate,
   .entry-content > h3 {
