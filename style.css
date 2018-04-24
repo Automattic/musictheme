@@ -473,6 +473,7 @@ a {
       left: 0;
       right: inherit;
       width: 100vw;
+      max-width: 100%;
       opacity: 1; }
       .main-navigation ul li.toggled-on > ul ul {
         opacity: 1; }
@@ -914,7 +915,8 @@ html,
 
 .hentry {
   margin: 0;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .updated:not(.published) {
   display: none; }
