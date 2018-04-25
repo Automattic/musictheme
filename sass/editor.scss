@@ -1,2 +1,12 @@
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
+
+//TODO: Find a better way to make this font available?
+@import url('https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy');
+
+// Base font styles
+.editor-post-title .editor-post-title__input,
+.edit-post-visual-editor, 
+.edit-post-visual-editor p {
+	font-family: $font__main;
+}
