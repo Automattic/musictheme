@@ -18,6 +18,8 @@ function musictheme_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'primary',
+		'wrapper'   => false,
+		'type'      => 'click',
 		'render'    => 'musictheme_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
