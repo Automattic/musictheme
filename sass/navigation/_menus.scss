@@ -33,11 +33,6 @@
 				clear: both;
 				float: none;
 
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-
 				&:last-of-type > a {
 					padding-bottom: 1.5rem;
 				}
@@ -49,10 +44,6 @@
 				padding: 1.5rem 1rem 0;
 				width: 100%;
 			}
-
-			a:hover,
-			a.focus {
-			}
 		}
 
 		li.toggled-on > ul {
@@ -61,8 +52,12 @@
 			width: 100vw;
 			opacity: 1;
 
-			ul {
+			ul.toggled-on {
 				opacity: 1
+			}
+
+			li.toggled-on ul {
+				left: 100%;
 			}
 		}
 	}
@@ -224,7 +219,6 @@
 
 		ul li.toggled-on > ul {
 			left: inherit;
-			right: 0;
 			width: inherit;
 		}
 
@@ -239,16 +233,29 @@
 			li {
 				float: left;
 				clear: inherit;
-			}
+				min-width: 200px;
 
-			li:last-of-type > a {
-				padding-bottom: .5rem;
+				&:last-of-type > a {
+					padding-bottom: .5rem;
+				}
+
+				&.menu-item-has-children > a {
+					padding-right: .5rem;
+					margin-right: 30px;
+				}
 			}
 
 			a {
+				display: inline-block;
 				font-size: 1rem;
 				padding: .5rem .5rem 0;
-				width: 200px;
+				width: auto;
+			}
+
+			.dropdown-toggle {
+				float: right;
+				margin-left: -30px;
+				padding: .5rem;
 			}
 		}
 
@@ -262,27 +269,31 @@
 
 		ul ul {
 			background: $color__background-body;
-			a {
+			a,
+			.dropdown-toggle {
 				color: $color__theme-primary;
 			}
 
 			.white & {
 				background: $color__theme-link;
-				a {
+				a,
+				.dropdown-toggle {
 					color: $color__background-body;
 				}
 			}
 
 			.grey & {
 				background: $color__background-body;
-				a {
+				a,
+				.dropdown-toggle {
 					color: $color__theme-secondary;
 				}
 			}
 
 			.black & {
 				background: $color__background-body;
-				a {
+				a,
+				.dropdown-toggle {
 					color: $color__theme-link;
 				}
 			}

@@ -459,9 +459,6 @@ a {
       .main-navigation ul ul li {
         clear: both;
         float: none; }
-        .main-navigation ul ul li:hover > ul,
-        .main-navigation ul ul li.focus > ul {
-          left: 100%; }
         .main-navigation ul ul li:last-of-type > a {
           padding-bottom: 1.5rem; }
       .main-navigation ul ul a {
@@ -474,8 +471,10 @@ a {
       right: inherit;
       width: 100vw;
       opacity: 1; }
-      .main-navigation ul li.toggled-on > ul ul {
+      .main-navigation ul li.toggled-on > ul ul.toggled-on {
         opacity: 1; }
+      .main-navigation ul li.toggled-on > ul li.toggled-on ul {
+        left: 100%; }
   .main-navigation li {
     float: left; }
     .main-navigation li.menu-item-has-children > a {
@@ -572,7 +571,6 @@ a {
       padding-right: .5rem; }
     .main-navigation ul li.toggled-on > ul {
       left: inherit;
-      right: 0;
       width: inherit; }
     .main-navigation .dropdown-toggle {
       display: inline-block; }
@@ -580,31 +578,44 @@ a {
       top: 100%; }
       .main-navigation ul ul li {
         float: left;
-        clear: inherit; }
-      .main-navigation ul ul li:last-of-type > a {
-        padding-bottom: .5rem; }
+        clear: inherit;
+        min-width: 200px; }
+        .main-navigation ul ul li:last-of-type > a {
+          padding-bottom: .5rem; }
+        .main-navigation ul ul li.menu-item-has-children > a {
+          padding-right: .5rem;
+          margin-right: 30px; }
       .main-navigation ul ul a {
+        display: inline-block;
         font-size: 1rem;
         padding: .5rem .5rem 0;
-        width: 200px; }
+        width: auto; }
+      .main-navigation ul ul .dropdown-toggle {
+        float: right;
+        margin-left: -30px;
+        padding: .5rem; }
     .main-navigation a,
     .main-navigation .dropdown-toggle {
       color: white; }
     .main-navigation ul ul {
       background: white; }
-      .main-navigation ul ul a {
+      .main-navigation ul ul a,
+      .main-navigation ul ul .dropdown-toggle {
         color: #f18686; }
       .white .main-navigation ul ul {
         background: black; }
-        .white .main-navigation ul ul a {
+        .white .main-navigation ul ul a,
+        .white .main-navigation ul ul .dropdown-toggle {
           color: white; }
       .grey .main-navigation ul ul {
         background: white; }
-        .grey .main-navigation ul ul a {
+        .grey .main-navigation ul ul a,
+        .grey .main-navigation ul ul .dropdown-toggle {
           color: #383838; }
       .black .main-navigation ul ul {
         background: white; }
-        .black .main-navigation ul ul a {
+        .black .main-navigation ul ul a,
+        .black .main-navigation ul ul .dropdown-toggle {
           color: black; } }
 
 /*--------------------------------------------------------------
