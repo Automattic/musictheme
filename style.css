@@ -1603,7 +1603,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .wp-block-table td,
   .wp-block-table th {
     padding: .5em .5em .3em;
-    border: 1px solid black; }
+    border: 1px solid #f1f1f1; }
   .wp-block-table.alignfull {
     color: white;
     background: #383838; }
