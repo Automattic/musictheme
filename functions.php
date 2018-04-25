@@ -83,10 +83,11 @@ if ( ! function_exists( 'musictheme_setup' ) ) :
 		add_theme_support( 'gutenberg', array(
 			'wide-images' => true,
 			'colors' => array(
-				'#0073aa',
-				'#229fd8',
-				'#eee',
-				'#444',
+				'#f18686',
+				'#000',
+				'#383838',
+				'#666',
+				'#fff',
 			),
 		) );
 	}
