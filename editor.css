@@ -39,8 +39,9 @@
   .wp-block-cover-image .wp-block-cover-image-text {
     font-size: 42px;
     line-height: 51px; }
-  .wp-block-cover-image.alignwide {
-    padding: 2rem; }
+  [data-align="full"] .wp-block-cover-image {
+    min-height: 100vh;
+    background-position: 100% 40%; }
   .wp-block-cover-image.black {
     background-color: black; }
   .wp-block-cover-image.gray, .wp-block-cover-image.grey {

@@ -52,8 +52,9 @@
 		line-height: 51px;
 	}
 
-	&.alignwide {
-		padding: $size__vertical-padding;
+	[data-align="full"] & {
+		min-height: 100vh;
+		background-position: 100% 40%;
 	}
 
 	/* Additional Color Classes */
