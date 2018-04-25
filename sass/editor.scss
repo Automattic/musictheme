@@ -110,6 +110,18 @@
 	border-radius: 0;
 }
 
+/**/
+/* ! Tables */
+/**/
+.wp-block-table {
+
+	td,
+	th {
+		padding: .5em .5em .3em;
+		border: 1px solid $color__background-screen;
+	}
+}
+
 /* 
  * Breakpoints.
  * Note: I added 280px to the standard theme breakpoints to account for extra UI chrome in the editor 
