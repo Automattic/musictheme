@@ -15,3 +15,22 @@
 .edit-post-visual-editor p {
 	@include font-size(1.125);
 }
+
+/* */
+/* ! Quote */
+/* */
+.wp-block-quote:not(.is-large) {
+	border-left: .25rem solid $color__theme-primary;
+}
+
+/* */
+/* ! Pullquote */
+/* */
+.wp-block-pullquote {
+	border-top: 4px solid $color__theme-primary;
+	border-bottom: 4px solid $color__theme-primary;
+
+	cite {
+		text-transform: none;
+	}
+}

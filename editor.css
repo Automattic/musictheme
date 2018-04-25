@@ -8,3 +8,18 @@
 .edit-post-visual-editor p {
   font-size: 18px;
   font-size: 1.125rem; }
+
+/* */
+/* ! Quote */
+/* */
+.wp-block-quote:not(.is-large) {
+  border-left: 0.25rem solid #f18686; }
+
+/* */
+/* ! Pullquote */
+/* */
+.wp-block-pullquote {
+  border-top: 4px solid #f18686;
+  border-bottom: 4px solid #f18686; }
+  .wp-block-pullquote cite {
+    text-transform: none; }
