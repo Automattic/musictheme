@@ -248,6 +248,14 @@
 .edit-post-visual-editor ul:not(.wp-block-gallery) ul {
   list-style-type: circle; }
 
+/**/
+/* ! Buttons */
+/**/
+.wp-block-button .wp-block-button__link,
+.wp-block-button .wp-block-button__link:hover {
+  background-color: black;
+  border-radius: 0; }
+
 /* 
  * Breakpoints.
  * Note: I added 280px to the standard theme breakpoints to account for extra UI chrome in the editor 

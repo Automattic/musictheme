@@ -101,6 +101,14 @@
 	list-style-type: circle;
 }
 
+/**/
+/* ! Buttons */
+/**/
+.wp-block-button .wp-block-button__link,
+.wp-block-button .wp-block-button__link:hover {
+	background-color: $color__theme-link;
+	border-radius: 0;
+}
 
 /* 
  * Breakpoints.
