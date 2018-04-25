@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400i");
+.editor-default-block-appender input[type="text"].editor-default-block-appender__content,
 .editor-post-title .editor-post-title__input,
 .edit-post-visual-editor,
 .edit-post-visual-editor p {
