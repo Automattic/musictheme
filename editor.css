@@ -242,6 +242,12 @@
 .has-background-dim.white.has-background-dim-100:before {
   background-color: white; }
 
+/**/
+/* ! Lists */
+/**/
+.edit-post-visual-editor ul:not(.wp-block-gallery) ul {
+  list-style-type: circle; }
+
 /* 
  * Breakpoints.
  * Note: I added 280px to the standard theme breakpoints to account for extra UI chrome in the editor 

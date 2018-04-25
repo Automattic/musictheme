@@ -94,6 +94,13 @@
 	}
 }
 
+/**/
+/* ! Lists */
+/**/
+.edit-post-visual-editor ul:not(.wp-block-gallery) ul {
+	list-style-type: circle;
+}
+
 
 /* 
  * Breakpoints.
