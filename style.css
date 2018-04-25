@@ -2102,7 +2102,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   margin: 0 auto; }
 
 #infinite-handle {
+  background: transparent;
   text-align: center; }
+  #infinite-handle span {
+    background: transparent; }
   #infinite-handle span button {
     background: white;
     color: black;

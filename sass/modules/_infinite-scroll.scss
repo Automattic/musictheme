@@ -18,7 +18,12 @@
 }
 
 #infinite-handle {
+	background: transparent;
 	text-align: center;
+
+	span {
+		background: transparent;
+	}
 
 	span button {
 		background: $color__background-body;
