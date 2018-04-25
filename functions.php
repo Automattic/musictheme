@@ -89,6 +89,34 @@ if ( ! function_exists( 'musictheme_setup' ) ) :
 				'#444',
 			),
 		) );
+
+		/**
+		 * Add custom Gutenberg Colors.
+		 * 
+		 * @link https://github.com/WordPress/gutenberg/blob/master/docs/extensibility/theme-support.md
+		 */
+		add_theme_support( 'editor-color-palette',
+			array(
+				'name' => 'pink',
+				'color' => '#f18686',
+			),
+			array(
+				'name' => 'black',
+				'color' => '#000',
+			),
+			array(
+				'name' => 'gray',
+				'color' => '#383838',
+			),
+			array(
+				'name' => 'light gray',
+				'color' => '#666',
+			),
+			array(
+				'name' => 'white',
+				'color' => '#FFF',
+			)
+		);
 	}
 endif;
 add_action( 'after_setup_theme', 'musictheme_setup' );
