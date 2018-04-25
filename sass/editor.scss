@@ -10,3 +10,8 @@
 .edit-post-visual-editor p {
 	font-family: $font__main;
 }
+
+.edit-post-visual-editor, 
+.edit-post-visual-editor p {
+	@include font-size(1.125);
+}

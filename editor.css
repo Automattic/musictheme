@@ -3,3 +3,8 @@
 .edit-post-visual-editor,
 .edit-post-visual-editor p {
   font-family: "Sorts Mill Goudy", "OFL Sorts Mill Goudy", serif; }
+
+.edit-post-visual-editor,
+.edit-post-visual-editor p {
+  font-size: 18px;
+  font-size: 1.125rem; }
