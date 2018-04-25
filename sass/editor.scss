@@ -93,3 +93,33 @@
 		@include has-background-dim($color__background-body);
 	}
 }
+
+
+/* 
+ * Breakpoints.
+ * Note: I added 280px to the standard theme breakpoints to account for extra UI chrome in the editor 
+ */
+@media screen and (min-width: 1020px) {
+
+	/**/
+	/* ! Cover Image */
+	/**/
+	[data-align="full"] .wp-block-cover-image {
+		background-size: auto 40%;
+		background-position: 90% 20%;
+		padding: 10% 0;
+	}
+
+	[data-align="wide"] .wp-block-cover-image,
+	[data-align="full"] .wp-block-cover-image {
+		h2,
+		.wp-block-cover-image-text {
+			padding: #{$size__vertical-padding * 2} $size__horizontal-padding;
+			width: 100%;
+			max-width: 100%;
+			font-size: 117px;
+			line-height: 128px;
+		}
+	}
+
+}
