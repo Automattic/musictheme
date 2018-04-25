@@ -210,3 +210,11 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Enqueue Gutenberg editor styles
+ */
+function musictheme_editor_styles() {
+    wp_enqueue_style( 'musictheme-blocks-style', get_template_directory_uri() . '/editor.css');
+}
+add_action( 'enqueue_block_editor_assets', 'musictheme_editor_styles' );
