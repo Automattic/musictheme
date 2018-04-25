@@ -2098,6 +2098,32 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 #infinite-footer {
   z-index: 500; }
 
+.infinite-loader .spinner {
+  margin: 0 auto; }
+
+#infinite-handle {
+  text-align: center; }
+  #infinite-handle span button {
+    background: white;
+    color: black;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.8em 1em 0.75em; }
+    #infinite-handle span button:hover {
+      color: black;
+      background-color: #f1f1f1;
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 1;
+      padding: 0.8em 1em 0.75em; }
+
+@media screen and (min-width: 1400px) {
+  .infinite-loader,
+  #infinite-handle {
+    position: relative;
+    left: calc( 180px - 2rem); } }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/

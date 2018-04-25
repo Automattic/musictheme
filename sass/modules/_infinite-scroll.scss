@@ -12,3 +12,37 @@
 #infinite-footer {
 	z-index: 500;
 }
+
+.infinite-loader .spinner {
+	margin: 0 auto;
+}
+
+#infinite-handle {
+	text-align: center;
+
+	span button {
+		background: $color__background-body;
+		color: $color__background-button;
+		@include font-size(1.5);
+		line-height: 1;
+		padding: 0.8em 1em 0.75em;
+
+		&:hover {
+			color: $color__background-button;
+			background-color: $color__background-screen;
+			@include font-size(1.5);
+			line-height: 1;
+			padding: 0.8em 1em 0.75em;
+		}
+	}
+}
+
+@media screen and (min-width: 1400px) {
+
+	.infinite-loader,
+	#infinite-handle {
+		position: relative;
+		left: calc( 180px - #{$size__horizontal-padding} );
+	}
+
+}
