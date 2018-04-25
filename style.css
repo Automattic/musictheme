@@ -1655,6 +1655,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     width: 100vw;
     display: block;
     margin: 0 auto; }
+  .wp-block-video.alignleft, .wp-block-video.alignright {
+    max-width: 50%;
+    margin-bottom: 2rem; }
 
 /**/
 /* ! Embeds */
