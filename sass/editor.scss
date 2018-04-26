@@ -1,0 +1,153 @@
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+//TODO: Find a better way to make this font available?
+@import url('https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400i');
+
+// Base font styles
+.editor-default-block-appender input[type="text"].editor-default-block-appender__content,
+.editor-post-title .editor-post-title__input,
+.edit-post-visual-editor, 
+.edit-post-visual-editor p {
+	font-family: $font__main;
+}
+
+.edit-post-visual-editor, 
+.edit-post-visual-editor p {
+	@include font-size(1.125);
+}
+
+/* */
+/* ! Quote */
+/* */
+.wp-block-quote:not(.is-large) {
+	border-left: .25rem solid $color__theme-primary;
+}
+
+/* */
+/* ! Pullquote */
+/* */
+.wp-block-pullquote {
+	border-top: 4px solid $color__theme-primary;
+	border-bottom: 4px solid $color__theme-primary;
+
+	cite {
+		text-transform: none;
+	}
+}
+
+/**/
+/* ! Cover Image */
+/**/
+.wp-block-cover-image {
+	align-items: center;
+	justify-content: center;
+	background-color: $color__theme-primary;
+	background-size: 50% auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	h2,
+	.wp-block-cover-image-text {
+		font-size: 42px;
+		line-height: 51px;
+	}
+
+	[data-align="full"] & {
+		min-height: 100vh;
+		background-position: 100% 40%;
+	}
+
+	/* Additional Color Classes */
+	&.black {
+		background-color: $color__theme-link;
+	}
+	&.gray, &.grey {
+		background-color: $color__theme-secondary;
+	}
+	&.white {
+		background-color: $color__background-body;
+
+		h2,
+		.wp-block-cover-image-text {
+			color: $color__theme-link;
+		}
+	}
+}
+
+/**/
+/* ! Dim Backgrounds */
+/**/
+.wp-block-cover-image.has-background-dim,
+.has-background-dim {
+	@include has-background-dim($color__theme-primary);
+
+	&.black {
+		@include has-background-dim($color__theme-link);
+	}
+
+	&.gray, &.grey {
+		@include has-background-dim($color__theme-secondary);
+	}
+
+	&.white {
+		@include has-background-dim($color__background-body);
+	}
+}
+
+/**/
+/* ! Lists */
+/**/
+.edit-post-visual-editor ul:not(.wp-block-gallery) ul {
+	list-style-type: circle;
+}
+
+/**/
+/* ! Buttons */
+/**/
+.wp-block-button .wp-block-button__link,
+.wp-block-button .wp-block-button__link:hover {
+	background-color: $color__theme-link;
+	border-radius: 0;
+}
+
+/**/
+/* ! Tables */
+/**/
+.wp-block-table {
+
+	td,
+	th {
+		padding: .5em .5em .3em;
+		border: 1px solid $color__background-screen;
+	}
+}
+
+/* 
+ * Breakpoints.
+ * Note: I added 280px to the standard theme breakpoints to account for extra UI chrome in the editor 
+ */
+@media screen and (min-width: 1020px) {
+
+	/**/
+	/* ! Cover Image */
+	/**/
+	[data-align="full"] .wp-block-cover-image {
+		background-size: auto 40%;
+		background-position: 90% 20%;
+		padding: 10% 0;
+	}
+
+	[data-align="wide"] .wp-block-cover-image,
+	[data-align="full"] .wp-block-cover-image {
+		h2,
+		.wp-block-cover-image-text {
+			padding: #{$size__vertical-padding * 2} $size__horizontal-padding;
+			width: 100%;
+			max-width: 100%;
+			font-size: 117px;
+			line-height: 128px;
+		}
+	}
+
+}

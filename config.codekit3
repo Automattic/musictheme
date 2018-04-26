@@ -77,6 +77,16 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"\/editor.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/editor-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"\/footer.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -286,6 +296,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/_normalize.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/editor.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/editor.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
