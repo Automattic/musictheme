@@ -7,6 +7,10 @@
 		float: right;
 	}
 
+	&.toggled ul {
+		display: block;
+	}
+
 	ul {
 		clear: both;
 		list-style: none;
@@ -16,7 +20,6 @@
 
 		ul {
 			float: left;
-			opacity: 0;
 			position: absolute;
 			left: -999em;
 			z-index: 99999;
@@ -24,21 +27,13 @@
 			-moz-transition:    opacity 0.5s ease-in-out;
 			transition:         opacity 0.5s ease-in-out;
 
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
 			li {
 				clear: both;
 				float: none;
-
-				&:last-of-type > a {
-					padding-bottom: 1.5rem;
-				}
 			}
 
 			a {
+				display: block;
 				font-size: 30px;
 				line-height: 1.25;
 				padding: 1.5rem 1rem 0;
@@ -47,18 +42,10 @@
 		}
 
 		li.toggled-on > ul {
-			left: 0;
-			right: inherit;
+			left: inherit;
+			right: 0;
 			width: 100vw;
 			opacity: 1;
-
-			ul.toggled-on {
-				opacity: 1
-			}
-
-			li.toggled-on ul {
-				left: 100%;
-			}
 		}
 	}
 
@@ -184,7 +171,7 @@
 			box-shadow: none;
 			right: inherit;
 			left: 0;
-			padding-left: 1rem;
+			padding-left: .5rem;
 			position: relative;
 			top: inherit;
 		}
@@ -194,10 +181,6 @@
 /* Small menu. */
 .menu-toggle {
 	display: none;
-}
-
-.main-navigation.toggled ul {
-	display: block;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -211,10 +194,10 @@
 		li {
 			float: left;
 			position: relative;
-		}
 
-		.menu-item-has-children > a {
-			padding-right: .5rem;
+			&.menu-item-has-children > a {
+				padding-right: .5rem;
+			}
 		}
 
 		ul li.toggled-on > ul {
@@ -228,7 +211,14 @@
 
 		ul ul {
 
-			top: 100%;
+			ul {
+				left: auto;
+				opacity: 1;
+
+				li {
+					padding-left: .5rem;
+				}
+			}
 
 			li {
 				float: left;
@@ -238,15 +228,9 @@
 				&:last-of-type > a {
 					padding-bottom: .5rem;
 				}
-
-				&.menu-item-has-children > a {
-					padding-right: .5rem;
-					margin-right: 30px;
-				}
 			}
 
 			a {
-				display: inline-block;
 				font-size: 1rem;
 				padding: .5rem .5rem 0;
 				width: auto;

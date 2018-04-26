@@ -438,6 +438,8 @@ a {
 	 */ }
   .main-navigation > div {
     float: right; }
+  .main-navigation.toggled ul {
+    display: block; }
   .main-navigation ul {
     clear: both;
     list-style: none;
@@ -446,35 +448,26 @@ a {
     text-align: left; }
     .main-navigation ul ul {
       float: left;
-      opacity: 0;
       position: absolute;
       left: -999em;
       z-index: 99999;
       -webkit-transition: opacity 0.5s ease-in-out;
       -moz-transition: opacity 0.5s ease-in-out;
       transition: opacity 0.5s ease-in-out; }
-      .main-navigation ul ul ul {
-        left: -999em;
-        top: 0; }
       .main-navigation ul ul li {
         clear: both;
         float: none; }
-        .main-navigation ul ul li:last-of-type > a {
-          padding-bottom: 1.5rem; }
       .main-navigation ul ul a {
+        display: block;
         font-size: 30px;
         line-height: 1.25;
         padding: 1.5rem 1rem 0;
         width: 100%; }
     .main-navigation ul li.toggled-on > ul {
-      left: 0;
-      right: inherit;
+      left: inherit;
+      right: 0;
       width: 100vw;
       opacity: 1; }
-      .main-navigation ul li.toggled-on > ul ul.toggled-on {
-        opacity: 1; }
-      .main-navigation ul li.toggled-on > ul li.toggled-on ul {
-        left: 100%; }
   .main-navigation li {
     float: left; }
     .main-navigation li.menu-item-has-children > a {
@@ -546,16 +539,13 @@ a {
     box-shadow: none;
     right: inherit;
     left: 0;
-    padding-left: 1rem;
+    padding-left: .5rem;
     position: relative;
     top: inherit; }
 
 /* Small menu. */
 .menu-toggle {
   display: none; }
-
-.main-navigation.toggled ul {
-  display: block; }
 
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
@@ -567,33 +557,32 @@ a {
     .main-navigation li {
       float: left;
       position: relative; }
-    .main-navigation .menu-item-has-children > a {
-      padding-right: .5rem; }
+      .main-navigation li.menu-item-has-children > a {
+        padding-right: .5rem; }
     .main-navigation ul li.toggled-on > ul {
       left: inherit;
       width: inherit; }
     .main-navigation .dropdown-toggle {
       display: inline-block; }
-    .main-navigation ul ul {
-      top: 100%; }
-      .main-navigation ul ul li {
-        float: left;
-        clear: inherit;
-        min-width: 200px; }
-        .main-navigation ul ul li:last-of-type > a {
-          padding-bottom: .5rem; }
-        .main-navigation ul ul li.menu-item-has-children > a {
-          padding-right: .5rem;
-          margin-right: 30px; }
-      .main-navigation ul ul a {
-        display: inline-block;
-        font-size: 1rem;
-        padding: .5rem .5rem 0;
-        width: auto; }
-      .main-navigation ul ul .dropdown-toggle {
-        float: right;
-        margin-left: -30px;
-        padding: .5rem; }
+    .main-navigation ul ul ul {
+      left: auto;
+      opacity: 1; }
+      .main-navigation ul ul ul li {
+        padding-left: .5rem; }
+    .main-navigation ul ul li {
+      float: left;
+      clear: inherit;
+      min-width: 200px; }
+      .main-navigation ul ul li:last-of-type > a {
+        padding-bottom: .5rem; }
+    .main-navigation ul ul a {
+      font-size: 1rem;
+      padding: .5rem .5rem 0;
+      width: auto; }
+    .main-navigation ul ul .dropdown-toggle {
+      float: right;
+      margin-left: -30px;
+      padding: .5rem; }
     .main-navigation a,
     .main-navigation .dropdown-toggle {
       color: white; }

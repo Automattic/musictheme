@@ -118,7 +118,7 @@ function musictheme_get_svg( $args = array() ) {
 function musictheme_dropdown_icon_to_menu_link( $item_output, $item, $depth, $args  ) {
 	if ( 'menu-1' === $args->theme_location ) {
 		foreach ( $item->classes as $value ) {
-			if ( 'menu-item-has-children' === $value || 'page_item_has_children' === $value ) {
+			if ( $depth <= 0 && ( 'menu-item-has-children' === $value || 'page_item_has_children' === $value ) ) {
 				$item_output = $item_output;
 				$item_output .= '<button class="dropdown-toggle" aria-expanded="false">';
 				$item_output .= '<span class="screen-reader-text">expand child menu</span>';
