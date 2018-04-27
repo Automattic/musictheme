@@ -15,39 +15,43 @@
 		<?php musictheme_post_thumbnail(); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php
-			the_content();
+	<?php if ( get_the_content() ) : ?>
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'musictheme' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
-
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<div class="entry-footer-wrap">
+		<div class="entry-content">
 			<?php
-				edit_post_link(
-					sprintf(
-						wp_kses(
-							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'musictheme' ),
-							array(
-								'span' => array(
-									'class' => array(),
-								),
-							)
-						),
-						get_the_title()
-					),
-					'<span class="edit-link">',
-					'</span>'
-				);
+				the_content();
+
+				wp_link_pages( array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'musictheme' ),
+					'after'  => '</div>',
+				) );
 			?>
-			</div>
-		</footer><!-- .entry-footer -->
+		</div><!-- .entry-content -->
+
+		<?php if ( get_edit_post_link() ) : ?>
+			<footer class="entry-footer">
+				<div class="entry-footer-wrap">
+				<?php
+					edit_post_link(
+						sprintf(
+							wp_kses(
+								/* translators: %s: Name of current post. Only visible to screen readers */
+								__( 'Edit <span class="screen-reader-text">%s</span>', 'musictheme' ),
+								array(
+									'span' => array(
+										'class' => array(),
+									),
+								)
+							),
+							get_the_title()
+						),
+						'<span class="edit-link">',
+						'</span>'
+					);
+				?>
+				</div>
+			</footer><!-- .entry-footer -->
+		<?php endif; ?>
+
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->

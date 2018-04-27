@@ -87,6 +87,11 @@
 	}
 }
 
+.singular .entry-header:only-child,
+.hfeed .page-header:only-child {
+	margin-bottom: $size__vertical-padding;
+}
+
 .entry-title {
 
 	color: $color__background-body;
@@ -260,7 +265,7 @@
 		}
 	}
 
-	.singular .entry-meta {
+	.singular .entry-header:not(:only-child) .entry-meta {
 		margin-bottom: #{$size__vertical-padding * 4};
 	}
 
@@ -272,13 +277,13 @@
 			line-height: 128px;
 		}
 
-		.page & {
+		.page .singular .entry-header:not(:only-child) & {
 			padding-bottom: #{$size__horizontal-padding * 4};
 		}
 	}
 
-	.singular .entry-header,
-	.hfeed .page-header {
+	.singular .entry-header:not(:only-child),
+	.hfeed .page-header:not(:only-child) {
 		margin: 0 0 -#{$size__horizontal-padding * 4};
 	}
 

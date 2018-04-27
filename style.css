@@ -982,6 +982,10 @@ html,
     margin: 0 auto;
     padding: 0 1rem; }
 
+.singular .entry-header:only-child,
+.hfeed .page-header:only-child {
+  margin-bottom: 2rem; }
+
 .entry-title {
   color: white;
   font-size: 42px;
@@ -1105,17 +1109,17 @@ html,
       max-width: 740px;
       padding: 0 2rem;
       width: 100%; }
-  .singular .entry-meta {
+  .singular .entry-header:not(:only-child) .entry-meta {
     margin-bottom: 8rem; }
   .entry-title {
     color: white; }
     .singular .entry-title {
       font-size: 117px;
       line-height: 128px; }
-    .page .entry-title {
+    .page .singular .entry-header:not(:only-child) .entry-title {
       padding-bottom: 8rem; }
-  .singular .entry-header,
-  .hfeed .page-header {
+  .singular .entry-header:not(:only-child),
+  .hfeed .page-header:not(:only-child) {
     margin: 0 0 -8rem; }
   .hfeed .page-header .page-title {
     font-size: 117px;
