@@ -277,8 +277,8 @@
 		}
 	}
 
-	.singular .entry-header,
-	.hfeed .page-header {
+	.singular .entry-header:not(:only-child),
+	.hfeed .page-header:not(:only-child) {
 		margin: 0 0 -#{$size__horizontal-padding * 4};
 	}
 
