@@ -539,7 +539,7 @@ a {
     box-shadow: none;
     right: inherit;
     left: 0;
-    padding-left: .5rem;
+    padding-left: 1rem;
     position: relative;
     top: inherit; }
 
@@ -550,6 +550,8 @@ a {
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none; }
+  #more-menu .sub-menu .sub-menu {
+    padding-left: .5rem; }
   .main-navigation {
     /**
 		 * Colors
@@ -566,9 +568,9 @@ a {
       display: inline-block; }
     .main-navigation ul ul ul {
       left: auto;
-      opacity: 1; }
-      .main-navigation ul ul ul li {
-        padding-left: .5rem; }
+      opacity: 1;
+      padding-left: .5rem;
+      position: relative; }
     .main-navigation ul ul li {
       float: left;
       clear: inherit;
