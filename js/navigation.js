@@ -160,9 +160,9 @@
 		var body = $( document.body );
 		var pageCoverImage = $( '.page .hentry .wp-block-cover-image' ).eq(0);
 
-		if ( body.hasClass( 'page-template-color-white' ) || pageCoverImage.hasClass( 'white' ) ) {
+		if ( body.hasClass( 'page-template-color-white' ) || body.hasClass( 'post-template-color-white' ) || pageCoverImage.hasClass( 'white' ) ) {
 			siteHeader.addClass( 'white' );
-		} else if ( body.hasClass( 'page-template-color-gray' ) || pageCoverImage.hasClass( 'grey' ) || pageCoverImage.hasClass( 'gray' ) ) {
+		} else if ( body.hasClass( 'page-template-color-gray' ) || body.hasClass( 'post-template-color-gray' ) || pageCoverImage.hasClass( 'grey' ) || pageCoverImage.hasClass( 'gray' ) ) {
 			siteHeader.addClass( 'grey' );
 		} else if ( pageCoverImage.hasClass( 'black' ) ) {
 			siteHeader.addClass( 'black' );
