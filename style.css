@@ -940,7 +940,8 @@ html,
   color: white;
   margin: 0 auto;
   max-width: 740px;
-  position: relative; }
+  position: relative;
+  /* Additional Color Options */ }
   .entry-header a {
     color: white; }
   .singular .entry-header {
@@ -967,6 +968,14 @@ html,
       max-width: 1100px;
       width: 100%;
       display: inherit; }
+  .page-template-color-pink.singular .entry-header {
+    background-color: #f18686; }
+  .page-template-color-gray.singular .entry-header {
+    background-color: #383838; }
+  .page-template-color-white.singular .entry-header {
+    background-color: white; }
+    .page-template-color-white.singular .entry-header .entry-title {
+      color: black; }
 
 .hfeed .page-header {
   color: white;

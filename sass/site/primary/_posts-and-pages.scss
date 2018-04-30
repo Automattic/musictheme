@@ -67,6 +67,21 @@
 			display: inherit;
 		}
 	}
+
+	/* Additional Color Options */
+	.page-template-color-pink.singular & {
+		background-color: $color__theme-primary;
+	}
+	.page-template-color-gray.singular & {
+		background-color: $color__theme-secondary;
+	}
+	.page-template-color-white.singular & {
+		background-color: $color__background-body;
+
+		.entry-title {
+			color: $color__theme-link;
+		}
+	}
 }
 
 .hfeed .page-header {
