@@ -7,5 +7,5 @@
  */
 
 // This template is all handled by CSS, so we're
-// just replicating the page.php template here.
+// just replicating the single.php template here.
 get_template_part( 'single' );
