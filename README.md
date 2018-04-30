@@ -23,11 +23,11 @@ A demo is available at https:musictheme.mystagingwebsite.com
 
 **How do I change the default page header colors?**
 
-In the page editor, you can change the page header color by selecting a color template from the Page Attributes section of Document Settings:
+In the page editor, you can change the page header color by selecting a color template from the Post/Page Attributes section of Document Settings:
 
 ![Document Settings](https://cloudup.com/files/iva6xfO0QEo/download)
 
-Alternatively, you may select the ""Hide Page Header" template to hide the post header altogether, and use a full-width cover image block as your page header instead.
+Alternatively, you may select the "Hide Page Header" template to hide the post header altogether, and use a full-width cover image block as your page header instead.
 
 **How do I change the background color for cover image blocks?**
 
