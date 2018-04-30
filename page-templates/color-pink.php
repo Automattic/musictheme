@@ -6,6 +6,10 @@
  * @package Music Theme
  */
 
-// This template is all handled by CSS, so we're
-// just replicating the single.php template here.
-get_template_part( 'single' );
+// This template is all handled by CSS, so we're just
+// replicating the single.php or page.php templates here.
+if ( is_single() ) {
+	get_template_part( 'single' );
+} else if ( is_page() ) {
+	get_template_part( 'page' );
+}
