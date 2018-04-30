@@ -157,11 +157,12 @@
 	 * Add contrast text color to site navigation when a white, grey or black alt-cover image is used
 	 */
 	function addHeaderContrast() {
+		var body = $( document.body );
 		var pageCoverImage = $( '.page .hentry .wp-block-cover-image' ).eq(0);
 
-		if ( pageCoverImage.hasClass( 'white' ) ) {
+		if ( body.hasClass( 'page-template-color-white' ) || body.hasClass( 'post-template-color-white' ) || pageCoverImage.hasClass( 'white' ) ) {
 			siteHeader.addClass( 'white' );
-		} else if ( pageCoverImage.hasClass( 'grey' ) || pageCoverImage.hasClass( 'gray' ) ) {
+		} else if ( body.hasClass( 'page-template-color-gray' ) || body.hasClass( 'post-template-color-gray' ) || pageCoverImage.hasClass( 'grey' ) || pageCoverImage.hasClass( 'gray' ) ) {
 			siteHeader.addClass( 'grey' );
 		} else if ( pageCoverImage.hasClass( 'black' ) ) {
 			siteHeader.addClass( 'black' );

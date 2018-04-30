@@ -940,7 +940,8 @@ html,
   color: white;
   margin: 0 auto;
   max-width: 740px;
-  position: relative; }
+  position: relative;
+  /* Additional Color Options */ }
   .entry-header a {
     color: white; }
   .singular .entry-header {
@@ -967,6 +968,20 @@ html,
       max-width: 1100px;
       width: 100%;
       display: inherit; }
+  .post-template-color-pink.singular .entry-header,
+  .page-template-color-pink.singular .entry-header {
+    background-color: #f18686; }
+  .post-template-color-gray.singular .entry-header,
+  .page-template-color-gray.singular .entry-header {
+    background-color: #383838; }
+  .post-template-color-white.singular .entry-header,
+  .page-template-color-white.singular .entry-header {
+    background-color: white; }
+    .post-template-color-white.singular .entry-header .entry-meta, .post-template-color-white.singular .entry-header .entry-meta a, .post-template-color-white.singular .entry-header .entry-title,
+    .page-template-color-white.singular .entry-header .entry-meta,
+    .page-template-color-white.singular .entry-header .entry-meta a,
+    .page-template-color-white.singular .entry-header .entry-title {
+      color: black; }
 
 .hfeed .page-header {
   color: white;
@@ -1064,14 +1079,16 @@ html,
     margin-top: 2rem;
     margin-bottom: 1rem; }
 
-.page.page-template-hide-header .entry-header {
+.page-template-hide-header .entry-header,
+.post-template-hide-header .entry-header {
   visibility: hidden;
   opacity: 0;
   height: 0;
   min-height: 0;
   padding: 2.5rem; }
 
-.page.page-template-hide-header .entry-content .alignfull:first-child {
+.page-template-hide-header .entry-content .alignfull:first-child,
+.post-template-hide-header .entry-content .alignfull:first-child {
   margin-top: -7rem; }
 
 .blog .post:nth-of-type(3n+2) .entry-header, .archive .post:nth-of-type(3n+2) .entry-header, .search-results .post:nth-of-type(3n+2) .entry-header {
@@ -1136,7 +1153,8 @@ html,
       position: absolute;
       right: calc( 5% + 2rem);
       height: 40%; }
-  .page.page-template-hide-header .entry-header {
+  .post-template-hide-header .entry-header,
+  .page-template-hide-header .entry-header {
     padding: 6.5rem; }
   .entry-footer-wrap,
   .hfeed .page-header .page-title {

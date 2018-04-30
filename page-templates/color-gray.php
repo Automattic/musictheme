@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Hide Page Header
+ * Template Name: Gray Page Header
  * Template Post Type: post, page
  *
  * @package Music Theme

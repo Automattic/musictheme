@@ -21,9 +21,13 @@ A demo is available at https:musictheme.mystagingwebsite.com
 
 ## FAQ
 
-**How do I remove the default post header?**
+**How do I change the default page header colors?**
 
-In the document settings of the editor, [choose the "Hide Page Header" template](http://cld.wthms.co/CCJaSI). This is located under the Page Attributes section. This template is especially helpful for when you want to begin your page with a full-width image or cover image. 
+In the page editor, you can change the page header color by selecting a color template from the Post/Page Attributes section of Document Settings:
+
+![Document Settings](https://cloudup.com/files/iva6xfO0QEo/download)
+
+Alternatively, you may select the "Hide Page Header" template to hide the post header altogether, and use a full-width cover image block as your page header instead.
 
 **How do I change the background color for cover image blocks?**
 

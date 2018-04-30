@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Hide Page Header
+ * Template Name: Pink Page Header
  * Template Post Type: post, page
  *
  * @package Music Theme

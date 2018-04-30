@@ -67,6 +67,24 @@
 			display: inherit;
 		}
 	}
+
+	/* Additional Color Options */
+	.post-template-color-pink.singular &,
+	.page-template-color-pink.singular & {
+		background-color: $color__theme-primary;
+	}
+	.post-template-color-gray.singular &,
+	.page-template-color-gray.singular & {
+		background-color: $color__theme-secondary;
+	}
+	.post-template-color-white.singular &,
+	.page-template-color-white.singular & {
+		background-color: $color__background-body;
+
+		.entry-meta, .entry-meta a, .entry-title {
+			color: $color__theme-link;
+		}
+	}
 }
 
 .hfeed .page-header {
@@ -192,7 +210,8 @@
 	}
 }
 
-.page.page-template-hide-header {
+.page-template-hide-header,
+.post-template-hide-header {
 
 	.entry-header {
 		visibility: hidden;
@@ -311,7 +330,8 @@
 		}
 	}
 
-	.page.page-template-hide-header {
+	.post-template-hide-header,
+	.page-template-hide-header {
 
 		.entry-header {
 			padding: 6.5rem;
