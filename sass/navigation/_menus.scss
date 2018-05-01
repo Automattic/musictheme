@@ -198,11 +198,12 @@
 		li {
 			float: left;
 			position: relative;
-
-			&.menu-item-has-children > a {
-				padding-right: .5rem;
-			}
 		}
+
+		& > ul > li.menu-item-has-children > a {
+			padding-right: .25rem;
+		}
+
 
 		ul li.toggled-on > ul {
 			left: inherit;
