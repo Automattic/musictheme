@@ -167,6 +167,16 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/js\/navigation-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/navigation-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/js\/navigation.js": {
 		"ft": 64,
 		"ma": 0,
@@ -216,6 +226,27 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/LICENSE",
+		"oF": 0
+		},
+	"\/page-templates\/color-gray.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/page-templates\/color-gray.php",
+		"oF": 0
+		},
+	"\/page-templates\/color-pink.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/page-templates\/color-pink.php",
+		"oF": 0
+		},
+	"\/page-templates\/color-white.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/page-templates\/color-white.php",
 		"oF": 0
 		},
 	"\/page-templates\/hide-header.php": {

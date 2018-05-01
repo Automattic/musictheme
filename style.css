@@ -1311,17 +1311,27 @@ html,
 --------------------------------------------------------------*/
 .site-footer {
   background: #383838;
-  margin: 2em 0 0; }
+  margin: 0; }
 
 .site-info {
   color: white;
   margin: 2rem auto;
   max-width: 1100px;
   padding: 0 1rem; }
+  .site-info .sep {
+    display: none; }
   .site-info a {
     color: white; }
+    .site-info a:first-child {
+      display: block; }
+
+@media screen and (min-width: 480px) {
+  .site-info .sep, .site-info a:first-child {
+    display: inline-block; } }
 
 @media screen and (min-width: 740px) {
+  .site-footer {
+    margin: 2em 0 0; }
   .site-info {
     padding: 0 2rem; } }
 
