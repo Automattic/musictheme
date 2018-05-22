@@ -14,14 +14,14 @@
 
 		// Make sure we have a menu and that the more-more item is present
 		if ( 0 < mainNav.length && 0 < moreMenu.length ) {
-			var navWidth = 0;
-			var firstMoreElement = moreMenu.find( 'li' ).first();
+			var navWidth         = 0,
+				firstMoreElement = moreMenu.find( 'li' ).first();
 
 			// Calculate the width of our "more" containing element
 			var moreWidth = moreMenu.outerWidth( true );
 
 			// Calculate the current width of our navigation
-			mainNav.find( '.menu > li' ).each( function() {
+			mainNav.find( '> div > ul > li' ).each( function() {
 				navWidth += $( this ).outerWidth( true );
 			});
 
@@ -30,16 +30,17 @@
 
 			// If our nav is wider than our available space, we're going to move items
 			if ( navWidth > availableSpace ) {
-				var lastItem = mainNav.find( '.menu > li:not(#more-menu)' ).last();
+				var lastItem = mainNav.find( '> div > ul > li:not(#more-menu)' ).last();
+
 				lastItem.attr( 'data-width', lastItem.outerWidth( true ) );
-				lastItem.prependTo( moreMenu.find( '.sub-menu' ).eq( 0 ) );
+				lastItem.prependTo( moreMenu.find( '.sub-menu, .children' ).eq( 0 ) );
 				// Rerun this function!
 				setTimeout( priorityNav, 10 );
 
 			// But if we have the extra space, we should add the items back to our menu
 			} else if ( navWidth + firstMoreElement.data( 'width' ) < availableSpace ) {
 				// Check to be sure there's enough space for our extra element
-				firstMoreElement.insertBefore( mainNav.find( '.menu > li' ).last() );
+				firstMoreElement.insertBefore( mainNav.find( '> div > ul > li' ).last() );
 				setTimeout( priorityNav, 10 );
 			}
 

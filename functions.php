@@ -184,9 +184,14 @@ function musictheme_scripts() {
 	}
 
 	// Screenreader text
-	wp_localize_script( 'musictheme-navigation', 'screenReaderText', array(
+	wp_localize_script( 'musictheme-navigation', 'musicThemeScreenReaderText', array(
 		'expand'   => esc_html__( 'expand child menu', 'musictheme' ),
 		'collapse' => esc_html__( 'collapse child menu', 'musictheme' ),
+	) );
+
+	// Icons
+	wp_localize_script( 'musictheme-navigation', 'musicThemeIcons', array(
+		'dropdown' => musictheme_get_svg( array( 'icon' => 'expand' ) )
 	) );
 
 }

@@ -470,16 +470,20 @@ a {
       opacity: 1; }
   .main-navigation li {
     float: left; }
-    .main-navigation li.menu-item-has-children > a {
+    .main-navigation li.menu-item-has-children > a,
+    .main-navigation li.page_item_has_children > a {
       padding-right: .25rem; }
   .main-navigation a {
     display: inline-block;
     padding: .5em; }
-  .main-navigation > div > ul > li.menu-item-has-children.toggled-on > a,
-  .current_page_item > a,
-  .current-menu-item > a,
-  .current_page_ancestor > a,
-  .current-menu-ancestor > a {
+  .main-navigation .current_page_item > a,
+  .main-navigation .current-menu-item > a,
+  .main-navigation .current_page_ancestor > a,
+  .main-navigation .current-menu-ancestor > a {
+    text-decoration: underline; }
+  .main-navigation > div > ul > li.menu-item-has-children.toggled-on > a {
+    text-decoration: underline; }
+  .main-navigation > div > ul > li.page_item_has_children.toggled-on > a {
     text-decoration: underline; }
   .main-navigation .dropdown-toggle {
     background: transparent;
@@ -542,16 +546,25 @@ a {
     display: inline-block; }
   #more-menu .icon {
     vertical-align: text-bottom;
+<<<<<<< HEAD
+    margin-left: 0; }
+  #more-menu .sub-menu > li,
+  #more-menu .children > li {
+=======
     margin-left: .25rem; }
   #more-menu .sub-menu > li {
+>>>>>>> master
     clear: both;
     float: none; }
-  #more-menu .sub-menu a {
+  #more-menu .sub-menu a,
+  #more-menu .children a {
     position: relative;
     z-index: 1; }
-  #more-menu .sub-menu .dropdown-toggle {
+  #more-menu .sub-menu .dropdown-toggle,
+  #more-menu .children .dropdown-toggle {
     display: none; }
-  #more-menu .sub-menu .sub-menu {
+  #more-menu .sub-menu .children,
+  #more-menu .children .children {
     box-shadow: none;
     right: inherit;
     left: 0;
@@ -575,6 +588,12 @@ a {
     .main-navigation li {
       float: left;
       position: relative; }
+<<<<<<< HEAD
+    .main-navigation > ul > li.menu-item-has-children > a,
+    .main-navigation > ul > li.page_item_has_children > a {
+      padding-right: .25rem; }
+=======
+>>>>>>> master
     .main-navigation ul li.toggled-on > ul {
       left: inherit;
       width: inherit; }
@@ -585,6 +604,8 @@ a {
       opacity: 1;
       padding-left: .5rem;
       position: relative; }
+    .main-navigation ul ul .dropdown-toggle {
+      display: none; }
     .main-navigation ul ul li {
       float: left;
       clear: inherit;

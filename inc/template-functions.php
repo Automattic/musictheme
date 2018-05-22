@@ -51,3 +51,16 @@ function musictheme_add_ellipses_to_nav( $items, $args ) {
 	return $items;
 }
 add_filter( 'wp_nav_menu_items', 'musictheme_add_ellipses_to_nav', 10, 2 );
+
+function musictheme_add_ellipses_to_page_menu( $items, $args ) {
+
+	$items .= '<li id="more-menu" class="menu-item menu-item-has-children">';
+	$items .= '<button class="dropdown-toggle" aria-expanded="false">';
+	$items .= '<span class="screen-reader-text">'. esc_html( 'More', 'musictheme' ) . '</span>';
+	$items .= musictheme_get_svg( array( 'icon' => 'ellipsis' ) );
+	$items .= '</button>';
+	$items .= '<ul class="sub-menu"></ul></li>';
+
+    return $items;
+}
+add_filter( 'wp_list_pages', 'musictheme_add_ellipses_to_page_menu', 10, 2 );
