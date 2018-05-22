@@ -5,7 +5,7 @@
  * navigation support for dropdown menus.
  */
 
-/* global screenReaderText */
+/* global musicThemeScreenReaderText, musicThemeIcons */
 ( function( $ ) {
 
 	var body,
@@ -21,6 +21,17 @@
 
 		// Add parent class to sub-menu parent items
 		container.find( '.sub-menu, .children' ).parents( 'li' ).addClass( 'menu-item-has-children' );
+
+		// Add dropdown toggle button
+		var dropdownToggle = $( '<button />', {
+				'class': 'dropdown-toggle',
+				'aria-expanded': false
+			} ).append( $( '<span />', {
+				'class': 'screen-reader-text',
+				text: musicThemeScreenReaderText.expand
+			})).append( '<span class="meta-nav" aria-hidden="true">'+ musicThemeIcons.dropdown +'</span>' );
+
+		container.find( '.menu-item-has-children > a' ).after( dropdownToggle );
 
 		// Change menu items with submenus to aria-haspopup="true".
 		container.find( '.menu-item-has-children' ).attr( 'aria-haspopup', 'true' );
@@ -62,13 +73,12 @@
 			// jscs:enable
 
 			// Update screen reader text
-			screenReaderSpan.text( screenReaderSpan.text() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
+			screenReaderSpan.text( screenReaderSpan.text() === musicThemeScreenReaderText.expand ? musicThemeScreenReaderText.collapse : musicThemeScreenReaderText.expand );
 
 		} );
 
 		// Close sub-menus when click outside of menus
 		$( 'html' ).click( function() {
-
 			container.find( '.toggled-on' ).removeClass( 'toggled-on' );
 		});
 
@@ -103,7 +113,7 @@
 		function toggleFocusClassTouchScreen() {
 
 			//	if ( window.innerWidth >= 896 ) {
-			$( document.body ).on( 'touchstart.altofocus', function( e ) {
+			$( document.body ).on( 'touchstart.musictheme', function( e ) {
 
 				if ( ! $( e.target ).closest( '.top-navigation li' ).length ) {
 
@@ -111,7 +121,7 @@
 				}
 			} );
 
-			siteNavigation.find( '.menu-item-has-children > a' ).on( 'touchstart.altofocus', function( e ) {
+			siteNavigation.find( '.menu-item-has-children > a' ).on( 'touchstart.musictheme', function( e ) {
 
 				var el = $( this ).parent( 'li' );
 
@@ -126,13 +136,13 @@
 
 		if ( 'ontouchstart' in window ) {
 
-			$( window ).on( 'resize.altofocus', toggleFocusClassTouchScreen );
+			$( window ).on( 'resize.musictheme', toggleFocusClassTouchScreen );
 			toggleFocusClassTouchScreen();
 		}
 
-		siteNavigation.find( 'a' ).on( 'focus.altofocus blur.altofocus', function() {
+		siteNavigation.find( 'a' ).on( 'focus.musictheme blur.musictheme', function() {
 
-			$( this ).parents( '.menu-item' ).toggleClass( 'focus' );
+			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
 		} );
 	}
 
@@ -193,8 +203,8 @@
 			body = $( document.body );
 
 			$( window )
-				.on( 'load.altofocus', onResizeARIA )
-				.on( 'resize.altofocus', onResizeARIA );
+				.on( 'load.musictheme', onResizeARIA )
+				.on( 'resize.musictheme', onResizeARIA );
 		});
 
 } )( jQuery );
