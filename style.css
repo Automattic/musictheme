@@ -580,6 +580,8 @@ a {
       opacity: 1;
       padding-left: .5rem;
       position: relative; }
+    .main-navigation ul ul .dropdown-toggle {
+      display: none; }
     .main-navigation ul ul li {
       float: left;
       clear: inherit;

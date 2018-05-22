@@ -210,6 +210,7 @@
 			padding-right: .25rem;
 		}
 
+
 		ul li.toggled-on > ul {
 			left: inherit;
 			width: inherit;
@@ -226,6 +227,10 @@
 				opacity: 1;
 				padding-left: .5rem;
 				position: relative;
+			}
+
+			.dropdown-toggle {
+				display: none;
 			}
 
 			li {
