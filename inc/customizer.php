@@ -25,6 +25,9 @@ function musictheme_customize_register( $wp_customize ) {
 			'render_callback' => 'musictheme_customize_partial_blogdescription',
 		) );
 	}
+
+	// Remove Color options
+	$wp_customize->remove_section("colors");
 }
 add_action( 'customize_register', 'musictheme_customize_register' );
 

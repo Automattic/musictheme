@@ -1,6 +1,6 @@
-# Music Theme
+# Music
 
-This theme is designed to showcase what Gutenberg can do with regards to themes. It is intended as a work in progress, at least until v1 of the new editor (and maybe beyond). 
+The _Music_ theme is an exploration of how Gutenberg can transform theme design and development. It is intended as a work in progress, at least until v1 of the new editor (and maybe beyond). 
 
 Contributors: Automattic  
 License: GPLv2 or later  
@@ -8,7 +8,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description
 
-Music theme is an experimental Gutenberg-powered theme. It's based on design mockups shared in [a blog post on Themeshaper](https://themeshaper.com/2018/03/07/designing-gutenberg-block-driven-themes-with-sketch/). 
+_Music_ is an experimental Gutenberg-powered theme. It's based on design mockups shared in [a blog post on Themeshaper](https://themeshaper.com/2018/03/07/designing-gutenberg-block-driven-themes-with-sketch/). 
 
 A demo is available at https:musictheme.mystagingwebsite.com
 
