@@ -94,13 +94,6 @@
 		"oAP": "\/footer.php",
 		"oF": 0
 		},
-	"\/functions.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/functions.php",
-		"oF": 0
-		},
 	"\/header.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -113,13 +106,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/inc\/custom-header.php",
-		"oF": 0
-		},
-	"\/inc\/customizer.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/inc\/customizer.php",
 		"oF": 0
 		},
 	"\/inc\/icon-functions.php": {
@@ -252,31 +238,6 @@
 		"oA": 0,
 		"oAP": "\/page.php",
 		"oF": 0
-		},
-	"\/README.html": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/README.html",
-		"oF": 0
-		},
-	"\/README.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"oA": 0,
-		"oAP": "\/README.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
 		},
 	"\/readme.txt": {
 		"cB": 0,
