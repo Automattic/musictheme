@@ -80,16 +80,37 @@ if ( ! function_exists( 'musictheme_setup' ) ) :
 			'flex-height' => true,
 		) );
 
-		add_theme_support( 'gutenberg', array(
-			'wide-images' => true,
-			'colors' => array(
-				'#f18686',
-				'#000',
-				'#383838',
-				'#666',
-				'#fff',
+		/**
+		 * Gutenberg: Add Custom Palette
+		 */
+		add_theme_support( 'editor-color-palette',
+			array(
+				'name' => 'pink',
+				'color' => '#f18686',
 			),
-		) );
+			array(
+				'name' => 'black',
+				'color' => '#000',
+			),
+			array(
+				'name' => 'dark gray',
+				'color' => '#383838',
+			),
+			array(
+				'name' => 'light gray',
+				'color' => '#666',
+			),
+			array(
+				'name' => 'white',
+				'color' => '#FFF',
+			)
+		);
+
+		/**
+		 * Gutenberg: Add support for wide alignment
+		 */
+		add_theme_support( 'align-wide' );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'musictheme_setup' );
@@ -110,9 +131,9 @@ add_action( 'after_setup_theme', 'musictheme_content_width', 0 );
  * Register Google Fonts
  */
 function musictheme_fonts_url() {
-    $fonts_url = '';
+	$fonts_url = '';
 
-    /* Translators: If there are characters in your language that are not
+	/* Translators: If there are characters in your language that are not
 	 * supported by Karla, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
@@ -220,6 +241,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Enqueue Gutenberg editor styles
  */
 function musictheme_editor_styles() {
-    wp_enqueue_style( 'musictheme-blocks-style', get_template_directory_uri() . '/editor.css');
+	wp_enqueue_style( 'musictheme-blocks-style', get_template_directory_uri() . '/editor.css');
 }
 add_action( 'enqueue_block_editor_assets', 'musictheme_editor_styles' );

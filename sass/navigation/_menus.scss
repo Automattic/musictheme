@@ -81,13 +81,25 @@
 	.dropdown-toggle {
 		background: transparent;
 		border: none;
-		padding: .25rem;
+		padding: .25rem 0;
+
+
+
+		&:focus,
+		&:hover {
+			outline: none;
+		}
 	}
 
 	.icon {
-		width: 0.75rem;
-		height: 0.75rem;
+		position: relative;
+		top: .25rem;
+		padding: .25rem;
+		width: 1.25rem;
+		height: 1.25rem;
 		fill: currentColor;
+		border-radius: 50%;
+		transition: all 0.25s ease-in-out;
 	}
 
 	/**
@@ -103,6 +115,21 @@
 
 		.black & {
 			color: $color__background-body;
+		}
+	}
+
+	.dropdown-toggle:focus .icon,
+	.dropdown-toggle:hover .icon {
+		background-color: $color__background-body;
+		color: $color__theme-link;
+
+		.white & {
+			background-color: $color__theme-link;
+			color: $color__background-body;
+		}
+
+		.black & {
+			color: $color__theme-link;
 		}
 	}
 
@@ -146,13 +173,11 @@
 
 	.dropdown-toggle {
 		display: inline-block;
-		line-height: 1.7rem;
-		padding: .5rem;
 	}
 
 	.icon {
 		vertical-align: text-bottom;
-		margin-left: 0;
+		margin-left: .25rem;
 	}
 
 	.sub-menu,
@@ -205,11 +230,14 @@
 			position: relative;
 		}
 
+<<<<<<< HEAD
 		& > ul > li.menu-item-has-children > a,
 		& > ul > li.page_item_has_children > a {
 			padding-right: .25rem;
 		}
 
+=======
+>>>>>>> master
 
 		ul li.toggled-on > ul {
 			left: inherit;

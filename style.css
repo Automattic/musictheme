@@ -488,11 +488,18 @@ a {
   .main-navigation .dropdown-toggle {
     background: transparent;
     border: none;
-    padding: .25rem; }
+    padding: .25rem 0; }
+    .main-navigation .dropdown-toggle:focus, .main-navigation .dropdown-toggle:hover {
+      outline: none; }
   .main-navigation .icon {
-    width: 0.75rem;
-    height: 0.75rem;
-    fill: currentColor; }
+    position: relative;
+    top: .25rem;
+    padding: .25rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    fill: currentColor;
+    border-radius: 50%;
+    transition: all 0.25s ease-in-out; }
   .main-navigation a,
   .main-navigation .dropdown-toggle {
     color: white; }
@@ -502,6 +509,17 @@ a {
     .black .main-navigation a, .black
     .main-navigation .dropdown-toggle {
       color: white; }
+  .main-navigation .dropdown-toggle:focus .icon,
+  .main-navigation .dropdown-toggle:hover .icon {
+    background-color: white;
+    color: black; }
+    .white .main-navigation .dropdown-toggle:focus .icon, .white
+    .main-navigation .dropdown-toggle:hover .icon {
+      background-color: black;
+      color: white; }
+    .black .main-navigation .dropdown-toggle:focus .icon, .black
+    .main-navigation .dropdown-toggle:hover .icon {
+      color: black; }
   .main-navigation ul ul {
     background: black; }
     .main-navigation ul ul a {
@@ -525,14 +543,17 @@ a {
   #more-menu.visible {
     display: inline-block; }
   #more-menu .dropdown-toggle {
-    display: inline-block;
-    line-height: 1.7rem;
-    padding: .5rem; }
+    display: inline-block; }
   #more-menu .icon {
     vertical-align: text-bottom;
+<<<<<<< HEAD
     margin-left: 0; }
   #more-menu .sub-menu > li,
   #more-menu .children > li {
+=======
+    margin-left: .25rem; }
+  #more-menu .sub-menu > li {
+>>>>>>> master
     clear: both;
     float: none; }
   #more-menu .sub-menu a,
@@ -567,9 +588,12 @@ a {
     .main-navigation li {
       float: left;
       position: relative; }
+<<<<<<< HEAD
     .main-navigation > ul > li.menu-item-has-children > a,
     .main-navigation > ul > li.page_item_has_children > a {
       padding-right: .25rem; }
+=======
+>>>>>>> master
     .main-navigation ul li.toggled-on > ul {
       left: inherit;
       width: inherit; }
