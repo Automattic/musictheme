@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 _Music_ is an experimental Gutenberg-powered theme. It's based on design mockups shared in [a blog post on Themeshaper](https://themeshaper.com/2018/03/07/designing-gutenberg-block-driven-themes-with-sketch/). 
 
-A demo is available at https:musictheme.mystagingwebsite.com
+A demo is available at https://musictheme.mystagingwebsite.com
 
 ## Installation
 
