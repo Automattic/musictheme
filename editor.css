@@ -11,6 +11,13 @@
   font-size: 1.125rem; }
 
 /* */
+/* ! Heading Blocks */
+/* */
+.wp-block-heading.editor-rich-text h1,
+.wp-block-heading.editor-rich-text h2 {
+  line-height: 1.4; }
+
+/* */
 /* ! Quote */
 /* */
 .wp-block-quote:not(.is-large) {
