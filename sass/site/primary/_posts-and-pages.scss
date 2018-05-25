@@ -296,7 +296,7 @@
 			line-height: 128px;
 		}
 
-		.page .singular .entry-header:not(:only-child) & {
+		.page.singular & {
 			padding-bottom: #{$size__horizontal-padding * 4};
 		}
 	}

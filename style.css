@@ -1160,7 +1160,7 @@ html,
     .singular .entry-title {
       font-size: 117px;
       line-height: 128px; }
-    .page .singular .entry-header:not(:only-child) .entry-title {
+    .page.singular .entry-title {
       padding-bottom: 8rem; }
   .singular .entry-header:not(:only-child),
   .hfeed .page-header:not(:only-child) {
