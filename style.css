@@ -1534,6 +1534,8 @@ p.wp-block-subhead {
     background: transparent; }
   .wp-block-image.alignfull {
     position: relative; }
+    .wp-block-image.alignfull img {
+      width: 100%; }
   .wp-block-image.alignleft, .wp-block-image.alignright {
     padding: 0 0 2rem 0;
     margin: 0; }
@@ -1542,8 +1544,7 @@ p.wp-block-subhead {
   .wp-block-image.alignright {
     margin-left: 2rem; }
   .wp-block-image img {
-    display: block;
-    width: 100%; }
+    display: block; }
 
 /**/
 /* ! Cover Image */

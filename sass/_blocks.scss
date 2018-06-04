@@ -209,6 +209,10 @@ p.wp-block-subhead {
 
 	&.alignfull {
 		position: relative;
+
+		img {
+			width: 100%;
+		}
 	}
 
 	&.alignleft,
@@ -227,7 +231,6 @@ p.wp-block-subhead {
 
 	img {
 		display: block;
-		width: 100%;
 	}
 }
 
