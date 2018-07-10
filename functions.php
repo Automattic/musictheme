@@ -83,28 +83,33 @@ if ( ! function_exists( 'musictheme_setup' ) ) :
 		/**
 		 * Gutenberg: Add Custom Palette
 		 */
-		add_theme_support( 'editor-color-palette',
+		add_theme_support( 'editor-color-palette', array(
 			array(
 				'name' => 'pink',
+				'slug' => 'pink',
 				'color' => '#f18686',
 			),
 			array(
 				'name' => 'black',
+				'slug' => 'black',
 				'color' => '#000',
 			),
 			array(
 				'name' => 'dark gray',
+				'slug' => 'dark-gray',
 				'color' => '#383838',
 			),
 			array(
 				'name' => 'light gray',
+				'slug' => 'light-gray',
 				'color' => '#666',
 			),
 			array(
 				'name' => 'white',
+				'slug' => 'white',
 				'color' => '#FFF',
 			)
-		);
+		) );
 
 		/**
 		 * Gutenberg: Add support for wide alignment
