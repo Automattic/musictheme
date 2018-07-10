@@ -1292,6 +1292,9 @@ html,
   .comment-list .children .depth-5 .reply-indicator {
     left: 3rem; }
 
+.comment-form input {
+  max-width: 100%; }
+
 @media screen and (min-width: 740px) {
   .comments-title,
   .comment-list,
