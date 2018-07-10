@@ -338,14 +338,13 @@
 		}
 	}
 
-	.entry-footer-wrap,
 	.hfeed .page-header .page-title {
 		margin-bottom: #{$size__vertical-padding * 4};
 		padding: 0 $size__horizontal-padding;
 	}
 
 	.entry-footer-wrap {
-		padding-bottom: #{$size__vertical-padding};
+		padding: 0 #{$size__vertical-padding} #{$size__vertical-padding};
 	}
 
 	.home.blog .page-header {

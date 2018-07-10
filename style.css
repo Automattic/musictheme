@@ -1183,12 +1183,11 @@ html,
   .post-template-hide-header .entry-header,
   .page-template-hide-header .entry-header {
     padding: 6.5rem; }
-  .entry-footer-wrap,
   .hfeed .page-header .page-title {
     margin-bottom: 8rem;
     padding: 0 2rem; }
   .entry-footer-wrap {
-    padding-bottom: 2rem; }
+    padding: 0 2rem 2rem; }
   .home.blog .page-header {
     padding: 10rem 0 8rem; } }
 
