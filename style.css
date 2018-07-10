@@ -1295,6 +1295,9 @@ html,
 .comment-form input {
   max-width: 100%; }
 
+.comment-form input[type="checkbox"] {
+  margin-right: 0.5em; }
+
 @media screen and (min-width: 740px) {
   .comments-title,
   .comment-list,
