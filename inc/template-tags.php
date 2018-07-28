@@ -185,12 +185,12 @@ function musictheme_reformat_comment( $comment, $args, $depth ) {
 			<footer class="comment-meta">
 				<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
 				<span class="comment-author vcard">
-					<?php printf( __( 'Posted by %s on' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link() ) ); ?>
+					<?php printf( __( 'Posted by %s on', 'musictheme' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link() ) ); ?>
 				</span><!-- .comment-author -->
 
 				<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 					<time datetime="<?php comment_time( 'c' ); ?>">
-						<?php printf( _x( '%1$s at %2$s', '1: date, 2: time' ), get_comment_date(), get_comment_time() ); ?>
+						<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'musictheme' ), get_comment_date(), get_comment_time() ); ?>
 					</time>
 				</a>
 				<?php edit_comment_link( __( 'Edit', 'musictheme' ), '<span class="edit-link">', '</span>' ); ?>
