@@ -1,0 +1,250 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Music Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-28 07:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: inc/template-tags.php:163
+msgid "(Edit)"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:87
+msgid ", "
+msgstr ""
+
+#: inc/template-tags.php:193
+#, php-format
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr ""
+
+#. Author of the theme
+msgid "Automattic"
+msgstr ""
+
+#: functions.php:194
+msgid "collapse child menu"
+msgstr ""
+
+#: comments.php:65
+msgid "Comments are closed."
+msgstr ""
+
+#. 1: comment count number, 2: title.
+#: comments.php:40
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#. %s: Name of current post. Only visible to screen readers
+#: template-parts/content-single.php:39
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: inc/template-tags.php:196
+msgid "Edit"
+msgstr ""
+
+#. %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:124 template-parts/content-page.php:39
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: functions.php:193
+msgid "expand child menu"
+msgstr ""
+
+#. Name of the template
+msgid "Gray Page Header"
+msgstr ""
+
+#. Name of the template
+msgid "Hide Page Header"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://automattic.com/"
+msgstr ""
+
+#. URI of the theme
+msgid "http://underscores.me/"
+msgstr ""
+
+#: footer.php:16
+msgid "https://wordpress.org/"
+msgstr ""
+
+#: 404.php:20
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#. %s: post title
+#: inc/template-tags.php:107
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#. used between list items, there is a space after the comma
+#: inc/template-tags.php:94
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#. Name of the theme
+msgid "Music Theme"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#. 1: title.
+#: comments.php:34
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: 404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: template-parts/content-page.php:25 template-parts/content-single.php:50
+msgid "Pages:"
+msgstr ""
+
+#: inc/template-tags.php:163
+msgid "Pingback:"
+msgstr ""
+
+#. Name of the template
+msgid "Pink Page Header"
+msgstr ""
+
+#: inc/icon-functions.php:42
+msgid "Please define an SVG icon filename."
+msgstr ""
+
+#: inc/icon-functions.php:37
+msgid "Please define default parameters in the form of an array."
+msgstr ""
+
+#. %s: post author.
+#: inc/template-tags.php:70
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#. %s: post date.
+#: inc/template-tags.php:64
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/template-tags.php:188
+#, php-format
+msgid "Posted by %s on"
+msgstr ""
+
+#: index.php:23
+msgid "Posts"
+msgstr ""
+
+#: functions.php:47
+msgid "Primary"
+msgstr ""
+
+#: header.php:44
+msgid "Primary Menu"
+msgstr ""
+
+#. %s: CMS name, i.e. WordPress.
+#: footer.php:18
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: template-parts/content-search.php:34 template-parts/content.php:34
+msgid "Read more"
+msgstr ""
+
+#. 1: link to WP admin new post page.
+#: template-parts/content-none.php:25
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#. %s: search query.
+#: search.php:20
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: header.php:23
+msgid "Skip to content"
+msgstr ""
+
+#: template-parts/content-none.php:38
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#. If there are characters in your language that are not
+#. supported by Karla, translate this to 'off'. Do not translate
+#. into your own language.
+#: functions.php:145
+msgctxt "Sorts Mill Goudy font: on or off"
+msgid "on"
+msgstr ""
+
+#. 1: list of tags.
+#: inc/template-tags.php:97
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"The <em>Music</em> theme is an exploration of how Gutenberg can transform "
+"theme design and development. It is intended as a work in progress, at least "
+"until v1 of the new editor (and maybe beyond)."
+msgstr ""
+
+#. 1: Theme name, 2: Theme author.
+#: footer.php:23
+#, php-format
+msgid "Theme: %1$s by %2$s."
+msgstr ""
+
+#. Name of the template
+msgid "White Page Header"
+msgstr ""
+
+#: inc/template-tags.php:176
+msgid "Your comment is awaiting moderation."
+msgstr ""
