@@ -47,6 +47,7 @@
 /**/
 /* ! Cover Image */
 /**/
+.wp-block-cover,
 .wp-block-cover-image {
 	align-items: center;
 	justify-content: center;
@@ -56,6 +57,7 @@
 	background-repeat: no-repeat;
 
 	h2,
+	.wp-block-cover-text,
 	.wp-block-cover-image-text {
 		font-size: 42px;
 		line-height: 51px;
@@ -77,6 +79,7 @@
 		background-color: $color__background-body;
 
 		h2,
+		.wp-block-cover-text,
 		.wp-block-cover-image-text {
 			color: $color__theme-link;
 		}
@@ -86,6 +89,7 @@
 /**/
 /* ! Dim Backgrounds */
 /**/
+.wp-block-cover.has-background-dim,
 .wp-block-cover-image.has-background-dim,
 .has-background-dim {
 	@include has-background-dim($color__theme-primary);
