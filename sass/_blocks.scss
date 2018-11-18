@@ -238,6 +238,7 @@ p.wp-block-subhead {
 /* ! Cover Image */
 /**/
 
+.wp-block-cover,
 .wp-block-cover-image {
 	align-items: center;
 	justify-content: left;
@@ -252,6 +253,7 @@ p.wp-block-subhead {
 	z-index: 0;
 
 	h2,
+	.wp-block-cover-text,
 	.wp-block-cover-image-text {
 		margin: 0 auto;
 		padding: 0;
@@ -282,6 +284,7 @@ p.wp-block-subhead {
 		z-index: 0;
 
 		h2,
+		.wp-block-cover-text
 		.wp-block-cover-image-text {
 			margin: 0 auto;
 			max-width: $size__site-max-width-wide;
@@ -323,6 +326,7 @@ p.wp-block-subhead {
 		background-color: $color__background-body;
 
 		h2,
+		.wp-block-cover-text,
 		.wp-block-cover-image-text {
 			color: $color__theme-link;
 		}
