@@ -2034,6 +2034,11 @@ p.wp-block-subhead {
   /* Additional Color Classes */
 }
 
+.wp-block-cover .wp-block-cover__inner-container,
+.wp-block-cover-image .wp-block-cover__inner-container {
+  width: 100%;
+}
+
 .wp-block-cover h2,
 .wp-block-cover .wp-block-cover-text,
 .wp-block-cover .wp-block-cover-image-text,

@@ -252,6 +252,10 @@ p.wp-block-subhead {
 	position: relative;
 	z-index: 0;
 
+	.wp-block-cover__inner-container {
+		width: 100%;
+	}
+
 	h2,
 	.wp-block-cover-text,
 	.wp-block-cover-image-text {
