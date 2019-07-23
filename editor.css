@@ -404,6 +404,13 @@
 }
 
 /**/
+/* ! Separator */
+/**/
+.wp-block-separator.is-style-wide {
+  border-bottom-width: 2px;
+}
+
+/**/
 /* ! Tables */
 /**/
 .wp-block-table td,

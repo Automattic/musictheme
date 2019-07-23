@@ -548,6 +548,15 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		display: block;
 		height: 2px;
 	}
+
+	&.is-style-wide,
+	&.is-style-dots {
+		padding: 0;
+	}
+
+	&.is-style-dots:before {
+		background-color: transparent;
+	}
 }
 
 /**/

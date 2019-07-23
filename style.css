@@ -2345,6 +2345,14 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   height: 2px;
 }
 
+.wp-block-separator.is-style-wide, .wp-block-separator.is-style-dots {
+  padding: 0;
+}
+
+.wp-block-separator.is-style-dots:before {
+  background-color: transparent;
+}
+
 /**/
 /* ! Buttons */
 /**/
