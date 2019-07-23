@@ -802,7 +802,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		&:first-child {
 			width: calc( 140% + #{$size__horizontal-padding} );
 			max-width: calc( 140% + #{$size__horizontal-padding} );
-			margin-left: calc( -20% - ( #{$size__horizontal-padding / 2} );
+			margin-left: calc( -20% - ( #{$size__horizontal-padding / 2} ) );
 			margin-top: -#{$size__vertical-padding};
 			border-left: 0;
 			border-right: 0;
