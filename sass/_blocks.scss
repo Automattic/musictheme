@@ -602,6 +602,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 	&.is-style-outline .wp-block-button__link {
 		background-color: transparent;
+		color: $color__theme-link;
 
 		&:active, &:focus, &:hover {
 			background-color: $color__theme-link;

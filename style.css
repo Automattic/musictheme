@@ -2393,6 +2393,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 
 .wp-block-button.is-style-outline .wp-block-button__link {
   background-color: transparent;
+  color: black;
 }
 
 .wp-block-button.is-style-outline .wp-block-button__link:active, .wp-block-button.is-style-outline .wp-block-button__link:focus, .wp-block-button.is-style-outline .wp-block-button__link:hover {
