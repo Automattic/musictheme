@@ -37,6 +37,13 @@ The default background color for cover image blocks is pink, but  there are a fe
 - `black`
 - `gray` or `grey`
 
+**How do I compile the stylesheets?**
+
+If you're modifying stylesheets in the Music theme, you'll want to work from the Sass files, and have Node-Sass auto-compile the CSS stylesheets. 
+
+1. Run `npm install` to install dependencies (You'll only have to do this once).
+2. Run `npm run build` to compile the CSS once, or `npm run watch` to have it compile changes whenever you modify a sass file.
+
 ## Credits
 
 * Based on Underscores http://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
