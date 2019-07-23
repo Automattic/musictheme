@@ -2358,6 +2358,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 /**/
 .wp-block-button .wp-block-button__link {
   background-color: black;
+  color: white;
   border-radius: 0;
   text-decoration: none;
 }
@@ -2394,7 +2395,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   background-color: transparent;
 }
 
-.wp-block-button.is-style-outline .wp-block-button__link:hover, .wp-block-button.is-style-outline .wp-block-button__link:focus {
+.wp-block-button.is-style-outline .wp-block-button__link:active, .wp-block-button.is-style-outline .wp-block-button__link:focus, .wp-block-button.is-style-outline .wp-block-button__link:hover {
   background-color: black;
   color: white;
 }
