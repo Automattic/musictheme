@@ -116,7 +116,14 @@ if ( ! function_exists( 'musictheme_setup' ) ) :
 		 */
 		add_theme_support( 'align-wide' );
 
-		// Add editor styles.
+		/**
+		 * Gutenberg: Add responsive embeds
+		 */
+		add_theme_support( 'responsive-embeds' );
+
+		/**
+		 * Gutenberg: Add editor styles
+		 */
 		add_theme_support( 'editor-styles' );
 		add_editor_style( 'editor.css' );
 	}
