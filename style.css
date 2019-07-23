@@ -2791,11 +2791,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     display: block;
     position: absolute;
     bottom: 0;
+    top: calc( 100% - 8rem);
     width: 740px;
     height: 8rem;
     background-color: white;
     margin-left: calc( ( 100vw - 740px ) / 2);
     margin-right: calc( ( 100vw - 740px ) / 2);
+    z-index: 1;
   }
   .wp-block-cover.alignfull:first-child + *:not(h3),
   .wp-block-cover-image.alignfull:first-child + *:not(h3) {
