@@ -8,7 +8,7 @@
     "node-sass": "^4.9.3"
   },
   "scripts": {
-    "watch": "node-sass sass -o css --output-style expanded && node-sass --watch sass -o css --output-style expanded",
-    "build": "node-sass sass -o css --output-style expanded"
+    "watch": "node-sass sass -o . --output-style expanded && node-sass --watch sass -o . --output-style expanded",
+    "build": "node-sass sass -o . --output-style expanded"
   }
 }
