@@ -1,0 +1,14 @@
+{
+  "name": "musictheme",
+  "version": "0.0.1",
+  "repository": "https://github.com/automattic/musictheme/",
+  "license": "GPL-2.0-or-later",
+  "description": "",
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  },
+  "scripts": {
+    "watch": "node-sass sass -o css --output-style expanded && node-sass --watch sass -o css --output-style expanded",
+    "build": "node-sass sass -o css --output-style expanded"
+  }
+}
