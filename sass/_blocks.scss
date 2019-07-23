@@ -557,6 +557,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .wp-block-button .wp-block-button__link {
 	background-color: $color__theme-link;
 	border-radius: 0;
+	text-decoration: none;
 }
 
 .wp-block-button .wp-block-button__link:active,
@@ -586,6 +587,16 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		.wp-block-button__link {
 			padding: 0.8em 1em 0.75em;
 			font-size: 1.5em;
+		}
+	}
+
+	&.is-style-outline .wp-block-button__link {
+		background-color: transparent;
+
+		&:hover,
+		&:focus {
+			background-color: $color__theme-link;
+			color: $color__background-body;
 		}
 	}
 
