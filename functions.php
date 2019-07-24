@@ -116,6 +116,16 @@ if ( ! function_exists( 'musictheme_setup' ) ) :
 		 */
 		add_theme_support( 'align-wide' );
 
+		/**
+		 * Gutenberg: Add responsive embeds
+		 */
+		add_theme_support( 'responsive-embeds' );
+
+		/**
+		 * Gutenberg: Add editor styles
+		 */
+		add_theme_support( 'editor-styles' );
+		add_editor_style( 'editor.css' );
 	}
 endif;
 add_action( 'after_setup_theme', 'musictheme_setup' );
@@ -241,11 +251,3 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-/**
- * Enqueue Gutenberg editor styles
- */
-function musictheme_editor_styles() {
-	wp_enqueue_style( 'musictheme-blocks-style', get_template_directory_uri() . '/editor.css');
-}
-add_action( 'enqueue_block_editor_assets', 'musictheme_editor_styles' );

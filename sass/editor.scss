@@ -5,23 +5,22 @@
 @import url('https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400i');
 
 // Base font styles
-.editor-default-block-appender input[type="text"].editor-default-block-appender__content,
-.editor-post-title .editor-post-title__input,
-.edit-post-visual-editor, 
-.edit-post-visual-editor p {
+.editor-post-title__input,
+body,
+p {
 	font-family: $font__main;
 }
 
-.edit-post-visual-editor, 
-.edit-post-visual-editor p {
+body,
+p {
 	@include font-size(1.125);
 }
 
 /* */
 /* ! Heading Blocks */
 /* */
-.wp-block-heading.editor-rich-text h1, 
-.wp-block-heading.editor-rich-text h2 {
+h1, 
+h2 {
 	line-height: 1.4;
 }
 
@@ -121,6 +120,17 @@
 .wp-block-button .wp-block-button__link:hover {
 	background-color: $color__theme-link;
 	border-radius: 0;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+	background-color: transparent;
+}
+
+/**/
+/* ! Separator */
+/**/
+.wp-block-separator.is-style-wide {
+	border-bottom-width: 2px;
 }
 
 /**/
