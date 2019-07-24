@@ -662,6 +662,51 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 	}
 }
 
+/**/
+/* ! Custom Colors */
+/**/
+
+.has-pink-color {
+	color: $color__theme-primary;
+}
+
+.has-pink-background-color {
+	background-color: $color__theme-primary;
+}
+
+.has-black-color {
+	color: $color__theme-link;
+}
+
+.has-black-background-color {
+	background-color: $color__theme-link;
+}
+
+.has-dark-gray-color {
+	color: $color__theme-secondary;
+}
+
+.has-dark-gray-background-color {
+	background-color: $color__theme-secondary;
+}
+
+.has-light-gray-color {
+	color: $color__theme-tertiary;
+}
+
+.has-light-gray-background-color {
+	background-color: $color__theme-tertiary;
+}
+
+.has-white-color {
+	color: $color__background-body;
+}
+
+.has-white-background-color {
+	background-color: $color__background-body;
+}
+
+
 @media screen and (min-width: 740px) {
 
 	.entry-content,

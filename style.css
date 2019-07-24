@@ -2714,6 +2714,49 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   background-color: white;
 }
 
+/**/
+/* ! Custom Colors */
+/**/
+.has-pink-color {
+  color: #f18686;
+}
+
+.has-pink-background-color {
+  background-color: #f18686;
+}
+
+.has-black-color {
+  color: black;
+}
+
+.has-black-background-color {
+  background-color: black;
+}
+
+.has-dark-gray-color {
+  color: #383838;
+}
+
+.has-dark-gray-background-color {
+  background-color: #383838;
+}
+
+.has-light-gray-color {
+  color: #666;
+}
+
+.has-light-gray-background-color {
+  background-color: #666;
+}
+
+.has-white-color {
+  color: white;
+}
+
+.has-white-background-color {
+  background-color: white;
+}
+
 @media screen and (min-width: 740px) {
   .entry-content,
   .page-content {
