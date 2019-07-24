@@ -2419,6 +2419,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 /**/
+/* ! Media & Text */
+/**/
+.wp-block-media-text {
+  background-color: white;
+}
+
+/**/
 /* ! Dim Backgrounds */
 /**/
 .wp-block-cover.has-background-dim:before,
@@ -2838,7 +2845,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     margin-left: calc( -20% - 2rem);
     border: 2rem solid #383838;
   }
-  .entry-content > .alignwide:not(.wp-block-cover-image):not(.wp-block-cover) {
+  .entry-content > .alignwide:not(.wp-block-cover-image):not(.wp-block-cover):not(.wp-block-media-text) {
     background: #383838;
     color: white;
   }

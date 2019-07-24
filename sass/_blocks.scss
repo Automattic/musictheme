@@ -633,6 +633,14 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 /**/
+/* ! Media & Text */
+/**/
+
+.wp-block-media-text {
+	background-color: $color__background-body;
+}
+
+/**/
 /* ! Dim Backgrounds */
 /**/
 
@@ -796,7 +804,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 		margin-left: calc( -20% - #{$size__horizontal-padding} );
 		border: $size__vertical-padding solid $color__theme-secondary;
 
-		&:not(.wp-block-cover-image):not(.wp-block-cover) {
+		&:not(.wp-block-cover-image):not(.wp-block-cover):not(.wp-block-media-text) {
 			background: $color__theme-secondary;
 			color: $color__background-body;
 		}
