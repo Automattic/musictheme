@@ -2426,6 +2426,47 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 /**/
+/* ! Group Block */
+/**/
+.wp-block-group > .wp-block-group__inner-container > * {
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-block-group > .wp-block-group__inner-container > *.alignwide, .wp-block-group > .wp-block-group__inner-container > *.alignfull {
+  max-width: 100%;
+}
+
+.wp-block-group.has-background {
+  margin-left: -1rem;
+  width: calc( 100% + 2rem);
+  padding: 1rem 0;
+}
+
+.wp-block-group.has-background > .wp-block-group__inner-container > * {
+  max-width: calc( 100% - 2rem);
+}
+
+.wp-block-group.has-background.alignwide > .wp-block-group__inner-container > * {
+  max-width: 740px;
+}
+
+.wp-block-group.has-background.alignwide > .wp-block-group__inner-container > *.alignwide, .wp-block-group.has-background.alignwide > .wp-block-group__inner-container > *.alignfull {
+  max-width: calc( 100% - 2rem);
+}
+
+.wp-block-group.has-background .wp-block-gallery.alignfull {
+  background-color: transparent;
+}
+
+.wp-block-group.has-background .wp-block-gallery.alignfull .blocks-gallery-item {
+  padding: 8px;
+  border: none;
+  background-color: transparent;
+}
+
+/**/
 /* ! Dim Backgrounds */
 /**/
 .wp-block-cover.has-background-dim:before,
@@ -2872,6 +2913,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .wp-block-cover-image.alignfull h2 {
     font-size: 117px;
     line-height: 128px;
+  }
+  .wp-block-group.has-background {
+    margin-left: -2rem;
+    width: calc( 100% + 4rem);
+    padding: 1rem 1rem;
   }
 }
 
